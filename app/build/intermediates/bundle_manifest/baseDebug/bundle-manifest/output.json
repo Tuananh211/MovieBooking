@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "applicationId": "com.base.movieBooking",
+  "variantType": "BASE_APK",
+  "elements": [
+    {
+      "outputType": {
+        "type": "BUNDLE_MANIFEST"
+      },
+      "apkData": {
+        "type": "MAIN",
+        "splits": [],
+        "versionCode": 1,
+        "versionName": "1.0",
+        "outputFile": "app-base-debug.apk",
+        "fullName": "baseDebug",
+        "baseName": "base-debug",
+        "dirName": ""
+      },
+      "path": "AndroidManifest.xml",
+      "properties": {
+        "packageId": "com.base.movieBooking",
+        "split": "",
+        "minSdkVersion": "22"
+      }
+    }
+  ]
+}

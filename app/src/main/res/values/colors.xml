@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F2F2F2</color>
+    <color name="colorPrimaryDark">#F2F2F2</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorGrey">#F2F2F2</color>
+    <color name="colorTextGrey">#808080</color>
+    <color name="colorBackGround">#F2F2F2</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBgBlack">#2C2B2B</color>
+    <color name="primary">#D70000</color>
+    <color name="neutral_50">#F2F2F2</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBackGroundGrey">#D6D6D6</color>
+    <color name="colorStrokeBlue">#4BAEBD</color>
+    <color name="colorOrange">#FF5722</color>
+    <color name="red">#D30A22</color>
+    <color name="green">#4CAF50</color>
+    <color name="yellow">#FF9800</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="main_color">#1F1D2B</color>
+    <color name="orange">#FF7427</color>
+    <color name="yellow_2">#FFC107</color>
+    <color name="dark_blue">#252836</color>
+</resources>

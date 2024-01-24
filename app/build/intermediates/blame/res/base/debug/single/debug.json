@@ -1,0 +1,438 @@
+[
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_calendar.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\calendar.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_dienanh_fragment.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\layout\\dienanh_fragment.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-xhdpi_caidat.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-xhdpi\\caidat.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_mail.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\mail.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_lich_phim.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\layout\\lich_phim.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_splash_fragment.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\layout\\splash_fragment.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-hdpi_dienanh.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-hdpi\\dienanh.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_header_phim.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\layout\\header_phim.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_seat.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\seat.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_rap3.webp.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\rap3.webp"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-xhdpi_logo_background.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-xhdpi\\logo_background.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_viewpager_dienanh.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\layout\\viewpager_dienanh.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_close.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\close.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_mario.jpg.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\mario.jpg"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-xxhdpi_caidat.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-xxhdpi\\caidat.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_avatar.jpg.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\avatar.jpg"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-xxhdpi_logo_background.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-xxhdpi\\logo_background.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_rap4.jpg.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\rap4.jpg"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_bg_btn_xemtiep.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\bg_btn_xemtiep.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-hdpi_caidat.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-hdpi\\caidat.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-mdpi_logo_foreground.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-mdpi\\logo_foreground.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_lich_chieu_fragment.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\layout\\lich_chieu_fragment.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\menu_menu_bottom_navigation.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\menu\\menu_bottom_navigation.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_star2.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\star2.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\color_custom_color_bottom_bar.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\color\\custom_color_bottom_bar.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_tab_right.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\tab_right.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_thongtin_fragment.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\layout\\thongtin_fragment.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_down.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\down.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_back.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\back.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_rap1.jpg.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\rap1.jpg"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_activity_main.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_dialog_loading.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\layout\\dialog_loading.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_next.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\next.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_lock.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\lock.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_header.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\layout\\header.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-xxhdpi_logo_round.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-xxhdpi\\logo_round.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-mdpi_logo_background.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-mdpi\\logo_background.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_dangky_fragment.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\layout\\dangky_fragment.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_dangnhap_fragment.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\layout\\dangnhap_fragment.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_antman.jpg.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\antman.jpg"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_diamond.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\diamond.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_taikhoan_fragment.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\layout\\taikhoan_fragment.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-xxxhdpi_logo_foreground.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-xxxhdpi\\logo_foreground.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-anydpi-v26_logo_round.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-anydpi-v26\\logo_round.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_user.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\user.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_rap6.jpg.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\rap6.jpg"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_map.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\map.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_rcv_lichchieu.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\layout\\rcv_lichchieu.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_rcv_phim_home.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\layout\\rcv_phim_home.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_rcv_giochieu.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\layout\\rcv_giochieu.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_layout_base_recyclerview.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\layout\\layout_base_recyclerview.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-xhdpi_logo_foreground.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-xhdpi\\logo_foreground.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_layout_load_more.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\layout\\layout_load_more.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_tai.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\tai.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-xxhdpi_logo_foreground.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-xxhdpi\\logo_foreground.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_rap_3.jpg.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\rap_3.jpg"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_bg_c13.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\bg_c13.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-anydpi-v26_logo.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-anydpi-v26\\logo.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_chonghe_fragment.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\layout\\chonghe_fragment.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_tichdiem.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\tichdiem.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_bg_rate_phim.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\bg_rate_phim.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-mdpi_logo_round.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-mdpi\\logo_round.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-xxxhdpi_caidat.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-xxxhdpi\\caidat.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-mdpi_caidat.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-mdpi\\caidat.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-hdpi_logo_foreground.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-hdpi\\logo_foreground.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_rap_2.jpg.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\rap_2.jpg"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_item_slide.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\layout\\item_slide.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-xxhdpi_dienanh.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-xxhdpi\\dienanh.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_rcv_dienanh.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\layout\\rcv_dienanh.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-xxxhdpi_dienanh.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-xxxhdpi\\dienanh.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_phim2.jpg.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\phim2.jpg"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-xhdpi_logo_round.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-xhdpi\\logo_round.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-xxxhdpi_logo_background.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-xxxhdpi\\logo_background.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_rapphim_fragment.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\layout\\rapphim_fragment.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_bg_indicator.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\bg_indicator.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-xxxhdpi_logo_round.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-xxxhdpi\\logo_round.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-hdpi_logo_round.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-hdpi\\logo_round.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_movie.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\movie.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_phim1.jpg.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\phim1.jpg"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_galaxy.jpg.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\galaxy.jpg"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_rap5.jpg.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\rap5.jpg"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_gift.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\gift.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_logo.jpg.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\logo.jpg"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_movieglass.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\movieglass.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_rcv_seat.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\layout\\rcv_seat.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_user2.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\user2.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_rcv_rap.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\layout\\rcv_rap.xml"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-hdpi_logo_background.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-hdpi\\logo_background.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_phone.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\phone.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_rap2.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\rap2.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_home2.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\home2.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-mdpi_dienanh.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-mdpi\\dienanh.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_setting.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\drawable\\setting.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-xhdpi_dienanh.png.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\mipmap-xhdpi\\dienanh.png"
+    },
+    {
+        "merged": "B:\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_home_fragment.xml.flat",
+        "source": "B:\\MovieBooking\\app\\src\\main\\res\\layout\\home_fragment.xml"
+    }
+]

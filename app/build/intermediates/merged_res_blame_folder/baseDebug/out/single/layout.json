@@ -1,0 +1,106 @@
+[
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/thongtin_fragment.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/thongtin_fragment.xml"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/rcv_phim_home.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/rcv_phim_home.xml"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/lich_chieu_fragment.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/lich_chieu_fragment.xml"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/home_fragment.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/home_fragment.xml"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/rcv_dienanh.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/rcv_dienanh.xml"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/giaodich_fragment.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/giaodich_fragment.xml"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/dangky_fragment.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/dangky_fragment.xml"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/rcv_giaodich.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/rcv_giaodich.xml"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/user_info_fragment.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/user_info_fragment.xml"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/rcv_lichchieu.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/rcv_lichchieu.xml"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/splash_fragment.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/splash_fragment.xml"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/film_info_child_fragment.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/film_info_child_fragment.xml"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/chonghe_fragment.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/chonghe_fragment.xml"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/rcv_rap.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/rcv_rap.xml"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/dangnhap_fragment.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/dangnhap_fragment.xml"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/thanhtoan_fragment.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/thanhtoan_fragment.xml"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/viewholder_category.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/viewholder_category.xml"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/taikhoan_fragment.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/taikhoan_fragment.xml"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/rapphim_fragment.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/rapphim_fragment.xml"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/rcv_seat.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/rcv_seat.xml"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/change_pass_fragment.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/change_pass_fragment.xml"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/thongtin_thanhtoan_fragment.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/thongtin_thanhtoan_fragment.xml"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/dienanh_fragment.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/dienanh_fragment.xml"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/lich_phim.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/lich_phim.xml"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/dialog_loading.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/dialog_loading.xml"
+    }
+]
