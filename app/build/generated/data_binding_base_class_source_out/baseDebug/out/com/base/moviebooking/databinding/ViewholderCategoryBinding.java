@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.base.moviebooking.R;
@@ -15,11 +16,15 @@ import java.lang.Object;
 
 public abstract class ViewholderCategoryBinding extends ViewDataBinding {
   @NonNull
+  public final ConstraintLayout listCategory;
+
+  @NonNull
   public final TextView titleTxt;
 
   protected ViewholderCategoryBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      TextView titleTxt) {
+      ConstraintLayout listCategory, TextView titleTxt) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.listCategory = listCategory;
     this.titleTxt = titleTxt;
   }
 

@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.base.moviebooking.R;
 import com.base.moviebooking.base.EndlessLoadingRecyclerViewAdapter;
 import com.base.moviebooking.databinding.RcvGiaodichBinding;
+import com.base.moviebooking.databinding.ViewholderCategoryBinding;
 import com.base.moviebooking.entity.ThongTinThanhToan;
 import com.base.moviebooking.listener.GiaoDichListener;
 

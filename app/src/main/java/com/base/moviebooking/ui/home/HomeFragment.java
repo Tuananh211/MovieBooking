@@ -4,12 +4,20 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 
+import androidx.annotation.NonNull;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.widget.CompositePageTransformer;
+import androidx.viewpager2.widget.MarginPageTransformer;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.base.moviebooking.DataLocalManager;
+import com.base.moviebooking.adapter.CategoryListAdapter;
+import com.base.moviebooking.entity.Category;
 import com.base.moviebooking.entity.News;
 import com.base.moviebooking.listener.OnChooseRecyclerView;
 import com.base.moviebooking.R;
@@ -31,22 +39,28 @@ import java.util.HashMap;
 import java.util.List;
 
 
+
+
 public class HomeFragment extends BaseFragment<HomeFragmentBinding> {
     private List<Slide> list;
     private List<Movie> movieList = new ArrayList<>();
+    private List<Category> categoryList = new ArrayList<>();
     private SlideAdapter slideAdapter;
+    private CategoryListAdapter categoryListAdapter;
+    private ViewPager2 viewPager2;
     private HomeAdapter homeAdapter;
     private Handler mHandler = new Handler();
-    private Runnable mRunnable = new Runnable() {
-        @Override
-        public void run() {
-            if (binding.viewpager.getCurrentItem() == list.size() - 1) {
-                binding.viewpager.setCurrentItem(0);
-            } else {
-                binding.viewpager.setCurrentItem(binding.viewpager.getCurrentItem() + 1);
-            }
-        }
-    };
+    private final Handler slideHandler= new Handler();
+//    private Runnable mRunnable = new Runnable() {
+//        @Override
+//        public void run() {
+//            if (binding.viewpager.getCurrentItem() == list.size() - 1) {
+//                binding.viewpager.setCurrentItem(0);
+//            } else {
+//                binding.viewpager.setCurrentItem(binding.viewpager.getCurrentItem() + 1);
+//            }
+//        }
+//    };
 
     @Override
     protected int getLayoutId() {
@@ -67,28 +81,29 @@ public class HomeFragment extends BaseFragment<HomeFragmentBinding> {
         getActivity().findViewById(R.id.bottombar).setVisibility(View.VISIBLE);
         HomeViewModel mViewModel = ViewModelProviders.of(this, viewModelFactory).get(HomeViewModel.class);
         //slide
-        slideAdapter = new SlideAdapter(getContext(), getListSlide());
-        binding.viewpager.setAdapter(slideAdapter);
-        binding.circleIndicator.setViewPager(binding.viewpager);
-        slideAdapter.registerDataSetObserver(binding.circleIndicator.getDataSetObserver());
-        mHandler.postDelayed(mRunnable, 5000);
-        binding.viewpager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                mHandler.removeCallbacks(mRunnable);
-                mHandler.postDelayed(mRunnable, 5000);
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
+        banners();
+//        slideAdapter = new SlideAdapter(getContext(), getListSlide());
+//        binding.viewpager.setAdapter(slideAdapter);
+//        binding.circleIndicator.setViewPager(binding.viewpager);
+//        slideAdapter.registerDataSetObserver(binding.circleIndicator.getDataSetObserver());
+//        mHandler.postDelayed(mRunnable, 5000);
+//        binding.viewpager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+//            @Override
+//            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+//
+//            }
+//
+//            @Override
+//            public void onPageSelected(int position) {
+//                mHandler.removeCallbacks(mRunnable);
+//                mHandler.postDelayed(mRunnable, 5000);
+//            }
+//
+//            @Override
+//            public void onPageScrollStateChanged(int state) {
+//
+//            }
+//        });
         //bật dialog loading
 
         //phim home
@@ -127,6 +142,11 @@ public class HomeFragment extends BaseFragment<HomeFragmentBinding> {
             public void onChooseLichChieu(Schedule showTime) {
 
             }
+
+            @Override
+            public void onChooseCategory(Category category) {
+
+            }
         });
         mViewModel.dataMovie.observe(getViewLifecycleOwner(), new Observer<List<Movie>>() {
             @Override
@@ -137,6 +157,58 @@ public class HomeFragment extends BaseFragment<HomeFragmentBinding> {
             }
         });
         binding.rcvSearch.setAdapter(homeAdapter);
+
+    // Category
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+        binding.categoryView.setLayoutManager(linearLayoutManager);
+        mViewModel.getListCategory();
+        categoryListAdapter = new CategoryListAdapter(getContext(), false, getContext(),
+                new OnChooseRecyclerView() {
+                    @Override
+                    public void onChoosePhim(Movie movie) {
+
+                    }
+
+                    @Override
+                    public void onChooseRap(Theater theater) {
+
+                    }
+
+                    @Override
+                    public void onChooseFilmInfo(FilmInfo filmInfo) {
+
+                    }
+
+                    @Override
+                    public void onChooseLichChieu(Schedule schedule) {
+
+                    }
+
+                    @Override
+                    public void onChooseCategory(Category category) {
+                        if (DataLocalManager.getInstance() != null && DataLocalManager.getBooleanValue()) {
+                            Log.d("mmm", "home đã Login", null);
+                            HashMap<String, Object> hashMap = new HashMap<>();
+                            hashMap.put("category", category);
+                            mViewController.addFragment(ShowTimeFragment.class, hashMap);
+                        } else {
+                            Log.d("mmm", "home chưa Login", null);
+                            getActivity().findViewById(R.id.bottombar).setVisibility(View.GONE);
+                            ((MainActivity) getActivity()).getViewController().replaceFragment(SignInFragment.class, null);
+
+                        }
+                    }
+                });
+
+        mViewModel.dataCategory.observe(getViewLifecycleOwner(), new Observer<List<Category>>() {
+            @Override
+            public void onChanged(List<Category> categoriesListResponse) {
+                categoryListAdapter.addModels(categoriesListResponse,false);
+                Log.d("fat", "add Model Category", null);
+                getActivity().findViewById(R.id.dialog_category).setVisibility(View.GONE);
+            }
+        });
+        binding.categoryView.setAdapter(categoryListAdapter);
     }
 
 
@@ -153,25 +225,83 @@ public class HomeFragment extends BaseFragment<HomeFragmentBinding> {
 
     }
 
-    private List<Slide> getListSlide() {
-        list = new ArrayList<>();
+//    private List<Slide> getListSlide() {
+//        list = new ArrayList<>();
+//        list.add(new Slide(R.drawable.avatar));
+//        list.add(new Slide(R.drawable.spiderman));
+//        list.add(new Slide(R.drawable.pussinboots));
+//        list.add(new Slide(R.drawable.lastofus));
+//        list.add(new Slide(R.drawable.megan));
+//        return list;
+//    }
+//
+//    @Override
+//    public void onPause() {
+//        super.onPause();
+//        mHandler.removeCallbacks(mRunnable);
+//    }
+//
+//    @Override
+//    public void onResume() {
+//        super.onResume();
+////        mHandler.postDelayed(mRunnable,3000);
+//    }
+
+    private void banners() {
+        viewPager2 = binding.viewpager;
+        list=  new ArrayList<>();
         list.add(new Slide(R.drawable.avatar));
-        list.add(new Slide(R.drawable.spiderman));
         list.add(new Slide(R.drawable.pussinboots));
+        list.add(new Slide(R.drawable.spiderman));
         list.add(new Slide(R.drawable.lastofus));
         list.add(new Slide(R.drawable.megan));
-        return list;
-    }
+        list.add(new Slide(R.drawable.wide));
+        list.add(new Slide(R.drawable.wide1));
+        list.add(new Slide(R.drawable.wide3));
+        viewPager2.setAdapter(
+                new SlideAdapter(list,viewPager2)
+        );
+//        WormDotsIndicator dotsIndicator = binding.circleIndicator;
+//        dotsIndicator.setViewPager2(viewPager2);
+        viewPager2.setClipToPadding(false);
+        viewPager2.setClipChildren(false);
+        viewPager2.setOffscreenPageLimit(3);
+        viewPager2.getChildAt(0).setOverScrollMode(RecyclerView.OVER_SCROLL_NEVER);
 
+        CompositePageTransformer compositePageTransformer= new CompositePageTransformer();
+        compositePageTransformer.addTransformer(new MarginPageTransformer(40));
+        compositePageTransformer.addTransformer(new ViewPager2.PageTransformer() {
+            @Override
+            public void transformPage(@NonNull View page, float position) {
+                float r= 1-Math.abs(position);
+                page.setScaleY(0.70f+r*0.15f);
+            }
+        });
+        viewPager2.setPageTransformer(compositePageTransformer);
+        viewPager2.setCurrentItem(1);
+        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                slideHandler.removeCallbacks(sliderRunnable);
+            }
+        });
+    }
     @Override
     public void onPause() {
         super.onPause();
-        mHandler.removeCallbacks(mRunnable);
+        slideHandler.removeCallbacks(sliderRunnable);
     }
-
     @Override
     public void onResume() {
         super.onResume();
-//        mHandler.postDelayed(mRunnable,3000);
+        slideHandler.postDelayed(sliderRunnable,2000);
     }
+
+    private final Runnable sliderRunnable= new Runnable() {
+        @Override
+        public void run() {
+            viewPager2.setCurrentItem(viewPager2.getCurrentItem()+1);
+        }
+    };
 }

@@ -1,8 +1,13 @@
 package com.base.moviebooking.entity;
 
-public class Category {
+import java.io.Serializable;
+
+public class Category implements Serializable {
     private int id;
     private String name;
+
+    public Category() {
+    }
 
     public Category(int id, String name) {
         this.id = id;

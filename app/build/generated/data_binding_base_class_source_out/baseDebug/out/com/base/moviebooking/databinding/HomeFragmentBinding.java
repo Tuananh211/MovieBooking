@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,7 +15,7 @@ import androidx.core.widget.NestedScrollView;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.widget.ViewPager2;
 import com.base.moviebooking.R;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -36,13 +35,13 @@ public abstract class HomeFragmentBinding extends ViewDataBinding {
   public final LinearLayout cst2;
 
   @NonNull
+  public final DialogLoadingBinding dialogCategory;
+
+  @NonNull
   public final DialogLoadingBinding dialogLoad;
 
   @NonNull
   public final EditText editTextText;
-
-  @NonNull
-  public final ProgressBar progressBar2;
 
   @NonNull
   public final RecyclerView rcvSearch;
@@ -66,22 +65,22 @@ public abstract class HomeFragmentBinding extends ViewDataBinding {
   public final TextView tvtToanquoc;
 
   @NonNull
-  public final ViewPager viewpager;
+  public final ViewPager2 viewpager;
 
   protected HomeFragmentBinding(Object _bindingComponent, View _root, int _localFieldCount,
       Button btnXemTiep, RecyclerView categoryView, CircleIndicator circleIndicator,
-      LinearLayout cst2, DialogLoadingBinding dialogLoad, EditText editTextText,
-      ProgressBar progressBar2, RecyclerView rcvSearch, NestedScrollView scrollView2,
+      LinearLayout cst2, DialogLoadingBinding dialogCategory, DialogLoadingBinding dialogLoad,
+      EditText editTextText, RecyclerView rcvSearch, NestedScrollView scrollView2,
       HorizontalScrollView scrollviewHome, TextView textView9, TextView tvtDangchieu,
-      TextView tvtSapchieu, TextView tvtToanquoc, ViewPager viewpager) {
+      TextView tvtSapchieu, TextView tvtToanquoc, ViewPager2 viewpager) {
     super(_bindingComponent, _root, _localFieldCount);
     this.btnXemTiep = btnXemTiep;
     this.categoryView = categoryView;
     this.circleIndicator = circleIndicator;
     this.cst2 = cst2;
+    this.dialogCategory = dialogCategory;
     this.dialogLoad = dialogLoad;
     this.editTextText = editTextText;
-    this.progressBar2 = progressBar2;
     this.rcvSearch = rcvSearch;
     this.scrollView2 = scrollView2;
     this.scrollviewHome = scrollviewHome;

@@ -1,5 +1,6 @@
 package com.base.moviebooking.listener;
 
+import com.base.moviebooking.entity.Category;
 import com.base.moviebooking.entity.FilmInfo;
 import com.base.moviebooking.entity.News;
 import com.base.moviebooking.entity.Schedule;
@@ -13,6 +14,7 @@ public interface OnChooseRecyclerView {
     void onChooseRap(Theater theater);
     void onChooseFilmInfo(FilmInfo filmInfo);
     void onChooseLichChieu(Schedule schedule);
+    void onChooseCategory(Category category);
 }
 
 

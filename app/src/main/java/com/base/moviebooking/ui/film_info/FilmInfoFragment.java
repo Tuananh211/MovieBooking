@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.base.moviebooking.entity.Category;
 import com.base.moviebooking.listener.OnChooseRecyclerView;
 import com.base.moviebooking.R;
 import com.base.moviebooking.adapter.FilmInformationAdapter;
@@ -66,6 +67,11 @@ public class FilmInfoFragment extends BaseFragment<DienanhFragmentBinding> {
 
             @Override
             public void onChooseLichChieu(Schedule lichChieu) {
+
+            }
+
+            @Override
+            public void onChooseCategory(Category category) {
 
             }
         });

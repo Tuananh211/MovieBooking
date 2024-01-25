@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.base.moviebooking.DataLocalManager;
+import com.base.moviebooking.entity.Category;
 import com.base.moviebooking.entity.News;
 import com.base.moviebooking.listener.OnChooseRecyclerView;
 import com.base.moviebooking.R;
@@ -110,6 +111,11 @@ public class ShowTimeChildFragment extends BaseFragment<LichChieuFragmentBinding
                     ((MainActivity)getActivity()).getViewController().replaceFragment(SignInFragment.class,null);
 
                 }
+            }
+
+            @Override
+            public void onChooseCategory(Category category) {
+
             }
         });
         // get Schedule lúc mới sang màn Schedule

@@ -1965,7 +1965,9 @@ int drawable white_eyes 0x7f0700f6
 int drawable white_lock 0x7f0700f7
 int drawable white_mail 0x7f0700f8
 int drawable white_radius 0x7f0700f9
+int drawable wide 0x7f0700fb
 int drawable wide1 0x7f0700fa
+int drawable wide3 0x7f0700fc
 int id ALT 0x7f080000
 int id BOTTOM_END 0x7f080001
 int id BOTTOM_START 0x7f080002
@@ -2157,6 +2159,7 @@ int id design_menu_item_action_area_stub 0x7f0800bb
 int id design_menu_item_text 0x7f0800bc
 int id design_navigation_view 0x7f0800bd
 int id dialog_button 0x7f0800be
+int id dialog_category 0x7f080296
 int id dialog_load 0x7f0800bf
 int id dimensions 0x7f0800c0
 int id direct 0x7f0800c1
@@ -2278,6 +2281,7 @@ int id line3 0x7f080134
 int id linear 0x7f080135
 int id linearLayout 0x7f080136
 int id listMode 0x7f080137
+int id list_category 0x7f080291
 int id list_item 0x7f080138
 int id lnHuy 0x7f080139
 int id ln_GDich 0x7f08013a
@@ -2393,7 +2397,6 @@ int id pickImage 0x7f0801a7
 int id pin 0x7f0801a8
 int id position 0x7f0801a9
 int id postLayout 0x7f0801aa
-int id progressBar2 0x7f0801ab
 int id progress_bar 0x7f0801ac
 int id progress_circular 0x7f0801ad
 int id progress_horizontal 0x7f0801ae

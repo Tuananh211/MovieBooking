@@ -21,7 +21,7 @@ public class HomeViewModel extends BaseViewModel {
     MutableLiveData<List<Movie>> dataMovie = new MutableLiveData<>();
     MutableLiveData<List<Category>> dataCategory = new MutableLiveData<>();
 
-    public MutableLiveData<List<Category>> getDataUser() {
+    public MutableLiveData<List<Category>> getDataCategory() {
         return dataCategory;
     }
 
@@ -65,8 +65,8 @@ public class HomeViewModel extends BaseViewModel {
                     }
 
                     @Override
-                    public void onSuccess(List<Category> categorie) {
-                        dataCategory.postValue(categorie);
+                    public void onSuccess(List<Category> categoriesListResponse) {
+                        dataCategory.postValue(categoriesListResponse);
                         Log.d("fat", "success get Data Category");
                     }
 

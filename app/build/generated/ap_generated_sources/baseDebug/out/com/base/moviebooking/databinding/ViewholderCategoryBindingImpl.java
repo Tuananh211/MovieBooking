@@ -17,8 +17,6 @@ public class ViewholderCategoryBindingImpl extends ViewholderCategoryBinding  {
         sViewsWithIds.put(R.id.titleTxt, 1);
     }
     // views
-    @NonNull
-    private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     // values
     // listeners
@@ -29,10 +27,10 @@ public class ViewholderCategoryBindingImpl extends ViewholderCategoryBinding  {
     }
     private ViewholderCategoryBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[0]
             , (android.widget.TextView) bindings[1]
             );
-        this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
-        this.mboundView0.setTag(null);
+        this.listCategory.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();

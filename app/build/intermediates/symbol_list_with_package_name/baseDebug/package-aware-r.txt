@@ -1966,7 +1966,9 @@ drawable white_eyes
 drawable white_lock
 drawable white_mail
 drawable white_radius
+drawable wide
 drawable wide1
+drawable wide3
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -2158,6 +2160,7 @@ id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
 id dialog_button
+id dialog_category
 id dialog_load
 id dimensions
 id direct
@@ -2279,6 +2282,7 @@ id line3
 id linear
 id linearLayout
 id listMode
+id list_category
 id list_item
 id lnHuy
 id ln_GDich
@@ -2394,7 +2398,6 @@ id pickImage
 id pin
 id position
 id postLayout
-id progressBar2
 id progress_bar
 id progress_circular
 id progress_horizontal

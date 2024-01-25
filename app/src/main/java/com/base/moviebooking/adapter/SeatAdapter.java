@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.base.moviebooking.databinding.ViewholderCategoryBinding;
 import com.base.moviebooking.listener.OnChooseSeat;
 import com.base.moviebooking.R;
 import com.base.moviebooking.base.EndlessLoadingRecyclerViewAdapter;
