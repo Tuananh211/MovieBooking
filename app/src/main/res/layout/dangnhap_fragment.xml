@@ -76,10 +76,10 @@
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textColorHint="@color/white"
-                    app:hintTextColor="@color/white"
                     app:endIconMode="clear_text"
                     app:errorEnabled="true"
                     app:errorTextAppearance="@style/TextAppearance.AppCompat.Small"
+                    app:hintTextColor="@color/white"
                     app:startIconDrawable="@drawable/white_mail"
                     app:startIconTint="@color/white">
 
