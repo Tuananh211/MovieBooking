@@ -84,7 +84,7 @@
             android:textSize="18sp"
             android:background="@drawable/edittext_background"
             style="@style/roundedCorners"
-            android:padding="5dp"
+            android:padding="15dp"
             android:inputType="text"
             />
         <TextView
@@ -99,7 +99,7 @@
             android:text=""
             android:textSize="18sp"
             style="@style/roundedCorners"
-            android:padding="5dp"
+            android:padding="15dp"
             />
         <EditText
             android:id="@+id/birthday_user"
@@ -115,7 +115,7 @@
             android:editable="false"
             style="@style/roundedCorners"
             android:inputType="date"
-            android:padding="5dp"
+            android:padding="15dp"
             />
         <TextView
             android:id="@+id/gmail_user"
@@ -129,7 +129,7 @@
             android:text=""
             android:textSize="18sp"
             style="@style/roundedCorners"
-            android:padding="5dp"
+            android:padding="15dp"
             />
         <EditText
             android:id="@+id/address"
@@ -140,10 +140,11 @@
             android:layout_marginBottom="10dp"
             android:text=""
             android:textSize="18sp"
+            android:textColor="@color/white"
             android:background="@drawable/edittext_background"
             style="@style/roundedCorners"
             android:inputType="text"
-            android:padding="5dp"
+            android:padding="15dp"
             />
         <RadioGroup
             android:layout_width="match_parent"
