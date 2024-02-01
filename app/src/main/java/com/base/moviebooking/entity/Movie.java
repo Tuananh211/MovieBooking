@@ -6,6 +6,7 @@ public class Movie implements Serializable {
     private String name;
     private String description;
     private String director;
+    private String imageDirector;
     private int time;
     private String timeRelease;
     private String image;
@@ -13,6 +14,14 @@ public class Movie implements Serializable {
     private int ageLimit;
 
     public Movie() {
+    }
+
+    public String getImageDirector() {
+        return imageDirector;
+    }
+
+    public void setImageDirector(String imageDirector) {
+        this.imageDirector = imageDirector;
     }
 
     public String getDescription() {
@@ -55,10 +64,11 @@ public class Movie implements Serializable {
         this.image = image;
     }
 
-    public Movie(String name, String description, String director, int time, String image, int id, int ageLimit) {
+    public Movie(String name, String description, String director,String imageDirector, int time, String image, int id, int ageLimit) {
         this.name = name;
         this.description = description;
         this.director = director;
+        this.imageDirector=imageDirector;
         this.time = time;
         this.image = image;
         this.id = id;

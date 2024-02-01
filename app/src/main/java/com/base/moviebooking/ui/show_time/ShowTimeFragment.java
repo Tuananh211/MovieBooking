@@ -142,10 +142,10 @@ public class ShowTimeFragment extends BaseFragment<LichPhimBinding>  {
                     binding.imgMovie.setImageResource(R.drawable.spiritedaway);
                     break;
 
-
             }
 
             binding.collapsingLayout.setTitle(movie.getName());
+            binding.movieTime.setText(String.valueOf(movie.getTime()));
             Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.lastofus);
             Palette.from(bitmap).generate(new Palette.PaletteAsyncListener() {
                 @Override

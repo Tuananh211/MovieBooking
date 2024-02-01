@@ -31,6 +31,7 @@ import com.base.moviebooking.databinding.ThanhtoanFragmentBindingImpl;
 import com.base.moviebooking.databinding.ThongtinFragmentBindingImpl;
 import com.base.moviebooking.databinding.ThongtinThanhtoanFragmentBindingImpl;
 import com.base.moviebooking.databinding.UserInfoFragmentBindingImpl;
+import com.base.moviebooking.databinding.ViewholderActorsBindingImpl;
 import com.base.moviebooking.databinding.ViewholderCategoryBindingImpl;
 import java.lang.IllegalArgumentException;
 import java.lang.Integer;
@@ -93,9 +94,11 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_USERINFOFRAGMENT = 25;
 
-  private static final int LAYOUT_VIEWHOLDERCATEGORY = 26;
+  private static final int LAYOUT_VIEWHOLDERACTORS = 26;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(26);
+  private static final int LAYOUT_VIEWHOLDERCATEGORY = 27;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(27);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.base.moviebooking.R.layout.activity_main, LAYOUT_ACTIVITYMAIN);
@@ -123,6 +126,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.base.moviebooking.R.layout.thongtin_fragment, LAYOUT_THONGTINFRAGMENT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.base.moviebooking.R.layout.thongtin_thanhtoan_fragment, LAYOUT_THONGTINTHANHTOANFRAGMENT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.base.moviebooking.R.layout.user_info_fragment, LAYOUT_USERINFOFRAGMENT);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.base.moviebooking.R.layout.viewholder_actors, LAYOUT_VIEWHOLDERACTORS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.base.moviebooking.R.layout.viewholder_category, LAYOUT_VIEWHOLDERCATEGORY);
   }
 
@@ -285,6 +289,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for user_info_fragment is invalid. Received: " + tag);
         }
+        case  LAYOUT_VIEWHOLDERACTORS: {
+          if ("layout/viewholder_actors_0".equals(tag)) {
+            return new ViewholderActorsBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for viewholder_actors is invalid. Received: " + tag);
+        }
         case  LAYOUT_VIEWHOLDERCATEGORY: {
           if ("layout/viewholder_category_0".equals(tag)) {
             return new ViewholderCategoryBindingImpl(component, view);
@@ -350,7 +360,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(26);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(27);
 
     static {
       sKeys.put("layout/activity_main_0", com.base.moviebooking.R.layout.activity_main);
@@ -378,6 +388,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/thongtin_fragment_0", com.base.moviebooking.R.layout.thongtin_fragment);
       sKeys.put("layout/thongtin_thanhtoan_fragment_0", com.base.moviebooking.R.layout.thongtin_thanhtoan_fragment);
       sKeys.put("layout/user_info_fragment_0", com.base.moviebooking.R.layout.user_info_fragment);
+      sKeys.put("layout/viewholder_actors_0", com.base.moviebooking.R.layout.viewholder_actors);
       sKeys.put("layout/viewholder_category_0", com.base.moviebooking.R.layout.viewholder_category);
     }
   }

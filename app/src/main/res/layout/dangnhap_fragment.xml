@@ -81,7 +81,9 @@
                     app:errorTextAppearance="@style/TextAppearance.AppCompat.Small"
                     app:hintTextColor="@color/white"
                     app:startIconDrawable="@drawable/white_mail"
-                    app:startIconTint="@color/white">
+                    app:startIconTint="@color/white"
+                    app:endIconTint="@color/white"
+                    >
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/edt_tk"

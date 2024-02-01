@@ -2037,6 +2037,9 @@ int id action_mode_close_button 0x7f080041
 int id action_text 0x7f080042
 int id actions 0x7f080043
 int id activity_chooser_view_content 0x7f080044
+int id actorImage 0x7f08029b
+int id actorName 0x7f08029c
+int id actor_load 0x7f08029d
 int id add 0x7f080045
 int id address 0x7f080046
 int id alertTitle 0x7f080047
@@ -2047,6 +2050,7 @@ int id amount_thuong 0x7f08004b
 int id amount_vip 0x7f08004c
 int id animateToEnd 0x7f08004d
 int id animateToStart 0x7f08004e
+int id appBarLayout 0x7f080297
 int id arc 0x7f08004f
 int id asConfigured 0x7f080050
 int id async 0x7f080051
@@ -2098,7 +2102,9 @@ int id buttonPanel 0x7f08007e
 int id cancel 0x7f08007f
 int id cancel_action 0x7f080080
 int id cancel_button 0x7f080081
+int id cateView 0x7f08029e
 int id categoryView 0x7f080082
+int id category_load 0x7f08029f
 int id cb_bong 0x7f080083
 int id cb_combo 0x7f080084
 int id cb_nuoc 0x7f080085
@@ -2132,6 +2138,7 @@ int id confirm_button 0x7f0800a0
 int id cong_bong 0x7f0800a1
 int id cong_combo 0x7f0800a2
 int id cong_nuoc 0x7f0800a3
+int id constraintLayout 0x7f080298
 int id container 0x7f0800a4
 int id content 0x7f0800a5
 int id contentPanel 0x7f0800a6
@@ -2161,8 +2168,10 @@ int id design_navigation_view 0x7f0800bd
 int id dialog_button 0x7f0800be
 int id dialog_category 0x7f080296
 int id dialog_load 0x7f0800bf
+int id dienvien 0x7f0802a0
 int id dimensions 0x7f0800c0
 int id direct 0x7f0800c1
+int id directorImage 0x7f0802a1
 int id directorMovie 0x7f0800c2
 int id disableHome 0x7f0800c3
 int id disablePostScroll 0x7f0800c4
@@ -2280,6 +2289,7 @@ int id line1 0x7f080133
 int id line3 0x7f080134
 int id linear 0x7f080135
 int id linearLayout 0x7f080136
+int id listActor 0x7f0802a2
 int id listMode 0x7f080137
 int id list_category 0x7f080291
 int id list_item 0x7f080138
@@ -2332,6 +2342,8 @@ int id month_navigation_previous 0x7f080166
 int id month_title 0x7f080167
 int id motion_base 0x7f080168
 int id movie 0x7f080169
+int id movieStar 0x7f080299
+int id movieTime 0x7f08029a
 int id mtrl_anchor_parent 0x7f08016a
 int id mtrl_calendar_day_selector_frame 0x7f08016b
 int id mtrl_calendar_days_of_week 0x7f08016c
@@ -2365,6 +2377,7 @@ int id navigation_bar_item_labels_group 0x7f080187
 int id navigation_bar_item_large_label_view 0x7f080188
 int id navigation_bar_item_small_label_view 0x7f080189
 int id navigation_header_container 0x7f08018a
+int id nestedScrollView 0x7f0802a6
 int id never 0x7f08018b
 int id noScroll 0x7f08018c
 int id none 0x7f08018d
@@ -2505,6 +2518,7 @@ int id tag_transition_group 0x7f080214
 int id tag_unhandled_key_event_manager 0x7f080215
 int id tag_unhandled_key_listeners 0x7f080216
 int id tag_window_insets_animation_callback 0x7f080217
+int id test1 0x7f0802a3
 int id test_checkbox_android_button_tint 0x7f080218
 int id test_checkbox_app_button_tint 0x7f080219
 int id test_radiobutton_android_button_tint 0x7f08021a
@@ -2588,6 +2602,7 @@ int id tvt_tenphim 0x7f080267
 int id tvt_time 0x7f080268
 int id tvt_toanquoc 0x7f080269
 int id tvt_tongtien 0x7f08026a
+int id txtCategory 0x7f0802a4
 int id unchecked 0x7f08026b
 int id uniform 0x7f08026c
 int id unlabeled 0x7f08026d
@@ -2611,7 +2626,6 @@ int id withText 0x7f08027e
 int id withinBounds 0x7f08027f
 int id wrap 0x7f080280
 int id wrap_content 0x7f080281
-int id xemtiep 0x7f080282
 int id zero_corner_chip 0x7f080283
 int id zxing_back_button 0x7f080284
 int id zxing_barcode_scanner 0x7f080285
@@ -2822,6 +2836,7 @@ int layout thanhtoan_fragment 0x7f0b0099
 int layout thongtin_fragment 0x7f0b009a
 int layout thongtin_thanhtoan_fragment 0x7f0b009b
 int layout user_info_fragment 0x7f0b009c
+int layout viewholder_actors 0x7f0b00a4
 int layout viewholder_category 0x7f0b009d
 int layout viewpager_dienanh 0x7f0b009e
 int layout zxing_barcode_scanner 0x7f0b009f
@@ -3732,6 +3747,7 @@ int style Widget_MaterialComponents_Tooltip 0x7f1102d9
 int style Widget_Support_CoordinatorLayout 0x7f1102da
 int style circle 0x7f1102db
 int style roundedCorners 0x7f1102dc
+int style roundedImageView 0x7f1102de
 int style zxing_CaptureTheme 0x7f1102dd
 int[] styleable AHBottomNavigationBehavior_Params { 0x7f030000, 0x7f0300df, 0x7f0300e0, 0x7f0300e1, 0x7f030125, 0x7f0301b3, 0x7f0302d4, 0x7f030321, 0x7f03038b }
 int styleable AHBottomNavigationBehavior_Params_accentColor 0

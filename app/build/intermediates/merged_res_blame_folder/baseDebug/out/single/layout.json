@@ -84,6 +84,10 @@
         "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/rcv_seat.xml"
     },
     {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/viewholder_actors.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/viewholder_actors.xml"
+    },
+    {
         "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/change_pass_fragment.xml",
         "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/change_pass_fragment.xml"
     },

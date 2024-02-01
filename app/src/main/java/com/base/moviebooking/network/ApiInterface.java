@@ -3,6 +3,7 @@ package com.base.moviebooking.network;
 
 import com.base.moviebooking.base.ListResponse;
 import com.base.moviebooking.entity.Account;
+import com.base.moviebooking.entity.Actor;
 import com.base.moviebooking.entity.Amount;
 import com.base.moviebooking.entity.CancelTicket;
 import com.base.moviebooking.entity.Category;
@@ -52,6 +53,13 @@ public interface ApiInterface {
     // get listCategory
     @GET("/movies/categories")
     Single<List<Category>> getListCategory();
+
+    // get listCategory by movie ID
+    @GET("/movies/{movieId}/categories")
+    Single<List<Category>> getListCategoryByMovieId(@Path("movieId") int movieId );
+    // get listActor by movie ID
+    @GET("/movies/{movieId}/actors")
+    Single<List<Actor>> getListActorsByMovieId(@Path("movieId") int movieId );
     //get cinema
     @GET("cinemas")
     Single<Theater> getTheater();

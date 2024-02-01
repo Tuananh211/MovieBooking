@@ -191,6 +191,8 @@ public final class DaggerAppComponent implements AppComponent {
 
   private Provider<UserInfoViewModel> userInfoViewModelProvider;
 
+  private Provider<DetailMovieViewModel> detailMovieViewModelProvider;
+
   private Provider<ChangePassViewModel> changePassViewModelProvider;
 
   private DaggerAppComponent(NetworkModule networkModuleParam, Application applicationParam) {
@@ -255,7 +257,7 @@ public final class DaggerAppComponent implements AppComponent {
         .put(ThongTinThanhToanViewModel.class, (Provider) thongTinThanhToanViewModelProvider)
         .put(GiaoDichViewModel.class, (Provider) giaoDichViewModelProvider)
         .put(UserInfoViewModel.class, (Provider) userInfoViewModelProvider)
-        .put(DetailMovieViewModel.class, (Provider) DetailMovieViewModel_Factory.create())
+        .put(DetailMovieViewModel.class, (Provider) detailMovieViewModelProvider)
         .put(ChangePassViewModel.class, (Provider) changePassViewModelProvider)
         .put(MainViewModel.class, (Provider) MainViewModel_Factory.create())
         .build();
@@ -453,6 +455,7 @@ public final class DaggerAppComponent implements AppComponent {
         ThongTinThanhToanViewModel_Factory.create(repositoryProvider);
     this.giaoDichViewModelProvider = GiaoDichViewModel_Factory.create(repositoryProvider);
     this.userInfoViewModelProvider = UserInfoViewModel_Factory.create(repositoryProvider);
+    this.detailMovieViewModelProvider = DetailMovieViewModel_Factory.create(repositoryProvider);
     this.changePassViewModelProvider = ChangePassViewModel_Factory.create(repositoryProvider);
   }
 

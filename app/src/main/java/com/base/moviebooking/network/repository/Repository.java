@@ -1,6 +1,7 @@
 package com.base.moviebooking.network.repository;
 
 import com.base.moviebooking.entity.Account;
+import com.base.moviebooking.entity.Actor;
 import com.base.moviebooking.entity.Amount;
 import com.base.moviebooking.entity.CancelTicket;
 import com.base.moviebooking.entity.Category;
@@ -65,6 +66,18 @@ public class Repository {
     //lấy list Category
     public Single<List<Category>> getListCategory( ) {
         return apiInterface.getListCategory()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+    //lấy list Category theo movieId
+    public Single<List<Category>> getListCategoryByMovieId(int movieId) {
+        return apiInterface.getListCategoryByMovieId(movieId)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+    //lấy list Actors theo movieId
+    public Single<List<Actor>> getListActorByMovieId(int movieId) {
+        return apiInterface.getListActorsByMovieId(movieId)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
     }

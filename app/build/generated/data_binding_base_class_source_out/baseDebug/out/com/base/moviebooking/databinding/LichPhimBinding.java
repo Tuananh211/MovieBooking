@@ -5,13 +5,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.widget.NestedScrollView;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.viewpager2.widget.ViewPager2;
 import com.base.moviebooking.R;
+import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.tabs.TabLayout;
 import java.lang.Deprecated;
@@ -19,10 +23,25 @@ import java.lang.Object;
 
 public abstract class LichPhimBinding extends ViewDataBinding {
   @NonNull
+  public final AppBarLayout appBarLayout;
+
+  @NonNull
   public final CollapsingToolbarLayout collapsingLayout;
 
   @NonNull
+  public final LinearLayout constraintLayout;
+
+  @NonNull
   public final ImageView imgMovie;
+
+  @NonNull
+  public final TextView movieStar;
+
+  @NonNull
+  public final TextView movieTime;
+
+  @NonNull
+  public final NestedScrollView nestedScrollView;
 
   @NonNull
   public final TabLayout tabLayout;
@@ -34,11 +53,18 @@ public abstract class LichPhimBinding extends ViewDataBinding {
   public final ViewPager2 viewpagerLichphim;
 
   protected LichPhimBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CollapsingToolbarLayout collapsingLayout, ImageView imgMovie, TabLayout tabLayout,
-      Toolbar toolbar, ViewPager2 viewpagerLichphim) {
+      AppBarLayout appBarLayout, CollapsingToolbarLayout collapsingLayout,
+      LinearLayout constraintLayout, ImageView imgMovie, TextView movieStar, TextView movieTime,
+      NestedScrollView nestedScrollView, TabLayout tabLayout, Toolbar toolbar,
+      ViewPager2 viewpagerLichphim) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.appBarLayout = appBarLayout;
     this.collapsingLayout = collapsingLayout;
+    this.constraintLayout = constraintLayout;
     this.imgMovie = imgMovie;
+    this.movieStar = movieStar;
+    this.movieTime = movieTime;
+    this.nestedScrollView = nestedScrollView;
     this.tabLayout = tabLayout;
     this.toolbar = toolbar;
     this.viewpagerLichphim = viewpagerLichphim;

@@ -14,32 +14,42 @@ public class LichPhimBindingImpl extends LichPhimBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.collapsing_layout, 1);
-        sViewsWithIds.put(R.id.img_movie, 2);
-        sViewsWithIds.put(R.id.toolbar, 3);
-        sViewsWithIds.put(R.id.tab_layout, 4);
-        sViewsWithIds.put(R.id.viewpager_lichphim, 5);
+        sViewsWithIds.put(R.id.appBarLayout, 1);
+        sViewsWithIds.put(R.id.collapsing_layout, 2);
+        sViewsWithIds.put(R.id.img_movie, 3);
+        sViewsWithIds.put(R.id.toolbar, 4);
+        sViewsWithIds.put(R.id.constraintLayout, 5);
+        sViewsWithIds.put(R.id.movieStar, 6);
+        sViewsWithIds.put(R.id.movieTime, 7);
+        sViewsWithIds.put(R.id.tab_layout, 8);
+        sViewsWithIds.put(R.id.nestedScrollView, 9);
+        sViewsWithIds.put(R.id.viewpager_lichphim, 10);
     }
     // views
     @NonNull
-    private final androidx.coordinatorlayout.widget.CoordinatorLayout mboundView0;
+    private final android.widget.ScrollView mboundView0;
     // variables
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public LichPhimBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 11, sIncludes, sViewsWithIds));
     }
     private LichPhimBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (com.google.android.material.appbar.CollapsingToolbarLayout) bindings[1]
-            , (android.widget.ImageView) bindings[2]
-            , (com.google.android.material.tabs.TabLayout) bindings[4]
-            , (androidx.appcompat.widget.Toolbar) bindings[3]
-            , (androidx.viewpager2.widget.ViewPager2) bindings[5]
+            , (com.google.android.material.appbar.AppBarLayout) bindings[1]
+            , (com.google.android.material.appbar.CollapsingToolbarLayout) bindings[2]
+            , (android.widget.LinearLayout) bindings[5]
+            , (android.widget.ImageView) bindings[3]
+            , (android.widget.TextView) bindings[6]
+            , (android.widget.TextView) bindings[7]
+            , (androidx.core.widget.NestedScrollView) bindings[9]
+            , (com.google.android.material.tabs.TabLayout) bindings[8]
+            , (androidx.appcompat.widget.Toolbar) bindings[4]
+            , (androidx.viewpager2.widget.ViewPager2) bindings[10]
             );
-        this.mboundView0 = (androidx.coordinatorlayout.widget.CoordinatorLayout) bindings[0];
+        this.mboundView0 = (android.widget.ScrollView) bindings[0];
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners

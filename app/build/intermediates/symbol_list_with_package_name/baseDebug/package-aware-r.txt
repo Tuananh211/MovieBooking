@@ -2038,6 +2038,9 @@ id action_mode_close_button
 id action_text
 id actions
 id activity_chooser_view_content
+id actorImage
+id actorName
+id actor_load
 id add
 id address
 id alertTitle
@@ -2048,6 +2051,7 @@ id amount_thuong
 id amount_vip
 id animateToEnd
 id animateToStart
+id appBarLayout
 id arc
 id asConfigured
 id async
@@ -2099,7 +2103,9 @@ id buttonPanel
 id cancel
 id cancel_action
 id cancel_button
+id cateView
 id categoryView
+id category_load
 id cb_bong
 id cb_combo
 id cb_nuoc
@@ -2133,6 +2139,7 @@ id confirm_button
 id cong_bong
 id cong_combo
 id cong_nuoc
+id constraintLayout
 id container
 id content
 id contentPanel
@@ -2162,8 +2169,10 @@ id design_navigation_view
 id dialog_button
 id dialog_category
 id dialog_load
+id dienvien
 id dimensions
 id direct
+id directorImage
 id directorMovie
 id disableHome
 id disablePostScroll
@@ -2281,6 +2290,7 @@ id line1
 id line3
 id linear
 id linearLayout
+id listActor
 id listMode
 id list_category
 id list_item
@@ -2333,6 +2343,8 @@ id month_navigation_previous
 id month_title
 id motion_base
 id movie
+id movieStar
+id movieTime
 id mtrl_anchor_parent
 id mtrl_calendar_day_selector_frame
 id mtrl_calendar_days_of_week
@@ -2366,6 +2378,7 @@ id navigation_bar_item_labels_group
 id navigation_bar_item_large_label_view
 id navigation_bar_item_small_label_view
 id navigation_header_container
+id nestedScrollView
 id never
 id noScroll
 id none
@@ -2506,6 +2519,7 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
+id test1
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id test_radiobutton_android_button_tint
@@ -2589,6 +2603,7 @@ id tvt_tenphim
 id tvt_time
 id tvt_toanquoc
 id tvt_tongtien
+id txtCategory
 id unchecked
 id uniform
 id unlabeled
@@ -2612,7 +2627,6 @@ id withText
 id withinBounds
 id wrap
 id wrap_content
-id xemtiep
 id zero_corner_chip
 id zxing_back_button
 id zxing_barcode_scanner
@@ -2823,6 +2837,7 @@ layout thanhtoan_fragment
 layout thongtin_fragment
 layout thongtin_thanhtoan_fragment
 layout user_info_fragment
+layout viewholder_actors
 layout viewholder_category
 layout viewpager_dienanh
 layout zxing_barcode_scanner
@@ -3733,6 +3748,7 @@ style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
 style circle
 style roundedCorners
+style roundedImageView
 style zxing_CaptureTheme
 styleable AHBottomNavigationBehavior_Params accentColor colored coloredActive coloredInactive disableColor inactiveColor selectedBackgroundVisible tabLayoutId translucentNavigationEnabled
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle

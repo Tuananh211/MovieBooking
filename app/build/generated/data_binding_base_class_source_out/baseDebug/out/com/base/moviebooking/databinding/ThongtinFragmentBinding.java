@@ -10,31 +10,63 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
 import com.base.moviebooking.R;
+import com.google.android.material.imageview.ShapeableImageView;
 import java.lang.Deprecated;
 import java.lang.Object;
 
 public abstract class ThongtinFragmentBinding extends ViewDataBinding {
   @NonNull
+  public final DialogLoadingBinding actorLoad;
+
+  @NonNull
+  public final RecyclerView cateView;
+
+  @NonNull
+  public final DialogLoadingBinding categoryLoad;
+
+  @NonNull
   public final TextView descriptionMovie;
+
+  @NonNull
+  public final TextView dienvien;
+
+  @NonNull
+  public final ShapeableImageView directorImage;
 
   @NonNull
   public final TextView directorMovie;
 
   @NonNull
+  public final RecyclerView listActor;
+
+  @NonNull
+  public final TextView test1;
+
+  @NonNull
   public final LinearLayout thongtinFragment;
 
   @NonNull
-  public final TextView xemtiep;
+  public final TextView txtCategory;
 
   protected ThongtinFragmentBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      TextView descriptionMovie, TextView directorMovie, LinearLayout thongtinFragment,
-      TextView xemtiep) {
+      DialogLoadingBinding actorLoad, RecyclerView cateView, DialogLoadingBinding categoryLoad,
+      TextView descriptionMovie, TextView dienvien, ShapeableImageView directorImage,
+      TextView directorMovie, RecyclerView listActor, TextView test1, LinearLayout thongtinFragment,
+      TextView txtCategory) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.actorLoad = actorLoad;
+    this.cateView = cateView;
+    this.categoryLoad = categoryLoad;
     this.descriptionMovie = descriptionMovie;
+    this.dienvien = dienvien;
+    this.directorImage = directorImage;
     this.directorMovie = directorMovie;
+    this.listActor = listActor;
+    this.test1 = test1;
     this.thongtinFragment = thongtinFragment;
-    this.xemtiep = xemtiep;
+    this.txtCategory = txtCategory;
   }
 
   @NonNull
