@@ -1952,8 +1952,13 @@ int drawable tai 0x7f0700e9
 int drawable teenwolf 0x7f0700ea
 int drawable test_custom_background 0x7f0700eb
 int drawable tichdiem 0x7f0700ec
+int drawable ticket 0x7f070102
 int drawable ticket_logo 0x7f0700ed
 int drawable time 0x7f0700ee
+int drawable tkim1 0x7f070103
+int drawable tkim2 0x7f070104
+int drawable tkim3 0x7f070105
+int drawable tkim4 0x7f070106
 int drawable tooltip_frame_dark 0x7f0700ef
 int drawable tooltip_frame_light 0x7f0700f0
 int drawable user 0x7f0700f1
@@ -2177,7 +2182,6 @@ int id disableHome 0x7f0800c3
 int id disablePostScroll 0x7f0800c4
 int id disableScroll 0x7f0800c5
 int id disjoint 0x7f0800c6
-int id doiqua 0x7f0800c7
 int id dragDown 0x7f0800c8
 int id dragEnd 0x7f0800c9
 int id dragLeft 0x7f0800ca
@@ -2546,7 +2550,6 @@ int id textinput_placeholder 0x7f08022f
 int id textinput_prefix_text 0x7f080230
 int id textinput_suffix_text 0x7f080231
 int id thongtin_fragment 0x7f080232
-int id tichdiem 0x7f080233
 int id tien 0x7f080234
 int id time 0x7f080235
 int id title 0x7f080236
@@ -2608,7 +2611,6 @@ int id uniform 0x7f08026c
 int id unlabeled 0x7f08026d
 int id up 0x7f08026e
 int id useLogo 0x7f08026f
-int id uudai 0x7f080270
 int id vertical 0x7f080271
 int id view 0x7f080272
 int id view_header 0x7f080273

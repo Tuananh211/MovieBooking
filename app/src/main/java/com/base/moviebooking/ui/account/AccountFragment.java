@@ -93,24 +93,24 @@ public class AccountFragment extends BaseFragment<TaikhoanFragmentBinding> {
                 Toast.makeText(getContext(), "Đăng xuất thành công", Toast.LENGTH_SHORT).show();
             }
         });
-        binding.doiqua.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getContext(), "Tính năng sắp ra mắt", Toast.LENGTH_SHORT).show();
-            }
-        });
-        binding.tichdiem.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getContext(), "Tính năng sắp ra mắt", Toast.LENGTH_SHORT).show();
-            }
-        });
-        binding.uudai.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getContext(), "Tính năng sắp ra mắt", Toast.LENGTH_SHORT).show();
-            }
-        });
+//        binding.doiqua.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Toast.makeText(getContext(), "Tính năng sắp ra mắt", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//        binding.tichdiem.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Toast.makeText(getContext(), "Tính năng sắp ra mắt", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//        binding.uudai.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Toast.makeText(getContext(), "Tính năng sắp ra mắt", Toast.LENGTH_SHORT).show();
+//            }
+//        });
         binding.lnThongtin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

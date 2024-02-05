@@ -1953,8 +1953,13 @@ drawable tai
 drawable teenwolf
 drawable test_custom_background
 drawable tichdiem
+drawable ticket
 drawable ticket_logo
 drawable time
+drawable tkim1
+drawable tkim2
+drawable tkim3
+drawable tkim4
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable user
@@ -2178,7 +2183,6 @@ id disableHome
 id disablePostScroll
 id disableScroll
 id disjoint
-id doiqua
 id dragDown
 id dragEnd
 id dragLeft
@@ -2547,7 +2551,6 @@ id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
 id thongtin_fragment
-id tichdiem
 id tien
 id time
 id title
@@ -2609,7 +2612,6 @@ id uniform
 id unlabeled
 id up
 id useLogo
-id uudai
 id vertical
 id view
 id view_header

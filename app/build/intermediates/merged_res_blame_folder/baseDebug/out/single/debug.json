@@ -172,6 +172,10 @@
         "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/drawable/lock.png"
     },
     {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/res/merged/base/debug/drawable_tkim1.jpg.flat",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/drawable/tkim1.jpg"
+    },
+    {
         "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/res/merged/base/debug/drawable_movieglass.png.flat",
         "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/drawable/movieglass.png"
     },
@@ -536,6 +540,10 @@
         "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/drawable/map.png"
     },
     {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/res/merged/base/debug/drawable_ticket.png.flat",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/drawable/ticket.png"
+    },
+    {
         "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/res/merged/base/debug/drawable-xxhdpi_microphone.png.flat",
         "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/drawable-xxhdpi/microphone.png"
     },
@@ -622,6 +630,10 @@
     {
         "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/res/merged/base/debug/layout_home_fragment.xml.flat",
         "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/home_fragment.xml"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/res/merged/base/debug/drawable_tkim4.jpg.flat",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/drawable/tkim4.jpg"
     },
     {
         "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/res/merged/base/debug/mipmap-mdpi_logo_foreground.png.flat",
@@ -718,6 +730,10 @@
     {
         "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/res/merged/base/debug/drawable-hdpi_btn_3.png.flat",
         "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/drawable-hdpi/btn_3.png"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/res/merged/base/debug/drawable_tkim3.jpg.flat",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/drawable/tkim3.jpg"
     },
     {
         "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/res/merged/base/debug/drawable-ldpi_microphone.png.flat",
@@ -922,6 +938,10 @@
     {
         "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/res/merged/base/debug/drawable_dv3.jpg.flat",
         "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/drawable/dv3.jpg"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/res/merged/base/debug/drawable_tkim2.jpg.flat",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/drawable/tkim2.jpg"
     },
     {
         "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/res/merged/base/debug/mipmap-hdpi_dienanh.png.flat",

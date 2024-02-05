@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -28,9 +27,6 @@ public abstract class TaikhoanFragmentBinding extends ViewDataBinding {
   public final TextView dangxuat;
 
   @NonNull
-  public final ImageView doiqua;
-
-  @NonNull
   public final TextView giaodich;
 
   @NonNull
@@ -46,31 +42,26 @@ public abstract class TaikhoanFragmentBinding extends ViewDataBinding {
   public final LinearLayout lnUser;
 
   @NonNull
-  public final ImageView tichdiem;
-
-  @NonNull
   public final TextView tvtName;
 
   @NonNull
-  public final ImageView uudai;
+  public final TextView txtCategory;
 
   protected TaikhoanFragmentBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      Button btnDangKy, Button btnDangNhap, TextView dangxuat, ImageView doiqua, TextView giaodich,
+      Button btnDangKy, Button btnDangNhap, TextView dangxuat, TextView giaodich,
       ShapeableImageView imgUser, LinearLayout lnNoUser, LinearLayout lnThongtin,
-      LinearLayout lnUser, ImageView tichdiem, TextView tvtName, ImageView uudai) {
+      LinearLayout lnUser, TextView tvtName, TextView txtCategory) {
     super(_bindingComponent, _root, _localFieldCount);
     this.btnDangKy = btnDangKy;
     this.btnDangNhap = btnDangNhap;
     this.dangxuat = dangxuat;
-    this.doiqua = doiqua;
     this.giaodich = giaodich;
     this.imgUser = imgUser;
     this.lnNoUser = lnNoUser;
     this.lnThongtin = lnThongtin;
     this.lnUser = lnUser;
-    this.tichdiem = tichdiem;
     this.tvtName = tvtName;
-    this.uudai = uudai;
+    this.txtCategory = txtCategory;
   }
 
   @NonNull
