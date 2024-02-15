@@ -1903,6 +1903,7 @@ int drawable mtrl_popupmenu_background_dark 0x7f0700b8
 int drawable mtrl_tabs_default_indicator 0x7f0700b9
 int drawable navigation_empty_icon 0x7f0700ba
 int drawable next 0x7f0700bb
+int drawable no_results 0x7f070107
 int drawable no_schedule 0x7f0700bc
 int drawable notification_action_background 0x7f0700bd
 int drawable notification_background 0x7f0700be
@@ -2173,6 +2174,7 @@ int id design_navigation_view 0x7f0800bd
 int id dialog_button 0x7f0800be
 int id dialog_category 0x7f080296
 int id dialog_load 0x7f0800bf
+int id dialog_load_2 0x7f0802a9
 int id dienvien 0x7f0802a0
 int id dimensions 0x7f0800c0
 int id direct 0x7f0800c1
@@ -2426,6 +2428,7 @@ int id rcv_gd 0x7f0801b4
 int id rcv_rap 0x7f0801b5
 int id rcv_rapphim 0x7f0801b6
 int id rcv_search 0x7f0801b7
+int id rcv_search_2 0x7f0802a8
 int id rcv_seat 0x7f0801b8
 int id rectangles 0x7f0801b9
 int id repeat_pass 0x7f0801ba
@@ -2759,6 +2762,7 @@ int layout material_time_input 0x7f0b004a
 int layout material_timepicker 0x7f0b004b
 int layout material_timepicker_dialog 0x7f0b004c
 int layout material_timepicker_textinput_display 0x7f0b004d
+int layout movie_by_category_fragment 0x7f0b00a5
 int layout mtrl_alert_dialog 0x7f0b004e
 int layout mtrl_alert_dialog_actions 0x7f0b004f
 int layout mtrl_alert_dialog_title 0x7f0b0050

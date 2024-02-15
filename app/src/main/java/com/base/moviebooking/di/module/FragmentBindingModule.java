@@ -5,6 +5,7 @@ import com.base.moviebooking.ui.change_pass.ChangePassFragment;
 import com.base.moviebooking.ui.chonghe.ChonGheFragment;
 import com.base.moviebooking.ui.film_info.FilmInfoChildFragment;
 import com.base.moviebooking.ui.giaodich.GiaoDichFragment;
+import com.base.moviebooking.ui.movie_by_categoryId.MovieByCategoryIdFragment;
 import com.base.moviebooking.ui.show_time.ShowTimeFragment;
 import com.base.moviebooking.ui.account.AccountFragment;
 import com.base.moviebooking.ui.home.HomeFragment;
@@ -65,7 +66,7 @@ public abstract class FragmentBindingModule {
     @ContributesAndroidInjector
     abstract ThanhToanFragment bindThanhToanFragment();
 
-@ContributesAndroidInjector
+    @ContributesAndroidInjector
     abstract ChangePassFragment bindChangePassFragment();
 
     @ContributesAndroidInjector
@@ -77,5 +78,7 @@ public abstract class FragmentBindingModule {
     @ContributesAndroidInjector
     abstract UserInfoFragment bindUserInfoFragment();
 
+    @ContributesAndroidInjector
+    abstract MovieByCategoryIdFragment bindMovieByCategoryIdFragment();
 
 }

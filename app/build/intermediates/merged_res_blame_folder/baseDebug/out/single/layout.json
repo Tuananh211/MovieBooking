@@ -64,6 +64,10 @@
         "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/dangnhap_fragment.xml"
     },
     {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/movie_by_category_fragment.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/movie_by_category_fragment.xml"
+    },
+    {
         "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/thanhtoan_fragment.xml",
         "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/thanhtoan_fragment.xml"
     },

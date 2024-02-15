@@ -40,6 +40,9 @@ public interface ApiInterface {
     //lấy thông tin phim
     @GET("movies")
     Single<List<Movie>> getMovie();
+    //lấy thông tin phim theo category
+    @GET("movies/list/{categoryId}")
+    Single<List<Movie>> getMovieByCategoryId(@Path("categoryId") int categoryId);
     // đăng nhập
     @POST("auth/login")
     Single<LoginResponse> login(@Body LoginRequest loginRequest);

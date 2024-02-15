@@ -1904,6 +1904,7 @@ drawable mtrl_popupmenu_background_dark
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
 drawable next
+drawable no_results
 drawable no_schedule
 drawable notification_action_background
 drawable notification_background
@@ -2174,6 +2175,7 @@ id design_navigation_view
 id dialog_button
 id dialog_category
 id dialog_load
+id dialog_load_2
 id dienvien
 id dimensions
 id direct
@@ -2427,6 +2429,7 @@ id rcv_gd
 id rcv_rap
 id rcv_rapphim
 id rcv_search
+id rcv_search_2
 id rcv_seat
 id rectangles
 id repeat_pass
@@ -2760,6 +2763,7 @@ layout material_time_input
 layout material_timepicker
 layout material_timepicker_dialog
 layout material_timepicker_textinput_display
+layout movie_by_category_fragment
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title

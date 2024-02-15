@@ -31,6 +31,7 @@ import com.base.moviebooking.entity.Schedule;
 import com.base.moviebooking.entity.Slide;
 import com.base.moviebooking.entity.Theater;
 import com.base.moviebooking.ui.main.MainActivity;
+import com.base.moviebooking.ui.movie_by_categoryId.MovieByCategoryIdFragment;
 import com.base.moviebooking.ui.show_time.ShowTimeFragment;
 import com.base.moviebooking.ui.sign_in.SignInFragment;
 
@@ -190,7 +191,7 @@ public class HomeFragment extends BaseFragment<HomeFragmentBinding> {
                             Log.d("mmm", "home đã Login", null);
                             HashMap<String, Object> hashMap = new HashMap<>();
                             hashMap.put("category", category);
-                            mViewController.addFragment(ShowTimeFragment.class, hashMap);
+                            mViewController.addFragment(MovieByCategoryIdFragment.class,hashMap);
                         } else {
                             Log.d("mmm", "home chưa Login", null);
                             getActivity().findViewById(R.id.bottombar).setVisibility(View.GONE);
