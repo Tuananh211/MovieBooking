@@ -3,6 +3,7 @@ package com.base.moviebooking.ui.movie_by_categoryId;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -42,7 +43,11 @@ public class MovieByCategoryIdFragment extends  BaseFragment<MovieByCategoryFrag
     public void backFromAddFragment() {
 
     }
+    @Override
+    public void onResume() {
 
+        super.onResume();
+    }
     @Override
     public boolean backPressed() {
        return true;
@@ -51,6 +56,7 @@ public class MovieByCategoryIdFragment extends  BaseFragment<MovieByCategoryFrag
     @Override
     public void initView() {
         getActivity().findViewById(R.id.bottombar).setVisibility(View.GONE);
+        getActivity().findViewById(R.id.ln_no_schedule).setVisibility(View.GONE);
         mViewModel = ViewModelProviders.of(this, viewModelFactory).get(MovieByCategoryIdModel.class);
         //phim home
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2);
@@ -115,8 +121,10 @@ public class MovieByCategoryIdFragment extends  BaseFragment<MovieByCategoryFrag
             }
         });
         binding.rcvSearch2.setAdapter(homeAdapter);
+//        binding.categoryType.setText(category.getName().toString());
             TextView t = getActivity().findViewById(R.id.tvt_headerphim);
             t.setText(category.getName().toString());
+
         }
         else {
             // Không có dữ liệu để xử lý
@@ -124,16 +132,20 @@ public class MovieByCategoryIdFragment extends  BaseFragment<MovieByCategoryFrag
         }
 
     }
-
     @Override
     public void initData() {
-        getActivity().findViewById(R.id.img_headerphim).setOnClickListener(new View.OnClickListener() {
+        ImageView back_btn = getActivity().findViewById(R.id.img_headerphim);
+        back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Log.d("back","aaaa");
+                System.out.println("hi");
                 mViewController.backFromAddFragment(null);
                 getActivity().findViewById(R.id.bottombar).setVisibility(View.VISIBLE);
+
             }
         });
-
     };
+
+
 }
