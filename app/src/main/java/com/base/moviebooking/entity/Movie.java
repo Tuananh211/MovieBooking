@@ -12,8 +12,17 @@ public class Movie implements Serializable {
     private String image;
     private int id;
     private int ageLimit;
+    private String trailer;
 
     public Movie() {
+    }
+
+    public String getTrailer() {
+        return trailer;
+    }
+
+    public void setTrailer(String trailer) {
+        this.trailer = trailer;
     }
 
     public String getImageDirector() {
@@ -64,7 +73,7 @@ public class Movie implements Serializable {
         this.image = image;
     }
 
-    public Movie(String name, String description, String director,String imageDirector, int time, String image, int id, int ageLimit) {
+    public Movie(String name, String description, String director,String imageDirector, int time, String image, int id, int ageLimit,String trailer) {
         this.name = name;
         this.description = description;
         this.director = director;
@@ -73,6 +82,7 @@ public class Movie implements Serializable {
         this.image = image;
         this.id = id;
         this.ageLimit = ageLimit;
+        this.trailer= trailer;
     }
 
     public int getAgeLimit() {

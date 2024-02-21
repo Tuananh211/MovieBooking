@@ -12,7 +12,7 @@ public class ThongtinFragmentBindingImpl extends ThongtinFragmentBinding  {
     @Nullable
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
-        sIncludes = new androidx.databinding.ViewDataBinding.IncludedLayouts(12);
+        sIncludes = new androidx.databinding.ViewDataBinding.IncludedLayouts(15);
         sIncludes.setIncludes(1, 
             new String[] {"dialog_loading", "dialog_loading"},
             new int[] {2, 3},
@@ -23,10 +23,13 @@ public class ThongtinFragmentBindingImpl extends ThongtinFragmentBinding  {
         sViewsWithIds.put(R.id.cateView, 5);
         sViewsWithIds.put(R.id.test1, 6);
         sViewsWithIds.put(R.id.descriptionMovie, 7);
-        sViewsWithIds.put(R.id.dienvien, 8);
-        sViewsWithIds.put(R.id.listActor, 9);
-        sViewsWithIds.put(R.id.directorImage, 10);
-        sViewsWithIds.put(R.id.directorMovie, 11);
+        sViewsWithIds.put(R.id.trailer, 8);
+        sViewsWithIds.put(R.id.exoplayer, 9);
+        sViewsWithIds.put(R.id.img_play_movie, 10);
+        sViewsWithIds.put(R.id.dienvien, 11);
+        sViewsWithIds.put(R.id.listActor, 12);
+        sViewsWithIds.put(R.id.directorImage, 13);
+        sViewsWithIds.put(R.id.directorMovie, 14);
     }
     // views
     @NonNull
@@ -37,7 +40,7 @@ public class ThongtinFragmentBindingImpl extends ThongtinFragmentBinding  {
     // Inverse Binding Event Handlers
 
     public ThongtinFragmentBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 12, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 15, sIncludes, sViewsWithIds));
     }
     private ThongtinFragmentBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 2
@@ -45,12 +48,15 @@ public class ThongtinFragmentBindingImpl extends ThongtinFragmentBinding  {
             , (androidx.recyclerview.widget.RecyclerView) bindings[5]
             , (com.base.moviebooking.databinding.DialogLoadingBinding) bindings[2]
             , (android.widget.TextView) bindings[7]
-            , (android.widget.TextView) bindings[8]
-            , (com.google.android.material.imageview.ShapeableImageView) bindings[10]
             , (android.widget.TextView) bindings[11]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[9]
+            , (com.google.android.material.imageview.ShapeableImageView) bindings[13]
+            , (android.widget.TextView) bindings[14]
+            , (com.google.android.exoplayer2.ui.PlayerView) bindings[9]
+            , (android.widget.ImageView) bindings[10]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[12]
             , (android.widget.TextView) bindings[6]
             , (android.widget.LinearLayout) bindings[1]
+            , (android.widget.TextView) bindings[8]
             , (android.widget.TextView) bindings[4]
             );
         setContainedBinding(this.actorLoad);
@@ -106,13 +112,13 @@ public class ThongtinFragmentBindingImpl extends ThongtinFragmentBinding  {
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeActorLoad((com.base.moviebooking.databinding.DialogLoadingBinding) object, fieldId);
-            case 1 :
                 return onChangeCategoryLoad((com.base.moviebooking.databinding.DialogLoadingBinding) object, fieldId);
+            case 1 :
+                return onChangeActorLoad((com.base.moviebooking.databinding.DialogLoadingBinding) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeActorLoad(com.base.moviebooking.databinding.DialogLoadingBinding ActorLoad, int fieldId) {
+    private boolean onChangeCategoryLoad(com.base.moviebooking.databinding.DialogLoadingBinding CategoryLoad, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
@@ -121,7 +127,7 @@ public class ThongtinFragmentBindingImpl extends ThongtinFragmentBinding  {
         }
         return false;
     }
-    private boolean onChangeCategoryLoad(com.base.moviebooking.databinding.DialogLoadingBinding CategoryLoad, int fieldId) {
+    private boolean onChangeActorLoad(com.base.moviebooking.databinding.DialogLoadingBinding ActorLoad, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x2L;
@@ -147,8 +153,8 @@ public class ThongtinFragmentBindingImpl extends ThongtinFragmentBinding  {
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): actorLoad
-        flag 1 (0x2L): categoryLoad
+        flag 0 (0x1L): categoryLoad
+        flag 1 (0x2L): actorLoad
         flag 2 (0x3L): null
     flag mapping end*/
     //end

@@ -1,5 +1,6 @@
 package com.base.moviebooking.ui.detail_movie;
 
+import android.net.Uri;
 import android.util.Log;
 import android.view.View;
 
@@ -25,7 +26,32 @@ import com.base.moviebooking.ui.main.MainActivity;
 import com.base.moviebooking.ui.show_time.ShowTimeFragment;
 import com.base.moviebooking.ui.show_time.ShowTimeViewModel;
 import com.base.moviebooking.ui.sign_in.SignInFragment;
+import com.base.moviebooking.utils.StringUtil;
 import com.bumptech.glide.Glide;
+import com.google.android.exoplayer2.DefaultLoadControl;
+import com.google.android.exoplayer2.DefaultRenderersFactory;
+import com.google.android.exoplayer2.ExoPlaybackException;
+import com.google.android.exoplayer2.ExoPlayerFactory;
+import com.google.android.exoplayer2.LoadControl;
+import com.google.android.exoplayer2.PlaybackParameters;
+import com.google.android.exoplayer2.Player;
+import com.google.android.exoplayer2.SimpleExoPlayer;
+import com.google.android.exoplayer2.Timeline;
+import com.google.android.exoplayer2.source.ExtractorMediaSource;
+import com.google.android.exoplayer2.source.TrackGroupArray;
+import com.google.android.exoplayer2.trackselection.AdaptiveTrackSelection;
+import com.google.android.exoplayer2.trackselection.DefaultTrackSelector;
+import com.google.android.exoplayer2.trackselection.TrackSelection;
+import com.google.android.exoplayer2.trackselection.TrackSelectionArray;
+import com.google.android.exoplayer2.trackselection.TrackSelector;
+import com.google.android.exoplayer2.ui.PlayerView;
+import com.google.android.exoplayer2.upstream.BandwidthMeter;
+import com.google.android.exoplayer2.upstream.DataSource;
+import com.google.android.exoplayer2.upstream.DefaultBandwidthMeter;
+import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
+import com.google.android.exoplayer2.upstream.DefaultHttpDataSource;
+import com.google.android.exoplayer2.upstream.DefaultHttpDataSourceFactory;
+import com.google.android.exoplayer2.util.Util;
 
 import java.util.HashMap;
 import java.util.List;
@@ -36,6 +62,8 @@ public class DetailMovieFragment extends BaseFragment<ThongtinFragmentBinding> {
     ShowTimeViewModel showTimeViewModel;
     private CategoryListAdapter categoryListAdapter;
     private ActorAdapter actorAdapter;
+    private ExtractorMediaSource mMediaSource;
+    private SimpleExoPlayer mPlayer;
 
     @Override
     protected int getLayoutId() {
@@ -79,13 +107,17 @@ public class DetailMovieFragment extends BaseFragment<ThongtinFragmentBinding> {
 //                        binding.descriptionMovie.setText(s.getTimeRelease());
                 showCategory(s.getId());
                 showActor(s.getId());
+                if (!StringUtil.isEmpty(s.getTrailer())) {
+                    Log.e("Movie Url", s.getTrailer());
+                    initExoPlayer(s.getTrailer());
+                }
             }
         });
     }
 
     @Override
     public void initData() {
-
+        binding.imgPlayMovie.setOnClickListener(view -> startVideo());
 
     }
 
@@ -173,6 +205,50 @@ public class DetailMovieFragment extends BaseFragment<ThongtinFragmentBinding> {
             }
         });
         binding.listActor.setAdapter(actorAdapter);
+    }
+    private void initExoPlayer(String trailerUrl) {
+        PlayerView mExoPlayerView = binding.exoplayer;
+
+        if (mPlayer != null) {
+            return;
+        }
+
+        DefaultBandwidthMeter bandwidthMeter = new DefaultBandwidthMeter();
+        TrackSelection.Factory videoTrackSelectionFactory = new AdaptiveTrackSelection.Factory(bandwidthMeter);
+        TrackSelector trackSelector = new DefaultTrackSelector(videoTrackSelectionFactory);
+        LoadControl loadControl = new DefaultLoadControl();
+
+        mPlayer = ExoPlayerFactory.newSimpleInstance(requireContext(), trackSelector, loadControl);
+        mExoPlayerView.setPlayer(mPlayer);
+
+        DataSource.Factory dataSourceFactory = new DefaultDataSourceFactory(requireContext(), Util.getUserAgent(requireContext(), "app-name"), bandwidthMeter);
+        mMediaSource = new ExtractorMediaSource.Factory(dataSourceFactory).createMediaSource(Uri.parse("https://www.youtube.com/watch?v="+trailerUrl));
+
+        mPlayer.prepare(mMediaSource);
+        mPlayer.setPlayWhenReady(true);
+    }
+
+    // Phương thức này sẽ được gọi từ ViewModel để tạo và khởi tạo ExoPlayer
+    public void initializeExoPlayer(String trailerUrl) {
+        initExoPlayer(trailerUrl);
+    }
+
+    // Phương thức này sẽ được gọi từ ViewModel để release ExoPlayer khi không cần thiết nữa
+    public void releaseExoPlayer() {
+        if (mPlayer != null) {
+            mPlayer.release();
+            mPlayer = null;
+        }
+    }
+
+    private void startVideo() {
+        binding.imgPlayMovie.setVisibility(View.GONE);
+        if (mPlayer != null) {
+            // Prepare video source
+            mPlayer.prepare(mMediaSource);
+            // Set play video
+            mPlayer.setPlayWhenReady(true);
+        }
     }
 
 }

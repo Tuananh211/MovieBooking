@@ -56,6 +56,10 @@
         "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/user_info_fragment.xml"
     },
     {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/res/merged/base/debug/drawable_ic_play_movie_white.xml.flat",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/drawable/ic_play_movie_white.xml"
+    },
+    {
         "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/res/merged/base/debug/drawable_star2.png.flat",
         "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/drawable/star2.png"
     },

@@ -4,6 +4,7 @@ package com.base.moviebooking.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -12,6 +13,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
 import com.base.moviebooking.R;
+import com.google.android.exoplayer2.ui.PlayerView;
 import com.google.android.material.imageview.ShapeableImageView;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -39,6 +41,12 @@ public abstract class ThongtinFragmentBinding extends ViewDataBinding {
   public final TextView directorMovie;
 
   @NonNull
+  public final PlayerView exoplayer;
+
+  @NonNull
+  public final ImageView imgPlayMovie;
+
+  @NonNull
   public final RecyclerView listActor;
 
   @NonNull
@@ -48,13 +56,16 @@ public abstract class ThongtinFragmentBinding extends ViewDataBinding {
   public final LinearLayout thongtinFragment;
 
   @NonNull
+  public final TextView trailer;
+
+  @NonNull
   public final TextView txtCategory;
 
   protected ThongtinFragmentBinding(Object _bindingComponent, View _root, int _localFieldCount,
       DialogLoadingBinding actorLoad, RecyclerView cateView, DialogLoadingBinding categoryLoad,
       TextView descriptionMovie, TextView dienvien, ShapeableImageView directorImage,
-      TextView directorMovie, RecyclerView listActor, TextView test1, LinearLayout thongtinFragment,
-      TextView txtCategory) {
+      TextView directorMovie, PlayerView exoplayer, ImageView imgPlayMovie, RecyclerView listActor,
+      TextView test1, LinearLayout thongtinFragment, TextView trailer, TextView txtCategory) {
     super(_bindingComponent, _root, _localFieldCount);
     this.actorLoad = actorLoad;
     this.cateView = cateView;
@@ -63,9 +74,12 @@ public abstract class ThongtinFragmentBinding extends ViewDataBinding {
     this.dienvien = dienvien;
     this.directorImage = directorImage;
     this.directorMovie = directorMovie;
+    this.exoplayer = exoplayer;
+    this.imgPlayMovie = imgPlayMovie;
     this.listActor = listActor;
     this.test1 = test1;
     this.thongtinFragment = thongtinFragment;
+    this.trailer = trailer;
     this.txtCategory = txtCategory;
   }
 

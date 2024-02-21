@@ -27,6 +27,7 @@ MERGED from [de.hdodenhof:circleimageview:3.1.0] /Users/vdc/.gradle/caches/trans
 MERGED from [me.relex:circleindicator:2.1.6] /Users/vdc/.gradle/caches/transforms-3/74c50961627711d0697101a06ba2fd59/transformed/jetified-circleindicator-2.1.6/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.palette:palette:1.0.0] /Users/vdc/.gradle/caches/transforms-3/0bea36907b32a84d9531ddc696ff8e02/transformed/palette-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:17:1-56:12
+MERGED from [com.google.android.exoplayer:exoplayer:2.7.2] /Users/vdc/.gradle/caches/transforms-3/e15b83143e2a71b486b014a08d470de5/transformed/jetified-exoplayer-2.7.2/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:viewbinding:4.2.2] /Users/vdc/.gradle/caches/transforms-3/ab2c8578846834d46bf696793da34c88/transformed/jetified-viewbinding-4.2.2/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-process:2.1.0] /Users/vdc/.gradle/caches/transforms-3/b1ce0b4cc2aee0ff9d59f2c1037cc915/transformed/jetified-lifecycle-process-2.1.0/AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.lifecycle:lifecycle-service:2.1.0] /Users/vdc/.gradle/caches/transforms-3/049371118cd3d7ce8c1f1ab3d67bebc8/transformed/jetified-lifecycle-service-2.1.0/AndroidManifest.xml:17:1-22:12
@@ -60,6 +61,11 @@ MERGED from [androidx.cardview:cardview:1.0.0] /Users/vdc/.gradle/caches/transfo
 MERGED from [com.github.bumptech.glide:gifdecoder:4.14.2] /Users/vdc/.gradle/caches/transforms-3/73b33cce586387167f78d5104bbb7d42/transformed/jetified-gifdecoder-4.14.2/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.exifinterface:exifinterface:1.3.3] /Users/vdc/.gradle/caches/transforms-3/4044ee456880aca44a0c01cab4b60253/transformed/exifinterface-1.3.3/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.tracing:tracing:1.0.0] /Users/vdc/.gradle/caches/transforms-3/1545aa21ab819d0f8ce9206dca71858d/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.7.2] /Users/vdc/.gradle/caches/transforms-3/06e81dcb1d9655cbc3e470e96a9ee676/transformed/jetified-exoplayer-dash-2.7.2/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.7.2] /Users/vdc/.gradle/caches/transforms-3/434e7b048866c79438f6ba93d77ec406/transformed/jetified-exoplayer-hls-2.7.2/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.7.2] /Users/vdc/.gradle/caches/transforms-3/353dc58538c9e847d61f80dc14b17a94/transformed/jetified-exoplayer-smoothstreaming-2.7.2/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-ui:2.7.2] /Users/vdc/.gradle/caches/transforms-3/49480756510d4c08062fe978aca57784/transformed/jetified-exoplayer-ui-2.7.2/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.7.2] /Users/vdc/.gradle/caches/transforms-3/85b5de7827ec0f039a3ae0e807da9849/transformed/jetified-exoplayer-core-2.7.2/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/vdc/.gradle/caches/transforms-3/523bf1cf31f39eb1680ec6f5da448147/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/vdc/.gradle/caches/transforms-3/78aa7a3e878a0fad11aa8ac6ba540a8d/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /Users/vdc/.gradle/caches/transforms-3/fba5bc5fba61732c0925c2efa98b006a/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -220,6 +226,8 @@ MERGED from [androidx.palette:palette:1.0.0] /Users/vdc/.gradle/caches/transform
 MERGED from [androidx.palette:palette:1.0.0] /Users/vdc/.gradle/caches/transforms-3/0bea36907b32a84d9531ddc696ff8e02/transformed/palette-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:20:5-44
 MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.exoplayer:exoplayer:2.7.2] /Users/vdc/.gradle/caches/transforms-3/e15b83143e2a71b486b014a08d470de5/transformed/jetified-exoplayer-2.7.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer:2.7.2] /Users/vdc/.gradle/caches/transforms-3/e15b83143e2a71b486b014a08d470de5/transformed/jetified-exoplayer-2.7.2/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.databinding:viewbinding:4.2.2] /Users/vdc/.gradle/caches/transforms-3/ab2c8578846834d46bf696793da34c88/transformed/jetified-viewbinding-4.2.2/AndroidManifest.xml:20:5-44
 MERGED from [androidx.databinding:viewbinding:4.2.2] /Users/vdc/.gradle/caches/transforms-3/ab2c8578846834d46bf696793da34c88/transformed/jetified-viewbinding-4.2.2/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-process:2.1.0] /Users/vdc/.gradle/caches/transforms-3/b1ce0b4cc2aee0ff9d59f2c1037cc915/transformed/jetified-lifecycle-process-2.1.0/AndroidManifest.xml:20:5-44
@@ -286,6 +294,16 @@ MERGED from [androidx.exifinterface:exifinterface:1.3.3] /Users/vdc/.gradle/cach
 MERGED from [androidx.exifinterface:exifinterface:1.3.3] /Users/vdc/.gradle/caches/transforms-3/4044ee456880aca44a0c01cab4b60253/transformed/exifinterface-1.3.3/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.tracing:tracing:1.0.0] /Users/vdc/.gradle/caches/transforms-3/1545aa21ab819d0f8ce9206dca71858d/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.tracing:tracing:1.0.0] /Users/vdc/.gradle/caches/transforms-3/1545aa21ab819d0f8ce9206dca71858d/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.7.2] /Users/vdc/.gradle/caches/transforms-3/06e81dcb1d9655cbc3e470e96a9ee676/transformed/jetified-exoplayer-dash-2.7.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.7.2] /Users/vdc/.gradle/caches/transforms-3/06e81dcb1d9655cbc3e470e96a9ee676/transformed/jetified-exoplayer-dash-2.7.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.7.2] /Users/vdc/.gradle/caches/transforms-3/434e7b048866c79438f6ba93d77ec406/transformed/jetified-exoplayer-hls-2.7.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.7.2] /Users/vdc/.gradle/caches/transforms-3/434e7b048866c79438f6ba93d77ec406/transformed/jetified-exoplayer-hls-2.7.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.7.2] /Users/vdc/.gradle/caches/transforms-3/353dc58538c9e847d61f80dc14b17a94/transformed/jetified-exoplayer-smoothstreaming-2.7.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.7.2] /Users/vdc/.gradle/caches/transforms-3/353dc58538c9e847d61f80dc14b17a94/transformed/jetified-exoplayer-smoothstreaming-2.7.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-ui:2.7.2] /Users/vdc/.gradle/caches/transforms-3/49480756510d4c08062fe978aca57784/transformed/jetified-exoplayer-ui-2.7.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-ui:2.7.2] /Users/vdc/.gradle/caches/transforms-3/49480756510d4c08062fe978aca57784/transformed/jetified-exoplayer-ui-2.7.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.7.2] /Users/vdc/.gradle/caches/transforms-3/85b5de7827ec0f039a3ae0e807da9849/transformed/jetified-exoplayer-core-2.7.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.7.2] /Users/vdc/.gradle/caches/transforms-3/85b5de7827ec0f039a3ae0e807da9849/transformed/jetified-exoplayer-core-2.7.2/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/vdc/.gradle/caches/transforms-3/523bf1cf31f39eb1680ec6f5da448147/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/vdc/.gradle/caches/transforms-3/523bf1cf31f39eb1680ec6f5da448147/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/vdc/.gradle/caches/transforms-3/78aa7a3e878a0fad11aa8ac6ba540a8d/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
