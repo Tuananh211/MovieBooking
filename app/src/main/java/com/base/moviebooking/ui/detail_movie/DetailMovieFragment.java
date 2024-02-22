@@ -109,7 +109,7 @@ public class DetailMovieFragment extends BaseFragment<ThongtinFragmentBinding> {
                 showActor(s.getId());
                 if (!StringUtil.isEmpty(s.getTrailer())) {
                     Log.e("Movie Url", s.getTrailer());
-                    initExoPlayer(s.getTrailer());
+                    initializeExoPlayer(s.getTrailer());
                 }
             }
         });
@@ -199,9 +199,21 @@ public class DetailMovieFragment extends BaseFragment<ThongtinFragmentBinding> {
         mViewModel.dataActors.observe(getViewLifecycleOwner(), new Observer<List<Actor>>() {
             @Override
             public void onChanged(List<Actor> actorsListResponse) {
-                actorAdapter.addModels(actorsListResponse,false);
-                Log.d("fat", "add Model Actor", null);
-                getActivity().findViewById(R.id.actor_load).setVisibility(View.GONE);
+                if(actorsListResponse.size()>0){
+                    actorAdapter.addModels(actorsListResponse,false);
+                    Log.d("fat", "add Model Actor", null);
+                    getActivity().findViewById(R.id.actor_load).setVisibility(View.GONE);
+                }
+                else {
+                    actorsListResponse.add(new Actor(1,"Perdo Pascal","https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/494807_v9_bd.jpg"));
+                    actorsListResponse.add(new Actor(2,"Anna Torv","https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/494807_v9_bd.jpg"));
+                    actorsListResponse.add(new Actor(3,"Nico Parker","https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/494807_v9_bd.jpg"));
+                    actorsListResponse.add(new Actor(4,"Nick Offerman","https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/494807_v9_bd.jpg"));
+                    actorAdapter.addModels(actorsListResponse,false);
+                    Log.d("fat", "add Model Actor", null);
+                    getActivity().findViewById(R.id.actor_load).setVisibility(View.GONE);
+                }
+
             }
         });
         binding.listActor.setAdapter(actorAdapter);
@@ -222,7 +234,7 @@ public class DetailMovieFragment extends BaseFragment<ThongtinFragmentBinding> {
         mExoPlayerView.setPlayer(mPlayer);
 
         DataSource.Factory dataSourceFactory = new DefaultDataSourceFactory(requireContext(), Util.getUserAgent(requireContext(), "app-name"), bandwidthMeter);
-        mMediaSource = new ExtractorMediaSource.Factory(dataSourceFactory).createMediaSource(Uri.parse("https://www.youtube.com/watch?v="+trailerUrl));
+        mMediaSource = new ExtractorMediaSource.Factory(dataSourceFactory).createMediaSource(Uri.parse("https://www.rmp-streaming.com/media/big-buck-bunny-360p.mp4"));
 
         mPlayer.prepare(mMediaSource);
         mPlayer.setPlayWhenReady(true);

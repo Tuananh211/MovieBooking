@@ -25,6 +25,7 @@ import com.base.moviebooking.entity.LoginResponse;
 import com.base.moviebooking.ui.account.AccountFragment;
 import com.base.moviebooking.ui.sign_up.SignUpFragment;
 import com.base.moviebooking.utils.MyUtils;
+import com.base.moviebooking.utils.StringUtil;
 
 import java.io.IOException;
 import java.security.InvalidAlgorithmParameterException;
@@ -136,7 +137,11 @@ public class SignInFragment extends BaseFragment<DangnhapFragmentBinding> {
             public void onClick(View view) {
                 if (binding.edtTk.getText().toString().equals("") || binding.edtMk.getText().toString().equals("")) {
                     Toast.makeText(getContext(), "Không được để trống", Toast.LENGTH_SHORT).show();
-                } else {
+                }
+                else if(!StringUtil.isValidEmail(binding.edtTk.getText().toString())){
+                    Toast.makeText(getContext(), "Email không hợp lệ", Toast.LENGTH_SHORT).show();
+                }
+                else {
                     LoginRequest loginRequest = new LoginRequest(binding.edtTk.getText().toString(), binding.edtMk.getText().toString());
                     mViewModel.login(loginRequest);
                 }
