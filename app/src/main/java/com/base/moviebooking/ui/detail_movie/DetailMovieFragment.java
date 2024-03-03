@@ -237,7 +237,7 @@ public class DetailMovieFragment extends BaseFragment<ThongtinFragmentBinding> {
         mMediaSource = new ExtractorMediaSource.Factory(dataSourceFactory).createMediaSource(Uri.parse("https://www.rmp-streaming.com/media/big-buck-bunny-360p.mp4"));
 
         mPlayer.prepare(mMediaSource);
-//        mPlayer.setPlayWhenReady(true);
+        mPlayer.setPlayWhenReady(false);
     }
 
     // Phương thức này sẽ được gọi từ ViewModel để tạo và khởi tạo ExoPlayer

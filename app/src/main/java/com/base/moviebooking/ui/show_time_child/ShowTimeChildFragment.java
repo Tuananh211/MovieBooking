@@ -1,11 +1,13 @@
 package com.base.moviebooking.ui.show_time_child;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -158,6 +160,8 @@ public class ShowTimeChildFragment extends BaseFragment<LichChieuFragmentBinding
 
     @Override
     public void initData() {
+        if(showTimeViewModel.dataMovie!= null){
+        MutableLiveData<Movie> movie = showTimeViewModel.dataMovie;
         List<String> item_Lich = new ArrayList<>();
         item_Lich.add("Chọn ngày");
 
@@ -213,19 +217,26 @@ public class ShowTimeChildFragment extends BaseFragment<LichChieuFragmentBinding
 
             }
         });
-        dataSpiner();
+        dataSpiner(movie.getValue().getId());
+        } else {
+            // Không có dữ liệu để xử lý
+            Log.d("cather","des NO data");
+        }
     }
 
-    private void dataSpiner() {
+    private void dataSpiner(int movieId) {
                 List<String> item_Rap = new ArrayList<>();
         item_Rap.add("Chọn rạp");
-        mViewModel.getCinemas();
+        mViewModel.getCinemasByMovieId(movieId);
         mViewModel.data.observe(getViewLifecycleOwner(), new Observer<List<Cinema>>() {
             @Override
             public void onChanged(List<Cinema> list) {
-                for(int i=0;i< list.size();i++){
-                    item_Rap.add(list.get(i).getName())  ;
+                if(!list.isEmpty()){
+                    for(int i=0;i< list.size();i++){
+                        item_Rap.add(list.get(i).getName())  ;
+                    }
                 }
+
             }
         });
         VietnamComparator vietnameseComparator = new VietnamComparator();

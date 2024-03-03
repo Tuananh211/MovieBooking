@@ -73,7 +73,9 @@ public interface ApiInterface {
     //get all cinema
     @GET("cinemas")
     Single<List<Cinema>> getCinemas();
-
+    //get all cinema has movie schedule
+    @GET("cinemas/{movieId}")
+    Single<List<Cinema>> getCinemasByMovieId(@Path("movieId") int movieId );
     //get schedule
     @GET("schedules")
     Single<List<Schedule>> getSchedules(@Query("cinemaId") int cinemaId, @Query("day") String day,@Query("movieId")int movieId);

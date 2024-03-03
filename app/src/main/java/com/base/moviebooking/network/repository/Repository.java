@@ -99,7 +99,12 @@ public class Repository {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
     }
-
+    //lấy all Cinema có lịch chiếu của phim đó
+    public Single<List<Cinema>> getCinemasByMovieId(int movieId ) {
+        return apiInterface.getCinemasByMovieId(movieId)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
     //lấy all Schedule
     public Single<List<Schedule>> getschedules(int cinemaId,String day,int movieId ) {
         return apiInterface.getSchedules(cinemaId,day,movieId)

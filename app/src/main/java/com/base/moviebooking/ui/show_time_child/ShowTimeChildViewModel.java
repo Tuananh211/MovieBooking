@@ -30,8 +30,8 @@ public class ShowTimeChildViewModel extends BaseViewModel {
     }
 
 
-    public void getCinemas( ) {
-        repository.getCinemas()
+    public void getCinemasByMovieId(int movieId) {
+        repository.getCinemasByMovieId(movieId)
                 .subscribe(new SingleObserver<List<Cinema>>() {
                     @Override
                     public void onSubscribe(Disposable d) {

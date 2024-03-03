@@ -5,7 +5,6 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,6 +18,9 @@ import com.base.moviebooking.base.BaseFragment;
 import com.base.moviebooking.databinding.LichPhimBinding;
 import com.base.moviebooking.entity.Movie;
 import com.base.moviebooking.ui.home.HomeFragment;
+import com.google.android.exoplayer2.ExoPlayer;
+import com.google.android.exoplayer2.Player;
+import com.google.android.exoplayer2.SimpleExoPlayer;
 import com.google.android.exoplayer2.ui.PlayerView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
@@ -96,21 +98,30 @@ public class ShowTimeFragment extends BaseFragment<LichPhimBinding>  {
         binding.toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                stopAllVideos();
                 getActivity().findViewById(R.id.bottombar).setVisibility(View.VISIBLE);
                 mViewController.replaceFragment(HomeFragment.class,null);
-                stopAllVideos();
+
             }
         });
 
     }
 
     private void stopAllVideos() {
-        // Tìm và dừng phát tất cả các ExoPlayer
-        PlayerView playerView1 = getActivity().findViewById(R.id.exoplayer);
+        if (getActivity() == null) {
+            return; // Đảm bảo rằng getActivity() không null
+        }
 
-        // Kiểm tra xem ExoPlayer có đang phát không trước khi dừng
-        if (playerView1.getPlayer() != null && playerView1.getPlayer().getPlayWhenReady()) {
-            playerView1.getPlayer().stop();
+        PlayerView playerView1 = getActivity().findViewById(R.id.exoplayer);
+        if (playerView1 == null || playerView1.getPlayer() == null) {
+            return; // Đảm bảo rằng PlayerView và Player đã được khởi tạo
+        }
+
+        Player player = playerView1.getPlayer();
+        // Kiểm tra trạng thái của Player trước khi dừng
+        if (player.getPlaybackState() != Player.STATE_IDLE &&
+                (player.getPlayWhenReady() || player.getPlaybackState() == Player.STATE_BUFFERING)) {
+            player.stop();
         }
     }
 
