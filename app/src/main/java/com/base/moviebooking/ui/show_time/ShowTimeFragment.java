@@ -5,6 +5,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,6 +19,7 @@ import com.base.moviebooking.base.BaseFragment;
 import com.base.moviebooking.databinding.LichPhimBinding;
 import com.base.moviebooking.entity.Movie;
 import com.base.moviebooking.ui.home.HomeFragment;
+import com.google.android.exoplayer2.ui.PlayerView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
@@ -96,9 +98,20 @@ public class ShowTimeFragment extends BaseFragment<LichPhimBinding>  {
             public void onClick(View view) {
                 getActivity().findViewById(R.id.bottombar).setVisibility(View.VISIBLE);
                 mViewController.replaceFragment(HomeFragment.class,null);
+                stopAllVideos();
             }
         });
 
+    }
+
+    private void stopAllVideos() {
+        // Tìm và dừng phát tất cả các ExoPlayer
+        PlayerView playerView1 = getActivity().findViewById(R.id.exoplayer);
+
+        // Kiểm tra xem ExoPlayer có đang phát không trước khi dừng
+        if (playerView1.getPlayer() != null && playerView1.getPlayer().getPlayWhenReady()) {
+            playerView1.getPlayer().stop();
+        }
     }
 
     @Override

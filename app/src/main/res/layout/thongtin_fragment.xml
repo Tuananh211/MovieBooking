@@ -84,8 +84,8 @@
                     android:id="@+id/img_play_movie"
                     android:layout_width="@dimen/define_dimen_60"
                     android:layout_height="@dimen/define_dimen_60"
-                    android:src="@drawable/ic_play_movie_white"
                     android:layout_centerInParent="true"
+                    android:src="@drawable/ic_play_movie_white"
                     tools:ignore="ContentDescription" />
             </RelativeLayout>
             <TextView
