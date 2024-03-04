@@ -189,6 +189,9 @@ public class SignInFragment extends BaseFragment<DangnhapFragmentBinding> {
             public void onClick(View view) {
                 if(editText.getText().toString().equals(""))
                     Toast.makeText(requireContext(),"Email trống",Toast.LENGTH_SHORT).show();
+                else if(!StringUtil.isValidEmail(editText.getText().toString())){
+                    Toast.makeText(getContext(), "Email không hợp lệ", Toast.LENGTH_SHORT).show();
+                }
                 else {
                     mViewModel.quenMK(new ForgetPass(editText.getText().toString()));
                 }
