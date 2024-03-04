@@ -50,7 +50,7 @@ public class MovieByCategoryIdFragment extends  BaseFragment<MovieByCategoryFrag
     }
     @Override
     public boolean backPressed() {
-       return true;
+       return false;
     }
 
     @Override

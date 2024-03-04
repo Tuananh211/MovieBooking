@@ -1,5 +1,8 @@
 <resources>
-    <string name="app_name">Movie Booking</string>
+    <string name="app_name">Movie Manager</string>
+    <string name="action_ok">Đồng ý</string>
+    <string name="action_cancel">Hủy</string>
+    <string name="msg_confirm_login_another_device">Bạn có chắc chắn muốn thoát ứng dụng?</string>
     <string name="trangchu">Trang chủ</string>
     <string name="dienanh">Điện ảnh</string>
     <string name="rapphim">Rạp movie</string>

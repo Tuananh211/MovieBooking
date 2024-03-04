@@ -34,6 +34,7 @@ import com.base.moviebooking.ui.main.MainActivity;
 import com.base.moviebooking.ui.movie_by_categoryId.MovieByCategoryIdFragment;
 import com.base.moviebooking.ui.show_time.ShowTimeFragment;
 import com.base.moviebooking.ui.sign_in.SignInFragment;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -74,6 +75,7 @@ public class HomeFragment extends BaseFragment<HomeFragmentBinding> {
 
     @Override
     public boolean backPressed() {
+
         return true;
     }
 
@@ -305,4 +307,16 @@ public class HomeFragment extends BaseFragment<HomeFragmentBinding> {
             viewPager2.setCurrentItem(viewPager2.getCurrentItem()+1);
         }
     };
+    private void showDialogLogout() {
+        new MaterialAlertDialogBuilder(requireContext())
+                .setTitle(getString(R.string.app_name))
+                .setMessage(getString(R.string.msg_confirm_login_another_device))
+                .setPositiveButton(getString(R.string.action_ok), (dialog, which) -> {
+                    dialog.dismiss();
+                    getActivity().finishAffinity();
+                })
+                .setNegativeButton(getString(R.string.action_cancel), (dialog, which) -> dialog.dismiss())
+                .setCancelable(true)
+                .show();
+    }
 }

@@ -3014,6 +3014,8 @@ int string abc_searchview_description_voice 0x7f100017
 int string abc_shareactionprovider_share_with 0x7f100018
 int string abc_shareactionprovider_share_with_application 0x7f100019
 int string abc_toolbar_collapse_description 0x7f10001a
+int string action_cancel 0x7f1000ad
+int string action_ok 0x7f1000ae
 int string anh 0x7f10001b
 int string anhdaidien 0x7f10001c
 int string app_name 0x7f10001d
@@ -3091,6 +3093,7 @@ int string material_timepicker_minute 0x7f100064
 int string material_timepicker_pm 0x7f100065
 int string material_timepicker_select_time 0x7f100066
 int string material_timepicker_text_input_mode_description 0x7f100067
+int string msg_confirm_login_another_device 0x7f1000af
 int string mtrl_badge_numberless_content_description 0x7f100068
 int string mtrl_chip_close_icon_content_description 0x7f100069
 int string mtrl_exceed_max_badge_number_content_description 0x7f10006a

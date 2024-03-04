@@ -52,7 +52,7 @@ public class ThongTinThanhToanFragment extends BaseFragment<ThongtinThanhtoanFra
     private ThongTinThanhToanViewModel mViewModel;
     ThongTinThanhToan  thanhToan  ;
     private String code;
-    private String gmail="thieuhaitam@gmail.com";
+    private String gmail="vdtuananha0211@gmail.com";
     private Bitmap bitmapImage;
     @Override
     protected int getLayoutId() {
