@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -41,9 +40,6 @@ public abstract class HomeFragmentBinding extends ViewDataBinding {
   public final DialogLoadingBinding dialogLoad;
 
   @NonNull
-  public final EditText editTextText;
-
-  @NonNull
   public final RecyclerView rcvSearch;
 
   @NonNull
@@ -51,6 +47,9 @@ public abstract class HomeFragmentBinding extends ViewDataBinding {
 
   @NonNull
   public final HorizontalScrollView scrollviewHome;
+
+  @NonNull
+  public final TextView searchFilm;
 
   @NonNull
   public final TextView textView9;
@@ -70,9 +69,9 @@ public abstract class HomeFragmentBinding extends ViewDataBinding {
   protected HomeFragmentBinding(Object _bindingComponent, View _root, int _localFieldCount,
       Button btnXemTiep, RecyclerView categoryView, CircleIndicator circleIndicator,
       LinearLayout cst2, DialogLoadingBinding dialogCategory, DialogLoadingBinding dialogLoad,
-      EditText editTextText, RecyclerView rcvSearch, NestedScrollView scrollView2,
-      HorizontalScrollView scrollviewHome, TextView textView9, TextView tvtDangchieu,
-      TextView tvtSapchieu, TextView tvtToanquoc, ViewPager2 viewpager) {
+      RecyclerView rcvSearch, NestedScrollView scrollView2, HorizontalScrollView scrollviewHome,
+      TextView searchFilm, TextView textView9, TextView tvtDangchieu, TextView tvtSapchieu,
+      TextView tvtToanquoc, ViewPager2 viewpager) {
     super(_bindingComponent, _root, _localFieldCount);
     this.btnXemTiep = btnXemTiep;
     this.categoryView = categoryView;
@@ -80,10 +79,10 @@ public abstract class HomeFragmentBinding extends ViewDataBinding {
     this.cst2 = cst2;
     this.dialogCategory = dialogCategory;
     this.dialogLoad = dialogLoad;
-    this.editTextText = editTextText;
     this.rcvSearch = rcvSearch;
     this.scrollView2 = scrollView2;
     this.scrollviewHome = scrollviewHome;
+    this.searchFilm = searchFilm;
     this.textView9 = textView9;
     this.tvtDangchieu = tvtDangchieu;
     this.tvtSapchieu = tvtSapchieu;

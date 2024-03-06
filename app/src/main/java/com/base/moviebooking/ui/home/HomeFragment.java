@@ -32,6 +32,7 @@ import com.base.moviebooking.entity.Slide;
 import com.base.moviebooking.entity.Theater;
 import com.base.moviebooking.ui.main.MainActivity;
 import com.base.moviebooking.ui.movie_by_categoryId.MovieByCategoryIdFragment;
+import com.base.moviebooking.ui.search_film.SearchFilmFragment;
 import com.base.moviebooking.ui.show_time.ShowTimeFragment;
 import com.base.moviebooking.ui.sign_in.SignInFragment;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
@@ -217,7 +218,13 @@ public class HomeFragment extends BaseFragment<HomeFragmentBinding> {
 
     @Override
     public void initData() {
-
+            binding.searchFilm.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    getActivity().findViewById(R.id.bottombar).setVisibility(View.GONE);
+                    mViewController.addFragment(SearchFilmFragment.class,null);
+                }
+            });
 
     }
 

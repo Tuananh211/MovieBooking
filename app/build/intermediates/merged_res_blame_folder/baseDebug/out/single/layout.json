@@ -4,6 +4,10 @@
         "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\layout\\home_fragment.xml"
     },
     {
+        "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\incremental\\mergeBaseDebugResources\\stripped.dir\\layout\\active_search_fragment.xml",
+        "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\layout\\active_search_fragment.xml"
+    },
+    {
         "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\incremental\\mergeBaseDebugResources\\stripped.dir\\layout\\rcv_giaodich.xml",
         "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\layout\\rcv_giaodich.xml"
     },

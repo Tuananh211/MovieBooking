@@ -23,7 +23,7 @@ public class HomeFragmentBindingImpl extends HomeFragmentBinding  {
             new int[] {com.base.moviebooking.R.layout.dialog_loading});
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.scrollView2, 5);
-        sViewsWithIds.put(R.id.editTextText, 6);
+        sViewsWithIds.put(R.id.search_film, 6);
         sViewsWithIds.put(R.id.viewpager, 7);
         sViewsWithIds.put(R.id.circle_indicator, 8);
         sViewsWithIds.put(R.id.textView9, 9);
@@ -59,10 +59,10 @@ public class HomeFragmentBindingImpl extends HomeFragmentBinding  {
             , (android.widget.LinearLayout) bindings[11]
             , (com.base.moviebooking.databinding.DialogLoadingBinding) bindings[3]
             , (com.base.moviebooking.databinding.DialogLoadingBinding) bindings[4]
-            , (android.widget.EditText) bindings[6]
             , (androidx.recyclerview.widget.RecyclerView) bindings[15]
             , (androidx.core.widget.NestedScrollView) bindings[5]
             , (android.widget.HorizontalScrollView) bindings[17]
+            , (android.widget.TextView) bindings[6]
             , (android.widget.TextView) bindings[9]
             , (android.widget.TextView) bindings[12]
             , (android.widget.TextView) bindings[13]

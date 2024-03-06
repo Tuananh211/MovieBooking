@@ -45,6 +45,12 @@ public class Repository {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
     }
+    //lấy thông tin phim qua tên
+    public Single<List<Movie>> getMovieDataByName(String name) {
+        return apiInterface.getMovieByName(name)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
     //lấy thông tin phim theo category
     public Single<List<Movie>> getMovieDataByCategoryId(int categoryId) {
         return apiInterface.getMovieByCategoryId(categoryId)

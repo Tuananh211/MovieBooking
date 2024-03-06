@@ -33,6 +33,8 @@ import com.base.moviebooking.ui.chonghe.ChonGheFragment;
 import com.base.moviebooking.ui.main.MainActivity;
 import com.base.moviebooking.ui.show_time.ShowTimeViewModel;
 import com.base.moviebooking.ui.sign_in.SignInFragment;
+import com.google.android.exoplayer2.Player;
+import com.google.android.exoplayer2.ui.PlayerView;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -69,7 +71,7 @@ public class ShowTimeChildFragment extends BaseFragment<LichChieuFragmentBinding
 
     @Override
     public void initView() {
-
+        stopAllVideos();
         getActivity().findViewById(R.id.bottombar).setVisibility(View.GONE);
 
         showTimeViewModel = ViewModelProviders.of(requireParentFragment(), viewModelFactory).get(ShowTimeViewModel.class);
@@ -105,6 +107,7 @@ public class ShowTimeChildFragment extends BaseFragment<LichChieuFragmentBinding
                     hashMap.put("schedule", lichChieu);
                     hashMap.put("movie", nMovie);
                     hashMap.put("cinema",binding.spinnerRap.getSelectedItem().toString());
+                    stopAllVideos();
                     ((MainActivity)getActivity()).getViewController().addFragment(ChonGheFragment.class,hashMap);
 
                 } else {
@@ -248,7 +251,23 @@ public class ShowTimeChildFragment extends BaseFragment<LichChieuFragmentBinding
         binding.spinnerRap.setAdapter(adapter2);
 
     }
+    private void stopAllVideos() {
+        if (getActivity() == null) {
+            return; // Đảm bảo rằng getActivity() không null
+        }
 
+        PlayerView playerView1 = getActivity().findViewById(R.id.exoplayer);
+        if (playerView1 == null || playerView1.getPlayer() == null) {
+            return; // Đảm bảo rằng PlayerView và Player đã được khởi tạo
+        }
+
+        Player player = playerView1.getPlayer();
+        // Kiểm tra trạng thái của Player trước khi dừng
+        if (player.getPlaybackState() != Player.STATE_IDLE &&
+                (player.getPlayWhenReady() || player.getPlaybackState() == Player.STATE_BUFFERING)) {
+            player.stop();
+        }
+    }
 
 
 }

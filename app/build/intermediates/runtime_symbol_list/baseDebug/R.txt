@@ -2272,6 +2272,7 @@ int id dialog_button 0x7f0800c5
 int id dialog_category 0x7f0800c6
 int id dialog_load 0x7f0800c7
 int id dialog_load_2 0x7f0800c8
+int id dialog_load_movie 0x7f0802bb
 int id dienvien 0x7f0800c9
 int id dimensions 0x7f0800ca
 int id direct 0x7f0800cb
@@ -2291,7 +2292,6 @@ int id dropdown_menu 0x7f0800d8
 int id easeIn 0x7f0800d9
 int id easeInOut 0x7f0800da
 int id easeOut 0x7f0800db
-int id editTextText 0x7f0800dc
 int id edit_query 0x7f0800dd
 int id edtConfirmPass 0x7f0800de
 int id edtMK 0x7f0800df
@@ -2300,6 +2300,7 @@ int id edtOldPass 0x7f0800e1
 int id edt_address 0x7f0800e2
 int id edt_birthday 0x7f0800e3
 int id edt_email 0x7f0800e4
+int id edt_keyword 0x7f0802bc
 int id edt_mk 0x7f0800e5
 int id edt_name 0x7f0800e6
 int id edt_password 0x7f0800e7
@@ -2383,6 +2384,8 @@ int id ignoreRequest 0x7f080134
 int id image 0x7f080135
 int id imageView 0x7f080136
 int id imageView2 0x7f080137
+int id image_back 0x7f0802bd
+int id image_delete 0x7f0802be
 int id imgSeat 0x7f080138
 int id imgUser 0x7f080139
 int id img_1 0x7f08013a
@@ -2429,6 +2432,7 @@ int id ln_down 0x7f080162
 int id ln_filminfo 0x7f080163
 int id ln_gheThuong 0x7f080164
 int id ln_gheVip 0x7f080165
+int id ln_no_movie 0x7f0802bf
 int id ln_no_schedule 0x7f080166
 int id ln_no_user 0x7f080167
 int id ln_nuoc 0x7f080168
@@ -2544,6 +2548,7 @@ int id radio 0x7f0801d5
 int id ratio 0x7f0801d6
 int id rc_gallery 0x7f0801d7
 int id rcv 0x7f0801d8
+int id rcv_data 0x7f0802c0
 int id rcv_dienanh 0x7f0801d9
 int id rcv_gd 0x7f0801da
 int id rcv_rap 0x7f0801db
@@ -2579,6 +2584,7 @@ int id search_bar 0x7f0801f8
 int id search_button 0x7f0801f9
 int id search_close_btn 0x7f0801fa
 int id search_edit_frame 0x7f0801fb
+int id search_film 0x7f0802c1
 int id search_go_btn 0x7f0801fc
 int id search_mag_icon 0x7f0801fd
 int id search_plate 0x7f0801fe
@@ -2837,6 +2843,7 @@ int layout abc_search_dropdown_item_icons_2line 0x7f0b0018
 int layout abc_search_view 0x7f0b0019
 int layout abc_select_dialog_material 0x7f0b001a
 int layout abc_tooltip 0x7f0b001b
+int layout active_search_fragment 0x7f0b00a7
 int layout activity_main 0x7f0b001c
 int layout bottom_navigation_item 0x7f0b001d
 int layout bottom_navigation_small_item 0x7f0b001e
