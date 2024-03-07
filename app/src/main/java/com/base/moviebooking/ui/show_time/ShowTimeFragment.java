@@ -104,6 +104,23 @@ public class ShowTimeFragment extends BaseFragment<LichPhimBinding>  {
 
             }
         });
+        binding.tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                // Thay đổi màu của thanh gạch chân khi tab được chọn
+                binding.tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.white));
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                // Xử lý khi tab không được chọn
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+                // Xử lý khi tab được chọn lại
+            }
+        });
 
     }
 

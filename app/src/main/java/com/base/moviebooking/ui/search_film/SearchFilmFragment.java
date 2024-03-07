@@ -104,74 +104,66 @@ public class SearchFilmFragment  extends BaseFragment<ActiveSearchFragmentBindin
     }
 
     private void searchMovie(String keyWord) {
-        getActivity().findViewById(R.id.dialog_load_movie).setVisibility(View.VISIBLE);
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2);
-        binding.rcvData.setLayoutManager(gridLayoutManager);
-        mViewModel.getMovieDataByName(keyWord);
-        homeAdapter = new HomeAdapter(getContext(), false, getContext(), new OnChooseRecyclerView() {
-            @Override
-            public void onChoosePhim(Movie movie) {
-                if (DataLocalManager.getInstance() != null && DataLocalManager.getBooleanValue()) {
-                    Log.d("mmm", "home đã Login", null);
-                    HashMap<String, Object> hashMap = new HashMap<>();
-                    hashMap.put("movie", movie);
-                    mViewController.addFragment(ShowTimeFragment.class, hashMap);
-                } else {
-                    Log.d("mmm", "home chưa Login", null);
-                    getActivity().findViewById(R.id.bottombar).setVisibility(View.GONE);
-                    ((MainActivity) getActivity()).getViewController().replaceFragment(SignInFragment.class, null);
-
+        // Kiểm tra xem adapter có dữ liệu hay không
+        if (homeAdapter != null && homeAdapter.getItemCount() > 0) {
+            // Clear dữ liệu hiện có và hiển thị dialog load movie
+            homeAdapter.clear();
+            homeAdapter.notifyDataSetChanged();
+            getActivity().findViewById(R.id.dialog_load_movie).setVisibility(View.VISIBLE);
+        } else {
+            // Nếu adapter chưa có dữ liệu, tạo mới adapter và thiết lập RecyclerView
+            homeAdapter = new HomeAdapter(getContext(), false, getContext(), new OnChooseRecyclerView() {
+                @Override
+                public void onChoosePhim(Movie movie) {
+                    if (DataLocalManager.getInstance() != null && DataLocalManager.getBooleanValue()) {
+                        Log.d("mmm", "home đã Login", null);
+                        HashMap<String, Object> hashMap = new HashMap<>();
+                        hashMap.put("movie", movie);
+                        mViewController.addFragment(ShowTimeFragment.class, hashMap);
+                    } else {
+                        Log.d("mmm", "home chưa Login", null);
+                        getActivity().findViewById(R.id.bottombar).setVisibility(View.GONE);
+                        ((MainActivity) getActivity()).getViewController().replaceFragment(SignInFragment.class, null);
+                    }
                 }
 
+                @Override
+                public void onChooseRap(Theater theater) {}
 
-            }
+                @Override
+                public void onChooseFilmInfo(FilmInfo filmInfo) {}
 
-            @Override
-            public void onChooseRap(Theater theater) {
+                @Override
+                public void onChooseLichChieu(Schedule showTime) {}
 
-            }
+                @Override
+                public void onChooseCategory(Category category) {}
+            });
+            GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2);
+            binding.rcvData.setLayoutManager(gridLayoutManager);
+            binding.rcvData.setAdapter(homeAdapter);
+        }
 
-            @Override
-            public void onChooseFilmInfo(FilmInfo filmInfo) {
+        mViewModel.getMovieDataByName(keyWord);
 
-            }
-
-            @Override
-            public void onChooseLichChieu(Schedule showTime) {
-
-            }
-
-            @Override
-            public void onChooseCategory(Category category) {
-
-            }
-        });
         mViewModel.dataMovie.observe(getViewLifecycleOwner(), new Observer<List<Movie>>() {
             @Override
             public void onChanged(List<Movie> movieListResponse) {
-                if(movieListResponse.size()!=0) {
-                    if (mListMovies != null) {
-                        homeAdapter.clear();
-                        mListMovies.clear();
-                        homeAdapter.addModels(mListMovies, false);
-                        getActivity().findViewById(R.id.dialog_load_movie).setVisibility(View.VISIBLE);
-                    } else {
-                        mListMovies = new ArrayList<>();
-                    }
-                    mListMovies.addAll(movieListResponse);
-                    homeAdapter.addModels(mListMovies, false);
-                    Log.d("fat", "add Model", null);
+                if (movieListResponse.size() != 0) {
+                    // Cập nhật dữ liệu mới vào adapter
+                    homeAdapter.clear();
+                    homeAdapter.addModels(movieListResponse, false);
                     getActivity().findViewById(R.id.dialog_load_movie).setVisibility(View.GONE);
                     getActivity().findViewById(R.id.ln_no_movie).setVisibility(View.GONE);
                 } else {
+                    // Xử lý khi không có kết quả trả về
                     homeAdapter.clear();
-                    mListMovies.clear();
                     getActivity().findViewById(R.id.dialog_load_movie).setVisibility(View.GONE);
                     getActivity().findViewById(R.id.ln_no_movie).setVisibility(View.VISIBLE);
                 }
+                homeAdapter.notifyDataSetChanged();
             }
         });
-        binding.rcvData.setAdapter(homeAdapter);
     }
 
 
