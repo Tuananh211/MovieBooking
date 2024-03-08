@@ -67,7 +67,7 @@ public interface ApiInterface {
     @GET("/movies/{movieId}/actors")
     Single<List<Actor>> getListActorsByMovieId(@Path("movieId") int movieId );
     //get cinema
-    @GET("cinemas")
+    @GET("cinemas/")
     Single<Theater> getTheater();
 
     // get Chair
@@ -75,7 +75,7 @@ public interface ApiInterface {
     Single<List<Seat>> getAllChair();
     //get all cinema
     @GET("cinemas")
-    Single<List<Cinema>> getCinemas();
+    Single<List<Theater>> getCinemas();
     //get all cinema has movie schedule
     @GET("cinemas/hasSchedule/{movieId}")
     Single<List<Cinema>> getCinemasByMovieId(@Path("movieId") int movieId );

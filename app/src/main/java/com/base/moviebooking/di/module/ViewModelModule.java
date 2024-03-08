@@ -12,6 +12,7 @@ import com.base.moviebooking.ui.giaodich.GiaoDichViewModel;
 import com.base.moviebooking.ui.home.HomeViewModel;
 import com.base.moviebooking.ui.main.MainViewModel;
 import com.base.moviebooking.ui.movie_by_categoryId.MovieByCategoryIdModel;
+import com.base.moviebooking.ui.schedule.ScheduleCinemaModel;
 import com.base.moviebooking.ui.search_film.SearchFilmModel;
 import com.base.moviebooking.ui.show_time.ShowTimeViewModel;
 import com.base.moviebooking.ui.show_time_child.ShowTimeChildViewModel;
@@ -127,6 +128,11 @@ public abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(MainViewModel.class)
     abstract ViewModel bindMainViewModel(MainViewModel viewModel);
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(ScheduleCinemaModel.class)
+    abstract ViewModel bindMainViewModel(ScheduleCinemaModel viewModel);
 
 
 

@@ -4,6 +4,7 @@ package com.base.moviebooking.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.Bindable;
@@ -19,13 +20,17 @@ public abstract class RcvRapBinding extends ViewDataBinding {
   @NonNull
   public final ShapeableImageView image;
 
+  @NonNull
+  public final LinearLayout lnTheater;
+
   @Bindable
   protected Theater mTheater;
 
   protected RcvRapBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      ShapeableImageView image) {
+      ShapeableImageView image, LinearLayout lnTheater) {
     super(_bindingComponent, _root, _localFieldCount);
     this.image = image;
+    this.lnTheater = lnTheater;
   }
 
   public abstract void setTheater(@Nullable Theater theater);

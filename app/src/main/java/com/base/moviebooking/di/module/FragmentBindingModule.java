@@ -7,6 +7,7 @@ import com.base.moviebooking.ui.chonghe.ChonGheFragment;
 import com.base.moviebooking.ui.film_info.FilmInfoChildFragment;
 import com.base.moviebooking.ui.giaodich.GiaoDichFragment;
 import com.base.moviebooking.ui.movie_by_categoryId.MovieByCategoryIdFragment;
+import com.base.moviebooking.ui.schedule.ScheduleCinemaFragment;
 import com.base.moviebooking.ui.search_film.SearchFilmFragment;
 import com.base.moviebooking.ui.show_time.ShowTimeFragment;
 import com.base.moviebooking.ui.account.AccountFragment;
@@ -85,5 +86,8 @@ public abstract class FragmentBindingModule {
 
     @ContributesAndroidInjector
     abstract SearchFilmFragment bindSearchFragment();
+
+    @ContributesAndroidInjector
+    abstract ScheduleCinemaFragment bindScheduleFragment();
 
 }

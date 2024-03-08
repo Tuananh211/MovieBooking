@@ -1922,6 +1922,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable diamond
+drawable dotted_line
 drawable down
 drawable drink
 drawable dv1
@@ -2419,6 +2420,7 @@ id line1
 id line3
 id linear
 id linearLayout
+id linearLayout2
 id listActor
 id listMode
 id list_category
@@ -2439,6 +2441,7 @@ id ln_no_user
 id ln_nuoc
 id ln_phim
 id ln_rcvgiaodich
+id ln_theater
 id ln_thongtin
 id ln_user
 id masked
@@ -2951,6 +2954,7 @@ layout rcv_lichchieu
 layout rcv_phim_home
 layout rcv_rap
 layout rcv_seat
+layout schedule_cinema_fragment
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -2981,6 +2985,7 @@ layout thongtin_thanhtoan_fragment
 layout user_info_fragment
 layout viewholder_actors
 layout viewholder_category
+layout viewholder_schedule
 layout viewpager_dienanh
 layout zxing_barcode_scanner
 layout zxing_capture

@@ -112,7 +112,15 @@
         "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/lich_phim.xml"
     },
     {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/schedule_cinema_fragment.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/schedule_cinema_fragment.xml"
+    },
+    {
         "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/dialog_loading.xml",
         "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/dialog_loading.xml"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/viewholder_schedule.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/viewholder_schedule.xml"
     }
 ]

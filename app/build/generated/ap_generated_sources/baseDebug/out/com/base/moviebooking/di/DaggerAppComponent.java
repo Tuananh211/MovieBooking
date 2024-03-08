@@ -195,6 +195,8 @@ public final class DaggerAppComponent implements AppComponent {
 
   private Provider<AccountViewModel> accountViewModelProvider;
 
+  private Provider<TheaterViewModel> theaterViewModelProvider;
+
   private Provider<SignUpViewModel> signUpViewModelProvider;
 
   private Provider<SignInViewModel> signInViewModelProvider;
@@ -273,7 +275,7 @@ public final class DaggerAppComponent implements AppComponent {
         .put(HomeViewModel.class, (Provider) homeViewModelProvider)
         .put(AccountViewModel.class, (Provider) accountViewModelProvider)
         .put(FilmInfoViewModel.class, (Provider) FilmInfoViewModel_Factory.create())
-        .put(TheaterViewModel.class, (Provider) TheaterViewModel_Factory.create())
+        .put(TheaterViewModel.class, (Provider) theaterViewModelProvider)
         .put(SignUpViewModel.class, (Provider) signUpViewModelProvider)
         .put(SignInViewModel.class, (Provider) signInViewModelProvider)
         .put(ChonGheViewModel.class, (Provider) chonGheViewModelProvider)
@@ -494,6 +496,7 @@ public final class DaggerAppComponent implements AppComponent {
     this.searchFilmModelProvider = SearchFilmModel_Factory.create(repositoryProvider);
     this.homeViewModelProvider = HomeViewModel_Factory.create(repositoryProvider);
     this.accountViewModelProvider = AccountViewModel_Factory.create(repositoryProvider);
+    this.theaterViewModelProvider = TheaterViewModel_Factory.create(repositoryProvider);
     this.signUpViewModelProvider = SignUpViewModel_Factory.create(repositoryProvider);
     this.signInViewModelProvider = SignInViewModel_Factory.create(repositoryProvider);
     this.chonGheViewModelProvider = ChonGheViewModel_Factory.create(repositoryProvider);

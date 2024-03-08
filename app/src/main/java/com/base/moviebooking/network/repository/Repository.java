@@ -19,6 +19,7 @@ import com.base.moviebooking.entity.RegisterResponse;
 import com.base.moviebooking.entity.Schedule;
 import com.base.moviebooking.entity.Seat;
 import com.base.moviebooking.entity.ThanhToan;
+import com.base.moviebooking.entity.Theater;
 import com.base.moviebooking.entity.ThongTinThanhToan;
 import com.base.moviebooking.entity.UserUpdate;
 import com.base.moviebooking.entity.VNPay;
@@ -100,7 +101,7 @@ public class Repository {
                 .observeOn(AndroidSchedulers.mainThread());
     }
     //lấy all Cinema
-    public Single<List<Cinema>> getCinemas( ) {
+    public Single<List<Theater>> getCinemas( ) {
         return apiInterface.getCinemas()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());

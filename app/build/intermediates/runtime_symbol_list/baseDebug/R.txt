@@ -1921,6 +1921,7 @@ int drawable design_ic_visibility_off 0x7f070077
 int drawable design_password_eye 0x7f070078
 int drawable design_snackbar_background 0x7f070079
 int drawable diamond 0x7f07007a
+int drawable dotted_line 0x7f070111
 int drawable down 0x7f07007b
 int drawable drink 0x7f07007c
 int drawable dv1 0x7f07007d
@@ -2418,6 +2419,7 @@ int id line1 0x7f080157
 int id line3 0x7f080158
 int id linear 0x7f080159
 int id linearLayout 0x7f08015a
+int id linearLayout2 0x7f0802c1
 int id listActor 0x7f08015b
 int id listMode 0x7f08015c
 int id list_category 0x7f08015d
@@ -2438,6 +2440,7 @@ int id ln_no_user 0x7f08016b
 int id ln_nuoc 0x7f08016c
 int id ln_phim 0x7f08016d
 int id ln_rcvgiaodich 0x7f08016e
+int id ln_theater 0x7f0802c2
 int id ln_thongtin 0x7f08016f
 int id ln_user 0x7f080170
 int id masked 0x7f080171
@@ -2950,6 +2953,7 @@ int layout rcv_lichchieu 0x7f0b0083
 int layout rcv_phim_home 0x7f0b0084
 int layout rcv_rap 0x7f0b0085
 int layout rcv_seat 0x7f0b0086
+int layout schedule_cinema_fragment 0x7f0b00a8
 int layout select_dialog_item_material 0x7f0b0087
 int layout select_dialog_multichoice_material 0x7f0b0088
 int layout select_dialog_singlechoice_material 0x7f0b0089
@@ -2980,6 +2984,7 @@ int layout thongtin_thanhtoan_fragment 0x7f0b00a1
 int layout user_info_fragment 0x7f0b00a2
 int layout viewholder_actors 0x7f0b00a3
 int layout viewholder_category 0x7f0b00a4
+int layout viewholder_schedule 0x7f0b00a9
 int layout viewpager_dienanh 0x7f0b00a5
 int layout zxing_barcode_scanner 0x7f0b00a6
 int layout zxing_capture 0x7f0b00a7
