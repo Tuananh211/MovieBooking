@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.widget.NestedScrollView;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -24,13 +25,17 @@ public abstract class ScheduleCinemaFragmentBinding extends ViewDataBinding {
   @NonNull
   public final TabLayout tabLayout;
 
+  @NonNull
+  public final Toolbar toolbar;
+
   protected ScheduleCinemaFragmentBinding(Object _bindingComponent, View _root,
       int _localFieldCount, DialogLoadingBinding dialogLoad, NestedScrollView scrollView2,
-      TabLayout tabLayout) {
+      TabLayout tabLayout, Toolbar toolbar) {
     super(_bindingComponent, _root, _localFieldCount);
     this.dialogLoad = dialogLoad;
     this.scrollView2 = scrollView2;
     this.tabLayout = tabLayout;
+    this.toolbar = toolbar;
   }
 
   @NonNull

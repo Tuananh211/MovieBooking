@@ -12,14 +12,15 @@ public class ScheduleCinemaFragmentBindingImpl extends ScheduleCinemaFragmentBin
     @Nullable
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
-        sIncludes = new androidx.databinding.ViewDataBinding.IncludedLayouts(5);
+        sIncludes = new androidx.databinding.ViewDataBinding.IncludedLayouts(6);
         sIncludes.setIncludes(1, 
             new String[] {"dialog_loading"},
             new int[] {2},
             new int[] {com.base.moviebooking.R.layout.dialog_loading});
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.scrollView2, 3);
-        sViewsWithIds.put(R.id.tab_layout, 4);
+        sViewsWithIds.put(R.id.toolbar, 4);
+        sViewsWithIds.put(R.id.tab_layout, 5);
     }
     // views
     @NonNull
@@ -32,13 +33,14 @@ public class ScheduleCinemaFragmentBindingImpl extends ScheduleCinemaFragmentBin
     // Inverse Binding Event Handlers
 
     public ScheduleCinemaFragmentBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
     }
     private ScheduleCinemaFragmentBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
             , (com.base.moviebooking.databinding.DialogLoadingBinding) bindings[2]
             , (androidx.core.widget.NestedScrollView) bindings[3]
-            , (com.google.android.material.tabs.TabLayout) bindings[4]
+            , (com.google.android.material.tabs.TabLayout) bindings[5]
+            , (androidx.appcompat.widget.Toolbar) bindings[4]
             );
         setContainedBinding(this.dialogLoad);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];

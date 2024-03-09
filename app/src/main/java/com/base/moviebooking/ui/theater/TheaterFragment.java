@@ -102,7 +102,7 @@ public class TheaterFragment extends BaseFragment<RapphimFragmentBinding> {
 //                    getActivity().findViewById(R.id.dialog_load).setVisibility(View.GONE);
                 }
                 else{
-//                    rapAdapter.addModels(getListModel(),false);
+                    rapAdapter.addModels(getListModel(),false);
                 }
 
             }

@@ -126,13 +126,15 @@ public abstract class ViewModelModule {
 
     @Binds
     @IntoMap
-    @ViewModelKey(MainViewModel.class)
-    abstract ViewModel bindMainViewModel(MainViewModel viewModel);
+    @ViewModelKey(ScheduleCinemaModel.class)
+    abstract ViewModel bindScheduleCineMaModel(ScheduleCinemaModel viewModel);
 
     @Binds
     @IntoMap
-    @ViewModelKey(ScheduleCinemaModel.class)
-    abstract ViewModel bindMainViewModel(ScheduleCinemaModel viewModel);
+    @ViewModelKey(MainViewModel.class)
+    abstract ViewModel bindMainViewModel(MainViewModel viewModel);
+
+
 
 
 
