@@ -23,6 +23,7 @@ import com.base.moviebooking.entity.Schedule;
 import com.base.moviebooking.entity.Theater;
 import com.base.moviebooking.listener.OnChooseRecyclerView;
 import com.base.moviebooking.ui.main.MainActivity;
+import com.base.moviebooking.ui.schedule.ScheduleCinemaFragment;
 import com.base.moviebooking.ui.show_time.ShowTimeFragment;
 import com.base.moviebooking.ui.sign_in.SignInFragment;
 import com.base.moviebooking.ui.theater.TheaterViewModel;
@@ -69,7 +70,7 @@ public class TheaterFragment extends BaseFragment<RapphimFragmentBinding> {
                     Log.d("mmm", "home đã Login", null);
                     HashMap<String, Object> hashMap = new HashMap<>();
                     hashMap.put("cinema", theater);
-                    mViewController.addFragment(ShowTimeFragment.class, hashMap);
+                    mViewController.addFragment(ScheduleCinemaFragment.class, hashMap);
                 } else {
                     Log.d("mmm", "home chưa Login", null);
                     getActivity().findViewById(R.id.bottombar).setVisibility(View.GONE);
