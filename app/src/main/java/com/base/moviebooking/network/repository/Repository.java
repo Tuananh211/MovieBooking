@@ -205,4 +205,17 @@ public class Repository {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
     }
+    //movie has schedule
+    public Single<List<Movie>> getMoviesHasSchedule(int cinemaId, String day) {
+        return apiInterface.getMovieHasSchedule(cinemaId,day)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    //get time of schedules
+    public Single<List<Schedule>> getTimeSchedule(int cinemaId,int movieId, String day) {
+        return apiInterface.getScheduleOfCinema(cinemaId,movieId,day)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
 }

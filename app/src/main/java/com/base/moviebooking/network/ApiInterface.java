@@ -137,7 +137,12 @@ public interface ApiInterface {
  //get News ny ID
     @GET("news/{id}")
     Single<News> getNewsByID(@Path("id") int id);
-
+// get Movie has Schedule
+    @GET("movies/movieHasSchedule")
+    Single<List<Movie>> getMovieHasSchedule(@Query("cinemaId") int cinemaId, @Query("day") String day);
+    // get time has Schedule
+    @GET("schedules/scheduleCinema")
+    Single<List<Schedule>> getScheduleOfCinema(@Query("cinemaId") int cinemaId, @Query("movieId") int movieId, @Query("day") String day);
 
 
 }

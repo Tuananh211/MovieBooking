@@ -4,9 +4,14 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.Observer;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.base.moviebooking.R;
@@ -14,21 +19,32 @@ import com.base.moviebooking.base.EndlessLoadingRecyclerViewAdapter;
 import com.base.moviebooking.base.RecyclerViewAdapter;
 import com.base.moviebooking.databinding.RcvPhimHomeBinding;
 import com.base.moviebooking.databinding.ViewholderScheduleBinding;
+import com.base.moviebooking.entity.Category;
+import com.base.moviebooking.entity.FilmInfo;
 import com.base.moviebooking.entity.Movie;
 import com.base.moviebooking.entity.Schedule;
+import com.base.moviebooking.entity.Theater;
 import com.base.moviebooking.listener.OnChooseRecyclerView;
+import com.base.moviebooking.ui.schedule.ScheduleCinemaModel;
+import com.base.moviebooking.ui.schedule_child.ScheduleChildModel;
 
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ScheduleAdapter extends EndlessLoadingRecyclerViewAdapter<ViewholderScheduleBinding> {
     private Context mContext;
     private OnChooseRecyclerView mOnChooseRecyclerView;
+    ScheduleCinemaModel scheduleCinemaModel;
+    ScheduleChildModel scheduleChildModel;
+    TimeAdapter timeAdapter;
+    private LifecycleOwner lifecycleOwner;
 
-    public ScheduleAdapter(Context context, boolean enableSelectedMode, Context mContext, OnChooseRecyclerView mOnChooseRecyclerView) {
+    public ScheduleAdapter(Context context, boolean enableSelectedMode, Context mContext, OnChooseRecyclerView mOnChooseRecyclerView, LifecycleOwner lifecycleOwner) {
         super(context, enableSelectedMode);
         this.mContext = mContext;
         this.mOnChooseRecyclerView = mOnChooseRecyclerView;
+        this.lifecycleOwner=lifecycleOwner;
     }
 
     @Override
@@ -64,6 +80,56 @@ public class ScheduleAdapter extends EndlessLoadingRecyclerViewAdapter<Viewholde
             binding.image.setImageBitmap(bitmap);
             binding.tvtAgeLimit.setText("C" + data.getAgeLimit());
             binding.tvtName.setText(data.getName());
+
+            GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 3);
+            binding.listTimes.setLayoutManager(gridLayoutManager);
+            String day = scheduleCinemaModel.day.getValue();
+            Theater theater = scheduleCinemaModel.getDataTheater().getValue();
+            scheduleChildModel.getTimeSchedule(theater.getId(),data.getId(),day);
+            timeAdapter =  new TimeAdapter(getContext(), false, getContext(), new OnChooseRecyclerView() {
+                @Override
+                public void onChoosePhim(Movie movie) {
+
+                }
+
+                @Override
+                public void onChooseRap(Theater theater) {
+
+                }
+
+                @Override
+                public void onChooseFilmInfo(FilmInfo filmInfo) {
+
+                }
+
+                @Override
+                public void onChooseLichChieu(Schedule showTime) {
+
+                }
+
+                @Override
+                public void onChooseCategory(Category category) {
+
+                }
+            });
+            scheduleChildModel.dataSchedule.observe((LifecycleOwner) lifecycleOwner.getLifecycle(), new Observer<List<Schedule>>() {
+                @Override
+                public void onChanged(List<Schedule> listScheduleResponse) {
+                    if (listScheduleResponse.size()!=0){
+                        timeAdapter.addModels(listScheduleResponse, false);
+                        Log.d("fat", "add Model", null);
+//                        getActivity().findViewById(R.id.dialog_load).setVisibility(View.GONE);
+//                        binding.lnNoMovie.setVisibility(View.GONE);
+                    }
+//                    else{
+//                        getActivity().findViewById(R.id.dialog_load).setVisibility(View.GONE);
+//                        binding.lnNoMovie.setVisibility(View.VISIBLE);
+//                    }
+
+                }
+            });
+            binding.listTimes.setAdapter(timeAdapter);
+            timeAdapter.notifyDataSetChanged();
         }
     }
     public static String parseBase64(String base64) {

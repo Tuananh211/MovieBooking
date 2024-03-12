@@ -103,6 +103,7 @@
                 android:textSize="18sp" />
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_times"
                 android:layout_width="match_parent"
                 android:layout_height="184dp"
                 android:paddingStart="5dp"

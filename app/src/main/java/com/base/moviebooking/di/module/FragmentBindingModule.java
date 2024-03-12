@@ -8,6 +8,7 @@ import com.base.moviebooking.ui.film_info.FilmInfoChildFragment;
 import com.base.moviebooking.ui.giaodich.GiaoDichFragment;
 import com.base.moviebooking.ui.movie_by_categoryId.MovieByCategoryIdFragment;
 import com.base.moviebooking.ui.schedule.ScheduleCinemaFragment;
+import com.base.moviebooking.ui.schedule_child.ScheduleChildFragment;
 import com.base.moviebooking.ui.search_film.SearchFilmFragment;
 import com.base.moviebooking.ui.show_time.ShowTimeFragment;
 import com.base.moviebooking.ui.account.AccountFragment;
@@ -89,5 +90,8 @@ public abstract class FragmentBindingModule {
 
     @ContributesAndroidInjector
     abstract ScheduleCinemaFragment bindScheduleFragment();
+
+    @ContributesAndroidInjector
+    abstract ScheduleChildFragment bindScheduleChildFragment();
 
 }
