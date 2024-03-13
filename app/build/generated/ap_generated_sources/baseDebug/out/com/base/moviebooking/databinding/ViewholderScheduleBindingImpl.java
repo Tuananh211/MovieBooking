@@ -19,6 +19,7 @@ public class ViewholderScheduleBindingImpl extends ViewholderScheduleBinding  {
         sViewsWithIds.put(R.id.image, 3);
         sViewsWithIds.put(R.id.tvt_ageLimit, 4);
         sViewsWithIds.put(R.id.tvtName, 5);
+        sViewsWithIds.put(R.id.list_times, 6);
     }
     // views
     @NonNull
@@ -29,12 +30,13 @@ public class ViewholderScheduleBindingImpl extends ViewholderScheduleBinding  {
     // Inverse Binding Event Handlers
 
     public ViewholderScheduleBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 7, sIncludes, sViewsWithIds));
     }
     private ViewholderScheduleBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
             , (com.google.android.material.imageview.ShapeableImageView) bindings[3]
             , (android.widget.LinearLayout) bindings[1]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[6]
             , (android.widget.LinearLayout) bindings[2]
             , (android.widget.TextView) bindings[4]
             , (android.widget.TextView) bindings[5]

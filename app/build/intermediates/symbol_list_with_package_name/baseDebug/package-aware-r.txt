@@ -2004,6 +2004,7 @@ drawable navigation_empty_icon
 drawable next
 drawable no_results
 drawable no_schedule
+drawable not_calendar
 drawable notification_action_background
 drawable notification_background
 drawable notification_bg
@@ -2425,6 +2426,8 @@ id listActor
 id listMode
 id list_category
 id list_item
+id list_time
+id list_times
 id lnHuy
 id ln_GDich
 id ln_bong
@@ -2555,6 +2558,7 @@ id rcv
 id rcv_data
 id rcv_dienanh
 id rcv_gd
+id rcv_lichphim
 id rcv_rap
 id rcv_rapphim
 id rcv_search
@@ -2688,6 +2692,7 @@ id texture_view
 id thongtin_fragment
 id tien
 id time
+id timeText
 id title
 id titleDividerNoCustom
 id titleTxt
@@ -2955,6 +2960,7 @@ layout rcv_phim_home
 layout rcv_rap
 layout rcv_seat
 layout schedule_cinema_fragment
+layout schedulle_child_fragment
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -2986,6 +2992,7 @@ layout user_info_fragment
 layout viewholder_actors
 layout viewholder_category
 layout viewholder_schedule
+layout viewholder_times
 layout viewpager_dienanh
 layout zxing_barcode_scanner
 layout zxing_capture

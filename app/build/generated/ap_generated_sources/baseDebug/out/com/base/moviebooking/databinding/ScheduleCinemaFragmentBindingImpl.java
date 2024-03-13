@@ -12,41 +12,33 @@ public class ScheduleCinemaFragmentBindingImpl extends ScheduleCinemaFragmentBin
     @Nullable
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
-        sIncludes = new androidx.databinding.ViewDataBinding.IncludedLayouts(6);
-        sIncludes.setIncludes(1, 
-            new String[] {"dialog_loading"},
-            new int[] {2},
-            new int[] {com.base.moviebooking.R.layout.dialog_loading});
+        sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.scrollView2, 3);
-        sViewsWithIds.put(R.id.toolbar, 4);
-        sViewsWithIds.put(R.id.tab_layout, 5);
+        sViewsWithIds.put(R.id.scrollView2, 1);
+        sViewsWithIds.put(R.id.toolbar, 2);
+        sViewsWithIds.put(R.id.tab_layout, 3);
+        sViewsWithIds.put(R.id.viewpager_lichphim, 4);
     }
     // views
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
-    @NonNull
-    private final android.widget.LinearLayout mboundView1;
     // variables
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public ScheduleCinemaFragmentBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
     }
     private ScheduleCinemaFragmentBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
-        super(bindingComponent, root, 1
-            , (com.base.moviebooking.databinding.DialogLoadingBinding) bindings[2]
-            , (androidx.core.widget.NestedScrollView) bindings[3]
-            , (com.google.android.material.tabs.TabLayout) bindings[5]
-            , (androidx.appcompat.widget.Toolbar) bindings[4]
+        super(bindingComponent, root, 0
+            , (androidx.core.widget.NestedScrollView) bindings[1]
+            , (com.google.android.material.tabs.TabLayout) bindings[3]
+            , (androidx.appcompat.widget.Toolbar) bindings[2]
+            , (androidx.viewpager2.widget.ViewPager2) bindings[4]
             );
-        setContainedBinding(this.dialogLoad);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView1 = (android.widget.LinearLayout) bindings[1];
-        this.mboundView1.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();
@@ -55,9 +47,8 @@ public class ScheduleCinemaFragmentBindingImpl extends ScheduleCinemaFragmentBin
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x2L;
+                mDirtyFlags = 0x1L;
         }
-        dialogLoad.invalidateAll();
         requestRebind();
     }
 
@@ -67,9 +58,6 @@ public class ScheduleCinemaFragmentBindingImpl extends ScheduleCinemaFragmentBin
             if (mDirtyFlags != 0) {
                 return true;
             }
-        }
-        if (dialogLoad.hasPendingBindings()) {
-            return true;
         }
         return false;
     }
@@ -81,25 +69,8 @@ public class ScheduleCinemaFragmentBindingImpl extends ScheduleCinemaFragmentBin
     }
 
     @Override
-    public void setLifecycleOwner(@Nullable androidx.lifecycle.LifecycleOwner lifecycleOwner) {
-        super.setLifecycleOwner(lifecycleOwner);
-        dialogLoad.setLifecycleOwner(lifecycleOwner);
-    }
-
-    @Override
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
-            case 0 :
-                return onChangeDialogLoad((com.base.moviebooking.databinding.DialogLoadingBinding) object, fieldId);
-        }
-        return false;
-    }
-    private boolean onChangeDialogLoad(com.base.moviebooking.databinding.DialogLoadingBinding DialogLoad, int fieldId) {
-        if (fieldId == BR._all) {
-            synchronized(this) {
-                    mDirtyFlags |= 0x1L;
-            }
-            return true;
         }
         return false;
     }
@@ -112,15 +83,13 @@ public class ScheduleCinemaFragmentBindingImpl extends ScheduleCinemaFragmentBin
             mDirtyFlags = 0;
         }
         // batch finished
-        executeBindingsOn(dialogLoad);
     }
     // Listener Stub Implementations
     // callback impls
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): dialogLoad
-        flag 1 (0x2L): null
+        flag 0 (0x1L): null
     flag mapping end*/
     //end
 }

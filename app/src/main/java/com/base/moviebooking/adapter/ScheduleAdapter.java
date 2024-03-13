@@ -111,7 +111,7 @@ public class ScheduleAdapter extends EndlessLoadingRecyclerViewAdapter<Viewholde
                 public void onChooseCategory(Category category) {
 
                 }
-            });
+            },data);
             scheduleChildModel.dataSchedule.observe((LifecycleOwner) lifecycleOwner.getLifecycle(), new Observer<List<Schedule>>() {
                 @Override
                 public void onChanged(List<Schedule> listScheduleResponse) {

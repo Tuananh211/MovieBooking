@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
 import com.base.moviebooking.R;
 import com.google.android.material.imageview.ShapeableImageView;
 import java.lang.Deprecated;
@@ -23,6 +24,9 @@ public abstract class ViewholderScheduleBinding extends ViewDataBinding {
   public final LinearLayout linearLayout2;
 
   @NonNull
+  public final RecyclerView listTimes;
+
+  @NonNull
   public final LinearLayout lnPhim;
 
   @NonNull
@@ -32,11 +36,12 @@ public abstract class ViewholderScheduleBinding extends ViewDataBinding {
   public final TextView tvtName;
 
   protected ViewholderScheduleBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      ShapeableImageView image, LinearLayout linearLayout2, LinearLayout lnPhim,
-      TextView tvtAgeLimit, TextView tvtName) {
+      ShapeableImageView image, LinearLayout linearLayout2, RecyclerView listTimes,
+      LinearLayout lnPhim, TextView tvtAgeLimit, TextView tvtName) {
     super(_bindingComponent, _root, _localFieldCount);
     this.image = image;
     this.linearLayout2 = linearLayout2;
+    this.listTimes = listTimes;
     this.lnPhim = lnPhim;
     this.tvtAgeLimit = tvtAgeLimit;
     this.tvtName = tvtName;

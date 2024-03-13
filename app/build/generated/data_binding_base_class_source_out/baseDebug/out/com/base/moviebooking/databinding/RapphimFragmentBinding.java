@@ -15,11 +15,15 @@ import java.lang.Object;
 
 public abstract class RapphimFragmentBinding extends ViewDataBinding {
   @NonNull
+  public final DialogLoadingBinding dialogLoad;
+
+  @NonNull
   public final RecyclerView rcvRapphim;
 
   protected RapphimFragmentBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      RecyclerView rcvRapphim) {
+      DialogLoadingBinding dialogLoad, RecyclerView rcvRapphim) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.dialogLoad = dialogLoad;
     this.rcvRapphim = rcvRapphim;
   }
 

@@ -69,8 +69,8 @@ public class TheaterFragment extends BaseFragment<RapphimFragmentBinding> {
                 if (DataLocalManager.getInstance() != null && DataLocalManager.getBooleanValue()) {
                     Log.d("mmm", "home đã Login", null);
                     HashMap<String, Object> hashMap = new HashMap<>();
-                    hashMap.put("cinema", theater);
-                    mViewController.addFragment(ScheduleCinemaFragment.class, hashMap);
+                    hashMap.put("theater", theater);
+                    mViewController.addFragment(ScheduleCinemaFragment.class,hashMap);
                 } else {
                     Log.d("mmm", "home chưa Login", null);
                     getActivity().findViewById(R.id.bottombar).setVisibility(View.GONE);
@@ -100,7 +100,7 @@ public class TheaterFragment extends BaseFragment<RapphimFragmentBinding> {
                 if (cinemaListResponse.size()!=0){
                     rapAdapter.addModels(cinemaListResponse, false);
                     Log.d("fat", "add Model", null);
-//                    getActivity().findViewById(R.id.dialog_load).setVisibility(View.GONE);
+                    getActivity().findViewById(R.id.dialog_load).setVisibility(View.GONE);
                 }
                 else{
                     rapAdapter.addModels(getListModel(),false);

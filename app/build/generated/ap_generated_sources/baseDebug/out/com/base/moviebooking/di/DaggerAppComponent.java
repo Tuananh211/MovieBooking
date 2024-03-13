@@ -19,6 +19,7 @@ import com.base.moviebooking.di.module.FragmentBindingModule_BindFilmInfoFragmen
 import com.base.moviebooking.di.module.FragmentBindingModule_BindGiaoDichFragment;
 import com.base.moviebooking.di.module.FragmentBindingModule_BindHomeFragment;
 import com.base.moviebooking.di.module.FragmentBindingModule_BindMovieByCategoryIdFragment;
+import com.base.moviebooking.di.module.FragmentBindingModule_BindScheduleChildFragment;
 import com.base.moviebooking.di.module.FragmentBindingModule_BindScheduleFragment;
 import com.base.moviebooking.di.module.FragmentBindingModule_BindSearchFragment;
 import com.base.moviebooking.di.module.FragmentBindingModule_BindShowTimeChildFragment;
@@ -67,6 +68,9 @@ import com.base.moviebooking.ui.movie_by_categoryId.MovieByCategoryIdModel_Facto
 import com.base.moviebooking.ui.schedule.ScheduleCinemaFragment;
 import com.base.moviebooking.ui.schedule.ScheduleCinemaModel;
 import com.base.moviebooking.ui.schedule.ScheduleCinemaModel_Factory;
+import com.base.moviebooking.ui.schedule_child.ScheduleChildFragment;
+import com.base.moviebooking.ui.schedule_child.ScheduleChildModel;
+import com.base.moviebooking.ui.schedule_child.ScheduleChildModel_Factory;
 import com.base.moviebooking.ui.search_film.SearchFilmFragment;
 import com.base.moviebooking.ui.search_film.SearchFilmModel;
 import com.base.moviebooking.ui.search_film.SearchFilmModel_Factory;
@@ -185,6 +189,10 @@ public final class DaggerAppComponent implements AppComponent {
           FragmentBindingModule_BindScheduleFragment.ScheduleCinemaFragmentSubcomponent.Builder>
       scheduleCinemaFragmentSubcomponentBuilderProvider;
 
+  private Provider<
+          FragmentBindingModule_BindScheduleChildFragment.ScheduleChildFragmentSubcomponent.Builder>
+      scheduleChildFragmentSubcomponentBuilderProvider;
+
   private Provider<Application> applicationProvider;
 
   private Provider<Context> provideContextProvider;
@@ -227,6 +235,8 @@ public final class DaggerAppComponent implements AppComponent {
 
   private Provider<ScheduleCinemaModel> scheduleCinemaModelProvider;
 
+  private Provider<ScheduleChildModel> scheduleChildModelProvider;
+
   private DaggerAppComponent(NetworkModule networkModuleParam, Application applicationParam) {
 
     initialize(networkModuleParam, applicationParam);
@@ -238,7 +248,7 @@ public final class DaggerAppComponent implements AppComponent {
 
   private Map<Class<?>, Provider<AndroidInjector.Factory<?>>>
       getMapOfClassOfAndProviderOfFactoryOf() {
-    return MapBuilder.<Class<?>, Provider<AndroidInjector.Factory<?>>>newMapBuilder(21)
+    return MapBuilder.<Class<?>, Provider<AndroidInjector.Factory<?>>>newMapBuilder(22)
         .put(MainActivity.class, (Provider) mainActivitySubcomponentBuilderProvider)
         .put(SplashFragment.class, (Provider) splashFragmentSubcomponentBuilderProvider)
         .put(HomeFragment.class, (Provider) homeFragmentSubcomponentBuilderProvider)
@@ -270,6 +280,9 @@ public final class DaggerAppComponent implements AppComponent {
         .put(
             ScheduleCinemaFragment.class,
             (Provider) scheduleCinemaFragmentSubcomponentBuilderProvider)
+        .put(
+            ScheduleChildFragment.class,
+            (Provider) scheduleChildFragmentSubcomponentBuilderProvider)
         .build();
   }
 
@@ -281,7 +294,7 @@ public final class DaggerAppComponent implements AppComponent {
 
   private Map<Class<? extends ViewModel>, Provider<ViewModel>>
       getMapOfClassOfAndProviderOfViewModel() {
-    return MapBuilder.<Class<? extends ViewModel>, Provider<ViewModel>>newMapBuilder(20)
+    return MapBuilder.<Class<? extends ViewModel>, Provider<ViewModel>>newMapBuilder(21)
         .put(SplashViewModel.class, (Provider) SplashViewModel_Factory.create())
         .put(MovieByCategoryIdModel.class, (Provider) movieByCategoryIdModelProvider)
         .put(SearchFilmModel.class, (Provider) searchFilmModelProvider)
@@ -301,6 +314,7 @@ public final class DaggerAppComponent implements AppComponent {
         .put(DetailMovieViewModel.class, (Provider) detailMovieViewModelProvider)
         .put(ChangePassViewModel.class, (Provider) changePassViewModelProvider)
         .put(ScheduleCinemaModel.class, (Provider) scheduleCinemaModelProvider)
+        .put(ScheduleChildModel.class, (Provider) scheduleChildModelProvider)
         .put(MainViewModel.class, (Provider) MainViewModel_Factory.create())
         .build();
   }
@@ -506,6 +520,17 @@ public final class DaggerAppComponent implements AppComponent {
             return new ScheduleCinemaFragmentSubcomponentBuilder();
           }
         };
+    this.scheduleChildFragmentSubcomponentBuilderProvider =
+        new Provider<
+            FragmentBindingModule_BindScheduleChildFragment.ScheduleChildFragmentSubcomponent
+                .Builder>() {
+          @Override
+          public FragmentBindingModule_BindScheduleChildFragment.ScheduleChildFragmentSubcomponent
+                  .Builder
+              get() {
+            return new ScheduleChildFragmentSubcomponentBuilder();
+          }
+        };
     this.applicationProvider = InstanceFactory.create(applicationParam);
     this.provideContextProvider = DoubleCheck.provider((Provider) applicationProvider);
     this.provideHttpClientProvider =
@@ -534,6 +559,7 @@ public final class DaggerAppComponent implements AppComponent {
     this.detailMovieViewModelProvider = DetailMovieViewModel_Factory.create(repositoryProvider);
     this.changePassViewModelProvider = ChangePassViewModel_Factory.create(repositoryProvider);
     this.scheduleCinemaModelProvider = ScheduleCinemaModel_Factory.create(repositoryProvider);
+    this.scheduleChildModelProvider = ScheduleChildModel_Factory.create(repositoryProvider);
   }
 
   @Override
@@ -1421,6 +1447,48 @@ public final class DaggerAppComponent implements AppComponent {
     }
 
     private ScheduleCinemaFragment injectScheduleCinemaFragment(ScheduleCinemaFragment instance) {
+      DaggerFragment_MembersInjector.injectChildFragmentInjector(
+          instance, getDispatchingAndroidInjectorOfFragment());
+      BaseFragment_MembersInjector.injectViewModelFactory(
+          instance, DaggerAppComponent.this.getViewModelFactory());
+      return instance;
+    }
+  }
+
+  private final class ScheduleChildFragmentSubcomponentBuilder
+      extends FragmentBindingModule_BindScheduleChildFragment.ScheduleChildFragmentSubcomponent
+          .Builder {
+    private ScheduleChildFragment seedInstance;
+
+    @Override
+    public void seedInstance(ScheduleChildFragment arg0) {
+      this.seedInstance = Preconditions.checkNotNull(arg0);
+    }
+
+    @Override
+    public FragmentBindingModule_BindScheduleChildFragment.ScheduleChildFragmentSubcomponent
+        build() {
+      Preconditions.checkBuilderRequirement(seedInstance, ScheduleChildFragment.class);
+      return new ScheduleChildFragmentSubcomponentImpl(seedInstance);
+    }
+  }
+
+  private final class ScheduleChildFragmentSubcomponentImpl
+      implements FragmentBindingModule_BindScheduleChildFragment.ScheduleChildFragmentSubcomponent {
+    private ScheduleChildFragmentSubcomponentImpl(ScheduleChildFragment seedInstance) {}
+
+    private DispatchingAndroidInjector<Fragment> getDispatchingAndroidInjectorOfFragment() {
+      return DispatchingAndroidInjector_Factory.newDispatchingAndroidInjector(
+          DaggerAppComponent.this.getMapOfClassOfAndProviderOfFactoryOf(),
+          Collections.<String, Provider<AndroidInjector.Factory<?>>>emptyMap());
+    }
+
+    @Override
+    public void inject(ScheduleChildFragment arg0) {
+      injectScheduleChildFragment(arg0);
+    }
+
+    private ScheduleChildFragment injectScheduleChildFragment(ScheduleChildFragment instance) {
       DaggerFragment_MembersInjector.injectChildFragmentInjector(
           instance, getDispatchingAndroidInjectorOfFragment());
       BaseFragment_MembersInjector.injectViewModelFactory(

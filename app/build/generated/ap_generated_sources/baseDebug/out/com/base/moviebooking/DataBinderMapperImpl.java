@@ -28,6 +28,7 @@ import com.base.moviebooking.databinding.RcvPhimHomeBindingImpl;
 import com.base.moviebooking.databinding.RcvRapBindingImpl;
 import com.base.moviebooking.databinding.RcvSeatBindingImpl;
 import com.base.moviebooking.databinding.ScheduleCinemaFragmentBindingImpl;
+import com.base.moviebooking.databinding.SchedulleChildFragmentBindingImpl;
 import com.base.moviebooking.databinding.SplashFragmentBindingImpl;
 import com.base.moviebooking.databinding.TaikhoanFragmentBindingImpl;
 import com.base.moviebooking.databinding.ThanhtoanFragmentBindingImpl;
@@ -37,6 +38,7 @@ import com.base.moviebooking.databinding.UserInfoFragmentBindingImpl;
 import com.base.moviebooking.databinding.ViewholderActorsBindingImpl;
 import com.base.moviebooking.databinding.ViewholderCategoryBindingImpl;
 import com.base.moviebooking.databinding.ViewholderScheduleBindingImpl;
+import com.base.moviebooking.databinding.ViewholderTimesBindingImpl;
 import java.lang.IllegalArgumentException;
 import java.lang.Integer;
 import java.lang.Object;
@@ -92,25 +94,29 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_SCHEDULECINEMAFRAGMENT = 22;
 
-  private static final int LAYOUT_SPLASHFRAGMENT = 23;
+  private static final int LAYOUT_SCHEDULLECHILDFRAGMENT = 23;
 
-  private static final int LAYOUT_TAIKHOANFRAGMENT = 24;
+  private static final int LAYOUT_SPLASHFRAGMENT = 24;
 
-  private static final int LAYOUT_THANHTOANFRAGMENT = 25;
+  private static final int LAYOUT_TAIKHOANFRAGMENT = 25;
 
-  private static final int LAYOUT_THONGTINFRAGMENT = 26;
+  private static final int LAYOUT_THANHTOANFRAGMENT = 26;
 
-  private static final int LAYOUT_THONGTINTHANHTOANFRAGMENT = 27;
+  private static final int LAYOUT_THONGTINFRAGMENT = 27;
 
-  private static final int LAYOUT_USERINFOFRAGMENT = 28;
+  private static final int LAYOUT_THONGTINTHANHTOANFRAGMENT = 28;
 
-  private static final int LAYOUT_VIEWHOLDERACTORS = 29;
+  private static final int LAYOUT_USERINFOFRAGMENT = 29;
 
-  private static final int LAYOUT_VIEWHOLDERCATEGORY = 30;
+  private static final int LAYOUT_VIEWHOLDERACTORS = 30;
 
-  private static final int LAYOUT_VIEWHOLDERSCHEDULE = 31;
+  private static final int LAYOUT_VIEWHOLDERCATEGORY = 31;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(31);
+  private static final int LAYOUT_VIEWHOLDERSCHEDULE = 32;
+
+  private static final int LAYOUT_VIEWHOLDERTIMES = 33;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(33);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.base.moviebooking.R.layout.active_search_fragment, LAYOUT_ACTIVESEARCHFRAGMENT);
@@ -135,6 +141,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.base.moviebooking.R.layout.rcv_rap, LAYOUT_RCVRAP);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.base.moviebooking.R.layout.rcv_seat, LAYOUT_RCVSEAT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.base.moviebooking.R.layout.schedule_cinema_fragment, LAYOUT_SCHEDULECINEMAFRAGMENT);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.base.moviebooking.R.layout.schedulle_child_fragment, LAYOUT_SCHEDULLECHILDFRAGMENT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.base.moviebooking.R.layout.splash_fragment, LAYOUT_SPLASHFRAGMENT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.base.moviebooking.R.layout.taikhoan_fragment, LAYOUT_TAIKHOANFRAGMENT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.base.moviebooking.R.layout.thanhtoan_fragment, LAYOUT_THANHTOANFRAGMENT);
@@ -144,6 +151,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.base.moviebooking.R.layout.viewholder_actors, LAYOUT_VIEWHOLDERACTORS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.base.moviebooking.R.layout.viewholder_category, LAYOUT_VIEWHOLDERCATEGORY);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.base.moviebooking.R.layout.viewholder_schedule, LAYOUT_VIEWHOLDERSCHEDULE);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.base.moviebooking.R.layout.viewholder_times, LAYOUT_VIEWHOLDERTIMES);
   }
 
   @Override
@@ -287,6 +295,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for schedule_cinema_fragment is invalid. Received: " + tag);
         }
+        case  LAYOUT_SCHEDULLECHILDFRAGMENT: {
+          if ("layout/schedulle_child_fragment_0".equals(tag)) {
+            return new SchedulleChildFragmentBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for schedulle_child_fragment is invalid. Received: " + tag);
+        }
         case  LAYOUT_SPLASHFRAGMENT: {
           if ("layout/splash_fragment_0".equals(tag)) {
             return new SplashFragmentBindingImpl(component, view);
@@ -340,6 +354,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new ViewholderScheduleBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for viewholder_schedule is invalid. Received: " + tag);
+        }
+        case  LAYOUT_VIEWHOLDERTIMES: {
+          if ("layout/viewholder_times_0".equals(tag)) {
+            return new ViewholderTimesBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for viewholder_times is invalid. Received: " + tag);
         }
       }
     }
@@ -400,7 +420,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(31);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(33);
 
     static {
       sKeys.put("layout/active_search_fragment_0", com.base.moviebooking.R.layout.active_search_fragment);
@@ -425,6 +445,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/rcv_rap_0", com.base.moviebooking.R.layout.rcv_rap);
       sKeys.put("layout/rcv_seat_0", com.base.moviebooking.R.layout.rcv_seat);
       sKeys.put("layout/schedule_cinema_fragment_0", com.base.moviebooking.R.layout.schedule_cinema_fragment);
+      sKeys.put("layout/schedulle_child_fragment_0", com.base.moviebooking.R.layout.schedulle_child_fragment);
       sKeys.put("layout/splash_fragment_0", com.base.moviebooking.R.layout.splash_fragment);
       sKeys.put("layout/taikhoan_fragment_0", com.base.moviebooking.R.layout.taikhoan_fragment);
       sKeys.put("layout/thanhtoan_fragment_0", com.base.moviebooking.R.layout.thanhtoan_fragment);
@@ -434,6 +455,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/viewholder_actors_0", com.base.moviebooking.R.layout.viewholder_actors);
       sKeys.put("layout/viewholder_category_0", com.base.moviebooking.R.layout.viewholder_category);
       sKeys.put("layout/viewholder_schedule_0", com.base.moviebooking.R.layout.viewholder_schedule);
+      sKeys.put("layout/viewholder_times_0", com.base.moviebooking.R.layout.viewholder_times);
     }
   }
 }

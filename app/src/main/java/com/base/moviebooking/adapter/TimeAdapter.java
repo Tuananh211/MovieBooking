@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.base.moviebooking.R;
@@ -12,16 +13,27 @@ import com.base.moviebooking.base.RecyclerViewAdapter;
 import com.base.moviebooking.databinding.ViewholderCategoryBinding;
 import com.base.moviebooking.databinding.ViewholderTimesBinding;
 import com.base.moviebooking.entity.Category;
+import com.base.moviebooking.entity.Movie;
 import com.base.moviebooking.entity.Schedule;
+import com.base.moviebooking.entity.Theater;
 import com.base.moviebooking.listener.OnChooseRecyclerView;
+import com.base.moviebooking.ui.chonghe.ChonGheFragment;
+import com.base.moviebooking.ui.main.MainActivity;
+import com.base.moviebooking.ui.schedule.ScheduleCinemaModel;
+import com.base.moviebooking.ui.theater.TheaterFragment;
+
+import java.util.HashMap;
 
 public class TimeAdapter extends EndlessLoadingRecyclerViewAdapter<ViewholderTimesBinding> {
     private Context mContext;
     private OnChooseRecyclerView mOnChooseRecyclerView;
-    public TimeAdapter(Context context, boolean enableSelectedMode, Context mContext, OnChooseRecyclerView onChooseRecyclerView) {
+    ScheduleCinemaModel scheduleCinemaModel;
+    Movie movie;
+    public TimeAdapter(Context context, boolean enableSelectedMode, Context mContext, OnChooseRecyclerView onChooseRecyclerView, Movie movie) {
         super(context, enableSelectedMode);
         this.mContext = mContext;
         this.mOnChooseRecyclerView = onChooseRecyclerView;
+        this.movie= movie;
     }
 
 
@@ -55,7 +67,14 @@ public class TimeAdapter extends EndlessLoadingRecyclerViewAdapter<ViewholderTim
             binding.listTime.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-//                    mOnChooseRecyclerView.onChooseCategory(data);
+                    Theater theater = scheduleCinemaModel.getDataTheater().getValue();
+                   HashMap<String, Object> hashMap = new HashMap<>();
+                    hashMap.put("schedule", data);
+                    hashMap.put("movie", movie);
+                    hashMap.put("cinema",theater.getName());
+                    if (mContext instanceof MainActivity) {
+                        ((MainActivity) mContext).getViewController().addFragment(ChonGheFragment.class, hashMap);
+                    }
                 }
             });
         }

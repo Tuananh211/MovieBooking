@@ -47,11 +47,9 @@ public class ScheduleCinemaFragment extends BaseFragment<ScheduleCinemaFragmentB
     public void initView() {
         AppCompatActivity activity = (AppCompatActivity) requireActivity();
         mViewModel = ViewModelProviders.of(this, viewModelFactory).get(ScheduleCinemaModel.class);
-
         Bundle bundle = getArguments();
-        Log.d("cather","detail");
         if (bundle != null && !bundle.isEmpty()) {
-            theater = (Theater) bundle.getSerializable("cinema");
+            theater = (Theater) bundle.getSerializable("theater");
             // Xử lý dữ liệu trong bundle
             mViewModel.sendDataTheater(theater);
             viewPagerAdapter = new ViewScheduleAdapter(this);

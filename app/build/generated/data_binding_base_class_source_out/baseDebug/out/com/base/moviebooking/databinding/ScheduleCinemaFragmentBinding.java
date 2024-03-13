@@ -10,15 +10,13 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.widget.NestedScrollView;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.viewpager2.widget.ViewPager2;
 import com.base.moviebooking.R;
 import com.google.android.material.tabs.TabLayout;
 import java.lang.Deprecated;
 import java.lang.Object;
 
 public abstract class ScheduleCinemaFragmentBinding extends ViewDataBinding {
-  @NonNull
-  public final DialogLoadingBinding dialogLoad;
-
   @NonNull
   public final NestedScrollView scrollView2;
 
@@ -28,14 +26,17 @@ public abstract class ScheduleCinemaFragmentBinding extends ViewDataBinding {
   @NonNull
   public final Toolbar toolbar;
 
+  @NonNull
+  public final ViewPager2 viewpagerLichphim;
+
   protected ScheduleCinemaFragmentBinding(Object _bindingComponent, View _root,
-      int _localFieldCount, DialogLoadingBinding dialogLoad, NestedScrollView scrollView2,
-      TabLayout tabLayout, Toolbar toolbar) {
+      int _localFieldCount, NestedScrollView scrollView2, TabLayout tabLayout, Toolbar toolbar,
+      ViewPager2 viewpagerLichphim) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.dialogLoad = dialogLoad;
     this.scrollView2 = scrollView2;
     this.tabLayout = tabLayout;
     this.toolbar = toolbar;
+    this.viewpagerLichphim = viewpagerLichphim;
   }
 
   @NonNull

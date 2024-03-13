@@ -19,7 +19,7 @@ public class TheaterAdapter extends EndlessLoadingRecyclerViewAdapter<RcvRapBind
 
     public TheaterAdapter(Context context, boolean enableSelectedMode, Context mContext, OnChooseRecyclerView onChooseRecyclerView) {
         super(context, enableSelectedMode);
-        this.mContext = mContext;
+        this.mContext = context;
         this.mOnChooseRecyclerView = onChooseRecyclerView;
     }
 
