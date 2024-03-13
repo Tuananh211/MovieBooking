@@ -1,6 +1,8 @@
 package com.base.moviebooking.entity;
 
-public class Theater {
+import java.io.Serializable;
+
+public class Theater  implements Serializable {
 
     private int id;
     private String name;

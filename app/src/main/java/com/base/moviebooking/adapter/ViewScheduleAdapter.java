@@ -22,7 +22,7 @@ public class ViewScheduleAdapter extends FragmentStateAdapter {
 
     @Override
     public int getItemCount() {
-        return 1;
+        return 7;
     }
 
     @Override

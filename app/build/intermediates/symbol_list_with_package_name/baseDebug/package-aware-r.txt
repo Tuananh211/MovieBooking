@@ -2276,6 +2276,7 @@ id dialog_category
 id dialog_load
 id dialog_load_2
 id dialog_load_movie
+id dialog_load_schedule
 id dienvien
 id dimensions
 id direct

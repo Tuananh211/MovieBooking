@@ -70,7 +70,6 @@ public class TheaterAdapter extends EndlessLoadingRecyclerViewAdapter<RcvRapBind
             binding.lnTheater.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
                     mOnChooseRecyclerView.onChooseRap(data);
                 }
             });

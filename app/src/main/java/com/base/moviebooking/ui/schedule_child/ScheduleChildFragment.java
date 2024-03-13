@@ -26,6 +26,7 @@ import com.base.moviebooking.listener.OnChooseRecyclerView;
 import com.base.moviebooking.ui.main.MainActivity;
 import com.base.moviebooking.ui.schedule.ScheduleCinemaFragment;
 import com.base.moviebooking.ui.schedule.ScheduleCinemaModel;
+import com.base.moviebooking.ui.show_time.ShowTimeViewModel;
 import com.base.moviebooking.ui.sign_in.SignInFragment;
 
 import java.util.HashMap;
@@ -53,9 +54,10 @@ public class ScheduleChildFragment extends BaseFragment<SchedulleChildFragmentBi
 
     @Override
     public void initView() {
+        scheduleCinemaModel = ViewModelProviders.of(requireParentFragment(), viewModelFactory).get(ScheduleCinemaModel.class);
         mViewModel = ViewModelProviders.of(this, viewModelFactory).get(ScheduleChildModel.class);
         binding.rcvLichphim.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL,false));
-        String day = scheduleCinemaModel.day.getValue();
+        String day = scheduleCinemaModel.day.getValue().toString();
         Theater theater = scheduleCinemaModel.getDataTheater().getValue();
         mViewModel.getMovieHasSchedule(theater.getId(),day);
         scheduleAdapter =  new ScheduleAdapter(getContext(), false, getContext(), new OnChooseRecyclerView() {
@@ -90,11 +92,11 @@ public class ScheduleChildFragment extends BaseFragment<SchedulleChildFragmentBi
                 if (listMovieResponse.size()!=0){
                     scheduleAdapter.addModels(listMovieResponse, false);
                     Log.d("fat", "add Model", null);
-                    getActivity().findViewById(R.id.dialog_load).setVisibility(View.GONE);
+                    getActivity().findViewById(R.id.dialog_load_schedule).setVisibility(View.GONE);
                     binding.lnNoMovie.setVisibility(View.GONE);
                 }
                 else{
-                    getActivity().findViewById(R.id.dialog_load).setVisibility(View.GONE);
+                    getActivity().findViewById(R.id.dialog_load_schedule).setVisibility(View.GONE);
                     binding.lnNoMovie.setVisibility(View.VISIBLE);
                 }
 

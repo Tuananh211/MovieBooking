@@ -70,7 +70,7 @@ public class TheaterFragment extends BaseFragment<RapphimFragmentBinding> {
                     Log.d("mmm", "home đã Login", null);
                     HashMap<String, Object> hashMap = new HashMap<>();
                     hashMap.put("theater", theater);
-                    mViewController.addFragment(ScheduleCinemaFragment.class,hashMap);
+                    mViewController.addFragment(ScheduleCinemaFragment.class, hashMap);
                 } else {
                     Log.d("mmm", "home chưa Login", null);
                     getActivity().findViewById(R.id.bottombar).setVisibility(View.GONE);
@@ -85,7 +85,7 @@ public class TheaterFragment extends BaseFragment<RapphimFragmentBinding> {
             }
 
             @Override
-            public void onChooseLichChieu(Schedule showTime) {
+            public void onChooseLichChieu(Schedule schedule) {
 
             }
 

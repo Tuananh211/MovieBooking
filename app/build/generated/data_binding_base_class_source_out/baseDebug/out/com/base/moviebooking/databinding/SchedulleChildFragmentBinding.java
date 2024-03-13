@@ -17,7 +17,7 @@ import java.lang.Object;
 
 public abstract class SchedulleChildFragmentBinding extends ViewDataBinding {
   @NonNull
-  public final DialogLoadingBinding dialogLoad;
+  public final DialogLoadingBinding dialogLoadSchedule;
 
   @NonNull
   public final LinearLayout lnNoMovie;
@@ -29,10 +29,10 @@ public abstract class SchedulleChildFragmentBinding extends ViewDataBinding {
   public final NestedScrollView scrollView2;
 
   protected SchedulleChildFragmentBinding(Object _bindingComponent, View _root,
-      int _localFieldCount, DialogLoadingBinding dialogLoad, LinearLayout lnNoMovie,
+      int _localFieldCount, DialogLoadingBinding dialogLoadSchedule, LinearLayout lnNoMovie,
       RecyclerView rcvLichphim, NestedScrollView scrollView2) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.dialogLoad = dialogLoad;
+    this.dialogLoadSchedule = dialogLoadSchedule;
     this.lnNoMovie = lnNoMovie;
     this.rcvLichphim = rcvLichphim;
     this.scrollView2 = scrollView2;

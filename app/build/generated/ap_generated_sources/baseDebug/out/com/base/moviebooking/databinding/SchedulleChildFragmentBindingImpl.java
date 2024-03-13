@@ -42,7 +42,7 @@ public class SchedulleChildFragmentBindingImpl extends SchedulleChildFragmentBin
             , (androidx.recyclerview.widget.RecyclerView) bindings[4]
             , (androidx.core.widget.NestedScrollView) bindings[3]
             );
-        setContainedBinding(this.dialogLoad);
+        setContainedBinding(this.dialogLoadSchedule);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
         this.mboundView1 = (android.widget.LinearLayout) bindings[1];
@@ -57,7 +57,7 @@ public class SchedulleChildFragmentBindingImpl extends SchedulleChildFragmentBin
         synchronized(this) {
                 mDirtyFlags = 0x2L;
         }
-        dialogLoad.invalidateAll();
+        dialogLoadSchedule.invalidateAll();
         requestRebind();
     }
 
@@ -68,7 +68,7 @@ public class SchedulleChildFragmentBindingImpl extends SchedulleChildFragmentBin
                 return true;
             }
         }
-        if (dialogLoad.hasPendingBindings()) {
+        if (dialogLoadSchedule.hasPendingBindings()) {
             return true;
         }
         return false;
@@ -83,18 +83,18 @@ public class SchedulleChildFragmentBindingImpl extends SchedulleChildFragmentBin
     @Override
     public void setLifecycleOwner(@Nullable androidx.lifecycle.LifecycleOwner lifecycleOwner) {
         super.setLifecycleOwner(lifecycleOwner);
-        dialogLoad.setLifecycleOwner(lifecycleOwner);
+        dialogLoadSchedule.setLifecycleOwner(lifecycleOwner);
     }
 
     @Override
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeDialogLoad((com.base.moviebooking.databinding.DialogLoadingBinding) object, fieldId);
+                return onChangeDialogLoadSchedule((com.base.moviebooking.databinding.DialogLoadingBinding) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeDialogLoad(com.base.moviebooking.databinding.DialogLoadingBinding DialogLoad, int fieldId) {
+    private boolean onChangeDialogLoadSchedule(com.base.moviebooking.databinding.DialogLoadingBinding DialogLoadSchedule, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
@@ -112,14 +112,14 @@ public class SchedulleChildFragmentBindingImpl extends SchedulleChildFragmentBin
             mDirtyFlags = 0;
         }
         // batch finished
-        executeBindingsOn(dialogLoad);
+        executeBindingsOn(dialogLoadSchedule);
     }
     // Listener Stub Implementations
     // callback impls
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): dialogLoad
+        flag 0 (0x1L): dialogLoadSchedule
         flag 1 (0x2L): null
     flag mapping end*/
     //end

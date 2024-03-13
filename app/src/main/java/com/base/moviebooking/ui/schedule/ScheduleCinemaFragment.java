@@ -18,9 +18,11 @@ import com.base.moviebooking.ui.theater.TheaterFragment;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 public class ScheduleCinemaFragment extends BaseFragment<ScheduleCinemaFragmentBinding> {
@@ -36,6 +38,10 @@ public class ScheduleCinemaFragment extends BaseFragment<ScheduleCinemaFragmentB
     @Override
     public void backFromAddFragment() {
 
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
     }
 
     @Override
@@ -149,9 +155,16 @@ public class ScheduleCinemaFragment extends BaseFragment<ScheduleCinemaFragmentB
 
     }
 
-    private String fomatDate(String date){
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        return dateFormat.format(date);
+    private String fomatDate(String dateString){
+        SimpleDateFormat inputFormat = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat outputFormat = new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            Date date = inputFormat.parse(dateString);
+            return outputFormat.format(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
 }
