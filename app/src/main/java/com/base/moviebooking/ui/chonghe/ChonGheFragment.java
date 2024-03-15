@@ -115,8 +115,8 @@ public class ChonGheFragment extends BaseFragment<ChongheFragmentBinding> {
         mViewModel.dataAmount.observe(getViewLifecycleOwner(), new Observer<List<Amount>>() {
             @Override
             public void onChanged(List<Amount> list) {
-                binding.amountThuong.setText(formatNumber(String.valueOf(list.get(0).getAmount())) + "VNĐ");
-                binding.amountVip.setText(formatNumber(String.valueOf(list.get(0).getAmount_vip())) + "VNĐ");
+                binding.amountThuong.setText(formatNumber(list.get(0).getAmount()) + "VNĐ");
+                binding.amountVip.setText(formatNumber(list.get(0).getAmount_vip()) + "VNĐ");
             }
         });
         binding.rcvSeat.setLayoutManager(new GridLayoutManager(getContext(), 11));
@@ -158,7 +158,7 @@ public class ChonGheFragment extends BaseFragment<ChongheFragmentBinding> {
                         }
 //                        Log.d(TAG, "a" + a);
 //                        Log.d(TAG, "i" + i);
-                        binding.tvtTongtien.setText("" + formatNumber(String.valueOf(i)) + "VNĐ");
+                        binding.tvtTongtien.setText("" + formatNumber(i) + "VNĐ");
 
                     }
 
@@ -178,17 +178,17 @@ public class ChonGheFragment extends BaseFragment<ChongheFragmentBinding> {
                             priceSeat.setSlgheVip(slgheVip);
                             priceSeat.setTienGheThuong(slgheThuong * deleteVND(binding.amountThuong.getText().toString()) + "");
                             priceSeat.setTienGheVip(slgheVip * deleteVND(binding.amountVip.getText().toString()) + "");
-                            priceSeat.setTongTien(binding.tvtTongtien.getText().toString());
+                            priceSeat.setTongTien(removeDot(binding.tvtTongtien.getText().toString()));
                             if (binding.cbBong.isChecked()) {
                                 priceSeat.setSlBong(binding.slBong.getText().toString());
-                                priceSeat.setTienBong(binding.giaBong.getText().toString());
+                                priceSeat.setTienBong(removeDot(binding.giaBong.getText().toString()));
                             }
                             if (binding.cbNuoc.isChecked()) {
-                                priceSeat.setTienNuoc(binding.giaNuoc.getText().toString());
+                                priceSeat.setTienNuoc(removeDot(binding.giaNuoc.getText().toString()));
                                 priceSeat.setSlNuoc(binding.slNuoc.getText().toString());
                             }
                             if (binding.cbCombo.isChecked()) {
-                                priceSeat.setTienCombo(binding.giaCombo.getText().toString());
+                                priceSeat.setTienCombo(removeDot(binding.giaCombo.getText().toString()));
                                 priceSeat.setSlCombo(binding.slCombo.getText().toString());
                             }
                             hashMap.put("priceSeat", priceSeat);
@@ -225,7 +225,7 @@ public class ChonGheFragment extends BaseFragment<ChongheFragmentBinding> {
                         gheThuong = gheThuong.replaceAll(s2 + "\\b", "");
                         ;
                     }
-                    binding.tvtTongtien.setText("" + formatNumber(String.valueOf(i)) + "VNĐ");
+                    binding.tvtTongtien.setText("" + formatNumber(i) + "VNĐ");
                 }
 
             }
@@ -292,9 +292,9 @@ public class ChonGheFragment extends BaseFragment<ChongheFragmentBinding> {
                     binding.truCombo.setEnabled(binding.cbCombo.isChecked());
 
                 if (binding.cbCombo.isChecked())
-                    binding.tvtTongtien.setText(deleteVND(binding.tvtTongtien.getText().toString()) + deleteVND(binding.giaCombo.getText().toString()) + "VNĐ");
+                    binding.tvtTongtien.setText(formatNumber(deleteVND(binding.tvtTongtien.getText().toString()) + deleteVND(binding.giaCombo.getText().toString()))+ "VNĐ");
                 else
-                    binding.tvtTongtien.setText(deleteVND(binding.tvtTongtien.getText().toString()) - deleteVND(binding.giaCombo.getText().toString()) + "VNĐ");
+                    binding.tvtTongtien.setText(formatNumber(deleteVND(binding.tvtTongtien.getText().toString()) - deleteVND(binding.giaCombo.getText().toString())) + "VNĐ");
 
             }
         });
@@ -308,9 +308,9 @@ public class ChonGheFragment extends BaseFragment<ChongheFragmentBinding> {
                 else
                     binding.truBong.setEnabled(binding.cbBong.isChecked());
                 if (binding.cbBong.isChecked())
-                    binding.tvtTongtien.setText(deleteVND(binding.tvtTongtien.getText().toString()) + deleteVND(binding.giaBong.getText().toString()) + "VNĐ");
+                    binding.tvtTongtien.setText(formatNumber(deleteVND(binding.tvtTongtien.getText().toString()) + deleteVND(binding.giaBong.getText().toString())) + "VNĐ");
                 else
-                    binding.tvtTongtien.setText(deleteVND(binding.tvtTongtien.getText().toString()) - deleteVND(binding.giaBong.getText().toString()) + "VNĐ");
+                    binding.tvtTongtien.setText(formatNumber(deleteVND(binding.tvtTongtien.getText().toString()) - deleteVND(binding.giaBong.getText().toString())) + "VNĐ");
 
             }
         });
@@ -323,9 +323,9 @@ public class ChonGheFragment extends BaseFragment<ChongheFragmentBinding> {
                 else
                     binding.truNuoc.setEnabled(binding.cbNuoc.isChecked());
                 if (binding.cbNuoc.isChecked())
-                    binding.tvtTongtien.setText(deleteVND(binding.tvtTongtien.getText().toString()) + deleteVND(binding.giaNuoc.getText().toString()) + "VNĐ");
+                    binding.tvtTongtien.setText(formatNumber(deleteVND(binding.tvtTongtien.getText().toString()) + deleteVND(binding.giaNuoc.getText().toString())) + "VNĐ");
                 else
-                    binding.tvtTongtien.setText(deleteVND(binding.tvtTongtien.getText().toString()) - deleteVND(binding.giaNuoc.getText().toString()) + "VNĐ");
+                    binding.tvtTongtien.setText(formatNumber(deleteVND(binding.tvtTongtien.getText().toString()) - deleteVND(binding.giaNuoc.getText().toString())) + "VNĐ");
 
             }
         });
@@ -339,7 +339,7 @@ public class ChonGheFragment extends BaseFragment<ChongheFragmentBinding> {
                 }
                 binding.slCombo.setText(i + 1 + "");
                 binding.giaCombo.setText((i + 1) * 70000 + "VNĐ");
-                binding.tvtTongtien.setText(deleteVND(binding.tvtTongtien.getText().toString()) + 70000 + "VNĐ");
+                binding.tvtTongtien.setText(formatNumber(deleteVND(binding.tvtTongtien.getText().toString()) + 70000) + "VNĐ");
             }
         });
 
@@ -365,7 +365,7 @@ public class ChonGheFragment extends BaseFragment<ChongheFragmentBinding> {
                 }
                 binding.slNuoc.setText(i + 1 + "");
                 binding.giaNuoc.setText((i + 1) * 30000 + "VNĐ");
-                binding.tvtTongtien.setText(deleteVND(binding.tvtTongtien.getText().toString()) + 30000 + "VNĐ");
+                binding.tvtTongtien.setText(formatNumber(deleteVND(binding.tvtTongtien.getText().toString()) + 30000) + "VNĐ");
 
             }
         });
@@ -416,10 +416,9 @@ public class ChonGheFragment extends BaseFragment<ChongheFragmentBinding> {
 
     }
 
-    public  String formatNumber(String numberString) {
+    public  String formatNumber(int number) {
         try {
-            int number = Integer.parseInt(numberString);
-            DecimalFormat decimalFormat = new DecimalFormat("#.###");
+            DecimalFormat decimalFormat = new DecimalFormat("#,###");
             return decimalFormat.format(number);
         } catch (NumberFormatException e) {
             System.out.println("Invalid number format");

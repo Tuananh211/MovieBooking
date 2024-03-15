@@ -288,7 +288,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="30dp"
+                            android:layout_marginStart="29dp"
                             android:text="Giá" />
 
                         <TextView
@@ -296,7 +296,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="10dp"
-                            android:text="30000VNĐ" />
+                            android:text="30,000VNĐ" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -359,7 +359,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="30dp"
+                            android:layout_marginStart="29dp"
                             android:text="Giá" />
 
                         <TextView
@@ -367,7 +367,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="10dp"
-                            android:text="50000VNĐ" />
+                            android:text="50,000VNĐ" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -431,7 +431,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="30dp"
+                            android:layout_marginStart="29dp"
                             android:text="Giá" />
 
                         <TextView
@@ -439,7 +439,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="10dp"
-                            android:text="70000VNĐ" />
+                            android:text="70,000VNĐ" />
                     </LinearLayout>
 
                 </LinearLayout>

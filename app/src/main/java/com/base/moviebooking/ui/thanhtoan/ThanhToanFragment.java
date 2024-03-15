@@ -29,6 +29,7 @@ import com.base.moviebooking.entity.ThanhToan;
 import com.base.moviebooking.entity.VNPay;
 import com.base.moviebooking.ui.thongtin_Thanhtoan.ThongTinThanhToanFragment;
 
+import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -87,42 +88,42 @@ public class ThanhToanFragment extends BaseFragment<ThanhtoanFragmentBinding> {
                 binding.lnGheThuong.setVisibility(View.GONE);
             } else {
                 binding.tvtGheThuong.setText(priceSeat.getSlgheThuong() + "x Ghế Thường - " + priceSeat.getGheThuong().toString().replace("null", ""));
-                binding.tvtGiagheThuong.setText(priceSeat.getTienGheThuong().toString() + "VNĐ");
+                binding.tvtGiagheThuong.setText(formatNumber(priceSeat.getTienGheThuong().toString()) + "VNĐ");
 
             }
             if (priceSeat.getGheVip() == null || priceSeat.getGheVip().toString().equals("") || priceSeat.getSlgheVip() == 0) {
                 binding.lnGheVip.setVisibility(View.GONE);
             } else {
                 binding.tvtGheVip.setText(priceSeat.getSlgheVip() + "x Ghế Vip - " + priceSeat.getGheVip().toString().replace("null", ""));
-                binding.tvtGiagheVip.setText(priceSeat.getTienGheVip().toString() + "VNĐ");
+                binding.tvtGiagheVip.setText(formatNumber(priceSeat.getTienGheVip().toString()) + "VNĐ");
             }
             if (priceSeat.getSlBong() == null) {
                 binding.lnBong.setVisibility(View.GONE);
             } else {
                 listProduct.add(new ProductThanhToan(2, Integer.parseInt(priceSeat.getSlBong().toString())));
                 binding.tvtBong.setText(priceSeat.getSlBong() + "x Bỏng Ngô");
-                binding.tvtGiabong.setText(priceSeat.getTienBong().toString());
+                binding.tvtGiabong.setText(formatNumber(priceSeat.getTienBong().toString()));
             }
             if (priceSeat.getSlNuoc() == null) {
                 binding.lnNuoc.setVisibility(View.GONE);
             } else {
                 listProduct.add(new ProductThanhToan(3, Integer.parseInt(priceSeat.getSlNuoc().toString())));
                 binding.tvtNuoc.setText(priceSeat.getSlNuoc() + "x Nước");
-                binding.tvtGiaNuoc.setText(priceSeat.getTienNuoc().toString());
+                binding.tvtGiaNuoc.setText(formatNumber(priceSeat.getTienNuoc().toString()));
             }
             if (priceSeat.getSlCombo() == null) {
                 binding.lnCombo.setVisibility(View.GONE);
             } else {
                 listProduct.add(new ProductThanhToan(4, Integer.parseInt(priceSeat.getSlCombo().toString())));
                 binding.tvtCombo.setText(priceSeat.getSlCombo() + "x Combo");
-                binding.tvtGiaCombo.setText(priceSeat.getTienCombo().toString());
+                binding.tvtGiaCombo.setText(formatNumber(priceSeat.getTienCombo().toString()));
             }
             binding.tvtTenphim.setText(movie.getName());
             binding.tvtRap.setText(nameCinema + " - Room " + schedule.getRoom_name().toString());
 
 //            amount = Integer.valueOf(priceSeat.getTongTien());
             //tong tien
-            binding.tvtTongtien.setText(priceSeat.getTongTien().toString());
+            binding.tvtTongtien.setText(formatNumber(priceSeat.getTongTien().toString()));
             // Xử lý dữ liệu trong bundle
         }
     }
@@ -235,6 +236,7 @@ public class ThanhToanFragment extends BaseFragment<ThanhtoanFragmentBinding> {
 
     public int deleteVND(String s) {
         if (!s.equals("")) {
+            s=removeDot(s);
             s = s.replaceAll("[^0-9]+", "");
             return Integer.parseInt(s);
         }
@@ -251,6 +253,18 @@ public class ThanhToanFragment extends BaseFragment<ThanhtoanFragmentBinding> {
         s = i + ":" + s2;
         return s;
     }
-
+    public  String formatNumber(String numberString) {
+        try {
+            int number = Integer.parseInt(numberString);
+            DecimalFormat decimalFormat = new DecimalFormat("#,###");
+            return decimalFormat.format(number);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid number format");
+            return null;
+        }
+    }
+    public static String removeDot(String str) {
+        return str.replace(".", "");
+    }
 
 }
