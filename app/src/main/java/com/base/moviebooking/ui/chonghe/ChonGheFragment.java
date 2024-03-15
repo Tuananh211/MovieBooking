@@ -30,6 +30,7 @@ import com.base.moviebooking.entity.Schedule;
 import com.base.moviebooking.entity.Seat;
 import com.base.moviebooking.ui.thanhtoan.ThanhToanFragment;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -114,8 +115,8 @@ public class ChonGheFragment extends BaseFragment<ChongheFragmentBinding> {
         mViewModel.dataAmount.observe(getViewLifecycleOwner(), new Observer<List<Amount>>() {
             @Override
             public void onChanged(List<Amount> list) {
-                binding.amountThuong.setText(list.get(0).getAmount() + "VNĐ");
-                binding.amountVip.setText(list.get(0).getAmount_vip() + "VNĐ");
+                binding.amountThuong.setText(formatNumber(String.valueOf(list.get(0).getAmount())) + "VNĐ");
+                binding.amountVip.setText(formatNumber(String.valueOf(list.get(0).getAmount_vip())) + "VNĐ");
             }
         });
         binding.rcvSeat.setLayoutManager(new GridLayoutManager(getContext(), 11));
@@ -157,7 +158,7 @@ public class ChonGheFragment extends BaseFragment<ChongheFragmentBinding> {
                         }
 //                        Log.d(TAG, "a" + a);
 //                        Log.d(TAG, "i" + i);
-                        binding.tvtTongtien.setText("" + i + "VNĐ");
+                        binding.tvtTongtien.setText("" + formatNumber(String.valueOf(i)) + "VNĐ");
 
                     }
 
@@ -224,7 +225,7 @@ public class ChonGheFragment extends BaseFragment<ChongheFragmentBinding> {
                         gheThuong = gheThuong.replaceAll(s2 + "\\b", "");
                         ;
                     }
-                    binding.tvtTongtien.setText("" + i + "VNĐ");
+                    binding.tvtTongtien.setText("" + formatNumber(String.valueOf(i)) + "VNĐ");
                 }
 
             }
@@ -256,6 +257,7 @@ public class ChonGheFragment extends BaseFragment<ChongheFragmentBinding> {
 
     public int deleteVND(String s) {
         if (!s.equals("")) {
+            s= removeDot(s);
             s = s.replaceAll("[^0-9]+", "");
             return Integer.parseInt(s);
         }
@@ -412,5 +414,19 @@ public class ChonGheFragment extends BaseFragment<ChongheFragmentBinding> {
     public void onResume() {
         super.onResume();
 
+    }
+
+    public  String formatNumber(String numberString) {
+        try {
+            int number = Integer.parseInt(numberString);
+            DecimalFormat decimalFormat = new DecimalFormat("#.###");
+            return decimalFormat.format(number);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid number format");
+            return null;
+        }
+    }
+    public static String removeDot(String str) {
+        return str.replace(".", "");
     }
 }

@@ -30,6 +30,7 @@ public class ScheduleCinemaFragment extends BaseFragment<ScheduleCinemaFragmentB
     private ViewScheduleAdapter viewPagerAdapter;
     Theater theater;
     private ScheduleAdapter scheduleAdapter;
+    List<String> item_Lich = new ArrayList<>();
     @Override
     protected int getLayoutId() {
         return R.layout.schedule_cinema_fragment;
@@ -60,7 +61,6 @@ public class ScheduleCinemaFragment extends BaseFragment<ScheduleCinemaFragmentB
             mViewModel.sendDataTheater(theater);
             viewPagerAdapter = new ViewScheduleAdapter(this);
             binding.viewpagerLichphim.setAdapter(viewPagerAdapter);
-            List<String> item_Lich = new ArrayList<>();
             Calendar calendar = Calendar.getInstance();
             SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
             String dateString = formatter.format(calendar.getTime());
@@ -78,31 +78,26 @@ public class ScheduleCinemaFragment extends BaseFragment<ScheduleCinemaFragmentB
                     switch (position) {
                         case 0:
                             tab.setText(item_Lich.get(0).toString());
-                            mViewModel.sendDay(fomatDate(item_Lich.get(0)));
+                            String selectedDate = fomatDate(item_Lich.get(0));
+                            mViewModel.sendDay(selectedDate);
                             break;
                         case 1:
                             tab.setText(item_Lich.get(1).toString());
-                            mViewModel.sendDay(fomatDate(item_Lich.get(1)));
                             break;
                         case 2:
                             tab.setText(item_Lich.get(2).toString());
-                            mViewModel.sendDay(fomatDate(item_Lich.get(2)));
                             break;
                         case 3:
                             tab.setText(item_Lich.get(3).toString());
-                            mViewModel.sendDay(fomatDate(item_Lich.get(3)));
                             break;
                         case 4:
                             tab.setText(item_Lich.get(4).toString());
-                            mViewModel.sendDay(fomatDate(item_Lich.get(4)));
                             break;
                         case 5:
                             tab.setText(item_Lich.get(5).toString());
-                            mViewModel.sendDay(fomatDate(item_Lich.get(5)));
                             break;
                         case 6:
                             tab.setText(item_Lich.get(6).toString());
-                            mViewModel.sendDay(fomatDate(item_Lich.get(6)));
                             break;
                     }
                 }
@@ -140,6 +135,14 @@ public class ScheduleCinemaFragment extends BaseFragment<ScheduleCinemaFragmentB
             public void onTabSelected(TabLayout.Tab tab) {
                 // Thay đổi màu của thanh gạch chân khi tab được chọn
                 binding.tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.white));
+                if (!item_Lich.isEmpty() && tab.getPosition() < item_Lich.size()) {
+                    String selectedDate = fomatDate(item_Lich.get(tab.getPosition()));
+                    mViewModel.sendDay(selectedDate);
+                } else {
+                    Calendar calendar = Calendar.getInstance();
+                    String selectedDate = fomatDate(String.valueOf(calendar.getTime()));
+                    mViewModel.sendDay(selectedDate);
+                }
             }
 
             @Override

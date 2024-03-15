@@ -72,6 +72,7 @@ public class ScheduleAdapter extends EndlessLoadingRecyclerViewAdapter<Viewholde
 
         @Override
         public void bind(Movie data) {
+
             // doi anh base64
             String base64Image = data.getImage();
 //            Log.d("mmm","base64"+base64Image,null);
