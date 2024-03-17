@@ -58,20 +58,13 @@ public abstract class HomeFragmentBinding extends ViewDataBinding {
   public final TextView tvtDangchieu;
 
   @NonNull
-  public final TextView tvtSapchieu;
-
-  @NonNull
-  public final TextView tvtToanquoc;
-
-  @NonNull
   public final ViewPager2 viewpager;
 
   protected HomeFragmentBinding(Object _bindingComponent, View _root, int _localFieldCount,
       Button btnXemTiep, RecyclerView categoryView, CircleIndicator circleIndicator,
       LinearLayout cst2, DialogLoadingBinding dialogCategory, DialogLoadingBinding dialogLoad,
       RecyclerView rcvSearch, NestedScrollView scrollView2, HorizontalScrollView scrollviewHome,
-      TextView searchFilm, TextView textView9, TextView tvtDangchieu, TextView tvtSapchieu,
-      TextView tvtToanquoc, ViewPager2 viewpager) {
+      TextView searchFilm, TextView textView9, TextView tvtDangchieu, ViewPager2 viewpager) {
     super(_bindingComponent, _root, _localFieldCount);
     this.btnXemTiep = btnXemTiep;
     this.categoryView = categoryView;
@@ -85,8 +78,6 @@ public abstract class HomeFragmentBinding extends ViewDataBinding {
     this.searchFilm = searchFilm;
     this.textView9 = textView9;
     this.tvtDangchieu = tvtDangchieu;
-    this.tvtSapchieu = tvtSapchieu;
-    this.tvtToanquoc = tvtToanquoc;
     this.viewpager = viewpager;
   }
 

@@ -104,6 +104,11 @@ public class MovieByCategoryIdFragment extends  BaseFragment<MovieByCategoryFrag
             public void onChooseCategory(Category category) {
 
             }
+
+            @Override
+            public void onChooseTime(Schedule schedule) {
+
+            }
         });
         mViewModel.dataMovie.observe(getViewLifecycleOwner(), new Observer<List<Movie>>() {
             @Override

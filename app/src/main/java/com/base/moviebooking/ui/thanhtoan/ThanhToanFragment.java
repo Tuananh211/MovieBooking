@@ -102,28 +102,28 @@ public class ThanhToanFragment extends BaseFragment<ThanhtoanFragmentBinding> {
             } else {
                 listProduct.add(new ProductThanhToan(2, Integer.parseInt(priceSeat.getSlBong().toString())));
                 binding.tvtBong.setText(priceSeat.getSlBong() + "x Bỏng Ngô");
-                binding.tvtGiabong.setText(formatNumber(priceSeat.getTienBong().toString()));
+                binding.tvtGiabong.setText(priceSeat.getTienBong().toString());
             }
             if (priceSeat.getSlNuoc() == null) {
                 binding.lnNuoc.setVisibility(View.GONE);
             } else {
                 listProduct.add(new ProductThanhToan(3, Integer.parseInt(priceSeat.getSlNuoc().toString())));
                 binding.tvtNuoc.setText(priceSeat.getSlNuoc() + "x Nước");
-                binding.tvtGiaNuoc.setText(formatNumber(priceSeat.getTienNuoc().toString()));
+                binding.tvtGiaNuoc.setText(priceSeat.getTienNuoc().toString());
             }
             if (priceSeat.getSlCombo() == null) {
                 binding.lnCombo.setVisibility(View.GONE);
             } else {
                 listProduct.add(new ProductThanhToan(4, Integer.parseInt(priceSeat.getSlCombo().toString())));
                 binding.tvtCombo.setText(priceSeat.getSlCombo() + "x Combo");
-                binding.tvtGiaCombo.setText(formatNumber(priceSeat.getTienCombo().toString()));
+                binding.tvtGiaCombo.setText(priceSeat.getTienCombo().toString());
             }
             binding.tvtTenphim.setText(movie.getName());
             binding.tvtRap.setText(nameCinema + " - Room " + schedule.getRoom_name().toString());
 
 //            amount = Integer.valueOf(priceSeat.getTongTien());
             //tong tien
-            binding.tvtTongtien.setText(formatNumber(priceSeat.getTongTien().toString()));
+            binding.tvtTongtien.setText(priceSeat.getTongTien().toString());
             // Xử lý dữ liệu trong bundle
         }
     }

@@ -151,6 +151,11 @@ public class DetailMovieFragment extends BaseFragment<ThongtinFragmentBinding> {
                     @Override
                     public void onChooseCategory(Category category) {
                     }
+
+                    @Override
+                    public void onChooseTime(Schedule schedule) {
+
+                    }
                 });
 
         mViewModel.dataCategory.observe(getViewLifecycleOwner(), new Observer<List<Category>>() {
@@ -193,6 +198,11 @@ public class DetailMovieFragment extends BaseFragment<ThongtinFragmentBinding> {
 
                     @Override
                     public void onChooseCategory(Category category) {
+                    }
+
+                    @Override
+                    public void onChooseTime(Schedule schedule) {
+
                     }
                 });
 

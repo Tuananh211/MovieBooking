@@ -12,7 +12,7 @@ public class HomeFragmentBindingImpl extends HomeFragmentBinding  {
     @Nullable
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
-        sIncludes = new androidx.databinding.ViewDataBinding.IncludedLayouts(18);
+        sIncludes = new androidx.databinding.ViewDataBinding.IncludedLayouts(16);
         sIncludes.setIncludes(1, 
             new String[] {"dialog_loading"},
             new int[] {4},
@@ -30,11 +30,9 @@ public class HomeFragmentBindingImpl extends HomeFragmentBinding  {
         sViewsWithIds.put(R.id.categoryView, 10);
         sViewsWithIds.put(R.id.cst2, 11);
         sViewsWithIds.put(R.id.tvt_dangchieu, 12);
-        sViewsWithIds.put(R.id.tvt_sapchieu, 13);
-        sViewsWithIds.put(R.id.tvt_toanquoc, 14);
-        sViewsWithIds.put(R.id.rcv_search, 15);
-        sViewsWithIds.put(R.id.btnXemTiep, 16);
-        sViewsWithIds.put(R.id.scrollview_home, 17);
+        sViewsWithIds.put(R.id.rcv_search, 13);
+        sViewsWithIds.put(R.id.btnXemTiep, 14);
+        sViewsWithIds.put(R.id.scrollview_home, 15);
     }
     // views
     @NonNull
@@ -49,24 +47,22 @@ public class HomeFragmentBindingImpl extends HomeFragmentBinding  {
     // Inverse Binding Event Handlers
 
     public HomeFragmentBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 18, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 16, sIncludes, sViewsWithIds));
     }
     private HomeFragmentBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 2
-            , (android.widget.Button) bindings[16]
+            , (android.widget.Button) bindings[14]
             , (androidx.recyclerview.widget.RecyclerView) bindings[10]
             , (me.relex.circleindicator.CircleIndicator) bindings[8]
             , (android.widget.LinearLayout) bindings[11]
             , (com.base.moviebooking.databinding.DialogLoadingBinding) bindings[3]
             , (com.base.moviebooking.databinding.DialogLoadingBinding) bindings[4]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[15]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[13]
             , (androidx.core.widget.NestedScrollView) bindings[5]
-            , (android.widget.HorizontalScrollView) bindings[17]
+            , (android.widget.HorizontalScrollView) bindings[15]
             , (android.widget.TextView) bindings[6]
             , (android.widget.TextView) bindings[9]
             , (android.widget.TextView) bindings[12]
-            , (android.widget.TextView) bindings[13]
-            , (android.widget.TextView) bindings[14]
             , (androidx.viewpager2.widget.ViewPager2) bindings[7]
             );
         setContainedBinding(this.dialogCategory);

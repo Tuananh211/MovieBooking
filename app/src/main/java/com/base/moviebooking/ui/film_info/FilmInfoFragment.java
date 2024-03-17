@@ -74,6 +74,11 @@ public class FilmInfoFragment extends BaseFragment<DienanhFragmentBinding> {
             public void onChooseCategory(Category category) {
 
             }
+
+            @Override
+            public void onChooseTime(Schedule schedule) {
+
+            }
         });
         filmInformationAdapter.addModels(getListModel(), false);
         binding.rcvDienanh.setAdapter(filmInformationAdapter);

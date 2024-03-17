@@ -2742,10 +2742,8 @@ int id tvt_listghe 0x7f080299
 int id tvt_name 0x7f08029a
 int id tvt_nuoc 0x7f08029b
 int id tvt_rap 0x7f08029c
-int id tvt_sapchieu 0x7f08029d
 int id tvt_tenphim 0x7f08029e
 int id tvt_time 0x7f08029f
-int id tvt_toanquoc 0x7f0802a0
 int id tvt_tongtien 0x7f0802a1
 int id txtCategory 0x7f0802a2
 int id unchecked 0x7f0802a3

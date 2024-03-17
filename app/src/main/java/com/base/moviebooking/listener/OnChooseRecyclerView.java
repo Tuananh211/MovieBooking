@@ -15,6 +15,7 @@ public interface OnChooseRecyclerView {
     void onChooseFilmInfo(FilmInfo filmInfo);
     void onChooseLichChieu(Schedule schedule);
     void onChooseCategory(Category category);
+    void onChooseTime(Schedule schedule);
 }
 
 

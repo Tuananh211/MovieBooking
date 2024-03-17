@@ -2743,10 +2743,8 @@ id tvt_listghe
 id tvt_name
 id tvt_nuoc
 id tvt_rap
-id tvt_sapchieu
 id tvt_tenphim
 id tvt_time
-id tvt_toanquoc
 id tvt_tongtien
 id txtCategory
 id unchecked

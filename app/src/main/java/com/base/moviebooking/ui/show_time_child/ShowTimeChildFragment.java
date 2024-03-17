@@ -122,6 +122,11 @@ public class ShowTimeChildFragment extends BaseFragment<LichChieuFragmentBinding
             public void onChooseCategory(Category category) {
 
             }
+
+            @Override
+            public void onChooseTime(Schedule schedule) {
+
+            }
         });
         // get Schedule lúc mới sang màn Schedule
         Calendar calendar = Calendar.getInstance();

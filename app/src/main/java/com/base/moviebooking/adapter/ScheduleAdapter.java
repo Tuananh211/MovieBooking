@@ -8,8 +8,10 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -25,9 +27,12 @@ import com.base.moviebooking.entity.Movie;
 import com.base.moviebooking.entity.Schedule;
 import com.base.moviebooking.entity.Theater;
 import com.base.moviebooking.listener.OnChooseRecyclerView;
+import com.base.moviebooking.ui.chonghe.ChonGheFragment;
+import com.base.moviebooking.ui.main.MainActivity;
 import com.base.moviebooking.ui.schedule.ScheduleCinemaModel;
 import com.base.moviebooking.ui.schedule_child.ScheduleChildModel;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -81,7 +86,7 @@ public class ScheduleAdapter extends EndlessLoadingRecyclerViewAdapter<Viewholde
             binding.image.setImageBitmap(bitmap);
             binding.tvtAgeLimit.setText("C" + data.getAgeLimit());
             binding.tvtName.setText(data.getName());
-
+            scheduleCinemaModel = ViewModelProviders.of((FragmentActivity) mContext).get(ScheduleCinemaModel.class);
             GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 3);
             binding.listTimes.setLayoutManager(gridLayoutManager);
             String day = scheduleCinemaModel.day.getValue();
@@ -112,7 +117,19 @@ public class ScheduleAdapter extends EndlessLoadingRecyclerViewAdapter<Viewholde
                 public void onChooseCategory(Category category) {
 
                 }
-            },data);
+
+                @Override
+                public void onChooseTime(Schedule schedule) {
+                    Theater theater = scheduleCinemaModel.getDataTheater().getValue();
+                    HashMap<String, Object> hashMap = new HashMap<>();
+                    hashMap.put("schedule", schedule);
+                    hashMap.put("movie", data);
+                    hashMap.put("cinema",theater.getName());
+                    if (mContext instanceof MainActivity) {
+                        ((MainActivity) mContext).getViewController().addFragment(ChonGheFragment.class, hashMap);
+                    }
+                }
+            });
             scheduleChildModel.dataSchedule.observe((LifecycleOwner) lifecycleOwner.getLifecycle(), new Observer<List<Schedule>>() {
                 @Override
                 public void onChanged(List<Schedule> listScheduleResponse) {

@@ -85,6 +85,11 @@ public class ScheduleChildFragment extends BaseFragment<SchedulleChildFragmentBi
             public void onChooseCategory(Category category) {
 
             }
+
+            @Override
+            public void onChooseTime(Schedule schedule) {
+
+            }
         },this);
         mViewModel.dataMovie.observe(getViewLifecycleOwner(), new Observer<List<Movie>>() {
             @Override

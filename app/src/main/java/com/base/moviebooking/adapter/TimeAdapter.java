@@ -29,12 +29,10 @@ public class TimeAdapter extends EndlessLoadingRecyclerViewAdapter<ViewholderTim
     private Context mContext;
     private OnChooseRecyclerView mOnChooseRecyclerView;
     ScheduleCinemaModel scheduleCinemaModel;
-    Movie movie;
-    public TimeAdapter(Context context, boolean enableSelectedMode, Context mContext, OnChooseRecyclerView onChooseRecyclerView, Movie movie) {
+    public TimeAdapter(Context context, boolean enableSelectedMode, Context mContext, OnChooseRecyclerView onChooseRecyclerView) {
         super(context, enableSelectedMode);
         this.mContext = mContext;
         this.mOnChooseRecyclerView = onChooseRecyclerView;
-        this.movie= movie;
     }
 
 
@@ -68,14 +66,7 @@ public class TimeAdapter extends EndlessLoadingRecyclerViewAdapter<ViewholderTim
             binding.listTime.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Theater theater = scheduleCinemaModel.getDataTheater().getValue();
-                   HashMap<String, Object> hashMap = new HashMap<>();
-                    hashMap.put("schedule", data);
-                    hashMap.put("movie", movie);
-                    hashMap.put("cinema",theater.getName());
-                    if (mContext instanceof MainActivity) {
-                        ((MainActivity) mContext).getViewController().addFragment(ChonGheFragment.class, hashMap);
-                    }
+                   mOnChooseRecyclerView.onChooseTime(data);
                 }
             });
         }

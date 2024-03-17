@@ -138,6 +138,11 @@ public class SearchFilmFragment  extends BaseFragment<ActiveSearchFragmentBindin
 
                 @Override
                 public void onChooseCategory(Category category) {}
+
+                @Override
+                public void onChooseTime(Schedule schedule) {
+
+                }
             });
             GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2);
             binding.rcvData.setLayoutManager(gridLayoutManager);

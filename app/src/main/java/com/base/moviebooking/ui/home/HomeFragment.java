@@ -151,6 +151,11 @@ public class HomeFragment extends BaseFragment<HomeFragmentBinding> {
             public void onChooseCategory(Category category) {
 
             }
+
+            @Override
+            public void onChooseTime(Schedule schedule) {
+
+            }
         });
         mViewModel.dataMovie.observe(getViewLifecycleOwner(), new Observer<List<Movie>>() {
             @Override
@@ -201,6 +206,11 @@ public class HomeFragment extends BaseFragment<HomeFragmentBinding> {
                             ((MainActivity) getActivity()).getViewController().replaceFragment(SignInFragment.class, null);
 
                         }
+                    }
+
+                    @Override
+                    public void onChooseTime(Schedule schedule) {
+
                     }
                 });
 

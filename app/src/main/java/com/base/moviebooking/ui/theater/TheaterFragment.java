@@ -93,6 +93,11 @@ public class TheaterFragment extends BaseFragment<RapphimFragmentBinding> {
             public void onChooseCategory(Category category) {
 
             }
+
+            @Override
+            public void onChooseTime(Schedule schedule) {
+
+            }
         });
         mViewModel.dataCinema.observe(getViewLifecycleOwner(), new Observer<List<Theater>>() {
             @Override
