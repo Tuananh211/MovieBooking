@@ -14,6 +14,14 @@ import com.base.moviebooking.ui.main.MainViewModel;
 import com.base.moviebooking.ui.movie_by_categoryId.MovieByCategoryIdModel;
 import com.base.moviebooking.ui.schedule.ScheduleCinemaModel;
 import com.base.moviebooking.ui.schedule_child.ScheduleChildModel;
+import com.base.moviebooking.ui.schedule_child.schedule_child1.ScheduleChildModel1;
+import com.base.moviebooking.ui.schedule_child.schedule_child2.ScheduleChildModel2;
+import com.base.moviebooking.ui.schedule_child.schedule_child3.ScheduleChildModel3;
+import com.base.moviebooking.ui.schedule_child.schedule_child4.ScheduleChildModel4;
+import com.base.moviebooking.ui.schedule_child.schedule_child5.ScheduleChildModel5;
+import com.base.moviebooking.ui.schedule_child.schedule_child6.ScheduleChildModel6;
+import com.base.moviebooking.ui.schedule_child.schedule_child7.ScheduleChildModel7;
+
 import com.base.moviebooking.ui.search_film.SearchFilmModel;
 import com.base.moviebooking.ui.show_time.ShowTimeViewModel;
 import com.base.moviebooking.ui.show_time_child.ShowTimeChildViewModel;
@@ -132,8 +140,34 @@ public abstract class ViewModelModule {
 
     @Binds
     @IntoMap
-    @ViewModelKey(ScheduleChildModel.class)
-    abstract ViewModel bindScheduleChildModel(ScheduleChildModel viewModel);
+    @ViewModelKey(ScheduleChildModel1.class)
+    abstract ViewModel bindScheduleChildModel1(ScheduleChildModel1 viewModel);
+    @Binds
+    @IntoMap
+    @ViewModelKey(ScheduleChildModel2.class)
+    abstract ViewModel bindScheduleChildModel2(ScheduleChildModel2 viewModel);
+    @Binds
+    @IntoMap
+    @ViewModelKey(ScheduleChildModel3.class)
+    abstract ViewModel bindScheduleChildModel3(ScheduleChildModel3 viewModel);
+    @Binds
+    @IntoMap
+    @ViewModelKey(ScheduleChildModel4.class)
+    abstract ViewModel bindScheduleChildModel4(ScheduleChildModel4 viewModel);
+    @Binds
+    @IntoMap
+    @ViewModelKey(ScheduleChildModel5.class)
+    abstract ViewModel bindScheduleChildModel5(ScheduleChildModel5 viewModel);
+    @Binds
+    @IntoMap
+    @ViewModelKey(ScheduleChildModel6.class)
+    abstract ViewModel bindScheduleChildModel6(ScheduleChildModel6 viewModel);
+    @Binds
+    @IntoMap
+    @ViewModelKey(ScheduleChildModel7.class)
+    abstract ViewModel bindScheduleChildModel7(ScheduleChildModel7 viewModel);
+
+
 
     @Binds
     @IntoMap

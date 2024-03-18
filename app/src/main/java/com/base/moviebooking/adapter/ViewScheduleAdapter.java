@@ -6,6 +6,14 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.base.moviebooking.ui.detail_movie.DetailMovieFragment;
 import com.base.moviebooking.ui.schedule_child.ScheduleChildFragment;
+import com.base.moviebooking.ui.schedule_child.schedule_child1.ScheduleChildFragment1;
+import com.base.moviebooking.ui.schedule_child.schedule_child2.ScheduleChildFragment2;
+import com.base.moviebooking.ui.schedule_child.schedule_child3.ScheduleChildFragment3;
+import com.base.moviebooking.ui.schedule_child.schedule_child4.ScheduleChildFragment4;
+import com.base.moviebooking.ui.schedule_child.schedule_child5.ScheduleChildFragment5;
+import com.base.moviebooking.ui.schedule_child.schedule_child6.ScheduleChildFragment6;
+import com.base.moviebooking.ui.schedule_child.schedule_child7.ScheduleChildFragment7;
+
 import com.base.moviebooking.ui.show_time_child.ShowTimeChildFragment;
 
 public class ViewScheduleAdapter extends FragmentStateAdapter {
@@ -17,7 +25,24 @@ public class ViewScheduleAdapter extends FragmentStateAdapter {
     @NonNull
     @Override
     public Fragment createFragment(int position) {
-        return new ScheduleChildFragment();
+        switch (position){
+            case 0:
+                return new ScheduleChildFragment1();
+            case 1:
+                return new ScheduleChildFragment2();
+            case 2:
+                return new ScheduleChildFragment3();
+            case 3:
+                return new ScheduleChildFragment4();
+            case 4:
+                return new ScheduleChildFragment5();
+            case 5:
+                return new ScheduleChildFragment6();
+            case 6:
+                return new ScheduleChildFragment7();
+            default:
+                return new ScheduleChildFragment1();
+        }
     }
 
     @Override

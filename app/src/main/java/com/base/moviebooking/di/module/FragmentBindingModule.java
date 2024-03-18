@@ -9,6 +9,14 @@ import com.base.moviebooking.ui.giaodich.GiaoDichFragment;
 import com.base.moviebooking.ui.movie_by_categoryId.MovieByCategoryIdFragment;
 import com.base.moviebooking.ui.schedule.ScheduleCinemaFragment;
 import com.base.moviebooking.ui.schedule_child.ScheduleChildFragment;
+import com.base.moviebooking.ui.schedule_child.schedule_child1.ScheduleChildFragment1;
+import com.base.moviebooking.ui.schedule_child.schedule_child2.ScheduleChildFragment2;
+import com.base.moviebooking.ui.schedule_child.schedule_child3.ScheduleChildFragment3;
+import com.base.moviebooking.ui.schedule_child.schedule_child4.ScheduleChildFragment4;
+import com.base.moviebooking.ui.schedule_child.schedule_child5.ScheduleChildFragment5;
+import com.base.moviebooking.ui.schedule_child.schedule_child6.ScheduleChildFragment6;
+import com.base.moviebooking.ui.schedule_child.schedule_child7.ScheduleChildFragment7;
+
 import com.base.moviebooking.ui.search_film.SearchFilmFragment;
 import com.base.moviebooking.ui.show_time.ShowTimeFragment;
 import com.base.moviebooking.ui.account.AccountFragment;
@@ -92,6 +100,20 @@ public abstract class FragmentBindingModule {
     abstract ScheduleCinemaFragment bindScheduleFragment();
 
     @ContributesAndroidInjector
-    abstract ScheduleChildFragment bindScheduleChildFragment();
+    abstract ScheduleChildFragment1 bindScheduleChildFragment1();
+    @ContributesAndroidInjector
+    abstract ScheduleChildFragment2 bindScheduleChildFragment2();
+    @ContributesAndroidInjector
+    abstract ScheduleChildFragment3 bindScheduleChildFragment3();
+    @ContributesAndroidInjector
+    abstract ScheduleChildFragment4 bindScheduleChildFragment4();
+    @ContributesAndroidInjector
+    abstract ScheduleChildFragment5 bindScheduleChildFragment5();
+    @ContributesAndroidInjector
+    abstract ScheduleChildFragment6 bindScheduleChildFragment6();
+    @ContributesAndroidInjector
+    abstract ScheduleChildFragment7 bindScheduleChildFragment7();
+
+
 
 }

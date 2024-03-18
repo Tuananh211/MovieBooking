@@ -138,10 +138,10 @@ public interface ApiInterface {
     @GET("news/{id}")
     Single<News> getNewsByID(@Path("id") int id);
 // get Movie has Schedule
-    @GET("movies/movieHasSchedule")
+    @GET("movies/getMovies")
     Single<List<Movie>> getMovieHasSchedule(@Query("cinemaId") int cinemaId, @Query("day") String day);
     // get time has Schedule
-    @GET("schedules/scheduleCinema")
+    @GET("schedules/getScheduleOfMovie")
     Single<List<Schedule>> getScheduleOfCinema(@Query("cinemaId") int cinemaId, @Query("movieId") int movieId, @Query("day") String day);
 
 
