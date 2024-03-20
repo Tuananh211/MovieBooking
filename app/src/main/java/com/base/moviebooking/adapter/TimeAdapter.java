@@ -43,7 +43,7 @@ public class TimeAdapter extends EndlessLoadingRecyclerViewAdapter<ViewholderTim
 
     @Override
     protected void bindNormalViewHolder(NormalViewHolder holder, int position) {
-        TimeAdapter.TimeViewHolder timeViewHolder = (TimeAdapter.TimeViewHolder) holder;
+        TimeViewHolder timeViewHolder = (TimeViewHolder) holder;
         timeViewHolder.bind(getItem(position, Schedule.class));
     }
 

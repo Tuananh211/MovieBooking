@@ -59,7 +59,8 @@ public class ScheduleAdapter extends EndlessLoadingRecyclerViewAdapter<Viewholde
 
     @Override
     protected void bindNormalViewHolder(NormalViewHolder holder, int position) {
-
+        ScheduleViewHolder scheduleViewHolder = (ScheduleViewHolder) holder;
+        scheduleViewHolder.bind(getItem(position, Movie.class));
     }
 
     @Override
@@ -85,7 +86,7 @@ public class ScheduleAdapter extends EndlessLoadingRecyclerViewAdapter<Viewholde
             Bitmap bitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
             binding.image.setImageBitmap(bitmap);
             binding.tvtAgeLimit.setText("C" + data.getAgeLimit());
-            binding.tvtName.setText(data.getName());
+            binding.tvtName.setText(data.getName().toString());
             scheduleCinemaModel = ViewModelProviders.of((FragmentActivity) mContext).get(ScheduleCinemaModel.class);
             GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 3);
             binding.listTimes.setLayoutManager(gridLayoutManager);
