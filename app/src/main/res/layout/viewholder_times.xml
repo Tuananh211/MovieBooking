@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TitleText"
-            android:background="@drawable/cat_background"
+            android:background="@drawable/btn_time"
             android:padding="8dp"
             android:layout_margin="7dp"
             android:textColor="@color/white"
