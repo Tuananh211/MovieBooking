@@ -83,21 +83,33 @@ public class ScheduleCinemaFragment extends BaseFragment<ScheduleCinemaFragmentB
                             break;
                         case 1:
                             tab.setText(item_Lich.get(1).toString());
+                            String selectedDate1 = fomatDate(item_Lich.get(1));
+                            mViewModel.sendDay1(selectedDate1);
                             break;
                         case 2:
                             tab.setText(item_Lich.get(2).toString());
+                            String selectedDate2 = fomatDate(item_Lich.get(2));
+                            mViewModel.sendDay2(selectedDate2);
                             break;
                         case 3:
                             tab.setText(item_Lich.get(3).toString());
+                            String selectedDate3 = fomatDate(item_Lich.get(3));
+                            mViewModel.sendDay3(selectedDate3);
                             break;
                         case 4:
                             tab.setText(item_Lich.get(4).toString());
+                            String selectedDate4 = fomatDate(item_Lich.get(4));
+                            mViewModel.sendDay4(selectedDate4);
                             break;
                         case 5:
                             tab.setText(item_Lich.get(5).toString());
+                            String selectedDate5 = fomatDate(item_Lich.get(5));
+                            mViewModel.sendDay5(selectedDate5);
                             break;
                         case 6:
                             tab.setText(item_Lich.get(6).toString());
+                            String selectedDate6 = fomatDate(item_Lich.get(6));
+                            mViewModel.sendDay6(selectedDate6);
                             break;
                     }
                 }
@@ -125,7 +137,7 @@ public class ScheduleCinemaFragment extends BaseFragment<ScheduleCinemaFragmentB
         binding.toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                getActivity().findViewById(R.id.bottombar).setVisibility(View.VISIBLE);
+                getActivity().findViewById(R.id.bottombar).setVisibility(View.VISIBLE);
                 mViewController.replaceFragment(TheaterFragment.class,null);
 
             }
@@ -135,14 +147,14 @@ public class ScheduleCinemaFragment extends BaseFragment<ScheduleCinemaFragmentB
             public void onTabSelected(TabLayout.Tab tab) {
                 // Thay đổi màu của thanh gạch chân khi tab được chọn
                 binding.tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.white));
-                if (!item_Lich.isEmpty() && tab.getPosition() < item_Lich.size()) {
-                    String selectedDate = fomatDate(item_Lich.get(tab.getPosition()));
-                    mViewModel.sendDay(selectedDate);
-                } else {
-                    Calendar calendar = Calendar.getInstance();
-                    String selectedDate = fomatDate(String.valueOf(calendar.getTime()));
-                    mViewModel.sendDay(selectedDate);
-                }
+//                if (!item_Lich.isEmpty() && tab.getPosition() < item_Lich.size()) {
+//                    String selectedDate = fomatDate(item_Lich.get(tab.getPosition()));
+//                    mViewModel.sendDay(selectedDate);
+//                } else {
+//                    Calendar calendar = Calendar.getInstance();
+//                    String selectedDate = fomatDate(String.valueOf(calendar.getTime()));
+//                    mViewModel.sendDay(selectedDate);
+//                }
             }
 
             @Override

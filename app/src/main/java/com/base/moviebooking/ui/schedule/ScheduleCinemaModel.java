@@ -31,6 +31,37 @@ public class ScheduleCinemaModel extends BaseViewModel {
     public MutableLiveData<String> getDay() {
         return day;
     }
+
+    public  MutableLiveData<String> day1 = new MutableLiveData<>();
+    public MutableLiveData<String> getDay1() {
+        return day1;
+    }
+
+    public  MutableLiveData<String> day2 = new MutableLiveData<>();
+    public MutableLiveData<String> getDay2() {
+        return day2;
+    }
+
+    public  MutableLiveData<String> day3 = new MutableLiveData<>();
+    public MutableLiveData<String> getDay3() {
+        return day3;
+    }
+
+    public  MutableLiveData<String> day4 = new MutableLiveData<>();
+    public MutableLiveData<String> getDay4() {
+        return day4;
+    }
+
+    public  MutableLiveData<String> day5 = new MutableLiveData<>();
+    public MutableLiveData<String> getDay5() {
+        return day5;
+    }
+
+    public  MutableLiveData<String> day6 = new MutableLiveData<>();
+    public MutableLiveData<String> getDay6() {
+        return day6;
+    }
+
     
     @Inject
     public ScheduleCinemaModel(Repository repository) {
@@ -42,6 +73,25 @@ public class ScheduleCinemaModel extends BaseViewModel {
     }
     public void sendDay(String dayString) {
         day.setValue(dayString);
+    }
+
+    public void sendDay1(String dayString) {
+        day1.setValue(dayString);
+    }
+    public void sendDay2(String dayString) {
+        day2.setValue(dayString);
+    }
+    public void sendDay3(String dayString) {
+        day3.setValue(dayString);
+    }
+    public void sendDay4(String dayString) {
+        day4.setValue(dayString);
+    }
+    public void sendDay5(String dayString) {
+        day5.setValue(dayString);
+    }
+    public void sendDay6(String dayString) {
+        day6.setValue(dayString);
     }
     
 

@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.base.moviebooking.base.BaseViewModel;
 import com.base.moviebooking.entity.Movie;
+import com.base.moviebooking.entity.MovieSchedule;
 import com.base.moviebooking.entity.Schedule;
 import com.base.moviebooking.network.repository.Repository;
 
@@ -19,8 +20,8 @@ import io.reactivex.disposables.Disposable;
 public class ScheduleChildModel7 extends BaseViewModel {
     private Repository repository;
 
-    MutableLiveData<List<Movie>> dataMovie = new MutableLiveData<>();
-    public MutableLiveData<List<Movie>> getDataMovie() {
+    MutableLiveData<List<MovieSchedule>> dataMovie = new MutableLiveData<>();
+    public MutableLiveData<List<MovieSchedule>> getDataMovie() {
         return dataMovie;
     }
 
@@ -36,13 +37,13 @@ public class ScheduleChildModel7 extends BaseViewModel {
 
     public void getMovieHasSchedule(int theaterId,String day) {
         repository.getMoviesHasSchedule(theaterId,day)
-                .subscribe(new SingleObserver<List<Movie>>() {
+                .subscribe(new SingleObserver<List<MovieSchedule>>() {
                     @Override
                     public void onSubscribe(Disposable d) {
                     }
 
                     @Override
-                    public void onSuccess(List<Movie> list) {
+                    public void onSuccess(List<MovieSchedule> list) {
                         dataMovie.postValue(list);
                         Log.d("fat", "success Cinemas");
                     }

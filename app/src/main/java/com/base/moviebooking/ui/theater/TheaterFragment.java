@@ -70,6 +70,7 @@ public class TheaterFragment extends BaseFragment<RapphimFragmentBinding> {
                     Log.d("mmm", "home đã Login", null);
                     HashMap<String, Object> hashMap = new HashMap<>();
                     hashMap.put("theater", theater);
+                    getActivity().findViewById(R.id.bottombar).setVisibility(View.GONE);
                     mViewController.addFragment(ScheduleCinemaFragment.class, hashMap);
                 } else {
                     Log.d("mmm", "home chưa Login", null);

@@ -16,6 +16,7 @@ import com.base.moviebooking.databinding.SchedulleChildFragmentBinding;
 import com.base.moviebooking.entity.Category;
 import com.base.moviebooking.entity.FilmInfo;
 import com.base.moviebooking.entity.Movie;
+import com.base.moviebooking.entity.MovieSchedule;
 import com.base.moviebooking.entity.Schedule;
 import com.base.moviebooking.entity.Theater;
 import com.base.moviebooking.listener.OnChooseRecyclerView;
@@ -48,7 +49,7 @@ public class ScheduleChildFragment5 extends BaseFragment<SchedulleChildFragment4
         scheduleCinemaModel = ViewModelProviders.of(requireParentFragment(), viewModelFactory).get(ScheduleCinemaModel.class);
         mViewModel = ViewModelProviders.of(this, viewModelFactory).get(ScheduleChildModel5.class);
         binding.rcvLichphim.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL,false));
-        String day = scheduleCinemaModel.day.getValue().toString();
+        String day = scheduleCinemaModel.day4.getValue().toString();
         Theater theater = scheduleCinemaModel.getDataTheater().getValue();
         mViewModel.getMovieHasSchedule(theater.getId(),day);
         scheduleAdapter =  new ScheduleAdapter(getContext(), false, getContext(), new OnChooseRecyclerView() {
@@ -81,10 +82,10 @@ public class ScheduleChildFragment5 extends BaseFragment<SchedulleChildFragment4
             public void onChooseTime(Schedule schedule) {
 
             }
-        },this);
-        mViewModel.dataMovie.observe(getViewLifecycleOwner(), new Observer<List<Movie>>() {
+        },this,scheduleCinemaModel);
+        mViewModel.dataMovie.observe(getViewLifecycleOwner(), new Observer<List<MovieSchedule>>() {
             @Override
-            public void onChanged(List<Movie> listMovieResponse) {
+            public void onChanged(List<MovieSchedule> listMovieResponse) {
                 if (listMovieResponse.size()!=0){
                     scheduleAdapter.addModels(listMovieResponse, false);
                     Log.d("fat", "add Model", null);

@@ -15,6 +15,7 @@ import com.base.moviebooking.databinding.SchedulleChildFragmentBinding;
 import com.base.moviebooking.entity.Category;
 import com.base.moviebooking.entity.FilmInfo;
 import com.base.moviebooking.entity.Movie;
+import com.base.moviebooking.entity.MovieSchedule;
 import com.base.moviebooking.entity.Schedule;
 import com.base.moviebooking.entity.Theater;
 import com.base.moviebooking.listener.OnChooseRecyclerView;
@@ -80,18 +81,26 @@ public class ScheduleChildFragment1 extends BaseFragment<SchedulleChildFragmentB
             public void onChooseTime(Schedule schedule) {
 
             }
-        },this);
-        mViewModel.dataMovie.observe(getViewLifecycleOwner(), new Observer<List<Movie>>() {
+        },this,scheduleCinemaModel);
+        mViewModel.dataMovie.observe(getViewLifecycleOwner(), new Observer<List<MovieSchedule>>() {
             @Override
-            public void onChanged(List<Movie> listMovieResponse) {
+            public void onChanged(List<MovieSchedule> listMovieResponse) {
                 if (listMovieResponse.size()!=0){
                     scheduleAdapter.addModels(listMovieResponse, false);
                     Log.d("fat", "add Model", null);
-                    getActivity().findViewById(R.id.dialog_load_schedule).setVisibility(View.GONE);
+                    View dialogLoadSchedule = getActivity().findViewById(R.id.dialog_load_schedule);
+                    if (dialogLoadSchedule != null) {
+                        dialogLoadSchedule.setVisibility(View.GONE);
+                    }
+//                    getActivity().findViewById(R.id.dialog_load_schedule).setVisibility(View.GONE);
                     binding.lnNoMovie.setVisibility(View.GONE);
                 }
                 else{
-                    getActivity().findViewById(R.id.dialog_load_schedule).setVisibility(View.GONE);
+                    View dialogLoadSchedule = getActivity().findViewById(R.id.dialog_load_schedule);
+                    if (dialogLoadSchedule != null) {
+                        dialogLoadSchedule.setVisibility(View.GONE);
+                    }
+//                    getActivity().findViewById(R.id.dialog_load_schedule).setVisibility(View.GONE);
                     binding.lnNoMovie.setVisibility(View.VISIBLE);
                 }
 

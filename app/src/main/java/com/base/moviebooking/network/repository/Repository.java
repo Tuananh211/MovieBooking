@@ -12,6 +12,7 @@ import com.base.moviebooking.entity.ForgetPass;
 import com.base.moviebooking.entity.LoginRequest;
 import com.base.moviebooking.entity.LoginResponse;
 import com.base.moviebooking.entity.Movie;
+import com.base.moviebooking.entity.MovieSchedule;
 import com.base.moviebooking.entity.News;
 import com.base.moviebooking.entity.Product;
 import com.base.moviebooking.entity.RegisterRequest;
@@ -206,7 +207,7 @@ public class Repository {
                 .observeOn(AndroidSchedulers.mainThread());
     }
     //movie has schedule
-    public Single<List<Movie>> getMoviesHasSchedule(int cinemaId, String day) {
+    public Single<List<MovieSchedule>> getMoviesHasSchedule(int cinemaId, String day) {
         return apiInterface.getMovieHasSchedule(cinemaId,day)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());

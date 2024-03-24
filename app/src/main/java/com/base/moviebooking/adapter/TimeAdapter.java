@@ -62,7 +62,9 @@ public class TimeAdapter extends EndlessLoadingRecyclerViewAdapter<ViewholderTim
 
         @Override
         public void bind(Schedule data) {
-            binding.timeText.setText(changeTimeZone(data.getPremiere().toString()));
+            String s = data.getPremiere().toString().substring(11,16);
+            s=changeTimeZone(s);
+            binding.timeText.setText(s);
             binding.listTime.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
