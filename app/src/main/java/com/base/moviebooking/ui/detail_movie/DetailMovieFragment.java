@@ -83,7 +83,6 @@ public class DetailMovieFragment extends BaseFragment<ThongtinFragmentBinding> {
     @Override
     public void initView() {
         mViewModel = ViewModelProviders.of(this, viewModelFactory).get(DetailMovieViewModel.class);
-        getActivity().findViewById(R.id.bottombar).setVisibility(View.GONE);
 //        mViewModel = ViewModelProviders.of(this,viewModelFactory).get(DetailMovieViewModel.class);
         showTimeViewModel = ViewModelProviders.of(requireParentFragment(), viewModelFactory).get(ShowTimeViewModel.class);
         showTimeViewModel.getData().observe(getViewLifecycleOwner(), new Observer<Movie>() {
@@ -163,7 +162,11 @@ public class DetailMovieFragment extends BaseFragment<ThongtinFragmentBinding> {
             public void onChanged(List<Category> categoriesListResponse) {
                 categoryListAdapter.addModels(categoriesListResponse,false);
                 Log.d("fat", "add Model Category", null);
-                getActivity().findViewById(R.id.category_load).setVisibility(View.GONE);
+                View dialogLoadSchedule = getActivity().findViewById(R.id.category_load);
+                if (dialogLoadSchedule != null) {
+                    dialogLoadSchedule.setVisibility(View.GONE);
+                }
+//                getActivity().findViewById(R.id.category_load).setVisibility(View.GONE);
             }
         });
         binding.cateView.setAdapter(categoryListAdapter);
@@ -212,7 +215,11 @@ public class DetailMovieFragment extends BaseFragment<ThongtinFragmentBinding> {
                 if(actorsListResponse.size()>0){
                     actorAdapter.addModels(actorsListResponse,false);
                     Log.d("fat", "add Model Actor", null);
-                    getActivity().findViewById(R.id.actor_load).setVisibility(View.GONE);
+                    View dialogLoadSchedule = getActivity().findViewById(R.id.actor_load);
+                    if (dialogLoadSchedule != null) {
+                        dialogLoadSchedule.setVisibility(View.GONE);
+                    }
+//                    getActivity().findViewById(R.id.actor_load).setVisibility(View.GONE);
                 }
                 else {
                     actorsListResponse.add(new Actor(1,"Perdo Pascal","https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/494807_v9_bd.jpg"));

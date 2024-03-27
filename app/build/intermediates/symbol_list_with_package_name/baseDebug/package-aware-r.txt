@@ -634,6 +634,22 @@ attr listPreferredItemPaddingRight
 attr listPreferredItemPaddingStart
 attr logo
 attr logoDescription
+attr lottie_autoPlay
+attr lottie_cacheComposition
+attr lottie_colorFilter
+attr lottie_enableMergePathsForKitKatAndAbove
+attr lottie_fallbackRes
+attr lottie_fileName
+attr lottie_imageAssetsFolder
+attr lottie_loop
+attr lottie_progress
+attr lottie_rawRes
+attr lottie_renderMode
+attr lottie_repeatCount
+attr lottie_repeatMode
+attr lottie_scale
+attr lottie_speed
+attr lottie_url
 attr matchHeightToWidth
 attr matchWidthToHeight
 attr materialAlertDialogBodyTextStyle
@@ -1889,6 +1905,7 @@ drawable avatar
 drawable avd_hide_password
 drawable avd_show_password
 drawable back
+drawable background_empty
 drawable bg_btn_xemtiep
 drawable bg_c13
 drawable bg_indicator
@@ -1914,6 +1931,7 @@ drawable choose_ghe
 drawable close
 drawable close_60
 drawable combo
+drawable custom_background_white_border
 drawable custom_bg_dienanh
 drawable custom_seat_frame
 drawable custom_selected_seat
@@ -2028,6 +2046,7 @@ drawable phim4
 drawable phim5
 drawable phone
 drawable popcorn
+drawable poster_phim
 drawable pussinboots
 drawable radius_4dp
 drawable radius_4dp_with_border
@@ -2044,6 +2063,7 @@ drawable search
 drawable seat
 drawable seat_choose_custom
 drawable seat_custom
+drawable send
 drawable setting
 drawable spiderman
 drawable spiritedaway
@@ -2165,6 +2185,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id automatic
 id back_dky
 id back_image
 id back_tt
@@ -2194,6 +2215,7 @@ id btnDienAnh
 id btnPass
 id btnQuenMK
 id btnRapPhim
+id btnSend
 id btnTaiKhoan
 id btnTrangchu
 id btnXemTiep
@@ -2378,6 +2400,7 @@ id graph_wrap
 id group_divider
 id groups
 id guideline
+id hardware
 id header
 id header_title
 id hideable
@@ -2397,6 +2420,7 @@ id imageView
 id imageView2
 id image_back
 id image_delete
+id imgAvatar
 id imgSeat
 id imgUser
 id img_1
@@ -2456,6 +2480,10 @@ id ln_rcvgiaodich
 id ln_theater
 id ln_thongtin
 id ln_user
+id lottie_layer_name
+id ly_comment
+id ly_comment_empty
+id ly_send_comment
 id masked
 id material_clock_display
 id material_clock_face
@@ -2575,6 +2603,8 @@ id rcv_search_2
 id rcv_seat
 id rectangles
 id repeat_pass
+id restart
+id reverse
 id reverseSawtooth
 id right
 id rightToLeft
@@ -2584,6 +2614,7 @@ id room
 id root
 id rounded
 id row_index_key
+id ry_comment
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -2628,6 +2659,7 @@ id snackbar_action
 id snackbar_text
 id snap
 id snapMargins
+id software
 id spacer
 id special_effects_controller_view_tag
 id spinner_ngay
@@ -2726,6 +2758,12 @@ id tru_nuoc
 id tv1
 id tv2
 id tv3
+id tvBanner_comment
+id tvContent
+id tvContentComment
+id tvDateComment
+id tvName
+id tvSumStar
 id tv_no_result
 id tv_title
 id tvt1
@@ -2859,6 +2897,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout active_comment_fragment
 layout active_search_fragment
 layout activity_main
 layout bottom_navigation_item
@@ -2895,6 +2934,7 @@ layout giaodich_fragment
 layout header
 layout header_phim
 layout home_fragment
+layout item_comment
 layout item_slide
 layout layout_base_recyclerview
 layout layout_load_more
@@ -3019,6 +3059,7 @@ mipmap logo_background
 mipmap logo_foreground
 mipmap logo_round
 plurals mtrl_badge_content_description
+raw comment
 raw zxing_beep
 string abc_action_bar_home_description
 string abc_action_bar_up_description
@@ -4014,6 +4055,7 @@ styleable LinearLayoutCompat android_gravity android_orientation android_baselin
 styleable LinearLayoutCompat_Layout android_layout_gravity android_layout_width android_layout_height android_layout_weight
 styleable LinearProgressIndicator indeterminateAnimationType indicatorDirectionLinear
 styleable ListPopupWindow android_dropDownHorizontalOffset android_dropDownVerticalOffset
+styleable LottieAnimationView lottie_autoPlay lottie_cacheComposition lottie_colorFilter lottie_enableMergePathsForKitKatAndAbove lottie_fallbackRes lottie_fileName lottie_imageAssetsFolder lottie_loop lottie_progress lottie_rawRes lottie_renderMode lottie_repeatCount lottie_repeatMode lottie_scale lottie_speed lottie_url
 styleable MaterialAlertDialog backgroundInsetBottom backgroundInsetEnd backgroundInsetStart backgroundInsetTop
 styleable MaterialAlertDialogTheme materialAlertDialogBodyTextStyle materialAlertDialogTheme materialAlertDialogTitleIconStyle materialAlertDialogTitlePanelStyle materialAlertDialogTitleTextStyle
 styleable MaterialAutoCompleteTextView android_inputType

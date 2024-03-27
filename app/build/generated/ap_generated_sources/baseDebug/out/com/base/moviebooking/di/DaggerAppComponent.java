@@ -13,6 +13,7 @@ import com.base.moviebooking.di.module.ActivityBindingModule_BindMainActivity;
 import com.base.moviebooking.di.module.FragmentBindingModule_BindAccountFragment;
 import com.base.moviebooking.di.module.FragmentBindingModule_BindChangePassFragment;
 import com.base.moviebooking.di.module.FragmentBindingModule_BindChonGheFragment;
+import com.base.moviebooking.di.module.FragmentBindingModule_BindCommentFragment;
 import com.base.moviebooking.di.module.FragmentBindingModule_BindDetailMovieFragment;
 import com.base.moviebooking.di.module.FragmentBindingModule_BindFilmInfoChildFragment;
 import com.base.moviebooking.di.module.FragmentBindingModule_BindFilmInfoFragment;
@@ -52,6 +53,9 @@ import com.base.moviebooking.ui.change_pass.ChangePassViewModel_Factory;
 import com.base.moviebooking.ui.chonghe.ChonGheFragment;
 import com.base.moviebooking.ui.chonghe.ChonGheViewModel;
 import com.base.moviebooking.ui.chonghe.ChonGheViewModel_Factory;
+import com.base.moviebooking.ui.comments.CommentFragment;
+import com.base.moviebooking.ui.comments.CommentModel;
+import com.base.moviebooking.ui.comments.CommentModel_Factory;
 import com.base.moviebooking.ui.detail_movie.DetailMovieFragment;
 import com.base.moviebooking.ui.detail_movie.DetailMovieViewModel;
 import com.base.moviebooking.ui.detail_movie.DetailMovieViewModel_Factory;
@@ -248,6 +252,9 @@ public final class DaggerAppComponent implements AppComponent {
               .Builder>
       scheduleChildFragment7SubcomponentBuilderProvider;
 
+  private Provider<FragmentBindingModule_BindCommentFragment.CommentFragmentSubcomponent.Builder>
+      commentFragmentSubcomponentBuilderProvider;
+
   private Provider<Application> applicationProvider;
 
   private Provider<Context> provideContextProvider;
@@ -304,6 +311,8 @@ public final class DaggerAppComponent implements AppComponent {
 
   private Provider<ScheduleChildModel7> scheduleChildModel7Provider;
 
+  private Provider<CommentModel> commentModelProvider;
+
   private DaggerAppComponent(NetworkModule networkModuleParam, Application applicationParam) {
 
     initialize(networkModuleParam, applicationParam);
@@ -315,7 +324,7 @@ public final class DaggerAppComponent implements AppComponent {
 
   private Map<Class<?>, Provider<AndroidInjector.Factory<?>>>
       getMapOfClassOfAndProviderOfFactoryOf() {
-    return MapBuilder.<Class<?>, Provider<AndroidInjector.Factory<?>>>newMapBuilder(28)
+    return MapBuilder.<Class<?>, Provider<AndroidInjector.Factory<?>>>newMapBuilder(29)
         .put(MainActivity.class, (Provider) mainActivitySubcomponentBuilderProvider)
         .put(SplashFragment.class, (Provider) splashFragmentSubcomponentBuilderProvider)
         .put(HomeFragment.class, (Provider) homeFragmentSubcomponentBuilderProvider)
@@ -368,6 +377,7 @@ public final class DaggerAppComponent implements AppComponent {
         .put(
             ScheduleChildFragment7.class,
             (Provider) scheduleChildFragment7SubcomponentBuilderProvider)
+        .put(CommentFragment.class, (Provider) commentFragmentSubcomponentBuilderProvider)
         .build();
   }
 
@@ -379,7 +389,7 @@ public final class DaggerAppComponent implements AppComponent {
 
   private Map<Class<? extends ViewModel>, Provider<ViewModel>>
       getMapOfClassOfAndProviderOfViewModel() {
-    return MapBuilder.<Class<? extends ViewModel>, Provider<ViewModel>>newMapBuilder(27)
+    return MapBuilder.<Class<? extends ViewModel>, Provider<ViewModel>>newMapBuilder(28)
         .put(SplashViewModel.class, (Provider) SplashViewModel_Factory.create())
         .put(MovieByCategoryIdModel.class, (Provider) movieByCategoryIdModelProvider)
         .put(SearchFilmModel.class, (Provider) searchFilmModelProvider)
@@ -406,6 +416,7 @@ public final class DaggerAppComponent implements AppComponent {
         .put(ScheduleChildModel5.class, (Provider) scheduleChildModel5Provider)
         .put(ScheduleChildModel6.class, (Provider) scheduleChildModel6Provider)
         .put(ScheduleChildModel7.class, (Provider) scheduleChildModel7Provider)
+        .put(CommentModel.class, (Provider) commentModelProvider)
         .put(MainViewModel.class, (Provider) MainViewModel_Factory.create())
         .build();
   }
@@ -688,6 +699,15 @@ public final class DaggerAppComponent implements AppComponent {
             return new ScheduleChildFragment7SubcomponentBuilder();
           }
         };
+    this.commentFragmentSubcomponentBuilderProvider =
+        new Provider<
+            FragmentBindingModule_BindCommentFragment.CommentFragmentSubcomponent.Builder>() {
+          @Override
+          public FragmentBindingModule_BindCommentFragment.CommentFragmentSubcomponent.Builder
+              get() {
+            return new CommentFragmentSubcomponentBuilder();
+          }
+        };
     this.applicationProvider = InstanceFactory.create(applicationParam);
     this.provideContextProvider = DoubleCheck.provider((Provider) applicationProvider);
     this.provideHttpClientProvider =
@@ -723,6 +743,7 @@ public final class DaggerAppComponent implements AppComponent {
     this.scheduleChildModel5Provider = ScheduleChildModel5_Factory.create(repositoryProvider);
     this.scheduleChildModel6Provider = ScheduleChildModel6_Factory.create(repositoryProvider);
     this.scheduleChildModel7Provider = ScheduleChildModel7_Factory.create(repositoryProvider);
+    this.commentModelProvider = CommentModel_Factory.create(repositoryProvider);
   }
 
   @Override
@@ -1911,6 +1932,46 @@ public final class DaggerAppComponent implements AppComponent {
     }
 
     private ScheduleChildFragment7 injectScheduleChildFragment7(ScheduleChildFragment7 instance) {
+      DaggerFragment_MembersInjector.injectChildFragmentInjector(
+          instance, getDispatchingAndroidInjectorOfFragment());
+      BaseFragment_MembersInjector.injectViewModelFactory(
+          instance, DaggerAppComponent.this.getViewModelFactory());
+      return instance;
+    }
+  }
+
+  private final class CommentFragmentSubcomponentBuilder
+      extends FragmentBindingModule_BindCommentFragment.CommentFragmentSubcomponent.Builder {
+    private CommentFragment seedInstance;
+
+    @Override
+    public void seedInstance(CommentFragment arg0) {
+      this.seedInstance = Preconditions.checkNotNull(arg0);
+    }
+
+    @Override
+    public FragmentBindingModule_BindCommentFragment.CommentFragmentSubcomponent build() {
+      Preconditions.checkBuilderRequirement(seedInstance, CommentFragment.class);
+      return new CommentFragmentSubcomponentImpl(seedInstance);
+    }
+  }
+
+  private final class CommentFragmentSubcomponentImpl
+      implements FragmentBindingModule_BindCommentFragment.CommentFragmentSubcomponent {
+    private CommentFragmentSubcomponentImpl(CommentFragment seedInstance) {}
+
+    private DispatchingAndroidInjector<Fragment> getDispatchingAndroidInjectorOfFragment() {
+      return DispatchingAndroidInjector_Factory.newDispatchingAndroidInjector(
+          DaggerAppComponent.this.getMapOfClassOfAndProviderOfFactoryOf(),
+          Collections.<String, Provider<AndroidInjector.Factory<?>>>emptyMap());
+    }
+
+    @Override
+    public void inject(CommentFragment arg0) {
+      injectCommentFragment(arg0);
+    }
+
+    private CommentFragment injectCommentFragment(CommentFragment instance) {
       DaggerFragment_MembersInjector.injectChildFragmentInjector(
           instance, getDispatchingAndroidInjectorOfFragment());
       BaseFragment_MembersInjector.injectViewModelFactory(

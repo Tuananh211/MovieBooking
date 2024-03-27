@@ -7,6 +7,7 @@ import com.base.moviebooking.di.ViewModelFactory;
 import com.base.moviebooking.ui.account.AccountViewModel;
 import com.base.moviebooking.ui.change_pass.ChangePassViewModel;
 import com.base.moviebooking.ui.chonghe.ChonGheViewModel;
+import com.base.moviebooking.ui.comments.CommentModel;
 import com.base.moviebooking.ui.film_info.FilmInfoViewModel;
 import com.base.moviebooking.ui.giaodich.GiaoDichViewModel;
 import com.base.moviebooking.ui.home.HomeViewModel;
@@ -167,12 +168,16 @@ public abstract class ViewModelModule {
     @ViewModelKey(ScheduleChildModel7.class)
     abstract ViewModel bindScheduleChildModel7(ScheduleChildModel7 viewModel);
 
-
+    @Binds
+    @IntoMap
+    @ViewModelKey(CommentModel.class)
+    abstract ViewModel bindCommentModel(CommentModel viewModel);
 
     @Binds
     @IntoMap
     @ViewModelKey(MainViewModel.class)
     abstract ViewModel bindMainViewModel(MainViewModel viewModel);
+
 
 
 

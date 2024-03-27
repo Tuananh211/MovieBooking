@@ -6,6 +6,7 @@ import android.view.View;
 import androidx.databinding.DataBinderMapper;
 import androidx.databinding.DataBindingComponent;
 import androidx.databinding.ViewDataBinding;
+import com.base.moviebooking.databinding.ActiveCommentFragmentBindingImpl;
 import com.base.moviebooking.databinding.ActiveSearchFragmentBindingImpl;
 import com.base.moviebooking.databinding.ActivityMainBindingImpl;
 import com.base.moviebooking.databinding.ChangePassFragmentBindingImpl;
@@ -17,6 +18,7 @@ import com.base.moviebooking.databinding.DienanhFragmentBindingImpl;
 import com.base.moviebooking.databinding.FilmInfoChildFragmentBindingImpl;
 import com.base.moviebooking.databinding.GiaodichFragmentBindingImpl;
 import com.base.moviebooking.databinding.HomeFragmentBindingImpl;
+import com.base.moviebooking.databinding.ItemCommentBindingImpl;
 import com.base.moviebooking.databinding.LichChieuFragmentBindingImpl;
 import com.base.moviebooking.databinding.LichPhimBindingImpl;
 import com.base.moviebooking.databinding.MovieByCategoryFragmentBindingImpl;
@@ -56,87 +58,92 @@ import java.util.HashMap;
 import java.util.List;
 
 public class DataBinderMapperImpl extends DataBinderMapper {
-  private static final int LAYOUT_ACTIVESEARCHFRAGMENT = 1;
+  private static final int LAYOUT_ACTIVECOMMENTFRAGMENT = 1;
 
-  private static final int LAYOUT_ACTIVITYMAIN = 2;
+  private static final int LAYOUT_ACTIVESEARCHFRAGMENT = 2;
 
-  private static final int LAYOUT_CHANGEPASSFRAGMENT = 3;
+  private static final int LAYOUT_ACTIVITYMAIN = 3;
 
-  private static final int LAYOUT_CHONGHEFRAGMENT = 4;
+  private static final int LAYOUT_CHANGEPASSFRAGMENT = 4;
 
-  private static final int LAYOUT_DANGKYFRAGMENT = 5;
+  private static final int LAYOUT_CHONGHEFRAGMENT = 5;
 
-  private static final int LAYOUT_DANGNHAPFRAGMENT = 6;
+  private static final int LAYOUT_DANGKYFRAGMENT = 6;
 
-  private static final int LAYOUT_DIALOGLOADING = 7;
+  private static final int LAYOUT_DANGNHAPFRAGMENT = 7;
 
-  private static final int LAYOUT_DIENANHFRAGMENT = 8;
+  private static final int LAYOUT_DIALOGLOADING = 8;
 
-  private static final int LAYOUT_FILMINFOCHILDFRAGMENT = 9;
+  private static final int LAYOUT_DIENANHFRAGMENT = 9;
 
-  private static final int LAYOUT_GIAODICHFRAGMENT = 10;
+  private static final int LAYOUT_FILMINFOCHILDFRAGMENT = 10;
 
-  private static final int LAYOUT_HOMEFRAGMENT = 11;
+  private static final int LAYOUT_GIAODICHFRAGMENT = 11;
 
-  private static final int LAYOUT_LICHCHIEUFRAGMENT = 12;
+  private static final int LAYOUT_HOMEFRAGMENT = 12;
 
-  private static final int LAYOUT_LICHPHIM = 13;
+  private static final int LAYOUT_ITEMCOMMENT = 13;
 
-  private static final int LAYOUT_MOVIEBYCATEGORYFRAGMENT = 14;
+  private static final int LAYOUT_LICHCHIEUFRAGMENT = 14;
 
-  private static final int LAYOUT_RAPPHIMFRAGMENT = 15;
+  private static final int LAYOUT_LICHPHIM = 15;
 
-  private static final int LAYOUT_RCVDIENANH = 16;
+  private static final int LAYOUT_MOVIEBYCATEGORYFRAGMENT = 16;
 
-  private static final int LAYOUT_RCVGIAODICH = 17;
+  private static final int LAYOUT_RAPPHIMFRAGMENT = 17;
 
-  private static final int LAYOUT_RCVLICHCHIEU = 18;
+  private static final int LAYOUT_RCVDIENANH = 18;
 
-  private static final int LAYOUT_RCVPHIMHOME = 19;
+  private static final int LAYOUT_RCVGIAODICH = 19;
 
-  private static final int LAYOUT_RCVRAP = 20;
+  private static final int LAYOUT_RCVLICHCHIEU = 20;
 
-  private static final int LAYOUT_RCVSEAT = 21;
+  private static final int LAYOUT_RCVPHIMHOME = 21;
 
-  private static final int LAYOUT_SCHEDULECINEMAFRAGMENT = 22;
+  private static final int LAYOUT_RCVRAP = 22;
 
-  private static final int LAYOUT_SCHEDULLECHILDFRAGMENT = 23;
+  private static final int LAYOUT_RCVSEAT = 23;
 
-  private static final int LAYOUT_SCHEDULLECHILDFRAGMENT1 = 24;
+  private static final int LAYOUT_SCHEDULECINEMAFRAGMENT = 24;
 
-  private static final int LAYOUT_SCHEDULLECHILDFRAGMENT2 = 25;
+  private static final int LAYOUT_SCHEDULLECHILDFRAGMENT = 25;
 
-  private static final int LAYOUT_SCHEDULLECHILDFRAGMENT3 = 26;
+  private static final int LAYOUT_SCHEDULLECHILDFRAGMENT1 = 26;
 
-  private static final int LAYOUT_SCHEDULLECHILDFRAGMENT4 = 27;
+  private static final int LAYOUT_SCHEDULLECHILDFRAGMENT2 = 27;
 
-  private static final int LAYOUT_SCHEDULLECHILDFRAGMENT5 = 28;
+  private static final int LAYOUT_SCHEDULLECHILDFRAGMENT3 = 28;
 
-  private static final int LAYOUT_SCHEDULLECHILDFRAGMENT6 = 29;
+  private static final int LAYOUT_SCHEDULLECHILDFRAGMENT4 = 29;
 
-  private static final int LAYOUT_SPLASHFRAGMENT = 30;
+  private static final int LAYOUT_SCHEDULLECHILDFRAGMENT5 = 30;
 
-  private static final int LAYOUT_TAIKHOANFRAGMENT = 31;
+  private static final int LAYOUT_SCHEDULLECHILDFRAGMENT6 = 31;
 
-  private static final int LAYOUT_THANHTOANFRAGMENT = 32;
+  private static final int LAYOUT_SPLASHFRAGMENT = 32;
 
-  private static final int LAYOUT_THONGTINFRAGMENT = 33;
+  private static final int LAYOUT_TAIKHOANFRAGMENT = 33;
 
-  private static final int LAYOUT_THONGTINTHANHTOANFRAGMENT = 34;
+  private static final int LAYOUT_THANHTOANFRAGMENT = 34;
 
-  private static final int LAYOUT_USERINFOFRAGMENT = 35;
+  private static final int LAYOUT_THONGTINFRAGMENT = 35;
 
-  private static final int LAYOUT_VIEWHOLDERACTORS = 36;
+  private static final int LAYOUT_THONGTINTHANHTOANFRAGMENT = 36;
 
-  private static final int LAYOUT_VIEWHOLDERCATEGORY = 37;
+  private static final int LAYOUT_USERINFOFRAGMENT = 37;
 
-  private static final int LAYOUT_VIEWHOLDERSCHEDULE = 38;
+  private static final int LAYOUT_VIEWHOLDERACTORS = 38;
 
-  private static final int LAYOUT_VIEWHOLDERTIMES = 39;
+  private static final int LAYOUT_VIEWHOLDERCATEGORY = 39;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(39);
+  private static final int LAYOUT_VIEWHOLDERSCHEDULE = 40;
+
+  private static final int LAYOUT_VIEWHOLDERTIMES = 41;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(41);
 
   static {
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.base.moviebooking.R.layout.active_comment_fragment, LAYOUT_ACTIVECOMMENTFRAGMENT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.base.moviebooking.R.layout.active_search_fragment, LAYOUT_ACTIVESEARCHFRAGMENT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.base.moviebooking.R.layout.activity_main, LAYOUT_ACTIVITYMAIN);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.base.moviebooking.R.layout.change_pass_fragment, LAYOUT_CHANGEPASSFRAGMENT);
@@ -148,6 +155,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.base.moviebooking.R.layout.film_info_child_fragment, LAYOUT_FILMINFOCHILDFRAGMENT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.base.moviebooking.R.layout.giaodich_fragment, LAYOUT_GIAODICHFRAGMENT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.base.moviebooking.R.layout.home_fragment, LAYOUT_HOMEFRAGMENT);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.base.moviebooking.R.layout.item_comment, LAYOUT_ITEMCOMMENT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.base.moviebooking.R.layout.lich_chieu_fragment, LAYOUT_LICHCHIEUFRAGMENT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.base.moviebooking.R.layout.lich_phim, LAYOUT_LICHPHIM);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.base.moviebooking.R.layout.movie_by_category_fragment, LAYOUT_MOVIEBYCATEGORYFRAGMENT);
@@ -187,6 +195,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         throw new RuntimeException("view must have a tag");
       }
       switch(localizedLayoutId) {
+        case  LAYOUT_ACTIVECOMMENTFRAGMENT: {
+          if ("layout/active_comment_fragment_0".equals(tag)) {
+            return new ActiveCommentFragmentBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for active_comment_fragment is invalid. Received: " + tag);
+        }
         case  LAYOUT_ACTIVESEARCHFRAGMENT: {
           if ("layout/active_search_fragment_0".equals(tag)) {
             return new ActiveSearchFragmentBindingImpl(component, view);
@@ -252,6 +266,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new HomeFragmentBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for home_fragment is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ITEMCOMMENT: {
+          if ("layout/item_comment_0".equals(tag)) {
+            return new ItemCommentBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_comment is invalid. Received: " + tag);
         }
         case  LAYOUT_LICHCHIEUFRAGMENT: {
           if ("layout/lich_chieu_fragment_0".equals(tag)) {
@@ -480,9 +500,10 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(39);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(41);
 
     static {
+      sKeys.put("layout/active_comment_fragment_0", com.base.moviebooking.R.layout.active_comment_fragment);
       sKeys.put("layout/active_search_fragment_0", com.base.moviebooking.R.layout.active_search_fragment);
       sKeys.put("layout/activity_main_0", com.base.moviebooking.R.layout.activity_main);
       sKeys.put("layout/change_pass_fragment_0", com.base.moviebooking.R.layout.change_pass_fragment);
@@ -494,6 +515,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/film_info_child_fragment_0", com.base.moviebooking.R.layout.film_info_child_fragment);
       sKeys.put("layout/giaodich_fragment_0", com.base.moviebooking.R.layout.giaodich_fragment);
       sKeys.put("layout/home_fragment_0", com.base.moviebooking.R.layout.home_fragment);
+      sKeys.put("layout/item_comment_0", com.base.moviebooking.R.layout.item_comment);
       sKeys.put("layout/lich_chieu_fragment_0", com.base.moviebooking.R.layout.lich_chieu_fragment);
       sKeys.put("layout/lich_phim_0", com.base.moviebooking.R.layout.lich_phim);
       sKeys.put("layout/movie_by_category_fragment_0", com.base.moviebooking.R.layout.movie_by_category_fragment);

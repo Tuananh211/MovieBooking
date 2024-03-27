@@ -4,6 +4,7 @@ package com.base.moviebooking.di.module;
 import com.base.moviebooking.databinding.ActiveSearchFragmentBinding;
 import com.base.moviebooking.ui.change_pass.ChangePassFragment;
 import com.base.moviebooking.ui.chonghe.ChonGheFragment;
+import com.base.moviebooking.ui.comments.CommentFragment;
 import com.base.moviebooking.ui.film_info.FilmInfoChildFragment;
 import com.base.moviebooking.ui.giaodich.GiaoDichFragment;
 import com.base.moviebooking.ui.movie_by_categoryId.MovieByCategoryIdFragment;
@@ -114,6 +115,7 @@ public abstract class FragmentBindingModule {
     @ContributesAndroidInjector
     abstract ScheduleChildFragment7 bindScheduleChildFragment7();
 
-
+    @ContributesAndroidInjector
+    abstract CommentFragment bindCommentFragment();
 
 }

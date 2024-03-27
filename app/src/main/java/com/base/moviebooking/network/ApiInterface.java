@@ -10,6 +10,7 @@ import com.base.moviebooking.entity.Category;
 import com.base.moviebooking.entity.Chair;
 import com.base.moviebooking.entity.ChangePass;
 import com.base.moviebooking.entity.Cinema;
+import com.base.moviebooking.entity.Comment;
 import com.base.moviebooking.entity.ForgetPass;
 import com.base.moviebooking.entity.LoginRequest;
 import com.base.moviebooking.entity.LoginResponse;
@@ -144,6 +145,9 @@ public interface ApiInterface {
     // get time has Schedule
     @GET("schedules/getScheduleOfMovie")
     Single<List<Schedule>> getScheduleOfCinema(@Query("cinemaId") int cinemaId, @Query("movieId") int movieId, @Query("day") String day);
+// get list comments
+    @GET("comment/list/{movieId}")
+    Single<List<Comment>> getListComments(@Path("movieId")int movieId);
 
 
 }

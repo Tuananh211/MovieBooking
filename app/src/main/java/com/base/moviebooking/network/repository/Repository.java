@@ -8,6 +8,7 @@ import com.base.moviebooking.entity.Category;
 import com.base.moviebooking.entity.Chair;
 import com.base.moviebooking.entity.ChangePass;
 import com.base.moviebooking.entity.Cinema;
+import com.base.moviebooking.entity.Comment;
 import com.base.moviebooking.entity.ForgetPass;
 import com.base.moviebooking.entity.LoginRequest;
 import com.base.moviebooking.entity.LoginResponse;
@@ -216,6 +217,13 @@ public class Repository {
     //get time of schedules
     public Single<List<Schedule>> getTimeSchedule(int cinemaId,int movieId, String day) {
         return apiInterface.getScheduleOfCinema(cinemaId,movieId,day)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    // get list comments
+    public Single<List<Comment>> getListComments(int movieId) {
+        return apiInterface.getListComments(movieId)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
     }

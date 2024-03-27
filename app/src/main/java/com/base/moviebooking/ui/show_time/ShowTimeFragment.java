@@ -64,6 +64,8 @@ public class ShowTimeFragment extends BaseFragment<LichPhimBinding>  {
                     case 1:
                         tab.setText("Thông tin");
                         break;
+                    case 2:
+                        tab.setText("Đánh giá");
                 }
             }
         }).attach();
