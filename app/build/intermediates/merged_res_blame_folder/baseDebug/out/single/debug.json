@@ -32,12 +32,12 @@
         "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\drawable-xhdpi\\search.png"
     },
     {
-        "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-mdpi_logo_background.png.flat",
-        "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\mipmap-mdpi\\logo_background.png"
-    },
-    {
         "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_rcv_giaodich.xml.flat",
         "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\layout\\rcv_giaodich.xml"
+    },
+    {
+        "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-mdpi_logo_background.png.flat",
+        "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\mipmap-mdpi\\logo_background.png"
     },
     {
         "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_layout_base_recyclerview.xml.flat",
@@ -80,12 +80,12 @@
         "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\drawable\\edittext_background_2.xml"
     },
     {
-        "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_rcv_seat.xml.flat",
-        "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\layout\\rcv_seat.xml"
-    },
-    {
         "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_schedulle_child_fragment4.xml.flat",
         "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\layout\\schedulle_child_fragment4.xml"
+    },
+    {
+        "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_rcv_seat.xml.flat",
+        "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\layout\\rcv_seat.xml"
     },
     {
         "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_img.png.flat",
@@ -112,20 +112,20 @@
         "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\drawable-hdpi\\btn_1.png"
     },
     {
-        "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_pussinboots.jpg.flat",
-        "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\drawable\\pussinboots.jpg"
-    },
-    {
         "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_rectangle.png.flat",
         "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\drawable\\rectangle.png"
     },
     {
-        "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_next.png.flat",
-        "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\drawable\\next.png"
+        "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_pussinboots.jpg.flat",
+        "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\drawable\\pussinboots.jpg"
     },
     {
         "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable-xxhdpi_btn_1.png.flat",
         "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\drawable-xxhdpi\\btn_1.png"
+    },
+    {
+        "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_next.png.flat",
+        "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\drawable\\next.png"
     },
     {
         "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\layout_rcv_dienanh.xml.flat",
@@ -152,12 +152,12 @@
         "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\drawable\\close_60.png"
     },
     {
-        "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_phim3.jpg.flat",
-        "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\drawable\\phim3.jpg"
-    },
-    {
         "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable-hdpi_microphone.png.flat",
         "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\drawable-hdpi\\microphone.png"
+    },
+    {
+        "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_phim3.jpg.flat",
+        "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\drawable\\phim3.jpg"
     },
     {
         "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_seat.png.flat",
@@ -204,12 +204,12 @@
         "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\drawable\\bg_btn_xemtiep.xml"
     },
     {
-        "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_dv3.jpg.flat",
-        "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\drawable\\dv3.jpg"
-    },
-    {
         "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_rap4.jpg.flat",
         "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\drawable\\rap4.jpg"
+    },
+    {
+        "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_dv3.jpg.flat",
+        "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\drawable\\dv3.jpg"
     },
     {
         "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_logo.jpg.flat",
@@ -228,12 +228,12 @@
         "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\drawable-hdpi\\search.png"
     },
     {
-        "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_custom_seat_frame.xml.flat",
-        "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\drawable\\custom_seat_frame.xml"
-    },
-    {
         "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_tai.png.flat",
         "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\drawable\\tai.png"
+    },
+    {
+        "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_custom_seat_frame.xml.flat",
+        "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\drawable\\custom_seat_frame.xml"
     },
     {
         "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable-mdpi_microphone.png.flat",

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+                                                        
 <LinearLayout
     android:layout_width="match_parent"
     android:background="@drawable/custom_background_white_border"
     android:orientation="vertical"
     android:layout_marginTop="10dp"
     android:padding="5dp"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content" android:tag="layout/item_comment_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -77,4 +77,4 @@
             android:layout_height="wrap_content"/>
 
 </LinearLayout>
-</layout>
+         
