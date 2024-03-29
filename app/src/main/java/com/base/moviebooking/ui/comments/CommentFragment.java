@@ -1,5 +1,8 @@
 package com.base.moviebooking.ui.comments;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -17,6 +20,7 @@ import com.base.moviebooking.adapter.HomeAdapter;
 import com.base.moviebooking.adapter.ShowTimesAdapter;
 import com.base.moviebooking.base.BaseFragment;
 import com.base.moviebooking.databinding.ActiveCommentFragmentBinding;
+import com.base.moviebooking.entity.Account;
 import com.base.moviebooking.entity.Category;
 import com.base.moviebooking.entity.Comment;
 import com.base.moviebooking.entity.FilmInfo;
@@ -32,6 +36,8 @@ import com.base.moviebooking.ui.sign_in.SignInFragment;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 public class CommentFragment extends BaseFragment<ActiveCommentFragmentBinding> {
@@ -120,10 +126,48 @@ public class CommentFragment extends BaseFragment<ActiveCommentFragmentBinding> 
             }
         });
         binding.ryComment.setAdapter(commentAdapter);
+
+        //get user info
+        mViewModel.getInfo();
+        mViewModel.dataUser.observe(getViewLifecycleOwner(), new Observer<List<Account>>() {
+            @Override
+            public void onChanged(List<Account> accounts) {
+                if(accounts.size()!=0){
+                    if(accounts.get(0).getAvatar()!=null){
+                        // doi anh base64
+                        String base64Image = accounts.get(0).getAvatar();
+//            Log.d("mmm","base64"+base64Image,null);
+                        byte[] imageBytes = Base64.decode(parseBase64(base64Image), Base64.DEFAULT);
+                        Bitmap bitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
+                        binding.imgAvatar.setImageBitmap(bitmap);
+                    }
+                    else{
+                        binding.imgAvatar.setImageResource(R.drawable.user2);
+                    }
+                }
+            }
+        });
     }
 
     @Override
     public void initData() {
 
+    }
+
+    public static String parseBase64(String base64) {
+
+        try {
+            Pattern pattern = Pattern.compile("((?<=base64,).*\\s*)", Pattern.DOTALL | Pattern.MULTILINE);
+            Matcher matcher = pattern.matcher(base64);
+            if (matcher.find()) {
+                return matcher.group().toString();
+            } else {
+                return "";
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        }
+        return "";
     }
 }

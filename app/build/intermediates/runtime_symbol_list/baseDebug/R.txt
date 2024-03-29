@@ -2084,6 +2084,7 @@ int drawable tooltip_frame_dark 0x7f07010a
 int drawable tooltip_frame_light 0x7f07010b
 int drawable user 0x7f07010c
 int drawable user2 0x7f07010d
+int drawable user_white 0x7f070118
 int drawable uudai1 0x7f07010e
 int drawable uudai3 0x7f07010f
 int drawable uudai4 0x7f070110

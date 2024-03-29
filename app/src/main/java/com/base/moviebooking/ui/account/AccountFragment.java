@@ -1,6 +1,9 @@
 package com.base.moviebooking.ui.account;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -19,6 +22,8 @@ import com.base.moviebooking.ui.sign_up.SignUpFragment;
 import com.base.moviebooking.ui.user_info.UserInfoFragment;
 
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 public class AccountFragment extends BaseFragment<TaikhoanFragmentBinding> {
@@ -59,6 +64,17 @@ public class AccountFragment extends BaseFragment<TaikhoanFragmentBinding> {
             public void onChanged(List<Account> account) {
                 Log.d("mmm", "dataUser" + account.get(0).getFullName());
                 binding.tvtName.setText(account.get(0).getFullName());
+                if (account.get(0).getAvatar() != null) {
+                    // Decode base64 string thành hình ảnh Bitmap
+                    byte[] imageBytes = Base64.decode(parseBase64(account.get(0).getAvatar()), Base64.DEFAULT);
+                    Bitmap bitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
+
+                    // Đặt hình ảnh cho ImageView
+                    binding.imgUser.setImageBitmap(bitmap);
+                } else {
+                    // Nếu không có hình ảnh, sử dụng hình ảnh mặc định
+                    binding.imgUser.setImageResource(R.drawable.user2);
+                }
                 Log.d(TAG, "name" + account.get(0).getFullName());
             }
         });
@@ -149,6 +165,23 @@ public class AccountFragment extends BaseFragment<TaikhoanFragmentBinding> {
 
         }
 
+    }
+
+    public static String parseBase64(String base64) {
+
+        try {
+            Pattern pattern = Pattern.compile("((?<=base64,).*\\s*)", Pattern.DOTALL | Pattern.MULTILINE);
+            Matcher matcher = pattern.matcher(base64);
+            if (matcher.find()) {
+                return matcher.group().toString();
+            } else {
+                return "";
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        }
+        return "";
     }
 }
 

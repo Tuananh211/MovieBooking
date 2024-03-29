@@ -5,9 +5,13 @@ import static android.app.Activity.RESULT_OK;
 import android.Manifest;
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.util.Base64;
 import android.view.View;
 import android.widget.DatePicker;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResult;
@@ -29,11 +33,16 @@ import com.base.moviebooking.ui.change_pass.ChangePassFragment;
 import com.gun0912.tedpermission.PermissionListener;
 import com.gun0912.tedpermission.normal.TedPermission;
 
+import java.io.ByteArrayOutputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class UserInfoFragment extends BaseFragment<UserInfoFragmentBinding> {
 
@@ -44,6 +53,10 @@ public class UserInfoFragment extends BaseFragment<UserInfoFragmentBinding> {
     final int month = calendar.get(Calendar.MONTH);
     final int day = calendar.get(Calendar.DAY_OF_MONTH);
     Uri selectedImageUri;
+
+    Bitmap bitmap;
+    String encode;
+    private Account account;
 
     @Override
     protected int getLayoutId() {
@@ -68,12 +81,22 @@ public class UserInfoFragment extends BaseFragment<UserInfoFragmentBinding> {
         mViewModel.dataUser.observe(getViewLifecycleOwner(), new Observer<List<Account>>() {
             @Override
             public void onChanged(List<Account> accounts) {
-                Account account = accounts.get(0);
+                 account = accounts.get(0);
                 binding.nameUser.setText(account.getFullName().toString());
 //                binding.phoneuser.setText(account.get().toString());
                 String s = account.getDateOfBirth().toString().substring(0,10);
                 SimpleDateFormat stringformat = new SimpleDateFormat("yyyy-MM-dd");
-
+                if(account.getAvatar()!=null){
+                    // doi anh base64
+                    String base64Image = account.getAvatar();
+//            Log.d("mmm","base64"+base64Image,null);
+                    byte[] imageBytes = Base64.decode(parseBase64(base64Image), Base64.DEFAULT);
+                    Bitmap bitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
+                    binding.imgUser.setImageBitmap(bitmap);
+                }
+                else{
+                    binding.imgUser.setImageResource(R.drawable.user_white);
+                }
                 Date date = null;
                 try {
                     date = stringformat.parse(s);
@@ -118,6 +141,7 @@ public class UserInfoFragment extends BaseFragment<UserInfoFragmentBinding> {
                     Toast.makeText(getContext(), "Cập nhật thất bại", Toast.LENGTH_SHORT).show();
 
                 }
+
             }
         });
     }
@@ -141,6 +165,7 @@ public class UserInfoFragment extends BaseFragment<UserInfoFragmentBinding> {
         binding.btnCapnhat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                binding.loading.setVisibility(View.VISIBLE);
 
                 SimpleDateFormat stringformat = new SimpleDateFormat("dd/MM/yyyy");
 
@@ -160,9 +185,16 @@ public class UserInfoFragment extends BaseFragment<UserInfoFragmentBinding> {
                     gender=0;
 
                 }
-                updateUser = new UserUpdate(binding.nameUser.getText().toString(),binding.address.getText().toString(), dateFormat.format(date),gender);
+                String newImage;
+                if(!encode.isEmpty() && !encode.equals("a"+account.getAvatar())){
+                    newImage= "data:image/jpeg;base64,"+encode;
+                }
+                else {
+                    newImage= account.getAvatar();
+                }
+                updateUser = new UserUpdate(binding.nameUser.getText().toString(),binding.address.getText().toString(), dateFormat.format(date),gender,newImage);
                 mViewModel.updateUser(updateUser);
-
+                binding.loading.setVisibility(View.GONE);
             }
         });
         binding.pickImage.setOnClickListener(new View.OnClickListener() {
@@ -198,13 +230,39 @@ public class UserInfoFragment extends BaseFragment<UserInfoFragmentBinding> {
             , new ActivityResultCallback<ActivityResult>() {
                 @Override
                 public void onActivityResult(ActivityResult result) {
-                    if(result.getResultCode()== RESULT_OK){
+                    if (result.getResultCode() == RESULT_OK) {
                         Intent intent = result.getData();
-                         selectedImageUri = intent.getData();// gallery
+                        selectedImageUri = intent.getData();// gallery
                         binding.imgUser.setImageURI(selectedImageUri);
+                        try {
+                            InputStream inputStream =  requireContext().getContentResolver().openInputStream(selectedImageUri);
+                            Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
+                            ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+                            byte[] imageBytes = stream.toByteArray();
+                            encode = android.util.Base64.encodeToString(imageBytes, Base64.DEFAULT);
+                        } catch (FileNotFoundException e) {
+                            throw new RuntimeException(e);
+                        }
                     }
                 }
             });
 
 
+    public static String parseBase64(String base64) {
+
+        try {
+            Pattern pattern = Pattern.compile("((?<=base64,).*\\s*)", Pattern.DOTALL | Pattern.MULTILINE);
+            Matcher matcher = pattern.matcher(base64);
+            if (matcher.find()) {
+                return matcher.group().toString();
+            } else {
+                return "";
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        }
+        return "";
+    }
 }

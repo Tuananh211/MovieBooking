@@ -142,7 +142,7 @@
                     android:background="@drawable/edittext_background"
                     android:padding="15dp"
                     android:text=""
-                    android:textColor="@color/white"
+                    android:textColor="@color/colorGrey"
                     android:textSize="18sp" />
 
                 <EditText
@@ -212,8 +212,14 @@
                         android:textColor="@color/yellow" />
 
                 </LinearLayout>
-
+                <ProgressBar
+                    android:id="@+id/loading"
+                    android:visibility="invisible"
+                    android:layout_gravity="center"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"/>
             </LinearLayout>
+
         </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

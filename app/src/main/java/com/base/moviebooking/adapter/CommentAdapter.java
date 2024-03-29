@@ -66,12 +66,18 @@ public class CommentAdapter extends EndlessLoadingRecyclerViewAdapter<ItemCommen
             binding.tvDateComment.setText(dateComment);
             binding.tvSumStar.setText(sumRate+"/5");
             binding.tvContent.setText(data.getContent());
-            // doi anh base64
-            String base64Image = data.getAvatar();
+            if(data.getAvatar()!= null){
+                // doi anh base64
+                String base64Image = data.getAvatar();
 //            Log.d("mmm","base64"+base64Image,null);
-            byte[] imageBytes = Base64.decode(parseBase64(base64Image), Base64.DEFAULT);
-            Bitmap bitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
-            binding.imgAvatar.setImageBitmap(bitmap);
+                byte[] imageBytes = Base64.decode(parseBase64(base64Image), Base64.DEFAULT);
+                Bitmap bitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
+                binding.imgAvatar.setImageBitmap(bitmap);
+            }
+            else {
+                binding.imgAvatar.setImageResource(R.drawable.user2);
+            }
+
         }
     }
     public static String convertDateTimeFormat(String inputDateTime) {
