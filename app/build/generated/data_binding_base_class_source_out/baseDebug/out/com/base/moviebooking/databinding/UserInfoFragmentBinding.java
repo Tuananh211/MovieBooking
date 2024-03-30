@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -41,6 +42,9 @@ public abstract class UserInfoFragmentBinding extends ViewDataBinding {
   public final ShapeableImageView imgUser;
 
   @NonNull
+  public final ProgressBar loading;
+
+  @NonNull
   public final RadioButton nam;
 
   @NonNull
@@ -57,8 +61,8 @@ public abstract class UserInfoFragmentBinding extends ViewDataBinding {
 
   protected UserInfoFragmentBinding(Object _bindingComponent, View _root, int _localFieldCount,
       EditText address, ImageView backTt, EditText birthdayUser, Button btnCapnhat, Button btnPass,
-      TextView gmailUser, ShapeableImageView imgUser, RadioButton nam, EditText nameUser,
-      RadioButton nu, TextView phoneuser, ShapeableImageView pickImage) {
+      TextView gmailUser, ShapeableImageView imgUser, ProgressBar loading, RadioButton nam,
+      EditText nameUser, RadioButton nu, TextView phoneuser, ShapeableImageView pickImage) {
     super(_bindingComponent, _root, _localFieldCount);
     this.address = address;
     this.backTt = backTt;
@@ -67,6 +71,7 @@ public abstract class UserInfoFragmentBinding extends ViewDataBinding {
     this.btnPass = btnPass;
     this.gmailUser = gmailUser;
     this.imgUser = imgUser;
+    this.loading = loading;
     this.nam = nam;
     this.nameUser = nameUser;
     this.nu = nu;

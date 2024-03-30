@@ -26,6 +26,7 @@ public class UserInfoFragmentBindingImpl extends UserInfoFragmentBinding  {
         sViewsWithIds.put(R.id.nu, 10);
         sViewsWithIds.put(R.id.btnPass, 11);
         sViewsWithIds.put(R.id.btnCapnhat, 12);
+        sViewsWithIds.put(R.id.loading, 13);
     }
     // views
     @NonNull
@@ -36,7 +37,7 @@ public class UserInfoFragmentBindingImpl extends UserInfoFragmentBinding  {
     // Inverse Binding Event Handlers
 
     public UserInfoFragmentBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 13, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 14, sIncludes, sViewsWithIds));
     }
     private UserInfoFragmentBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
@@ -47,6 +48,7 @@ public class UserInfoFragmentBindingImpl extends UserInfoFragmentBinding  {
             , (android.widget.Button) bindings[11]
             , (android.widget.TextView) bindings[7]
             , (com.google.android.material.imageview.ShapeableImageView) bindings[2]
+            , (android.widget.ProgressBar) bindings[13]
             , (android.widget.RadioButton) bindings[9]
             , (android.widget.EditText) bindings[4]
             , (android.widget.RadioButton) bindings[10]

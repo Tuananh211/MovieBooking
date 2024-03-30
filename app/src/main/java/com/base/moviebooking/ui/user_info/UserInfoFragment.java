@@ -95,7 +95,8 @@ public class UserInfoFragment extends BaseFragment<UserInfoFragmentBinding> {
                     binding.imgUser.setImageBitmap(bitmap);
                 }
                 else{
-                    binding.imgUser.setImageResource(R.drawable.user_white);
+                    binding.imgUser.setImageResource(R.drawable.user2);
+                    binding.imgUser.setBackgroundColor(getResources().getColor(R.color.colorGrey));
                 }
                 Date date = null;
                 try {
@@ -186,8 +187,8 @@ public class UserInfoFragment extends BaseFragment<UserInfoFragmentBinding> {
 
                 }
                 String newImage;
-                if(!encode.isEmpty() && !encode.equals("a"+account.getAvatar())){
-                    newImage= "data:image/jpeg;base64,"+encode;
+                if(!encode.isEmpty() && !encode.equals(account.getAvatar())){
+                    newImage=encode;
                 }
                 else {
                     newImage= account.getAvatar();
@@ -240,7 +241,7 @@ public class UserInfoFragment extends BaseFragment<UserInfoFragmentBinding> {
                             ByteArrayOutputStream stream = new ByteArrayOutputStream();
                             bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
                             byte[] imageBytes = stream.toByteArray();
-                            encode = android.util.Base64.encodeToString(imageBytes, Base64.DEFAULT);
+                            encode = "data:image/jpeg;base64,"+ android.util.Base64.encodeToString(imageBytes, Base64.DEFAULT);
                         } catch (FileNotFoundException e) {
                             throw new RuntimeException(e);
                         }

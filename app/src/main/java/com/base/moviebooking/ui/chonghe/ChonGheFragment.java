@@ -338,7 +338,7 @@ public class ChonGheFragment extends BaseFragment<ChongheFragmentBinding> {
                     binding.truCombo.setEnabled(true);
                 }
                 binding.slCombo.setText(i + 1 + "");
-                binding.giaCombo.setText((i + 1) * 70000 + "VNĐ");
+                binding.giaCombo.setText(formatNumber((i + 1) * 70000) + "VNĐ");
                 binding.tvtTongtien.setText(formatNumber(deleteVND(binding.tvtTongtien.getText().toString()) + 70000) + "VNĐ");
             }
         });
@@ -351,7 +351,7 @@ public class ChonGheFragment extends BaseFragment<ChongheFragmentBinding> {
                     binding.truBong.setEnabled(true);
                 }
                 binding.slBong.setText(i + 1 + "");
-                binding.giaBong.setText((i + 1) * 50000 + "VNĐ");
+                binding.giaBong.setText(formatNumber((i + 1) * 50000) + "VNĐ");
                 binding.tvtTongtien.setText(formatNumber(deleteVND(binding.tvtTongtien.getText().toString()) + 50000) + "VNĐ");
 
             }
@@ -364,7 +364,7 @@ public class ChonGheFragment extends BaseFragment<ChongheFragmentBinding> {
                     binding.truNuoc.setEnabled(true);
                 }
                 binding.slNuoc.setText(i + 1 + "");
-                binding.giaNuoc.setText((i + 1) * 30000 + "VNĐ");
+                binding.giaNuoc.setText(formatNumber((i + 1) * 30000) + "VNĐ");
                 binding.tvtTongtien.setText(formatNumber(deleteVND(binding.tvtTongtien.getText().toString()) + 30000) + "VNĐ");
 
             }

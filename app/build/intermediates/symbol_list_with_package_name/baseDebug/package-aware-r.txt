@@ -2086,6 +2086,7 @@ drawable tooltip_frame_light
 drawable user
 drawable user2
 drawable user_white
+drawable user_white_32
 drawable uudai1
 drawable uudai3
 drawable uudai4
@@ -2481,6 +2482,7 @@ id ln_rcvgiaodich
 id ln_theater
 id ln_thongtin
 id ln_user
+id loading
 id lottie_layer_name
 id ly_comment
 id ly_comment_empty

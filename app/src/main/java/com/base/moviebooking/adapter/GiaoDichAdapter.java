@@ -15,6 +15,7 @@ import com.base.moviebooking.databinding.ViewholderCategoryBinding;
 import com.base.moviebooking.entity.ThongTinThanhToan;
 import com.base.moviebooking.listener.GiaoDichListener;
 
+import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -73,7 +74,7 @@ public class GiaoDichAdapter extends EndlessLoadingRecyclerViewAdapter<RcvGiaodi
                     }
                 }
             }
-            binding.tien.setText("Tổng tiền: " + data.getValue() + "");
+            binding.tien.setText("Tổng tiền: " + formatNumber(data.getValue()) + "");
             binding.cinema.setText("Rạp: " + data.getCinema());
             binding.room.setText("Phòng: " + data.getRoom());
             binding.movie.setText("Phim: " + data.getMovie());
@@ -181,5 +182,13 @@ public class GiaoDichAdapter extends EndlessLoadingRecyclerViewAdapter<RcvGiaodi
         return s;
     }
 
-
+    public  String formatNumber(int number) {
+        try {
+            DecimalFormat decimalFormat = new DecimalFormat("#,###");
+            return decimalFormat.format(number);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid number format");
+            return null;
+        }
+    }
 }

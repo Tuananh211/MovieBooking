@@ -13,7 +13,6 @@ import com.base.moviebooking.R;
 import com.base.moviebooking.base.EndlessLoadingRecyclerViewAdapter;
 import com.base.moviebooking.base.RecyclerViewAdapter;
 import com.base.moviebooking.databinding.ItemCommentBinding;
-import com.base.moviebooking.databinding.RcvRapBinding;
 import com.base.moviebooking.entity.Comment;
 import com.base.moviebooking.entity.Theater;
 import com.base.moviebooking.listener.OnChooseRecyclerView;
@@ -76,6 +75,7 @@ public class CommentAdapter extends EndlessLoadingRecyclerViewAdapter<ItemCommen
             }
             else {
                 binding.imgAvatar.setImageResource(R.drawable.user2);
+                binding.imgAvatar.setBackgroundColor(mContext.getResources().getColor(R.color.colorGrey));
             }
 
         }
