@@ -35,8 +35,10 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/tvBanner_comment"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="10dp"
             android:layout_weight="3"
             android:orientation="horizontal">
 
@@ -46,32 +48,32 @@
                 android:layout_height="45dp"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:src="@drawable/poster_phim"
-                />
+                android:src="@drawable/poster_phim" />
 
-            <EditText
+            <TextView
                 android:id="@+id/tvContentComment"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
+                android:gravity="center_vertical"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="7.5"
                 android:background="@drawable/custom_background_white_border"
-                android:hint="Nhập bình luận của bạn ở đây"
+                android:hint="Nhập bình luận của bạn"
                 android:maxLines="1"
                 android:paddingLeft="10dp"
                 android:textColor="@color/white"
                 android:textColorHint="@color/colorGrey"
                 tools:ignore="TouchTargetSizeCheck" />
 
-            <ImageView
-                android:id="@+id/btnSend"
-                android:layout_width="0dp"
-                android:layout_height="35dp"
-                android:layout_gravity="center"
-                android:layout_weight="1.5"
-                android:src="@drawable/send"
-                app:tint="@color/orange" />
+            <!--            <ImageView-->
+            <!--                android:id="@+id/btnSend"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="35dp"-->
+            <!--                android:layout_gravity="center"-->
+            <!--                android:layout_weight="1.5"-->
+            <!--                android:src="@drawable/send"-->
+            <!--                app:tint="@color/orange" />-->
         </LinearLayout>
 
         <FrameLayout

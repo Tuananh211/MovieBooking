@@ -9,6 +9,7 @@ import com.base.moviebooking.entity.Chair;
 import com.base.moviebooking.entity.ChangePass;
 import com.base.moviebooking.entity.Cinema;
 import com.base.moviebooking.entity.Comment;
+import com.base.moviebooking.entity.CreateComment;
 import com.base.moviebooking.entity.ForgetPass;
 import com.base.moviebooking.entity.LoginRequest;
 import com.base.moviebooking.entity.LoginResponse;
@@ -224,6 +225,18 @@ public class Repository {
     // get list comments
     public Single<List<Comment>> getListComments(int movieId) {
         return apiInterface.getListComments(movieId)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+    // get movie comment of user
+    public Single<List<Comment>> getMovieCommentOfUser(int movieId) {
+        return apiInterface.getCommentMovieOfUser(movieId)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+    // create comment
+    public Single<List<Comment>> createComment(CreateComment createComment) {
+        return apiInterface.createComment(createComment)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
     }

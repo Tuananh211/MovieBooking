@@ -16,6 +16,12 @@
         <item name="windowFixedHeightMajor">90%</item>
         <item name="windowFixedHeightMinor">90%</item>
     </style>
+    <style name="MyAlertDialogTheme2" parent="Base.Theme.AppCompat.Light.Dialog.Alert">
+        <item name="windowFixedWidthMajor">100%</item>
+        <item name="windowFixedWidthMinor">100%</item>
+        <item name="windowFixedHeightMajor">100%</item>
+        <item name="windowFixedHeightMinor">100%</item>
+    </style>
 
     <style name="CustomDialog">
         <item name="android:windowFrame">@null</item>

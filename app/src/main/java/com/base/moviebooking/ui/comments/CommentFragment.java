@@ -1,11 +1,19 @@
 package com.base.moviebooking.ui.comments;
 
+import android.app.Dialog;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.util.Base64;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
+import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RatingBar;
+import android.widget.Toast;
 
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
@@ -21,8 +29,10 @@ import com.base.moviebooking.adapter.ShowTimesAdapter;
 import com.base.moviebooking.base.BaseFragment;
 import com.base.moviebooking.databinding.ActiveCommentFragmentBinding;
 import com.base.moviebooking.entity.Account;
+import com.base.moviebooking.entity.CancelTicket;
 import com.base.moviebooking.entity.Category;
 import com.base.moviebooking.entity.Comment;
+import com.base.moviebooking.entity.CreateComment;
 import com.base.moviebooking.entity.FilmInfo;
 import com.base.moviebooking.entity.Movie;
 import com.base.moviebooking.entity.Schedule;
@@ -44,8 +54,10 @@ public class CommentFragment extends BaseFragment<ActiveCommentFragmentBinding> 
 
     private CommentModel mViewModel;
     private List<Comment> commentList;
+    private List<Comment> userListComment;
     private ShowTimeViewModel showTimeViewModel;
     private CommentAdapter commentAdapter;
+    private Dialog dialog;
     Movie nMovie;
 
     @Override
@@ -68,90 +80,142 @@ public class CommentFragment extends BaseFragment<ActiveCommentFragmentBinding> 
 //        getActivity().findViewById(R.id.bottombar).setVisibility(View.GONE);
         mViewModel = ViewModelProviders.of(this, viewModelFactory).get(CommentModel.class);
         showTimeViewModel = ViewModelProviders.of(requireParentFragment(), viewModelFactory).get(ShowTimeViewModel.class);
-//        showTimeViewModel.dataMovie.observe(getViewLifecycleOwner(), new Observer<Movie>() {
-//            @Override
-//            public void onChanged(Movie movie) {
-//                nMovie = movie;
-//            }
-//        });
-       // Show list comment
-        binding.ryComment.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL,false));
-        mViewModel.getListComments(1);
-        commentAdapter = new CommentAdapter(getContext(), false, getContext(), new OnChooseRecyclerView() {
+        showTimeViewModel.getDataMovieComent().observe(getViewLifecycleOwner(), new Observer<Movie>() {
             @Override
-            public void onChoosePhim(Movie movie) {
+            public void onChanged(Movie movie) {
+                nMovie = movie;
+                //get user Comment
+                mViewModel.getUserComment(movie.getId());
+                mViewModel.userComment.observe(getViewLifecycleOwner(), new Observer<List<Comment>>() {
+                    @Override
+                    public void onChanged(List<Comment> comments) {
+                        if(comments.size()!=0){
+                            binding.lySendComment.setVisibility(View.GONE);
+                        }
+                    }
+                });
 
-            }
+                // Show list comment
+                binding.ryComment.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL,false));
+                mViewModel.getListComments(movie.getId());
+                commentAdapter = new CommentAdapter(getContext(), false, getContext(), new OnChooseRecyclerView() {
+                    @Override
+                    public void onChoosePhim(Movie movie) {
 
-            @Override
-            public void onChooseRap(Theater theater) {
+                    }
 
-            }
+                    @Override
+                    public void onChooseRap(Theater theater) {
 
-            @Override
-            public void onChooseFilmInfo(FilmInfo filmInfo) {
+                    }
 
-            }
+                    @Override
+                    public void onChooseFilmInfo(FilmInfo filmInfo) {
 
-            @Override
-            public void onChooseLichChieu(Schedule showTime) {
+                    }
 
-            }
+                    @Override
+                    public void onChooseLichChieu(Schedule showTime) {
 
-            @Override
-            public void onChooseCategory(Category category) {
+                    }
 
-            }
+                    @Override
+                    public void onChooseCategory(Category category) {
 
-            @Override
-            public void onChooseTime(Schedule schedule) {
+                    }
 
-            }
-        });
-        mViewModel.comments.observe(getViewLifecycleOwner(), new Observer<List<Comment>>() {
-            @Override
-            public void onChanged(List<Comment> movieListResponse) {
-                if(movieListResponse.size()!=0){
-                    commentList= movieListResponse;
-                    commentAdapter.addModels(movieListResponse, false);
-                    binding.ryComment.setVisibility(View.VISIBLE);
-                    binding.lyCommentEmpty.setVisibility(View.GONE);
-                } else {
-                    binding.ryComment.setVisibility(View.GONE);
-                    binding.lyCommentEmpty.setVisibility(View.VISIBLE);
-                }
+                    @Override
+                    public void onChooseTime(Schedule schedule) {
 
-                Log.d("fat", "add Model", null);
-                getActivity().findViewById(R.id.dialog_load).setVisibility(View.GONE);
-            }
-        });
-        binding.ryComment.setAdapter(commentAdapter);
+                    }
+                });
+                mViewModel.comments.observe(getViewLifecycleOwner(), new Observer<List<Comment>>() {
+                    @Override
+                    public void onChanged(List<Comment> movieListResponse) {
+                        if(movieListResponse.size()!=0){
+                            commentList= movieListResponse;
+                            commentAdapter.clear();
+                            commentAdapter.addModels(movieListResponse, false);
+                            binding.ryComment.setVisibility(View.VISIBLE);
+                            binding.lyCommentEmpty.setVisibility(View.GONE);
+                        } else {
+                            binding.ryComment.setVisibility(View.GONE);
+                            binding.lyCommentEmpty.setVisibility(View.VISIBLE);
+                        }
+                        commentAdapter.notifyDataSetChanged();
+                        Log.d("fat", "add Model", null);
+                        getActivity().findViewById(R.id.dialog_load).setVisibility(View.GONE);
+                    }
+                });
+                binding.ryComment.setAdapter(commentAdapter);
 
-        //get user info
-        mViewModel.getInfo();
-        mViewModel.dataUser.observe(getViewLifecycleOwner(), new Observer<List<Account>>() {
-            @Override
-            public void onChanged(List<Account> accounts) {
-                if(accounts.size()!=0){
-                    if(accounts.get(0).getAvatar()!=null){
-                        // doi anh base64
-                        String base64Image = accounts.get(0).getAvatar();
+                //get user info
+                mViewModel.getInfo();
+                mViewModel.dataUser.observe(getViewLifecycleOwner(), new Observer<List<Account>>() {
+                    @Override
+                    public void onChanged(List<Account> accounts) {
+                        if(accounts.size()!=0){
+                            if(accounts.get(0).getAvatar()!=null){
+                                // doi anh base64
+                                String base64Image = accounts.get(0).getAvatar();
 //            Log.d("mmm","base64"+base64Image,null);
-                        byte[] imageBytes = Base64.decode(parseBase64(base64Image), Base64.DEFAULT);
-                        Bitmap bitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
-                        binding.imgAvatar.setImageBitmap(bitmap);
+                                byte[] imageBytes = Base64.decode(parseBase64(base64Image), Base64.DEFAULT);
+                                Bitmap bitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
+                                binding.imgAvatar.setImageBitmap(bitmap);
+                            }
+                            else{
+                                binding.imgAvatar.setImageResource(R.drawable.user2);
+                            }
+                        }
                     }
-                    else{
-                        binding.imgAvatar.setImageResource(R.drawable.user2);
-                    }
-                }
+                });
             }
         });
+
+
     }
 
     @Override
     public void initData() {
+        binding.tvContentComment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog = new Dialog(requireContext(), R.style.MyAlertDialogTheme2);
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog.setContentView(R.layout.dialog_rate);
+                Window window = dialog.getWindow();
+                window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                window.setGravity(Gravity.CENTER);
+                dialog.setCancelable(false);
+                dialog.show();
+                dialog.findViewById(R.id.cancel).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.findViewById(R.id.send).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        RatingBar ratingBar = dialog.findViewById(R.id.ratingBar);
+                        int rate = (int) ratingBar.getRating();
+                        EditText editContent = dialog.findViewById(R.id.edtFeedBack);
+                        String content = editContent.getText().toString();
+                        if(!content.equals("")&&rate!=0){
+                            CreateComment createComment = new CreateComment(nMovie.getId(),content,rate);
+                            mViewModel.createComment(createComment);
+                            Toast.makeText(getContext(), "Gửi góp ý thành công", Toast.LENGTH_SHORT).show();
+                            dialog.cancel();
+                        }
+                        else {
+                            Toast.makeText(getContext(), "Hãy điền đầy đủ các thông tin", Toast.LENGTH_SHORT).show();
+                            binding.lySendComment.setVisibility(View.GONE);
+                        }
 
+                    }
+                });
+            }
+        });
     }
 
     public static String parseBase64(String base64) {

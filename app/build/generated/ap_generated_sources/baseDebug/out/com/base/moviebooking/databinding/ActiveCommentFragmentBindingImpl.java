@@ -19,9 +19,8 @@ public class ActiveCommentFragmentBindingImpl extends ActiveCommentFragmentBindi
         sViewsWithIds.put(R.id.ly_send_comment, 3);
         sViewsWithIds.put(R.id.imgAvatar, 4);
         sViewsWithIds.put(R.id.tvContentComment, 5);
-        sViewsWithIds.put(R.id.btnSend, 6);
-        sViewsWithIds.put(R.id.ry_comment, 7);
-        sViewsWithIds.put(R.id.ly_comment_empty, 8);
+        sViewsWithIds.put(R.id.ry_comment, 6);
+        sViewsWithIds.put(R.id.ly_comment_empty, 7);
     }
     // views
     @NonNull
@@ -32,18 +31,17 @@ public class ActiveCommentFragmentBindingImpl extends ActiveCommentFragmentBindi
     // Inverse Binding Event Handlers
 
     public ActiveCommentFragmentBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 9, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 8, sIncludes, sViewsWithIds));
     }
     private ActiveCommentFragmentBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (android.widget.ImageView) bindings[6]
             , (de.hdodenhof.circleimageview.CircleImageView) bindings[4]
             , (android.widget.RelativeLayout) bindings[1]
-            , (android.widget.LinearLayout) bindings[8]
+            , (android.widget.LinearLayout) bindings[7]
             , (android.widget.LinearLayout) bindings[3]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[7]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[6]
             , (android.widget.TextView) bindings[2]
-            , (android.widget.EditText) bindings[5]
+            , (android.widget.TextView) bindings[5]
             );
         this.mboundView0 = (android.widget.ScrollView) bindings[0];
         this.mboundView0.setTag(null);

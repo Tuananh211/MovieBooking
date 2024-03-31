@@ -4,8 +4,6 @@ package com.base.moviebooking.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -20,9 +18,6 @@ import java.lang.Deprecated;
 import java.lang.Object;
 
 public abstract class ActiveCommentFragmentBinding extends ViewDataBinding {
-  @NonNull
-  public final ImageView btnSend;
-
   @NonNull
   public final CircleImageView imgAvatar;
 
@@ -42,14 +37,13 @@ public abstract class ActiveCommentFragmentBinding extends ViewDataBinding {
   public final TextView tvBannerComment;
 
   @NonNull
-  public final EditText tvContentComment;
+  public final TextView tvContentComment;
 
   protected ActiveCommentFragmentBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      ImageView btnSend, CircleImageView imgAvatar, RelativeLayout lyComment,
-      LinearLayout lyCommentEmpty, LinearLayout lySendComment, RecyclerView ryComment,
-      TextView tvBannerComment, EditText tvContentComment) {
+      CircleImageView imgAvatar, RelativeLayout lyComment, LinearLayout lyCommentEmpty,
+      LinearLayout lySendComment, RecyclerView ryComment, TextView tvBannerComment,
+      TextView tvContentComment) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.btnSend = btnSend;
     this.imgAvatar = imgAvatar;
     this.lyComment = lyComment;
     this.lyCommentEmpty = lyCommentEmpty;

@@ -11,6 +11,7 @@ import com.base.moviebooking.entity.Chair;
 import com.base.moviebooking.entity.ChangePass;
 import com.base.moviebooking.entity.Cinema;
 import com.base.moviebooking.entity.Comment;
+import com.base.moviebooking.entity.CreateComment;
 import com.base.moviebooking.entity.ForgetPass;
 import com.base.moviebooking.entity.LoginRequest;
 import com.base.moviebooking.entity.LoginResponse;
@@ -148,6 +149,11 @@ public interface ApiInterface {
 // get list comments
     @GET("comment/list/{movieId}")
     Single<List<Comment>> getListComments(@Path("movieId")int movieId);
+// get comment movie of user
+    @GET("comment/userComment/{movieId}")
+    Single<List<Comment>> getCommentMovieOfUser(@Path("movieId")int movieId);
 
-
+    // create comment movie of user
+    @POST("comment/")
+    Single<List<Comment>> createComment(@Body CreateComment createComment);
 }

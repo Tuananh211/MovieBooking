@@ -159,6 +159,7 @@ public class ShowTimeFragment extends BaseFragment<LichPhimBinding>  {
              movie = (Movie) bundle.getSerializable("movie");
             // Xử lý dữ liệu trong bundle
             mViewModel.sendData(movie);
+            mViewModel.sendDataMovieComment(movie);
             switch (movie.getId()){
                 case 1:
                     binding.imgMovie.setImageResource(R.drawable.lastofus);

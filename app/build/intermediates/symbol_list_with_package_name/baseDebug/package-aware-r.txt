@@ -1951,6 +1951,7 @@ drawable dv4
 drawable dv5
 drawable edittext_background
 drawable edittext_background_2
+drawable edittext_background_white
 drawable exo_controls_fastforward
 drawable exo_controls_fullscreen_enter
 drawable exo_controls_fullscreen_exit
@@ -2065,10 +2066,12 @@ drawable seat_choose_custom
 drawable seat_custom
 drawable send
 drawable setting
+drawable smile_star
 drawable spiderman
 drawable spiritedaway
 drawable star
 drawable star2
+drawable star_smile
 drawable tab_right
 drawable tai
 drawable teenwolf
@@ -2090,6 +2093,7 @@ drawable user_white_32
 drawable uudai1
 drawable uudai3
 drawable uudai4
+drawable wave
 drawable white_eyes
 drawable white_lock
 drawable white_mail
@@ -2217,7 +2221,6 @@ id btnDienAnh
 id btnPass
 id btnQuenMK
 id btnRapPhim
-id btnSend
 id btnTaiKhoan
 id btnTrangchu
 id btnXemTiep
@@ -2329,6 +2332,7 @@ id easeInOut
 id easeOut
 id edit_query
 id edtConfirmPass
+id edtFeedBack
 id edtMK
 id edtNewPass
 id edtOldPass
@@ -2592,6 +2596,7 @@ id progress_bar
 id progress_circular
 id progress_horizontal
 id radio
+id ratingBar
 id ratio
 id rc_gallery
 id rcv
@@ -2648,6 +2653,7 @@ id selected_photos_container
 id selected_photos_container_frame
 id selected_photos_empty
 id selection_type
+id send
 id shortcut
 id showCustom
 id showHome
@@ -2927,6 +2933,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_huy_ve
 layout dialog_loading
+layout dialog_rate
 layout dienanh_fragment
 layout exo_playback_control_view
 layout exo_player_control_view
@@ -3494,6 +3501,7 @@ style MaterialAlertDialog_MaterialComponents_Title_Panel_CenterStacked
 style MaterialAlertDialog_MaterialComponents_Title_Text
 style MaterialAlertDialog_MaterialComponents_Title_Text_CenterStacked
 style MyAlertDialogTheme
+style MyAlertDialogTheme2
 style Platform_AppCompat
 style Platform_AppCompat_Light
 style Platform_MaterialComponents

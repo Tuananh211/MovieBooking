@@ -99,21 +99,24 @@ public class GiaoDichAdapter extends EndlessLoadingRecyclerViewAdapter<RcvGiaodi
             }
             SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
             binding.gio.setText("Thời gian: " + gio + " " + dateFormat.format(date));
+
             if (data.getIs_cancel() == 1) {
                 binding.lnHuy.setVisibility(View.VISIBLE);
                 binding.lnGDich.setEnabled(false);
             } else {
-                if (checkTicket(data.getPremiere())) {//checkTicket(data.getCreated_date())
+//                if (checkTicket(data.getPremiere())) {//checkTicket(data.getCreated_date())
                     binding.lnGDich.setOnLongClickListener(new View.OnLongClickListener() {
                         @Override
                         public boolean onLongClick(View view) {
                             Log.d("linhd", data.getCode().toString());
-                            giaoDichListener.onChooseGD(data.getCode());
+                            if(checkTicket(data.getPremiere())){
+                                giaoDichListener.onChooseGD(data.getCode());
+                            }
 //                    Toast.makeText(getContext(), "Longclick", Toast.LENGTH_SHORT).show();
                             return false;
                         }
                     });
-                }
+//                }
             }
 
             binding.setGiaodich(data);
