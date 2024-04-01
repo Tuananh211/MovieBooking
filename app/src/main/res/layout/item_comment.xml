@@ -2,6 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 <LinearLayout
+    android:id="@+id/ly_comment"
     android:layout_width="match_parent"
     android:background="@drawable/custom_background_white_border"
     android:orientation="vertical"

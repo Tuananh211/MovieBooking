@@ -11,6 +11,7 @@ import com.base.moviebooking.entity.Chair;
 import com.base.moviebooking.entity.ChangePass;
 import com.base.moviebooking.entity.Cinema;
 import com.base.moviebooking.entity.Comment;
+import com.base.moviebooking.entity.CommentUpdate;
 import com.base.moviebooking.entity.CreateComment;
 import com.base.moviebooking.entity.ForgetPass;
 import com.base.moviebooking.entity.LoginRequest;
@@ -33,6 +34,7 @@ import java.util.List;
 
 import io.reactivex.Single;
 import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
@@ -156,4 +158,10 @@ public interface ApiInterface {
     // create comment movie of user
     @POST("comment/")
     Single<List<Comment>> createComment(@Body CreateComment createComment);
+    // update comment movie of user
+    @PUT("comment/")
+    Single<List<Comment>> updateComment(@Body CommentUpdate updateComment);
+    // delete comment movie of user
+    @DELETE("comment/")
+    Single<List<Comment>> deleteComment(@Body Comment deleteComment);
 }

@@ -15,6 +15,7 @@ import com.base.moviebooking.base.RecyclerViewAdapter;
 import com.base.moviebooking.databinding.ItemCommentBinding;
 import com.base.moviebooking.entity.Comment;
 import com.base.moviebooking.entity.Theater;
+import com.base.moviebooking.listener.OnChooseComment;
 import com.base.moviebooking.listener.OnChooseRecyclerView;
 
 import java.text.ParseException;
@@ -26,12 +27,12 @@ import java.util.regex.Pattern;
 
 public class CommentAdapter extends EndlessLoadingRecyclerViewAdapter<ItemCommentBinding> {
     private final Context mContext;
-    private OnChooseRecyclerView mOnChooseRecyclerView;
+    private OnChooseComment mOnChooseComment;
 
-    public CommentAdapter(Context context, boolean enableSelectedMode, Context mContext, OnChooseRecyclerView mOnChooseRecyclerView) {
+    public CommentAdapter(Context context, boolean enableSelectedMode, Context mContext, OnChooseComment mOnChooseComment) {
         super(context, enableSelectedMode);
         this.mContext = mContext;
-        this.mOnChooseRecyclerView = mOnChooseRecyclerView;
+        this.mOnChooseComment = mOnChooseComment;
     }
 
     @Override
@@ -77,7 +78,13 @@ public class CommentAdapter extends EndlessLoadingRecyclerViewAdapter<ItemCommen
                 binding.imgAvatar.setImageResource(R.drawable.user2);
                 binding.imgAvatar.setBackgroundColor(mContext.getResources().getColor(R.color.colorGrey));
             }
-
+            binding.lyComment.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View view) {
+                    mOnChooseComment.ChooseComment(data);
+                    return false;
+                }
+            });
         }
     }
     public static String convertDateTimeFormat(String inputDateTime) {

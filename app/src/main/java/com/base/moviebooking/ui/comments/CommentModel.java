@@ -7,6 +7,7 @@ import androidx.lifecycle.MutableLiveData;
 import com.base.moviebooking.base.BaseViewModel;
 import com.base.moviebooking.entity.Account;
 import com.base.moviebooking.entity.Comment;
+import com.base.moviebooking.entity.CommentUpdate;
 import com.base.moviebooking.entity.CreateComment;
 import com.base.moviebooking.entity.Seat;
 import com.base.moviebooking.network.repository.Repository;
@@ -99,6 +100,45 @@ public class CommentModel extends BaseViewModel {
 
     public void createComment(CreateComment createComment) {
         repository.createComment(createComment)
+                .subscribe(new SingleObserver<List<Comment>>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+                    }
+
+                    @Override
+                    public void onSuccess(List<Comment> list) {
+                        comments.postValue(list);
+                    }
+
+
+                    @Override
+                    public void onError(Throwable e) {
+                        Log.d("fat", "" + e.getMessage());
+                    }
+                });
+    }
+    public void updateComment(CommentUpdate commentUpdate) {
+        repository.updateComment(commentUpdate)
+                .subscribe(new SingleObserver<List<Comment>>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+                    }
+
+                    @Override
+                    public void onSuccess(List<Comment> list) {
+                        comments.postValue(list);
+                    }
+
+
+                    @Override
+                    public void onError(Throwable e) {
+                        Log.d("fat", "" + e.getMessage());
+                    }
+                });
+    }
+    //delete Comment
+    public void deleteComment(Comment deleteComment) {
+        repository.deleteComment(deleteComment)
                 .subscribe(new SingleObserver<List<Comment>>() {
                     @Override
                     public void onSubscribe(Disposable d) {

@@ -32,17 +32,20 @@ import com.base.moviebooking.entity.Account;
 import com.base.moviebooking.entity.CancelTicket;
 import com.base.moviebooking.entity.Category;
 import com.base.moviebooking.entity.Comment;
+import com.base.moviebooking.entity.CommentUpdate;
 import com.base.moviebooking.entity.CreateComment;
 import com.base.moviebooking.entity.FilmInfo;
 import com.base.moviebooking.entity.Movie;
 import com.base.moviebooking.entity.Schedule;
 import com.base.moviebooking.entity.Theater;
+import com.base.moviebooking.listener.OnChooseComment;
 import com.base.moviebooking.listener.OnChooseRecyclerView;
 import com.base.moviebooking.ui.home.HomeViewModel;
 import com.base.moviebooking.ui.main.MainActivity;
 import com.base.moviebooking.ui.show_time.ShowTimeFragment;
 import com.base.moviebooking.ui.show_time.ShowTimeViewModel;
 import com.base.moviebooking.ui.sign_in.SignInFragment;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.HashMap;
 import java.util.List;
@@ -58,8 +61,9 @@ public class CommentFragment extends BaseFragment<ActiveCommentFragmentBinding> 
     private ShowTimeViewModel showTimeViewModel;
     private CommentAdapter commentAdapter;
     private Dialog dialog;
+    private BottomSheetDialog bottomSheetDialog;
     Movie nMovie;
-
+    Account account;
     @Override
     protected int getLayoutId() {
         return R.layout.active_comment_fragment;
@@ -95,38 +99,37 @@ public class CommentFragment extends BaseFragment<ActiveCommentFragmentBinding> 
                     }
                 });
 
+                //get user info
+                mViewModel.getInfo();
+                mViewModel.dataUser.observe(getViewLifecycleOwner(), new Observer<List<Account>>() {
+                    @Override
+                    public void onChanged(List<Account> accounts) {
+                        if(accounts.size()!=0){
+                            account=accounts.get(0);
+                            if(accounts.get(0).getAvatar()!=null){
+                                // doi anh base64
+                                String base64Image = accounts.get(0).getAvatar();
+//            Log.d("mmm","base64"+base64Image,null);
+                                byte[] imageBytes = Base64.decode(parseBase64(base64Image), Base64.DEFAULT);
+                                Bitmap bitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
+                                binding.imgAvatar.setImageBitmap(bitmap);
+                            }
+                            else{
+                                binding.imgAvatar.setImageResource(R.drawable.user2);
+                            }
+                        }
+                    }
+                });
                 // Show list comment
                 binding.ryComment.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL,false));
                 mViewModel.getListComments(movie.getId());
-                commentAdapter = new CommentAdapter(getContext(), false, getContext(), new OnChooseRecyclerView() {
-                    @Override
-                    public void onChoosePhim(Movie movie) {
-
-                    }
+                commentAdapter = new CommentAdapter(getContext(), false, getContext(), new OnChooseComment() {
 
                     @Override
-                    public void onChooseRap(Theater theater) {
-
-                    }
-
-                    @Override
-                    public void onChooseFilmInfo(FilmInfo filmInfo) {
-
-                    }
-
-                    @Override
-                    public void onChooseLichChieu(Schedule showTime) {
-
-                    }
-
-                    @Override
-                    public void onChooseCategory(Category category) {
-
-                    }
-
-                    @Override
-                    public void onChooseTime(Schedule schedule) {
-
+                    public void ChooseComment(Comment comment) {
+                        if(comment.getUserId()==account.getId()){
+                            showOptionComment(comment);
+                        }
                     }
                 });
                 mViewModel.comments.observe(getViewLifecycleOwner(), new Observer<List<Comment>>() {
@@ -149,26 +152,7 @@ public class CommentFragment extends BaseFragment<ActiveCommentFragmentBinding> 
                 });
                 binding.ryComment.setAdapter(commentAdapter);
 
-                //get user info
-                mViewModel.getInfo();
-                mViewModel.dataUser.observe(getViewLifecycleOwner(), new Observer<List<Account>>() {
-                    @Override
-                    public void onChanged(List<Account> accounts) {
-                        if(accounts.size()!=0){
-                            if(accounts.get(0).getAvatar()!=null){
-                                // doi anh base64
-                                String base64Image = accounts.get(0).getAvatar();
-//            Log.d("mmm","base64"+base64Image,null);
-                                byte[] imageBytes = Base64.decode(parseBase64(base64Image), Base64.DEFAULT);
-                                Bitmap bitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
-                                binding.imgAvatar.setImageBitmap(bitmap);
-                            }
-                            else{
-                                binding.imgAvatar.setImageResource(R.drawable.user2);
-                            }
-                        }
-                    }
-                });
+
             }
         });
 
@@ -204,7 +188,7 @@ public class CommentFragment extends BaseFragment<ActiveCommentFragmentBinding> 
                         if(!content.equals("")&&rate!=0){
                             CreateComment createComment = new CreateComment(nMovie.getId(),content,rate);
                             mViewModel.createComment(createComment);
-                            Toast.makeText(getContext(), "Gửi góp ý thành công", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), "Gửi đánh giá thành công", Toast.LENGTH_SHORT).show();
                             dialog.cancel();
                         }
                         else {
@@ -218,6 +202,85 @@ public class CommentFragment extends BaseFragment<ActiveCommentFragmentBinding> 
         });
     }
 
+    void  showOptionComment(Comment comment){
+        bottomSheetDialog = new BottomSheetDialog(requireContext());
+        bottomSheetDialog.setContentView(R.layout.comment_bottom_sheet);
+        bottomSheetDialog.show();
+
+        //UpdateComment
+        bottomSheetDialog.findViewById(R.id.updateComment).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                bottomSheetDialog.cancel();
+                dialog = new Dialog(requireContext(), R.style.MyAlertDialogTheme2);
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog.setContentView(R.layout.dialog_update_comment);
+                Window window = dialog.getWindow();
+                window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                window.setGravity(Gravity.CENTER);
+                dialog.setCancelable(false);
+                dialog.show();
+                RatingBar ratingBar = dialog.findViewById(R.id.ratingBar);
+                EditText editContent = dialog.findViewById(R.id.edtFeedBack);
+                ratingBar.setRating(comment.getRate());
+                editContent.setText(comment.getContent());
+                dialog.findViewById(R.id.cancel).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.findViewById(R.id.update).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        int rate = (int) ratingBar.getRating();
+                        String content = editContent.getText().toString();
+                        if(!content.equals("")&&rate!=0){
+                            CommentUpdate commentUpdate = new CommentUpdate(nMovie.getId(),comment.getMovieId(),rate,content);
+                            mViewModel.updateComment(commentUpdate);
+                            Toast.makeText(getContext(), "Cập nhật thành công", Toast.LENGTH_SHORT).show();
+                            dialog.cancel();
+                        }
+                        else {
+                            Toast.makeText(getContext(), "Hãy điền đầy đủ các thông tin", Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+                });
+            }
+        });
+
+        //Delete Comment
+        bottomSheetDialog.findViewById(R.id.deleteComment).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                bottomSheetDialog.cancel();
+                dialog = new Dialog(requireContext(), R.style.MyAlertDialogTheme2);
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog.setContentView(R.layout.dialog_delete_comment);
+                Window window = dialog.getWindow();
+                window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                window.setGravity(Gravity.CENTER);
+                dialog.setCancelable(false);
+                dialog.show();
+                dialog.findViewById(R.id.cancel).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.findViewById(R.id.acceptDelete).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                            mViewModel.deleteComment(comment);
+                            Toast.makeText(getContext(), "Xóa đánh giá thành công", Toast.LENGTH_SHORT).show();
+                            dialog.cancel();
+                            binding.lySendComment.setVisibility(View.VISIBLE);
+                    }
+                });
+            }
+        });
+    }
     public static String parseBase64(String base64) {
 
         try {
