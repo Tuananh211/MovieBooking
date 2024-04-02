@@ -137,8 +137,8 @@ public class CommentModel extends BaseViewModel {
                 });
     }
     //delete Comment
-    public void deleteComment(Comment deleteComment) {
-        repository.deleteComment(deleteComment)
+    public void deleteComment(int commentId,int movieId) {
+        repository.deleteComment(commentId,movieId)
                 .subscribe(new SingleObserver<List<Comment>>() {
                     @Override
                     public void onSubscribe(Disposable d) {

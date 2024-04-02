@@ -1905,7 +1905,9 @@ drawable avatar
 drawable avd_hide_password
 drawable avd_show_password
 drawable back
+drawable background_bottom_sheet
 drawable background_empty
+drawable background_white_bottom_sheet
 drawable bg_btn_xemtiep
 drawable bg_c13
 drawable bg_indicator
@@ -2040,6 +2042,7 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable orange_button_background
 drawable oval_btn_blackground
+drawable pencil
 drawable phim1
 drawable phim2
 drawable phim3
@@ -2086,6 +2089,7 @@ drawable tkim3
 drawable tkim4
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable trash
 drawable user
 drawable user2
 drawable user_white
@@ -2117,6 +2121,7 @@ id TOP_END
 id TOP_START
 id To_login
 id accelerate
+id acceptDelete
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
 id accessibility_custom_action_1
@@ -2292,6 +2297,7 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
+id deleteComment
 id deltaRelative
 id descriptionMovie
 id design_bottom_sheet
@@ -2806,6 +2812,8 @@ id unchecked
 id uniform
 id unlabeled
 id up
+id update
+id updateComment
 id useLogo
 id vertical
 id view
@@ -2913,6 +2921,7 @@ layout bottom_navigation_item
 layout bottom_navigation_small_item
 layout change_pass_fragment
 layout chonghe_fragment
+layout comment_bottom_sheet
 layout custom_dialog
 layout dangky_fragment
 layout dangnhap_fragment
@@ -2931,9 +2940,11 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_delete_comment
 layout dialog_huy_ve
 layout dialog_loading
 layout dialog_rate
+layout dialog_update_comment
 layout dienanh_fragment
 layout exo_playback_control_view
 layout exo_player_control_view

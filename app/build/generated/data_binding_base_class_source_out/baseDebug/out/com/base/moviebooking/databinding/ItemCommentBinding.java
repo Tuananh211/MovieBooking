@@ -4,6 +4,7 @@ package com.base.moviebooking.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,6 +20,9 @@ public abstract class ItemCommentBinding extends ViewDataBinding {
   public final CircleImageView imgAvatar;
 
   @NonNull
+  public final LinearLayout lyComment;
+
+  @NonNull
   public final TextView tvContent;
 
   @NonNull
@@ -31,10 +35,11 @@ public abstract class ItemCommentBinding extends ViewDataBinding {
   public final TextView tvSumStar;
 
   protected ItemCommentBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CircleImageView imgAvatar, TextView tvContent, TextView tvDateComment, TextView tvName,
-      TextView tvSumStar) {
+      CircleImageView imgAvatar, LinearLayout lyComment, TextView tvContent, TextView tvDateComment,
+      TextView tvName, TextView tvSumStar) {
     super(_bindingComponent, _root, _localFieldCount);
     this.imgAvatar = imgAvatar;
+    this.lyComment = lyComment;
     this.tvContent = tvContent;
     this.tvDateComment = tvDateComment;
     this.tvName = tvName;

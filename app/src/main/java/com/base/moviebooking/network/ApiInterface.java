@@ -162,6 +162,6 @@ public interface ApiInterface {
     @PUT("comment/")
     Single<List<Comment>> updateComment(@Body CommentUpdate updateComment);
     // delete comment movie of user
-    @DELETE("comment/")
-    Single<List<Comment>> deleteComment(@Body Comment deleteComment);
+    @DELETE("comment/deleteComment")
+    Single<List<Comment>> deleteComment(@Query("commentId") int commentId, @Query("movieId") int movieId);
 }

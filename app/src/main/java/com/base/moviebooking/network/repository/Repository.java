@@ -249,8 +249,8 @@ public class Repository {
     }
 
     //Delete Comment
-    public Single<List<Comment>> deleteComment(Comment deleteComment) {
-        return apiInterface.deleteComment(deleteComment)
+    public Single<List<Comment>> deleteComment(int commentId,int movieId) {
+        return apiInterface.deleteComment(commentId,movieId)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
     }

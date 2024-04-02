@@ -189,6 +189,7 @@ public class CommentFragment extends BaseFragment<ActiveCommentFragmentBinding> 
                             CreateComment createComment = new CreateComment(nMovie.getId(),content,rate);
                             mViewModel.createComment(createComment);
                             Toast.makeText(getContext(), "Gửi đánh giá thành công", Toast.LENGTH_SHORT).show();
+                            binding.lySendComment.setVisibility(View.GONE);
                             dialog.cancel();
                         }
                         else {
@@ -236,7 +237,7 @@ public class CommentFragment extends BaseFragment<ActiveCommentFragmentBinding> 
                         int rate = (int) ratingBar.getRating();
                         String content = editContent.getText().toString();
                         if(!content.equals("")&&rate!=0){
-                            CommentUpdate commentUpdate = new CommentUpdate(nMovie.getId(),comment.getMovieId(),rate,content);
+                            CommentUpdate commentUpdate = new CommentUpdate(comment.getId(),comment.getMovieId(),rate,content);
                             mViewModel.updateComment(commentUpdate);
                             Toast.makeText(getContext(), "Cập nhật thành công", Toast.LENGTH_SHORT).show();
                             dialog.cancel();
@@ -272,7 +273,7 @@ public class CommentFragment extends BaseFragment<ActiveCommentFragmentBinding> 
                 dialog.findViewById(R.id.acceptDelete).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                            mViewModel.deleteComment(comment);
+                            mViewModel.deleteComment(comment.getId(),comment.getMovieId());
                             Toast.makeText(getContext(), "Xóa đánh giá thành công", Toast.LENGTH_SHORT).show();
                             dialog.cancel();
                             binding.lySendComment.setVisibility(View.VISIBLE);

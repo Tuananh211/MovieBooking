@@ -21,8 +21,6 @@ public class ItemCommentBindingImpl extends ItemCommentBinding  {
         sViewsWithIds.put(R.id.tvContent, 5);
     }
     // views
-    @NonNull
-    private final android.widget.LinearLayout mboundView0;
     // variables
     // values
     // listeners
@@ -34,13 +32,13 @@ public class ItemCommentBindingImpl extends ItemCommentBinding  {
     private ItemCommentBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
             , (de.hdodenhof.circleimageview.CircleImageView) bindings[1]
+            , (android.widget.LinearLayout) bindings[0]
             , (android.widget.TextView) bindings[5]
             , (android.widget.TextView) bindings[4]
             , (android.widget.TextView) bindings[2]
             , (android.widget.TextView) bindings[3]
             );
-        this.mboundView0 = (android.widget.LinearLayout) bindings[0];
-        this.mboundView0.setTag(null);
+        this.lyComment.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();
