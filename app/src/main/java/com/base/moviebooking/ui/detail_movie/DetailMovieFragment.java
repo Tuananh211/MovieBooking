@@ -228,7 +228,10 @@ public class DetailMovieFragment extends BaseFragment<ThongtinFragmentBinding> {
                     actorsListResponse.add(new Actor(4,"Nick Offerman","https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/494807_v9_bd.jpg"));
                     actorAdapter.addModels(actorsListResponse,false);
                     Log.d("fat", "add Model Actor", null);
-                    getActivity().findViewById(R.id.actor_load).setVisibility(View.GONE);
+                    View dialogLoadSchedule = getActivity().findViewById(R.id.actor_load);
+                    if (dialogLoadSchedule != null) {
+                        dialogLoadSchedule.setVisibility(View.GONE);
+                    }
                 }
 
             }
