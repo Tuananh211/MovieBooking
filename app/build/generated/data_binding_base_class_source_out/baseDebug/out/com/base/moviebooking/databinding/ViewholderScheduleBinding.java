@@ -30,6 +30,9 @@ public abstract class ViewholderScheduleBinding extends ViewDataBinding {
   public final LinearLayout lnPhim;
 
   @NonNull
+  public final TextView rate;
+
+  @NonNull
   public final TextView tvtAgeLimit;
 
   @NonNull
@@ -37,12 +40,13 @@ public abstract class ViewholderScheduleBinding extends ViewDataBinding {
 
   protected ViewholderScheduleBinding(Object _bindingComponent, View _root, int _localFieldCount,
       ShapeableImageView image, LinearLayout linearLayout2, RecyclerView listTimes,
-      LinearLayout lnPhim, TextView tvtAgeLimit, TextView tvtName) {
+      LinearLayout lnPhim, TextView rate, TextView tvtAgeLimit, TextView tvtName) {
     super(_bindingComponent, _root, _localFieldCount);
     this.image = image;
     this.linearLayout2 = linearLayout2;
     this.listTimes = listTimes;
     this.lnPhim = lnPhim;
+    this.rate = rate;
     this.tvtAgeLimit = tvtAgeLimit;
     this.tvtName = tvtName;
   }

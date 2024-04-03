@@ -14,12 +14,14 @@ public class MovieSchedule implements Serializable {
     private int id;
     private int ageLimit;
     private String trailer;
+
+    private float rate;
     private List<Schedule> listSchedule;
 
     public MovieSchedule() {
     }
 
-    public MovieSchedule(String name, String description, String director, String imageDirector, int time, String timeRelease, String image, int id, int ageLimit, String trailer, List<Schedule> listSchedule) {
+    public MovieSchedule(String name, String description, String director, String imageDirector, int time, String timeRelease, String image, int id, int ageLimit, String trailer,float rate, List<Schedule> listSchedule) {
         this.name = name;
         this.description = description;
         this.director = director;
@@ -30,6 +32,7 @@ public class MovieSchedule implements Serializable {
         this.id = id;
         this.ageLimit = ageLimit;
         this.trailer = trailer;
+        this.rate = rate;
         this.listSchedule = listSchedule;
     }
 
@@ -111,6 +114,14 @@ public class MovieSchedule implements Serializable {
 
     public void setTrailer(String trailer) {
         this.trailer = trailer;
+    }
+
+    public float getRate() {
+        return rate;
+    }
+
+    public void setRate(float rate) {
+        this.rate = rate;
     }
 
     public List<Schedule> getListSchedule() {

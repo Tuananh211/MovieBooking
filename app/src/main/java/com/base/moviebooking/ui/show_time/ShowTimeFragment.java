@@ -190,6 +190,7 @@ public class ShowTimeFragment extends BaseFragment<LichPhimBinding>  {
 
             binding.collapsingLayout.setTitle(movie.getName());
             binding.movieTime.setText(String.valueOf(movie.getTime()));
+            binding.movieStar.setText(String.valueOf(movie.getRate()));
             Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.lastofus);
             Palette.from(bitmap).generate(new Palette.PaletteAsyncListener() {
                 @Override

@@ -25,6 +25,9 @@ public abstract class RcvPhimHomeBinding extends ViewDataBinding {
   public final LinearLayout lnPhim;
 
   @NonNull
+  public final TextView rate;
+
+  @NonNull
   public final TextView tvtAgeLimit;
 
   @NonNull
@@ -34,10 +37,12 @@ public abstract class RcvPhimHomeBinding extends ViewDataBinding {
   protected Movie mMovie;
 
   protected RcvPhimHomeBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      ShapeableImageView image, LinearLayout lnPhim, TextView tvtAgeLimit, TextView tvtName) {
+      ShapeableImageView image, LinearLayout lnPhim, TextView rate, TextView tvtAgeLimit,
+      TextView tvtName) {
     super(_bindingComponent, _root, _localFieldCount);
     this.image = image;
     this.lnPhim = lnPhim;
+    this.rate = rate;
     this.tvtAgeLimit = tvtAgeLimit;
     this.tvtName = tvtName;
   }

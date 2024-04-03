@@ -90,9 +90,11 @@ public class ScheduleAdapter extends EndlessLoadingRecyclerViewAdapter<Viewholde
             binding.image.setImageBitmap(bitmap);
             binding.tvtAgeLimit.setText("C" + data.getAgeLimit());
             binding.tvtName.setText(data.getName().toString());
+            binding.rate.setText(String.valueOf(data.getRate()));
 //            scheduleCinemaModel = ViewModelProviders.of(requireParentFragment(), getContext()).get(ScheduleCinemaModel.class);
             GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 3);
             binding.listTimes.setLayoutManager(gridLayoutManager);
+
 //            scheduleChildModel.getTimeSchedule(theater.getId(),data.getId(),day);
             timeAdapter =  new TimeAdapter(getContext(), false, getContext(), new OnChooseRecyclerView() {
                 @Override

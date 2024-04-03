@@ -14,7 +14,28 @@ public class Movie implements Serializable {
     private int ageLimit;
     private String trailer;
 
+    private float rate;
     public Movie() {
+    }
+
+    public Movie(String name, String description, String director,String imageDirector, int time, String image, int id, int ageLimit,String trailer) {
+        this.name = name;
+        this.description = description;
+        this.director = director;
+        this.imageDirector=imageDirector;
+        this.time = time;
+        this.image = image;
+        this.id = id;
+        this.ageLimit = ageLimit;
+        this.trailer= trailer;
+    }
+
+    public float getRate() {
+        return rate;
+    }
+
+    public void setRate(float rate) {
+        this.rate = rate;
     }
 
     public String getTrailer() {
@@ -73,7 +94,7 @@ public class Movie implements Serializable {
         this.image = image;
     }
 
-    public Movie(String name, String description, String director,String imageDirector, int time, String image, int id, int ageLimit,String trailer) {
+    public Movie(String name, String description, String director,String imageDirector, int time, String image, int id, int ageLimit,String trailer, float rate) {
         this.name = name;
         this.description = description;
         this.director = director;
@@ -83,6 +104,7 @@ public class Movie implements Serializable {
         this.id = id;
         this.ageLimit = ageLimit;
         this.trailer= trailer;
+        this.rate=rate;
     }
 
     public int getAgeLimit() {

@@ -15,7 +15,8 @@ public class RcvPhimHomeBindingImpl extends RcvPhimHomeBinding  {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.image, 2);
-        sViewsWithIds.put(R.id.tvt_ageLimit, 3);
+        sViewsWithIds.put(R.id.rate, 3);
+        sViewsWithIds.put(R.id.tvt_ageLimit, 4);
     }
     // views
     // variables
@@ -24,13 +25,14 @@ public class RcvPhimHomeBindingImpl extends RcvPhimHomeBinding  {
     // Inverse Binding Event Handlers
 
     public RcvPhimHomeBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
     }
     private RcvPhimHomeBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
             , (com.google.android.material.imageview.ShapeableImageView) bindings[2]
             , (android.widget.LinearLayout) bindings[0]
             , (android.widget.TextView) bindings[3]
+            , (android.widget.TextView) bindings[4]
             , (android.widget.TextView) bindings[1]
             );
         this.lnPhim.setTag(null);

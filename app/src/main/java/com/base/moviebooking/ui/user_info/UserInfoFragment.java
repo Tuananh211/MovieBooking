@@ -55,7 +55,7 @@ public class UserInfoFragment extends BaseFragment<UserInfoFragmentBinding> {
     Uri selectedImageUri;
 
     Bitmap bitmap;
-    String encode;
+    String encode= "";
     private Account account;
 
     @Override
@@ -136,6 +136,10 @@ public class UserInfoFragment extends BaseFragment<UserInfoFragmentBinding> {
                 if(response.isSuccess()){
                     mViewController.backFromAddFragment(null);
                     getActivity().findViewById(R.id.bottombar).setVisibility(View.VISIBLE);
+                    binding.showInfo.setVisibility(View.VISIBLE);
+                    binding.loadingUpdate.setVisibility(View.GONE);
+                    binding.overlay.setVisibility(View.GONE);
+                    mViewModel.getInfo();
                     Toast.makeText(getContext(), "Cập nhật thành công", Toast.LENGTH_SHORT).show();
 
                 }else {
@@ -166,8 +170,9 @@ public class UserInfoFragment extends BaseFragment<UserInfoFragmentBinding> {
         binding.btnCapnhat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                binding.loading.setVisibility(View.VISIBLE);
-
+                binding.showInfo.setVisibility(View.GONE);
+                binding.loadingUpdate.setVisibility(View.VISIBLE);
+                binding.overlay.setVisibility(View.VISIBLE);
                 SimpleDateFormat stringformat = new SimpleDateFormat("dd/MM/yyyy");
 
                 Date date = null;
@@ -195,7 +200,7 @@ public class UserInfoFragment extends BaseFragment<UserInfoFragmentBinding> {
                 }
                 updateUser = new UserUpdate(binding.nameUser.getText().toString(),binding.address.getText().toString(), dateFormat.format(date),gender,newImage);
                 mViewModel.updateUser(updateUser);
-                binding.loading.setVisibility(View.GONE);
+
             }
         });
         binding.pickImage.setOnClickListener(new View.OnClickListener() {

@@ -2102,6 +2102,7 @@ drawable white_eyes
 drawable white_lock
 drawable white_mail
 drawable white_radius
+drawable white_ticket
 drawable wide
 drawable wide1
 drawable wide3
@@ -2492,7 +2493,7 @@ id ln_rcvgiaodich
 id ln_theater
 id ln_thongtin
 id ln_user
-id loading
+id loadingUpdate
 id lottie_layer_name
 id ly_comment
 id ly_comment_empty
@@ -2581,6 +2582,7 @@ id onDateChanged
 id one
 id outline
 id outward
+id overlay
 id packed
 id parallax
 id parent
@@ -2602,6 +2604,7 @@ id progress_bar
 id progress_circular
 id progress_horizontal
 id radio
+id rate
 id ratingBar
 id ratio
 id rc_gallery
@@ -2663,6 +2666,7 @@ id send
 id shortcut
 id showCustom
 id showHome
+id showInfo
 id showTitle
 id sin
 id skipCollapsed

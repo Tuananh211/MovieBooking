@@ -66,6 +66,7 @@ public class HomeAdapter extends EndlessLoadingRecyclerViewAdapter<RcvPhimHomeBi
             binding.image.setImageBitmap(bitmap);
             binding.tvtAgeLimit.setText("C" + data.getAgeLimit());
             binding.setMovie(data);
+            binding.rate.setText(String.valueOf(data.getRate()));
             binding.lnPhim.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

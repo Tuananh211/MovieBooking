@@ -15,18 +15,20 @@ public class UserInfoFragmentBindingImpl extends UserInfoFragmentBinding  {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.back_tt, 1);
-        sViewsWithIds.put(R.id.imgUser, 2);
-        sViewsWithIds.put(R.id.pickImage, 3);
-        sViewsWithIds.put(R.id.nameUser, 4);
-        sViewsWithIds.put(R.id.phoneuser, 5);
-        sViewsWithIds.put(R.id.birthday_user, 6);
-        sViewsWithIds.put(R.id.gmail_user, 7);
-        sViewsWithIds.put(R.id.address, 8);
-        sViewsWithIds.put(R.id.nam, 9);
-        sViewsWithIds.put(R.id.nu, 10);
-        sViewsWithIds.put(R.id.btnPass, 11);
-        sViewsWithIds.put(R.id.btnCapnhat, 12);
-        sViewsWithIds.put(R.id.loading, 13);
+        sViewsWithIds.put(R.id.showInfo, 2);
+        sViewsWithIds.put(R.id.imgUser, 3);
+        sViewsWithIds.put(R.id.pickImage, 4);
+        sViewsWithIds.put(R.id.nameUser, 5);
+        sViewsWithIds.put(R.id.phoneuser, 6);
+        sViewsWithIds.put(R.id.birthday_user, 7);
+        sViewsWithIds.put(R.id.gmail_user, 8);
+        sViewsWithIds.put(R.id.address, 9);
+        sViewsWithIds.put(R.id.nam, 10);
+        sViewsWithIds.put(R.id.nu, 11);
+        sViewsWithIds.put(R.id.btnPass, 12);
+        sViewsWithIds.put(R.id.btnCapnhat, 13);
+        sViewsWithIds.put(R.id.overlay, 14);
+        sViewsWithIds.put(R.id.loadingUpdate, 15);
     }
     // views
     @NonNull
@@ -37,23 +39,25 @@ public class UserInfoFragmentBindingImpl extends UserInfoFragmentBinding  {
     // Inverse Binding Event Handlers
 
     public UserInfoFragmentBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 14, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 16, sIncludes, sViewsWithIds));
     }
     private UserInfoFragmentBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (android.widget.EditText) bindings[8]
+            , (android.widget.EditText) bindings[9]
             , (android.widget.ImageView) bindings[1]
-            , (android.widget.EditText) bindings[6]
+            , (android.widget.EditText) bindings[7]
+            , (android.widget.Button) bindings[13]
             , (android.widget.Button) bindings[12]
-            , (android.widget.Button) bindings[11]
-            , (android.widget.TextView) bindings[7]
-            , (com.google.android.material.imageview.ShapeableImageView) bindings[2]
-            , (android.widget.ProgressBar) bindings[13]
-            , (android.widget.RadioButton) bindings[9]
-            , (android.widget.EditText) bindings[4]
-            , (android.widget.RadioButton) bindings[10]
-            , (android.widget.TextView) bindings[5]
+            , (android.widget.TextView) bindings[8]
             , (com.google.android.material.imageview.ShapeableImageView) bindings[3]
+            , (android.widget.ProgressBar) bindings[15]
+            , (android.widget.RadioButton) bindings[10]
+            , (android.widget.EditText) bindings[5]
+            , (android.widget.RadioButton) bindings[11]
+            , (android.view.View) bindings[14]
+            , (android.widget.TextView) bindings[6]
+            , (com.google.android.material.imageview.ShapeableImageView) bindings[4]
+            , (android.widget.LinearLayout) bindings[2]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
