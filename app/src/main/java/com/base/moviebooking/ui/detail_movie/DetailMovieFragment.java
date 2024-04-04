@@ -110,6 +110,9 @@ public class DetailMovieFragment extends BaseFragment<ThongtinFragmentBinding> {
                     Log.e("Movie Url", s.getTrailer());
                     initializeExoPlayer(s.getTrailer());
                 }
+                else{
+                    initializeExoPlayer("https://www.rmp-streaming.com/media/big-buck-bunny-360p.mp4");
+                }
             }
         });
     }
@@ -254,7 +257,7 @@ public class DetailMovieFragment extends BaseFragment<ThongtinFragmentBinding> {
         mExoPlayerView.setPlayer(mPlayer);
 
         DataSource.Factory dataSourceFactory = new DefaultDataSourceFactory(requireContext(), Util.getUserAgent(requireContext(), "app-name"), bandwidthMeter);
-        mMediaSource = new ExtractorMediaSource.Factory(dataSourceFactory).createMediaSource(Uri.parse("https://www.rmp-streaming.com/media/big-buck-bunny-360p.mp4"));
+        mMediaSource = new ExtractorMediaSource.Factory(dataSourceFactory).createMediaSource(Uri.parse(trailerUrl));
 
         mPlayer.prepare(mMediaSource);
         mPlayer.setPlayWhenReady(false);

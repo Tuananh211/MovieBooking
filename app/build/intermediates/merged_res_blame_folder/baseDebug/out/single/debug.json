@@ -156,12 +156,12 @@
         "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/drawable/wide.jpg"
     },
     {
-        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/res/merged/base/debug/drawable_megan.jpg.flat",
-        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/drawable/megan.jpg"
-    },
-    {
         "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/res/merged/base/debug/mipmap-xxxhdpi_dienanh.png.flat",
         "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/mipmap-xxxhdpi/dienanh.png"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/res/merged/base/debug/drawable_megan.jpg.flat",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/drawable/megan.jpg"
     },
     {
         "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/res/merged/base/debug/drawable_phone.png.flat",

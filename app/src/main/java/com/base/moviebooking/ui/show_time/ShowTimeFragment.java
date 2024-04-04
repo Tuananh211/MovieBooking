@@ -3,6 +3,7 @@ package com.base.moviebooking.ui.show_time;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 
@@ -24,6 +25,9 @@ import com.google.android.exoplayer2.SimpleExoPlayer;
 import com.google.android.exoplayer2.ui.PlayerView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 public class ShowTimeFragment extends BaseFragment<LichPhimBinding>  {
@@ -160,6 +164,20 @@ public class ShowTimeFragment extends BaseFragment<LichPhimBinding>  {
             // Xử lý dữ liệu trong bundle
             mViewModel.sendData(movie);
             mViewModel.sendDataMovieComment(movie);
+
+
+//            if(movie.getImage()!=null){
+//                // doi anh base64
+//                String base64Image = movie.getImage();
+////            Log.d("mmm","base64"+base64Image,null);
+//                byte[] imageBytes = Base64.decode(parseBase64(base64Image), Base64.DEFAULT);
+//                Bitmap bitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
+//                binding.imgMovie.setImageBitmap(bitmap);
+//            }
+//            else {
+//                binding.imgMovie.setImageResource(R.drawable.lastofus);
+//            }
+
             switch (movie.getId()){
                 case 1:
                     binding.imgMovie.setImageResource(R.drawable.lastofus);
@@ -206,5 +224,20 @@ public class ShowTimeFragment extends BaseFragment<LichPhimBinding>  {
             Log.d("cather","des NO data");
         }
     }
+    public static String parseBase64(String base64) {
 
+        try {
+            Pattern pattern = Pattern.compile("((?<=base64,).*\\s*)", Pattern.DOTALL | Pattern.MULTILINE);
+            Matcher matcher = pattern.matcher(base64);
+            if (matcher.find()) {
+                return matcher.group().toString();
+            } else {
+                return "";
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        }
+        return "";
+    }
 }

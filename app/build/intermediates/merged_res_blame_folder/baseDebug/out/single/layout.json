@@ -8,12 +8,12 @@
         "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/rcv_phim_home.xml"
     },
     {
-        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/item_comment.xml",
-        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/item_comment.xml"
-    },
-    {
         "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/lich_chieu_fragment.xml",
         "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/lich_chieu_fragment.xml"
+    },
+    {
+        "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/item_comment.xml",
+        "source": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/res/layout/item_comment.xml"
     },
     {
         "merged": "/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/build/intermediates/incremental/mergeBaseDebugResources/stripped.dir/layout/active_search_fragment.xml",
