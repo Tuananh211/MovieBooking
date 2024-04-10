@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -205,6 +206,34 @@ public class ShowTimeFragment extends BaseFragment<LichPhimBinding>  {
                     break;
 
             }
+
+//            switch (movie.getId()){
+//                case 1:
+//                    binding.imgMovie.setImageResource(R.drawable.lastofus);
+//                    break;
+//                case 12:
+//                    binding.imgMovie.setImageResource(R.drawable.avatar);
+//                    break;
+//                case 13:
+//                    binding.imgMovie.setImageResource(R.drawable.pussinboots);
+//                    break;
+//                case 19:
+//                    binding.imgMovie.setImageResource(R.drawable.blackpanther);
+//                    break;
+//                case 20:
+//                    binding.imgMovie.setImageResource(R.drawable.teenwolf);
+//                    break;
+//                case 22:
+//                    binding.imgMovie.setImageResource(R.drawable.megan);
+//                    break;
+//                case 23:
+//                    binding.imgMovie.setImageResource(R.drawable.spiderman);
+//                    break;
+//                case 24:
+//                    binding.imgMovie.setImageResource(R.drawable.spiritedaway);
+//                    break;
+//
+//            }
 
             binding.collapsingLayout.setTitle(movie.getName());
             binding.movieTime.setText(String.valueOf(movie.getTime()));

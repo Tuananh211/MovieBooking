@@ -93,8 +93,8 @@ public class CommentFragment extends BaseFragment<ActiveCommentFragmentBinding> 
                 mViewModel.userComment.observe(getViewLifecycleOwner(), new Observer<List<Comment>>() {
                     @Override
                     public void onChanged(List<Comment> comments) {
-                        if(comments.size()!=0){
-                            binding.lySendComment.setVisibility(View.GONE);
+                        if(comments.size()==0){
+                            binding.lySendComment.setVisibility(View.VISIBLE);
                         }
                     }
                 });

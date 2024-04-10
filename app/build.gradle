@@ -27,20 +27,20 @@ android {
             //signingConfig signingConfigs.debug
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField 'String', 'BASE_URL', '"http://10.12.100.114:8081/"'
-//            buildConfigField 'String', 'BASE_URL', '"http://192.168.1.151:8080/"'
+//            buildConfigField 'String', 'BASE_URL', '"http://10.12.100.114:8081/"'
+            buildConfigField 'String', 'BASE_URL', '"http://192.168.1.151:8080/"'
         }
         stage {
             //signingConfig signingConfigs.debug
-            buildConfigField 'String', 'BASE_URL', '"http://10.12.100.114:8081/"'
-//            buildConfigField 'String', 'BASE_URL', '"http://192.168.1.151:8080/"'
+//            buildConfigField 'String', 'BASE_URL', '"http://10.12.100.114:8081/"'
+            buildConfigField 'String', 'BASE_URL', '"http://192.168.1.151:8080/"'
         }
         release {
             signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField 'String', 'BASE_URL', '"http://10.12.100.114:8081/"'////35.213.177.38
-//            buildConfigField 'String', 'BASE_URL', '"http://192.168.1.151:8080/"'////35.213.177.38
+//            buildConfigField 'String', 'BASE_URL', '"http://10.12.100.114:8081/"'////35.213.177.38
+            buildConfigField 'String', 'BASE_URL', '"http://192.168.1.151:8080/"'////35.213.177.38
         }
     }
 
