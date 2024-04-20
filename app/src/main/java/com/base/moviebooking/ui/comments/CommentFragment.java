@@ -116,6 +116,7 @@ public class CommentFragment extends BaseFragment<ActiveCommentFragmentBinding> 
                             }
                             else{
                                 binding.imgAvatar.setImageResource(R.drawable.user2);
+                                binding.imgAvatar.setBackgroundColor(getResources().getColor(R.color.colorGrey));
                             }
                         }
                     }

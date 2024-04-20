@@ -34,7 +34,7 @@
                 android:id="@+id/imgUser"
                 app:shapeAppearanceOverlay="@style/circle"
                 android:scaleType="fitXY"
-                android:src="@drawable/user"
+                android:src="@drawable/user2"
                 android:layout_gravity="center"
                 />
             <TextView
