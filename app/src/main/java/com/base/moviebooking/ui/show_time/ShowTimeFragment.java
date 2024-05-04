@@ -167,45 +167,19 @@ public class ShowTimeFragment extends BaseFragment<LichPhimBinding>  {
             mViewModel.sendDataMovieComment(movie);
 
 
-//            if(movie.getImage()!=null){
-//                // doi anh base64
-//                String base64Image = movie.getImage();
-////            Log.d("mmm","base64"+base64Image,null);
-//                byte[] imageBytes = Base64.decode(parseBase64(base64Image), Base64.DEFAULT);
-//                Bitmap bitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
-//                binding.imgMovie.setImageBitmap(bitmap);
-//            }
-//            else {
-//                binding.imgMovie.setImageResource(R.drawable.lastofus);
-//            }
-
-            switch (movie.getId()){
-                case 1:
-                    binding.imgMovie.setImageResource(R.drawable.lastofus);
-                    break;
-                case 12:
-                    binding.imgMovie.setImageResource(R.drawable.avatar);
-                    break;
-                case 13:
-                    binding.imgMovie.setImageResource(R.drawable.pussinboots);
-                    break;
-                case 19:
-                    binding.imgMovie.setImageResource(R.drawable.blackpanther);
-                    break;
-                case 20:
-                    binding.imgMovie.setImageResource(R.drawable.teenwolf);
-                    break;
-                case 22:
-                    binding.imgMovie.setImageResource(R.drawable.megan);
-                    break;
-                case 23:
-                    binding.imgMovie.setImageResource(R.drawable.spiderman);
-                    break;
-                case 24:
-                    binding.imgMovie.setImageResource(R.drawable.spiritedaway);
-                    break;
-
+            if(movie.getImage()!=null){
+                // doi anh base64
+                String base64Image = movie.getImage();
+//            Log.d("mmm","base64"+base64Image,null);
+                byte[] imageBytes = Base64.decode(parseBase64(base64Image), Base64.DEFAULT);
+                Bitmap bitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
+                binding.imgMovie.setImageBitmap(bitmap);
             }
+            else {
+                binding.imgMovie.setImageResource(R.drawable.lastofus);
+            }
+
+
 
 //            switch (movie.getId()){
 //                case 1:

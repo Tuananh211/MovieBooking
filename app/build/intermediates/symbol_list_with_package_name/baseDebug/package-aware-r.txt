@@ -2042,6 +2042,7 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable orange_button_background
 drawable oval_btn_blackground
+drawable oval_btn_blackground_grey
 drawable pencil
 drawable phim1
 drawable phim2
@@ -2595,7 +2596,6 @@ id pathRelative
 id pbLoading
 id peekHeight
 id percent
-id phoneuser
 id pickImage
 id pin
 id position

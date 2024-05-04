@@ -74,7 +74,7 @@ public class AccountFragment extends BaseFragment<TaikhoanFragmentBinding> {
                 } else {
                     // Nếu không có hình ảnh, sử dụng hình ảnh mặc định
                     binding.imgUser.setImageResource(R.drawable.user2);
-                    binding.imgUser.setBackgroundColor(getResources().getColor(R.color.colorGrey));
+                    binding.imgUser.setBackgroundResource(R.drawable.oval_btn_blackground_grey);
 
                 }
                 Log.d(TAG, "name" + account.get(0).getFullName());

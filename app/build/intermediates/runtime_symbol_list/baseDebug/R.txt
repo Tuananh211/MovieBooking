@@ -2041,6 +2041,7 @@ int drawable notification_tile_bg 0x7f0700df
 int drawable notify_panel_notification_icon_bg 0x7f0700e0
 int drawable orange_button_background 0x7f0700e1
 int drawable oval_btn_blackground 0x7f0700e2
+int drawable oval_btn_blackground_grey 0x7f070123
 int drawable pencil 0x7f0700e3
 int drawable phim1 0x7f0700e4
 int drawable phim2 0x7f0700e5
@@ -2594,7 +2595,6 @@ int id pathRelative 0x7f0801e5
 int id pbLoading 0x7f0801e6
 int id peekHeight 0x7f0801e7
 int id percent 0x7f0801e8
-int id phoneuser 0x7f0801e9
 int id pickImage 0x7f0801ea
 int id pin 0x7f0801eb
 int id position 0x7f0801ec

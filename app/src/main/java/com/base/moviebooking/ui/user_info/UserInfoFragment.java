@@ -96,7 +96,7 @@ public class UserInfoFragment extends BaseFragment<UserInfoFragmentBinding> {
                 }
                 else{
                     binding.imgUser.setImageResource(R.drawable.user2);
-                    binding.imgUser.setBackgroundColor(getResources().getColor(R.color.colorGrey));
+                    binding.imgUser.setBackgroundResource(R.drawable.oval_btn_blackground_grey);
                 }
                 Date date = null;
                 try {

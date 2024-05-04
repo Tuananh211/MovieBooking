@@ -58,9 +58,6 @@ public abstract class UserInfoFragmentBinding extends ViewDataBinding {
   public final View overlay;
 
   @NonNull
-  public final TextView phoneuser;
-
-  @NonNull
   public final ShapeableImageView pickImage;
 
   @NonNull
@@ -69,8 +66,8 @@ public abstract class UserInfoFragmentBinding extends ViewDataBinding {
   protected UserInfoFragmentBinding(Object _bindingComponent, View _root, int _localFieldCount,
       EditText address, ImageView backTt, EditText birthdayUser, Button btnCapnhat, Button btnPass,
       TextView gmailUser, ShapeableImageView imgUser, ProgressBar loadingUpdate, RadioButton nam,
-      EditText nameUser, RadioButton nu, View overlay, TextView phoneuser,
-      ShapeableImageView pickImage, LinearLayout showInfo) {
+      EditText nameUser, RadioButton nu, View overlay, ShapeableImageView pickImage,
+      LinearLayout showInfo) {
     super(_bindingComponent, _root, _localFieldCount);
     this.address = address;
     this.backTt = backTt;
@@ -84,7 +81,6 @@ public abstract class UserInfoFragmentBinding extends ViewDataBinding {
     this.nameUser = nameUser;
     this.nu = nu;
     this.overlay = overlay;
-    this.phoneuser = phoneuser;
     this.pickImage = pickImage;
     this.showInfo = showInfo;
   }
