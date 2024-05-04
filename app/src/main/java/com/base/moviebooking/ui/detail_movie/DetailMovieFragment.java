@@ -163,6 +163,7 @@ public class DetailMovieFragment extends BaseFragment<ThongtinFragmentBinding> {
         mViewModel.dataCategory.observe(getViewLifecycleOwner(), new Observer<List<Category>>() {
             @Override
             public void onChanged(List<Category> categoriesListResponse) {
+                categoryListAdapter.clear();
                 categoryListAdapter.addModels(categoriesListResponse,false);
                 Log.d("fat", "add Model Category", null);
                 View dialogLoadSchedule = getActivity().findViewById(R.id.category_load);
@@ -215,6 +216,7 @@ public class DetailMovieFragment extends BaseFragment<ThongtinFragmentBinding> {
         mViewModel.dataActors.observe(getViewLifecycleOwner(), new Observer<List<Actor>>() {
             @Override
             public void onChanged(List<Actor> actorsListResponse) {
+                actorAdapter.clear();
                 if(actorsListResponse.size()>0){
                     actorAdapter.addModels(actorsListResponse,false);
                     Log.d("fat", "add Model Actor", null);

@@ -15,6 +15,8 @@ import com.base.moviebooking.base.EndlessLoadingRecyclerViewAdapter;
 import com.base.moviebooking.databinding.RcvPhimHomeBinding;
 import com.base.moviebooking.entity.Movie;
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -66,7 +68,8 @@ public class HomeAdapter extends EndlessLoadingRecyclerViewAdapter<RcvPhimHomeBi
             binding.image.setImageBitmap(bitmap);
             binding.tvtAgeLimit.setText("C" + data.getAgeLimit());
             binding.setMovie(data);
-            binding.rate.setText(String.valueOf(data.getRate()));
+            DecimalFormat decimalFormat = new DecimalFormat("0.0");
+            binding.rate.setText(decimalFormat.format(data.getRate()));
             binding.lnPhim.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

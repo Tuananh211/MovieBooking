@@ -27,7 +27,7 @@ public class LichPhimBindingImpl extends LichPhimBinding  {
     }
     // views
     @NonNull
-    private final android.widget.ScrollView mboundView0;
+    private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     // values
     // listeners
@@ -49,7 +49,7 @@ public class LichPhimBindingImpl extends LichPhimBinding  {
             , (androidx.appcompat.widget.Toolbar) bindings[4]
             , (androidx.viewpager2.widget.ViewPager2) bindings[10]
             );
-        this.mboundView0 = (android.widget.ScrollView) bindings[0];
+        this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners

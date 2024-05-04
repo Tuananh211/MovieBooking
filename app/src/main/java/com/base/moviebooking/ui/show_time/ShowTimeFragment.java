@@ -27,6 +27,7 @@ import com.google.android.exoplayer2.ui.PlayerView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
+import java.text.DecimalFormat;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -58,6 +59,8 @@ public class ShowTimeFragment extends BaseFragment<LichPhimBinding>  {
         mViewModel = ViewModelProviders.of(this, viewModelFactory).get(ShowTimeViewModel.class);
         viewPagerAdapter = new ViewPagerAdapter(this);
         binding.viewpagerLichphim.setAdapter(viewPagerAdapter);
+        binding.viewpagerLichphim.setNestedScrollingEnabled(true);
+        binding.viewpagerLichphim.setUserInputEnabled(true);
         new TabLayoutMediator(binding.tabLayout, binding.viewpagerLichphim, new TabLayoutMediator.TabConfigurationStrategy() {
 
             @Override
@@ -211,7 +214,8 @@ public class ShowTimeFragment extends BaseFragment<LichPhimBinding>  {
 
             binding.collapsingLayout.setTitle(movie.getName());
             binding.movieTime.setText(String.valueOf(movie.getTime()));
-            binding.movieStar.setText(String.valueOf(movie.getRate()));
+            DecimalFormat decimalFormat = new DecimalFormat("0.0");
+            binding.movieStar.setText(decimalFormat.format(movie.getRate()));
             Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.lastofus);
             Palette.from(bitmap).generate(new Palette.PaletteAsyncListener() {
                 @Override

@@ -33,7 +33,7 @@ public class ThongtinFragmentBindingImpl extends ThongtinFragmentBinding  {
     }
     // views
     @NonNull
-    private final android.widget.ScrollView mboundView0;
+    private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     // values
     // listeners
@@ -61,7 +61,7 @@ public class ThongtinFragmentBindingImpl extends ThongtinFragmentBinding  {
             );
         setContainedBinding(this.actorLoad);
         setContainedBinding(this.categoryLoad);
-        this.mboundView0 = (android.widget.ScrollView) bindings[0];
+        this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
         this.thongtinFragment.setTag(null);
         setRootTag(root);
