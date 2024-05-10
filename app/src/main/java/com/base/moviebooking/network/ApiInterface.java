@@ -114,6 +114,10 @@ public interface ApiInterface {
     @GET("auth/myTickets?handle=true")
     Single<List<ThongTinThanhToan>> getThongTinThanhToan();
 
+    //getTicket of user with movie
+    @GET("auth//getMyTicketOfMovie?handle=true")
+    Single<List<ThongTinThanhToan>> getMyTicketOfMovie(@Query("movieId") int movieId);
+
     @POST("checkout/create_payment_url")
     Single<String> postWebviewTT(@Body VNPay vnPay);
 

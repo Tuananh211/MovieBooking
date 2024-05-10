@@ -10,6 +10,7 @@ import com.base.moviebooking.entity.Comment;
 import com.base.moviebooking.entity.CommentUpdate;
 import com.base.moviebooking.entity.CreateComment;
 import com.base.moviebooking.entity.Seat;
+import com.base.moviebooking.entity.ThongTinThanhToan;
 import com.base.moviebooking.network.repository.Repository;
 
 import java.util.List;
@@ -24,6 +25,8 @@ public class CommentModel extends BaseViewModel {
     MutableLiveData<List<Comment>> comments = new MutableLiveData<>();
     MutableLiveData<List<Account>> dataUser = new MutableLiveData<>();
     MutableLiveData<List<Comment>> userComment = new MutableLiveData<>();
+    MutableLiveData<List<ThongTinThanhToan>> userTicket = new MutableLiveData<>();
+
     public MutableLiveData<List<Account>> getDataUser() {
         return dataUser;
     }
@@ -33,6 +36,11 @@ public class CommentModel extends BaseViewModel {
     public MutableLiveData<List<Comment>> getDataUserComment() {
         return userComment;
     }
+
+    public MutableLiveData<List<ThongTinThanhToan>> getDataUserTicket() {
+        return userTicket;
+    }
+
     @Inject
     public CommentModel(Repository repository) {
         this.repository = repository;
@@ -147,6 +155,27 @@ public class CommentModel extends BaseViewModel {
                     @Override
                     public void onSuccess(List<Comment> list) {
                         comments.postValue(list);
+                    }
+
+
+                    @Override
+                    public void onError(Throwable e) {
+                        Log.d("fat", "" + e.getMessage());
+                    }
+                });
+    }
+
+    //get user Ticket
+    public void getTicket(int movieId) {
+        repository.getMyTicketOfMovie(movieId)
+                .subscribe(new SingleObserver<List<ThongTinThanhToan>>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+                    }
+
+                    @Override
+                    public void onSuccess(List<ThongTinThanhToan> list) {
+                        userTicket.postValue(list);
                     }
 
 

@@ -38,6 +38,7 @@ import com.base.moviebooking.entity.FilmInfo;
 import com.base.moviebooking.entity.Movie;
 import com.base.moviebooking.entity.Schedule;
 import com.base.moviebooking.entity.Theater;
+import com.base.moviebooking.entity.ThongTinThanhToan;
 import com.base.moviebooking.listener.OnChooseComment;
 import com.base.moviebooking.listener.OnChooseRecyclerView;
 import com.base.moviebooking.ui.home.HomeViewModel;
@@ -62,6 +63,8 @@ public class CommentFragment extends BaseFragment<ActiveCommentFragmentBinding> 
     private CommentAdapter commentAdapter;
     private Dialog dialog;
     private BottomSheetDialog bottomSheetDialog;
+    private boolean isDialogShown = false;
+
     Movie nMovie;
     Account account;
     @Override
@@ -153,6 +156,19 @@ public class CommentFragment extends BaseFragment<ActiveCommentFragmentBinding> 
                 });
                 binding.ryComment.setAdapter(commentAdapter);
 
+                // get ticket movie of user
+                mViewModel.getTicket(nMovie.getId());
+                mViewModel.userTicket.observe(getViewLifecycleOwner(), new Observer<List<ThongTinThanhToan>>() {
+                    @Override
+                    public void onChanged(List<ThongTinThanhToan> tickets) {
+                        if(tickets.size()==0){
+                            isDialogShown= true;
+                        }
+                        else{
+                             isDialogShown= false;
+                        }
+                    }
+                });
 
             }
         });
@@ -165,41 +181,45 @@ public class CommentFragment extends BaseFragment<ActiveCommentFragmentBinding> 
         binding.tvContentComment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dialog = new Dialog(requireContext(), R.style.MyAlertDialogTheme2);
-                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-                dialog.setContentView(R.layout.dialog_rate);
-                Window window = dialog.getWindow();
-                window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                window.setGravity(Gravity.CENTER);
-                dialog.setCancelable(false);
-                dialog.show();
-                dialog.findViewById(R.id.cancel).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        dialog.dismiss();
-                    }
-                });
-                dialog.findViewById(R.id.send).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        RatingBar ratingBar = dialog.findViewById(R.id.ratingBar);
-                        int rate = (int) ratingBar.getRating();
-                        EditText editContent = dialog.findViewById(R.id.edtFeedBack);
-                        String content = editContent.getText().toString();
-                        if(!content.equals("")&&rate!=0){
-                            CreateComment createComment = new CreateComment(nMovie.getId(),content,rate);
-                            mViewModel.createComment(createComment);
-                            Toast.makeText(getContext(), "Gửi đánh giá thành công", Toast.LENGTH_SHORT).show();
-                            binding.lySendComment.setVisibility(View.GONE);
-                            dialog.cancel();
+                if(isDialogShown){
+                    Toast.makeText(getContext(), "Bạn phải mua vé phim này để tiến hành đánh giá", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    dialog = new Dialog(requireContext(), R.style.MyAlertDialogTheme2);
+                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                    dialog.setContentView(R.layout.dialog_rate);
+                    Window window = dialog.getWindow();
+                    window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                    window.setGravity(Gravity.CENTER);
+                    dialog.setCancelable(false);
+                    dialog.show();
+                    dialog.findViewById(R.id.cancel).setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            dialog.dismiss();
                         }
-                        else {
-                            Toast.makeText(getContext(), "Hãy điền đầy đủ các thông tin", Toast.LENGTH_SHORT).show();
-                            binding.lySendComment.setVisibility(View.GONE);
-                        }
+                    });
+                    dialog.findViewById(R.id.send).setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            RatingBar ratingBar = dialog.findViewById(R.id.ratingBar);
+                            int rate = (int) ratingBar.getRating();
+                            EditText editContent = dialog.findViewById(R.id.edtFeedBack);
+                            String content = editContent.getText().toString();
+                            if (!content.equals("") && rate != 0) {
+                                CreateComment createComment = new CreateComment(nMovie.getId(), content, rate);
+                                mViewModel.createComment(createComment);
+                                Toast.makeText(getContext(), "Gửi đánh giá thành công", Toast.LENGTH_SHORT).show();
+                                binding.lySendComment.setVisibility(View.GONE);
+                                dialog.cancel();
+                            } else {
+                                Toast.makeText(getContext(), "Hãy điền đầy đủ các thông tin", Toast.LENGTH_SHORT).show();
+                                binding.lySendComment.setVisibility(View.GONE);
+                            }
 
-                    }
-                });
+                        }
+                    });
+                }
             }
         });
     }

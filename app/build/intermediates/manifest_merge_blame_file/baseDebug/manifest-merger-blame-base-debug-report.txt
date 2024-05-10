@@ -6,179 +6,179 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="22"
-8-->D:\Code DOAN\MovieBooking\app\src\main\AndroidManifest.xml
+8-->/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="32" />
-9-->D:\Code DOAN\MovieBooking\app\src\main\AndroidManifest.xml
+9-->/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-11-->D:\Code DOAN\MovieBooking\app\src\main\AndroidManifest.xml:5:5-79
-11-->D:\Code DOAN\MovieBooking\app\src\main\AndroidManifest.xml:5:22-77
+11-->/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/AndroidManifest.xml:5:5-79
+11-->/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/AndroidManifest.xml:5:22-77
 12    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-12-->D:\Code DOAN\MovieBooking\app\src\main\AndroidManifest.xml:6:5-80
-12-->D:\Code DOAN\MovieBooking\app\src\main\AndroidManifest.xml:6:22-78
+12-->/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/AndroidManifest.xml:6:5-80
+12-->/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/AndroidManifest.xml:6:22-78
 13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-13-->D:\Code DOAN\MovieBooking\app\src\main\AndroidManifest.xml:7:5-79
-13-->D:\Code DOAN\MovieBooking\app\src\main\AndroidManifest.xml:7:22-76
+13-->/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/AndroidManifest.xml:7:5-79
+13-->/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/AndroidManifest.xml:7:22-76
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->D:\Code DOAN\MovieBooking\app\src\main\AndroidManifest.xml:8:5-66
-14-->D:\Code DOAN\MovieBooking\app\src\main\AndroidManifest.xml:8:22-64
+14-->/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/AndroidManifest.xml:8:5-66
+14-->/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/AndroidManifest.xml:8:22-64
 15    <uses-permission android:name="android.permission.CAMERA" /> <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
-15-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\0bd481bcb9cb0b86237f75916472e881\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:22:5-65
-15-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\0bd481bcb9cb0b86237f75916472e881\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:22:22-62
+15-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:22:5-65
+15-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:22:22-62
 16    <uses-feature
-16-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\0bd481bcb9cb0b86237f75916472e881\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:25:5-27:36
+16-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:25:5-27:36
 17        android:name="android.hardware.camera"
-17-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\0bd481bcb9cb0b86237f75916472e881\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:26:9-47
+17-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:26:9-47
 18        android:required="false" />
-18-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\0bd481bcb9cb0b86237f75916472e881\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:27:9-33
+18-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:27:9-33
 19    <uses-feature
-19-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\0bd481bcb9cb0b86237f75916472e881\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:28:5-30:36
+19-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:28:5-30:36
 20        android:name="android.hardware.camera.front"
-20-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\0bd481bcb9cb0b86237f75916472e881\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:29:9-53
+20-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:29:9-53
 21        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
-21-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\0bd481bcb9cb0b86237f75916472e881\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:30:9-33
+21-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:30:9-33
 22    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
 23    <uses-feature
-23-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\0bd481bcb9cb0b86237f75916472e881\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:33:5-35:36
+23-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:33:5-35:36
 24        android:name="android.hardware.camera.autofocus"
-24-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\0bd481bcb9cb0b86237f75916472e881\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:34:9-57
+24-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:34:9-57
 25        android:required="false" />
-25-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\0bd481bcb9cb0b86237f75916472e881\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:35:9-33
+25-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:35:9-33
 26    <uses-feature
-26-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\0bd481bcb9cb0b86237f75916472e881\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:36:5-38:36
+26-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:36:5-38:36
 27        android:name="android.hardware.camera.flash"
-27-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\0bd481bcb9cb0b86237f75916472e881\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:37:9-53
+27-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:37:9-53
 28        android:required="false" />
-28-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\0bd481bcb9cb0b86237f75916472e881\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:38:9-33
+28-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:38:9-33
 29    <uses-feature
-29-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\0bd481bcb9cb0b86237f75916472e881\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:39:5-41:36
+29-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:39:5-41:36
 30        android:name="android.hardware.screen.landscape"
-30-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\0bd481bcb9cb0b86237f75916472e881\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:40:9-57
+30-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:40:9-57
 31        android:required="false" />
-31-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\0bd481bcb9cb0b86237f75916472e881\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:41:9-33
+31-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:41:9-33
 32    <uses-feature
-32-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\0bd481bcb9cb0b86237f75916472e881\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:42:5-44:36
+32-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:42:5-44:36
 33        android:name="android.hardware.wifi"
-33-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\0bd481bcb9cb0b86237f75916472e881\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:43:9-45
+33-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:43:9-45
 34        android:required="false" />
-34-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\0bd481bcb9cb0b86237f75916472e881\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:44:9-33
+34-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:44:9-33
 35
 36    <application
-36-->D:\Code DOAN\MovieBooking\app\src\main\AndroidManifest.xml:10:5-29:19
+36-->/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/AndroidManifest.xml:10:5-29:19
 37        android:name="com.base.moviebooking.BaseApplication"
-37-->D:\Code DOAN\MovieBooking\app\src\main\AndroidManifest.xml:11:9-61
+37-->/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/AndroidManifest.xml:11:9-61
 38        android:allowBackup="true"
-38-->D:\Code DOAN\MovieBooking\app\src\main\AndroidManifest.xml:12:9-35
+38-->/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/AndroidManifest.xml:12:9-35
 39        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-39-->[androidx.core:core:1.5.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\540dbfb90b248d7b59cd154497c15f99\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
+39-->[androidx.core:core:1.5.0] /Users/vdc/.gradle/caches/transforms-3/540dbfb90b248d7b59cd154497c15f99/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
 40        android:debuggable="true"
 41        android:icon="@mipmap/logo"
-41-->D:\Code DOAN\MovieBooking\app\src\main\AndroidManifest.xml:13:9-36
+41-->/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/AndroidManifest.xml:13:9-36
 42        android:label="@string/app_name"
-42-->D:\Code DOAN\MovieBooking\app\src\main\AndroidManifest.xml:14:9-41
+42-->/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/AndroidManifest.xml:14:9-41
 43        android:roundIcon="@mipmap/logo"
-43-->D:\Code DOAN\MovieBooking\app\src\main\AndroidManifest.xml:15:9-41
+43-->/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/AndroidManifest.xml:15:9-41
 44        android:supportsRtl="true"
-44-->D:\Code DOAN\MovieBooking\app\src\main\AndroidManifest.xml:16:9-35
+44-->/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/AndroidManifest.xml:16:9-35
 45        android:testOnly="true"
 46        android:theme="@style/AppTheme"
-46-->D:\Code DOAN\MovieBooking\app\src\main\AndroidManifest.xml:18:9-40
+46-->/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/AndroidManifest.xml:18:9-40
 47        android:usesCleartextTraffic="true" >
-47-->D:\Code DOAN\MovieBooking\app\src\main\AndroidManifest.xml:17:9-44
+47-->/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/AndroidManifest.xml:17:9-44
 48        <activity
-48-->D:\Code DOAN\MovieBooking\app\src\main\AndroidManifest.xml:20:9-28:20
+48-->/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/AndroidManifest.xml:20:9-28:20
 49            android:name="com.base.moviebooking.ui.main.MainActivity"
-49-->D:\Code DOAN\MovieBooking\app\src\main\AndroidManifest.xml:20:19-76
+49-->/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/AndroidManifest.xml:20:19-76
 50            android:exported="true" >
-50-->D:\Code DOAN\MovieBooking\app\src\main\AndroidManifest.xml:21:13-36
+50-->/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/AndroidManifest.xml:21:13-36
 51            <intent-filter>
-51-->D:\Code DOAN\MovieBooking\app\src\main\AndroidManifest.xml:22:13-27:29
+51-->/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/AndroidManifest.xml:22:13-27:29
 52                <action android:name="android.intent.action.MAIN" />
-52-->D:\Code DOAN\MovieBooking\app\src\main\AndroidManifest.xml:23:17-69
-52-->D:\Code DOAN\MovieBooking\app\src\main\AndroidManifest.xml:23:25-66
+52-->/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/AndroidManifest.xml:23:17-69
+52-->/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/AndroidManifest.xml:23:25-66
 53                <action android:name="android.intent.action.VIEW" />
-53-->D:\Code DOAN\MovieBooking\app\src\main\AndroidManifest.xml:24:17-69
-53-->D:\Code DOAN\MovieBooking\app\src\main\AndroidManifest.xml:24:25-66
+53-->/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/AndroidManifest.xml:24:17-69
+53-->/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/AndroidManifest.xml:24:25-66
 54
 55                <category android:name="android.intent.category.LAUNCHER" />
-55-->D:\Code DOAN\MovieBooking\app\src\main\AndroidManifest.xml:26:17-77
-55-->D:\Code DOAN\MovieBooking\app\src\main\AndroidManifest.xml:26:27-74
+55-->/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/AndroidManifest.xml:26:17-77
+55-->/Users/vdc/Desktop/Megazone/DA/MovieBooking/app/src/main/AndroidManifest.xml:26:27-74
 56            </intent-filter>
 57        </activity>
 58
 59        <provider
-59-->[gun0912.ted:tedbottompicker:1.2.6] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\3687109990581477f3b4ad6640d0b49f\transformed\jetified-tedbottompicker-1.2.6\AndroidManifest.xml:14:9-22:20
+59-->[gun0912.ted:tedbottompicker:1.2.6] /Users/vdc/.gradle/caches/transforms-3/9eea0bf8dd089c89d4d677f6a9a0a98d/transformed/jetified-tedbottompicker-1.2.6/AndroidManifest.xml:14:9-22:20
 60            android:name="androidx.core.content.FileProvider"
-60-->[gun0912.ted:tedbottompicker:1.2.6] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\3687109990581477f3b4ad6640d0b49f\transformed\jetified-tedbottompicker-1.2.6\AndroidManifest.xml:15:13-62
+60-->[gun0912.ted:tedbottompicker:1.2.6] /Users/vdc/.gradle/caches/transforms-3/9eea0bf8dd089c89d4d677f6a9a0a98d/transformed/jetified-tedbottompicker-1.2.6/AndroidManifest.xml:15:13-62
 61            android:authorities="com.base.movieBooking.provider"
-61-->[gun0912.ted:tedbottompicker:1.2.6] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\3687109990581477f3b4ad6640d0b49f\transformed\jetified-tedbottompicker-1.2.6\AndroidManifest.xml:16:13-60
+61-->[gun0912.ted:tedbottompicker:1.2.6] /Users/vdc/.gradle/caches/transforms-3/9eea0bf8dd089c89d4d677f6a9a0a98d/transformed/jetified-tedbottompicker-1.2.6/AndroidManifest.xml:16:13-60
 62            android:exported="false"
-62-->[gun0912.ted:tedbottompicker:1.2.6] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\3687109990581477f3b4ad6640d0b49f\transformed\jetified-tedbottompicker-1.2.6\AndroidManifest.xml:17:13-37
+62-->[gun0912.ted:tedbottompicker:1.2.6] /Users/vdc/.gradle/caches/transforms-3/9eea0bf8dd089c89d4d677f6a9a0a98d/transformed/jetified-tedbottompicker-1.2.6/AndroidManifest.xml:17:13-37
 63            android:grantUriPermissions="true" >
-63-->[gun0912.ted:tedbottompicker:1.2.6] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\3687109990581477f3b4ad6640d0b49f\transformed\jetified-tedbottompicker-1.2.6\AndroidManifest.xml:18:13-47
+63-->[gun0912.ted:tedbottompicker:1.2.6] /Users/vdc/.gradle/caches/transforms-3/9eea0bf8dd089c89d4d677f6a9a0a98d/transformed/jetified-tedbottompicker-1.2.6/AndroidManifest.xml:18:13-47
 64            <meta-data
-64-->[gun0912.ted:tedbottompicker:1.2.6] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\3687109990581477f3b4ad6640d0b49f\transformed\jetified-tedbottompicker-1.2.6\AndroidManifest.xml:19:13-21:58
+64-->[gun0912.ted:tedbottompicker:1.2.6] /Users/vdc/.gradle/caches/transforms-3/9eea0bf8dd089c89d4d677f6a9a0a98d/transformed/jetified-tedbottompicker-1.2.6/AndroidManifest.xml:19:13-21:58
 65                android:name="android.support.FILE_PROVIDER_PATHS"
-65-->[gun0912.ted:tedbottompicker:1.2.6] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\3687109990581477f3b4ad6640d0b49f\transformed\jetified-tedbottompicker-1.2.6\AndroidManifest.xml:20:17-67
+65-->[gun0912.ted:tedbottompicker:1.2.6] /Users/vdc/.gradle/caches/transforms-3/9eea0bf8dd089c89d4d677f6a9a0a98d/transformed/jetified-tedbottompicker-1.2.6/AndroidManifest.xml:20:17-67
 66                android:resource="@xml/provider_paths" />
-66-->[gun0912.ted:tedbottompicker:1.2.6] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\3687109990581477f3b4ad6640d0b49f\transformed\jetified-tedbottompicker-1.2.6\AndroidManifest.xml:21:17-55
+66-->[gun0912.ted:tedbottompicker:1.2.6] /Users/vdc/.gradle/caches/transforms-3/9eea0bf8dd089c89d4d677f6a9a0a98d/transformed/jetified-tedbottompicker-1.2.6/AndroidManifest.xml:21:17-55
 67        </provider>
 68
 69        <activity
-69-->[gun0912.ted:tedonactivityresult:1.0.6] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\a463c09559e300975b2fcbc8385a5180\transformed\jetified-tedonactivityresult-1.0.6\AndroidManifest.xml:10:9-14:75
+69-->[gun0912.ted:tedonactivityresult:1.0.6] /Users/vdc/.gradle/caches/transforms-3/ab41ae140c33f9fbbd362a9b8bfd0d37/transformed/jetified-tedonactivityresult-1.0.6/AndroidManifest.xml:10:9-14:75
 70            android:name="com.gun0912.tedonactivityresult.ProxyActivity"
-70-->[gun0912.ted:tedonactivityresult:1.0.6] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\a463c09559e300975b2fcbc8385a5180\transformed\jetified-tedonactivityresult-1.0.6\AndroidManifest.xml:11:13-73
+70-->[gun0912.ted:tedonactivityresult:1.0.6] /Users/vdc/.gradle/caches/transforms-3/ab41ae140c33f9fbbd362a9b8bfd0d37/transformed/jetified-tedonactivityresult-1.0.6/AndroidManifest.xml:11:13-73
 71            android:configChanges="mcc|mnc|locale|keyboard|keyboardHidden|screenLayout|fontScale|uiMode|orientation|screenSize|layoutDirection"
-71-->[gun0912.ted:tedonactivityresult:1.0.6] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\a463c09559e300975b2fcbc8385a5180\transformed\jetified-tedonactivityresult-1.0.6\AndroidManifest.xml:12:13-144
+71-->[gun0912.ted:tedonactivityresult:1.0.6] /Users/vdc/.gradle/caches/transforms-3/ab41ae140c33f9fbbd362a9b8bfd0d37/transformed/jetified-tedonactivityresult-1.0.6/AndroidManifest.xml:12:13-144
 72            android:screenOrientation="unspecified"
-72-->[gun0912.ted:tedonactivityresult:1.0.6] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\a463c09559e300975b2fcbc8385a5180\transformed\jetified-tedonactivityresult-1.0.6\AndroidManifest.xml:13:13-52
+72-->[gun0912.ted:tedonactivityresult:1.0.6] /Users/vdc/.gradle/caches/transforms-3/ab41ae140c33f9fbbd362a9b8bfd0d37/transformed/jetified-tedonactivityresult-1.0.6/AndroidManifest.xml:13:13-52
 73            android:theme="@style/android:Theme.Translucent.NoTitleBar" />
-73-->[gun0912.ted:tedonactivityresult:1.0.6] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\a463c09559e300975b2fcbc8385a5180\transformed\jetified-tedonactivityresult-1.0.6\AndroidManifest.xml:14:13-72
+73-->[gun0912.ted:tedonactivityresult:1.0.6] /Users/vdc/.gradle/caches/transforms-3/ab41ae140c33f9fbbd362a9b8bfd0d37/transformed/jetified-tedonactivityresult-1.0.6/AndroidManifest.xml:14:13-72
 74        <activity
-74-->[io.github.ParkSangGwon:tedpermission:3.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\ca6372eb4c722c8b1da75fe74bd535bd\transformed\jetified-tedpermission-3.3.0\AndroidManifest.xml:10:9-14:67
+74-->[io.github.ParkSangGwon:tedpermission:3.3.0] /Users/vdc/.gradle/caches/transforms-3/ca6372eb4c722c8b1da75fe74bd535bd/transformed/jetified-tedpermission-3.3.0/AndroidManifest.xml:10:9-14:67
 75            android:name="com.gun0912.tedpermission.TedPermissionActivity"
-75-->[io.github.ParkSangGwon:tedpermission:3.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\ca6372eb4c722c8b1da75fe74bd535bd\transformed\jetified-tedpermission-3.3.0\AndroidManifest.xml:11:13-75
+75-->[io.github.ParkSangGwon:tedpermission:3.3.0] /Users/vdc/.gradle/caches/transforms-3/ca6372eb4c722c8b1da75fe74bd535bd/transformed/jetified-tedpermission-3.3.0/AndroidManifest.xml:11:13-75
 76            android:configChanges="mcc|mnc|locale|keyboard|keyboardHidden|screenLayout|fontScale|uiMode|orientation|screenSize|layoutDirection"
-76-->[io.github.ParkSangGwon:tedpermission:3.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\ca6372eb4c722c8b1da75fe74bd535bd\transformed\jetified-tedpermission-3.3.0\AndroidManifest.xml:12:13-144
+76-->[io.github.ParkSangGwon:tedpermission:3.3.0] /Users/vdc/.gradle/caches/transforms-3/ca6372eb4c722c8b1da75fe74bd535bd/transformed/jetified-tedpermission-3.3.0/AndroidManifest.xml:12:13-144
 77            android:screenOrientation="unspecified"
-77-->[io.github.ParkSangGwon:tedpermission:3.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\ca6372eb4c722c8b1da75fe74bd535bd\transformed\jetified-tedpermission-3.3.0\AndroidManifest.xml:13:13-52
+77-->[io.github.ParkSangGwon:tedpermission:3.3.0] /Users/vdc/.gradle/caches/transforms-3/ca6372eb4c722c8b1da75fe74bd535bd/transformed/jetified-tedpermission-3.3.0/AndroidManifest.xml:13:13-52
 78            android:theme="@style/Theme.Transparent.Permission" />
-78-->[io.github.ParkSangGwon:tedpermission:3.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\ca6372eb4c722c8b1da75fe74bd535bd\transformed\jetified-tedpermission-3.3.0\AndroidManifest.xml:14:13-64
+78-->[io.github.ParkSangGwon:tedpermission:3.3.0] /Users/vdc/.gradle/caches/transforms-3/ca6372eb4c722c8b1da75fe74bd535bd/transformed/jetified-tedpermission-3.3.0/AndroidManifest.xml:14:13-64
 79
 80        <provider
-80-->[io.github.ParkSangGwon:tedpermission:3.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\ca6372eb4c722c8b1da75fe74bd535bd\transformed\jetified-tedpermission-3.3.0\AndroidManifest.xml:16:9-19:40
+80-->[io.github.ParkSangGwon:tedpermission:3.3.0] /Users/vdc/.gradle/caches/transforms-3/ca6372eb4c722c8b1da75fe74bd535bd/transformed/jetified-tedpermission-3.3.0/AndroidManifest.xml:16:9-19:40
 81            android:name="com.gun0912.tedpermission.provider.TedPermissionProvider"
-81-->[io.github.ParkSangGwon:tedpermission:3.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\ca6372eb4c722c8b1da75fe74bd535bd\transformed\jetified-tedpermission-3.3.0\AndroidManifest.xml:17:13-84
+81-->[io.github.ParkSangGwon:tedpermission:3.3.0] /Users/vdc/.gradle/caches/transforms-3/ca6372eb4c722c8b1da75fe74bd535bd/transformed/jetified-tedpermission-3.3.0/AndroidManifest.xml:17:13-84
 82            android:authorities="com.base.movieBooking.tedpermissionprovider"
-82-->[io.github.ParkSangGwon:tedpermission:3.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\ca6372eb4c722c8b1da75fe74bd535bd\transformed\jetified-tedpermission-3.3.0\AndroidManifest.xml:18:13-73
+82-->[io.github.ParkSangGwon:tedpermission:3.3.0] /Users/vdc/.gradle/caches/transforms-3/ca6372eb4c722c8b1da75fe74bd535bd/transformed/jetified-tedpermission-3.3.0/AndroidManifest.xml:18:13-73
 83            android:exported="false" />
-83-->[io.github.ParkSangGwon:tedpermission:3.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\ca6372eb4c722c8b1da75fe74bd535bd\transformed\jetified-tedpermission-3.3.0\AndroidManifest.xml:19:13-37
+83-->[io.github.ParkSangGwon:tedpermission:3.3.0] /Users/vdc/.gradle/caches/transforms-3/ca6372eb4c722c8b1da75fe74bd535bd/transformed/jetified-tedpermission-3.3.0/AndroidManifest.xml:19:13-37
 84
 85        <activity
-85-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\0bd481bcb9cb0b86237f75916472e881\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:47:9-53:63
+85-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:47:9-53:63
 86            android:name="com.journeyapps.barcodescanner.CaptureActivity"
-86-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\0bd481bcb9cb0b86237f75916472e881\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:48:13-74
+86-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:48:13-74
 87            android:clearTaskOnLaunch="true"
-87-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\0bd481bcb9cb0b86237f75916472e881\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:49:13-45
+87-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:49:13-45
 88            android:screenOrientation="sensorLandscape"
-88-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\0bd481bcb9cb0b86237f75916472e881\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:50:13-56
+88-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:50:13-56
 89            android:stateNotNeeded="true"
-89-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\0bd481bcb9cb0b86237f75916472e881\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:51:13-42
+89-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:51:13-42
 90            android:theme="@style/zxing_CaptureTheme"
-90-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\0bd481bcb9cb0b86237f75916472e881\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:52:13-54
+90-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:52:13-54
 91            android:windowSoftInputMode="stateAlwaysHidden" />
-91-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\0bd481bcb9cb0b86237f75916472e881\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:53:13-60
+91-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/vdc/.gradle/caches/transforms-3/0bd481bcb9cb0b86237f75916472e881/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:53:13-60
 92
 93        <provider
-93-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\b1ce0b4cc2aee0ff9d59f2c1037cc915\transformed\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:23:9-27:43
+93-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/vdc/.gradle/caches/transforms-3/b1ce0b4cc2aee0ff9d59f2c1037cc915/transformed/jetified-lifecycle-process-2.1.0/AndroidManifest.xml:23:9-27:43
 94            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-94-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\b1ce0b4cc2aee0ff9d59f2c1037cc915\transformed\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:24:13-79
+94-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/vdc/.gradle/caches/transforms-3/b1ce0b4cc2aee0ff9d59f2c1037cc915/transformed/jetified-lifecycle-process-2.1.0/AndroidManifest.xml:24:13-79
 95            android:authorities="com.base.movieBooking.lifecycle-process"
-95-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\b1ce0b4cc2aee0ff9d59f2c1037cc915\transformed\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:25:13-69
+95-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/vdc/.gradle/caches/transforms-3/b1ce0b4cc2aee0ff9d59f2c1037cc915/transformed/jetified-lifecycle-process-2.1.0/AndroidManifest.xml:25:13-69
 96            android:exported="false"
-96-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\b1ce0b4cc2aee0ff9d59f2c1037cc915\transformed\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:26:13-37
+96-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/vdc/.gradle/caches/transforms-3/b1ce0b4cc2aee0ff9d59f2c1037cc915/transformed/jetified-lifecycle-process-2.1.0/AndroidManifest.xml:26:13-37
 97            android:multiprocess="true" />
-97-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\DIEN MAY XANH\.gradle\caches\transforms-3\b1ce0b4cc2aee0ff9d59f2c1037cc915\transformed\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:27:13-40
+97-->[androidx.lifecycle:lifecycle-process:2.1.0] /Users/vdc/.gradle/caches/transforms-3/b1ce0b4cc2aee0ff9d59f2c1037cc915/transformed/jetified-lifecycle-process-2.1.0/AndroidManifest.xml:27:13-40
 98    </application>
 99
 100</manifest>

@@ -172,6 +172,13 @@ public class Repository {
                 .observeOn(AndroidSchedulers.mainThread());
     }
 
+    //lấy vé ứng với từng phim
+    public Single<List<ThongTinThanhToan>> getMyTicketOfMovie(int movieId) {
+        return apiInterface.getMyTicketOfMovie(movieId)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
     // thanh toan webview
     public Single<String> thanhToanWebview(VNPay vnPay) {
         return apiInterface.postWebviewTT(vnPay)

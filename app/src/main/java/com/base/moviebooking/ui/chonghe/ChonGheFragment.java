@@ -32,6 +32,7 @@ import com.base.moviebooking.ui.thanhtoan.ThanhToanFragment;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
@@ -76,7 +77,15 @@ public class ChonGheFragment extends BaseFragment<ChongheFragmentBinding> {
             movie = (Movie) bundle.getSerializable("movie");
             nameCinema = bundle.getString("cinema");
             mViewModel.getChaired(schedule.getId());
-            mViewModel.getAmount(2, 1, 1);
+
+            Calendar calendar = Calendar.getInstance(); // Lấy ngày hiện tại
+            int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
+
+            if (dayOfWeek >= Calendar.MONDAY && dayOfWeek <= Calendar.FRIDAY) {
+                mViewModel.getAmount(2, 1, 1);
+            } else if (dayOfWeek == Calendar.SATURDAY || dayOfWeek == Calendar.SUNDAY) {
+                mViewModel.getAmount(3, 1, 1);
+            }
             // Xử lý dữ liệu trong bundle
         }
         mViewModel.getProduct();
