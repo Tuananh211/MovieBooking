@@ -34,6 +34,7 @@ import com.base.moviebooking.ui.main.MainActivity;
 import com.base.moviebooking.ui.schedule.ScheduleCinemaModel;
 import com.base.moviebooking.ui.schedule_child.ScheduleChildModel;
 
+import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -90,7 +91,8 @@ public class ScheduleAdapter extends EndlessLoadingRecyclerViewAdapter<Viewholde
             binding.image.setImageBitmap(bitmap);
             binding.tvtAgeLimit.setText("C" + data.getAgeLimit());
             binding.tvtName.setText(data.getName().toString());
-            binding.rate.setText(String.valueOf(data.getRate()));
+            DecimalFormat decimalFormat = new DecimalFormat("0.0");
+            binding.rate.setText(decimalFormat.format(data.getRate()));
 //            scheduleCinemaModel = ViewModelProviders.of(requireParentFragment(), getContext()).get(ScheduleCinemaModel.class);
             GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 3);
             binding.listTimes.setLayoutManager(gridLayoutManager);

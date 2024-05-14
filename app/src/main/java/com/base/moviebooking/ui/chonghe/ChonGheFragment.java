@@ -31,8 +31,11 @@ import com.base.moviebooking.entity.Seat;
 import com.base.moviebooking.ui.thanhtoan.ThanhToanFragment;
 
 import java.text.DecimalFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -79,6 +82,13 @@ public class ChonGheFragment extends BaseFragment<ChongheFragmentBinding> {
             mViewModel.getChaired(schedule.getId());
 
             Calendar calendar = Calendar.getInstance(); // Lấy ngày hiện tại
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd"); // Định dạng của chuỗi ngày
+            try {
+                Date premiereDate = dateFormat.parse(schedule.getPremiere()); // Chuyển đổi chuỗi thành đối tượng Date
+                calendar.setTime(premiereDate); // Thiết lập ngày đã chuyển đổi cho calendar
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
             int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
 
             if (dayOfWeek >= Calendar.MONDAY && dayOfWeek <= Calendar.FRIDAY) {
