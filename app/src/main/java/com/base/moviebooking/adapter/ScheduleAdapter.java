@@ -129,7 +129,7 @@ public class ScheduleAdapter extends EndlessLoadingRecyclerViewAdapter<Viewholde
                     Theater theater = scheduleCinemaModel.getDataTheater().getValue();
                     HashMap<String, Object> hashMap = new HashMap<>();
                     hashMap.put("schedule", schedule);
-                    Movie movie = new Movie(data.getName(),data.getDescription(),data.getImageDirector(),data.getDirector(),data.getTime(),data.getImage(),data.getId(),data.getAgeLimit(),data.getTrailer());
+                    Movie movie = new Movie(data.getName(),data.getDescription(),data.getImageDirector(),data.getDirector(),data.getTime(),data.getImage(),data.getId(),data.getAgeLimit(),data.getTrailer(),data.getFormat());
                     hashMap.put("movie", movie);
                     hashMap.put("cinema",theater.getName());
                     if (mContext instanceof MainActivity) {

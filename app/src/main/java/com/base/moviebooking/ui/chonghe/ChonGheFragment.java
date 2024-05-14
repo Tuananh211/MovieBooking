@@ -90,12 +90,21 @@ public class ChonGheFragment extends BaseFragment<ChongheFragmentBinding> {
                 e.printStackTrace();
             }
             int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
-
-            if (dayOfWeek >= Calendar.MONDAY && dayOfWeek <= Calendar.FRIDAY) {
-                mViewModel.getAmount(2, 1, 1);
-            } else if (dayOfWeek == Calendar.SATURDAY || dayOfWeek == Calendar.SUNDAY) {
-                mViewModel.getAmount(3, 1, 1);
+            String format = movie.getFormat();
+            if(format.equals("2D")){
+                if (dayOfWeek >= Calendar.MONDAY && dayOfWeek <= Calendar.FRIDAY) {
+                    mViewModel.getAmount(2, 1, 1);
+                } else if (dayOfWeek == Calendar.SATURDAY || dayOfWeek == Calendar.SUNDAY) {
+                    mViewModel.getAmount(3, 1, 1);
+                }
+            }else{
+                if (dayOfWeek >= Calendar.MONDAY && dayOfWeek <= Calendar.FRIDAY) {
+                    mViewModel.getAmount(2, 2, 1);
+                } else if (dayOfWeek == Calendar.SATURDAY || dayOfWeek == Calendar.SUNDAY) {
+                    mViewModel.getAmount(3, 2, 1);
+                }
             }
+
             // Xử lý dữ liệu trong bundle
         }
         mViewModel.getProduct();
@@ -121,6 +130,7 @@ public class ChonGheFragment extends BaseFragment<ChongheFragmentBinding> {
         });
         //set duwx lieu movie
         binding.nameMovie.setText(movie.getName());
+        binding.format.setText(movie.getFormat()+" PHỤ ĐỀ");
         binding.tvtAgeLimit.setText("C" + movie.getAgeLimit());
         TextView t = getActivity().findViewById(R.id.tvt_headerphim);
         t.setText("Đặt ghế");

@@ -13,12 +13,13 @@ public class Movie implements Serializable {
     private int id;
     private int ageLimit;
     private String trailer;
+    private String format;
 
     private float rate;
     public Movie() {
     }
 
-    public Movie(String name, String description, String director,String imageDirector, int time, String image, int id, int ageLimit,String trailer) {
+    public Movie(String name, String description, String director,String imageDirector, int time, String image, int id, int ageLimit,String trailer,String format) {
         this.name = name;
         this.description = description;
         this.director = director;
@@ -28,6 +29,7 @@ public class Movie implements Serializable {
         this.id = id;
         this.ageLimit = ageLimit;
         this.trailer= trailer;
+        this.format=format;
     }
 
     public float getRate() {
@@ -94,7 +96,7 @@ public class Movie implements Serializable {
         this.image = image;
     }
 
-    public Movie(String name, String description, String director,String imageDirector, int time, String image, int id, int ageLimit,String trailer, float rate) {
+    public Movie(String name, String description, String director,String imageDirector, int time, String image, int id, int ageLimit,String trailer, float rate, String format) {
         this.name = name;
         this.description = description;
         this.director = director;
@@ -105,6 +107,7 @@ public class Movie implements Serializable {
         this.ageLimit = ageLimit;
         this.trailer= trailer;
         this.rate=rate;
+        this.format=format;
     }
 
     public int getAgeLimit() {
@@ -131,7 +134,11 @@ public class Movie implements Serializable {
         this.name = name;
     }
 
+    public String getFormat() {
+        return format;
+    }
 
-
-
+    public void setFormat(String format) {
+        this.format = format;
+    }
 }

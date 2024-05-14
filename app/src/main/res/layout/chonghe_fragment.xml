@@ -43,9 +43,11 @@
                         >
 
                         <TextView
+                            android:id="@+id/format"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="16sp"
+                            android:textAllCaps="true"
                             android:text="2D PHỤ ĐỀ"
                             android:layout_marginEnd="20dp"
                             />

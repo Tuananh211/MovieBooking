@@ -46,6 +46,9 @@ public abstract class ChongheFragmentBinding extends ViewDataBinding {
   public final Button congNuoc;
 
   @NonNull
+  public final TextView format;
+
+  @NonNull
   public final TextView giaBong;
 
   @NonNull
@@ -107,11 +110,12 @@ public abstract class ChongheFragmentBinding extends ViewDataBinding {
 
   protected ChongheFragmentBinding(Object _bindingComponent, View _root, int _localFieldCount,
       TextView amountThuong, TextView amountVip, Button btnDatve, CheckBox cbBong, CheckBox cbCombo,
-      CheckBox cbNuoc, Button congBong, Button congCombo, Button congNuoc, TextView giaBong,
-      TextView giaCombo, TextView giaNuoc, ImageView imgBong, ImageView imgCombo, ImageView imgNuoc,
-      TextView nameMovie, RecyclerView rcvSeat, TextView slBong, TextView slCombo, TextView slNuoc,
-      Button truBong, Button truCombo, Button truNuoc, TextView tvtAgeLimit, TextView tvtBong,
-      TextView tvtCombo, TextView tvtListghe, TextView tvtNuoc, TextView tvtTongtien) {
+      CheckBox cbNuoc, Button congBong, Button congCombo, Button congNuoc, TextView format,
+      TextView giaBong, TextView giaCombo, TextView giaNuoc, ImageView imgBong, ImageView imgCombo,
+      ImageView imgNuoc, TextView nameMovie, RecyclerView rcvSeat, TextView slBong,
+      TextView slCombo, TextView slNuoc, Button truBong, Button truCombo, Button truNuoc,
+      TextView tvtAgeLimit, TextView tvtBong, TextView tvtCombo, TextView tvtListghe,
+      TextView tvtNuoc, TextView tvtTongtien) {
     super(_bindingComponent, _root, _localFieldCount);
     this.amountThuong = amountThuong;
     this.amountVip = amountVip;
@@ -122,6 +126,7 @@ public abstract class ChongheFragmentBinding extends ViewDataBinding {
     this.congBong = congBong;
     this.congCombo = congCombo;
     this.congNuoc = congNuoc;
+    this.format = format;
     this.giaBong = giaBong;
     this.giaCombo = giaCombo;
     this.giaNuoc = giaNuoc;
