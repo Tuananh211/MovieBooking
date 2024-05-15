@@ -93,15 +93,15 @@ public class ChonGheFragment extends BaseFragment<ChongheFragmentBinding> {
             String format = movie.getFormat();
             if(format.equals("2D")){
                 if (dayOfWeek >= Calendar.MONDAY && dayOfWeek <= Calendar.FRIDAY) {
-                    mViewModel.getAmount(2, 1, 1);
+                    mViewModel.getAmount(1, 1, 1);
                 } else if (dayOfWeek == Calendar.SATURDAY || dayOfWeek == Calendar.SUNDAY) {
-                    mViewModel.getAmount(3, 1, 1);
+                    mViewModel.getAmount(1, 2, 1);
                 }
             }else{
                 if (dayOfWeek >= Calendar.MONDAY && dayOfWeek <= Calendar.FRIDAY) {
-                    mViewModel.getAmount(2, 2, 1);
+                    mViewModel.getAmount(2, 1, 3);
                 } else if (dayOfWeek == Calendar.SATURDAY || dayOfWeek == Calendar.SUNDAY) {
-                    mViewModel.getAmount(3, 2, 1);
+                    mViewModel.getAmount(2, 2, 3);
                 }
             }
 
