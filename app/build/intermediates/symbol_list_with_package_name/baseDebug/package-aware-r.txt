@@ -2082,6 +2082,8 @@ drawable teenwolf
 drawable test_custom_background
 drawable tichdiem
 drawable ticket
+drawable ticket2
+drawable ticket3
 drawable ticket_logo
 drawable time
 drawable tkim1

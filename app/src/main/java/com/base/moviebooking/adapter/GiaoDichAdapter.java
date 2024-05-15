@@ -104,6 +104,8 @@ public class GiaoDichAdapter extends EndlessLoadingRecyclerViewAdapter<RcvGiaodi
                 binding.lnHuy.setVisibility(View.VISIBLE);
                 binding.lnGDich.setEnabled(false);
             } else {
+                binding.lnHuy.setVisibility(View.GONE);
+                binding.lnGDich.setEnabled(true);
 //                if (checkTicket(data.getPremiere())) {//checkTicket(data.getCreated_date())
                     binding.lnGDich.setOnLongClickListener(new View.OnLongClickListener() {
                         @Override
