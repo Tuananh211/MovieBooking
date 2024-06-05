@@ -52,6 +52,7 @@ public class ShowTimeChildFragment extends BaseFragment<LichChieuFragmentBinding
     private ShowTimeViewModel showTimeViewModel;
     private ShowTimesAdapter showTimesAdapter;
     private List<ShowTime> lichChieuList = new ArrayList<>();
+    private  List<Cinema> listCinema = new ArrayList<>();
     Date date;
 
     @Override
@@ -200,7 +201,7 @@ public class ShowTimeChildFragment extends BaseFragment<LichChieuFragmentBinding
             e.printStackTrace();
         }
         if(binding.spinnerRap.getSelectedItemPosition()!=0){
-            mViewModel.getListSchedule(binding.spinnerRap.getSelectedItemPosition(),dateFormat.format(date),nMovie.getId());
+            mViewModel.getListSchedule(listCinema.get(binding.spinnerRap.getSelectedItemPosition()-1).getId(),dateFormat.format(date),nMovie.getId());
         }
 //        binding.birthdayUser.setText(dateFormat.format(date));
 
@@ -215,7 +216,7 @@ public class ShowTimeChildFragment extends BaseFragment<LichChieuFragmentBinding
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if(binding.spinnerNgay.getSelectedItemPosition()!=0){
-                    mViewModel.getListSchedule(binding.spinnerRap.getSelectedItemPosition(),dateFormat.format(date),nMovie.getId());
+                    mViewModel.getListSchedule(listCinema.get(binding.spinnerRap.getSelectedItemPosition()-1).getId(),dateFormat.format(date),nMovie.getId());
                 }
 
             }
@@ -240,6 +241,7 @@ public class ShowTimeChildFragment extends BaseFragment<LichChieuFragmentBinding
             @Override
             public void onChanged(List<Cinema> list) {
                 if(!list.isEmpty()){
+                    listCinema.addAll(list);
                     for(int i=0;i< list.size();i++){
                         item_Rap.add(list.get(i).getName())  ;
                     }
