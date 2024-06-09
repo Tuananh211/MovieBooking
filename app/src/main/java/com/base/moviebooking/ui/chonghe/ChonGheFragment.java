@@ -6,6 +6,7 @@ import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
@@ -34,6 +35,7 @@ import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -70,6 +72,24 @@ public class ChonGheFragment extends BaseFragment<ChongheFragmentBinding> {
     public boolean backPressed() {
         mViewController.backFromAddFragment(null);
         return false;
+    }
+
+    private String truncateText(String text, int maxCharacters) {
+        if (text.length() <= maxCharacters) {
+            return text;
+        } else {
+            int colonIndex = text.indexOf(":");
+            if (colonIndex != -1 && colonIndex < maxCharacters) {
+                return text.substring(0, colonIndex + 1) + "...";
+            } else {
+                String truncatedText = text.substring(0, maxCharacters);
+                int lastSpaceIndex = truncatedText.lastIndexOf(" ");
+                if (lastSpaceIndex != -1) {
+                    truncatedText = truncatedText.substring(0, lastSpaceIndex);
+                }
+                return truncatedText + "...";
+            }
+        }
     }
 
     @Override
@@ -130,7 +150,7 @@ public class ChonGheFragment extends BaseFragment<ChongheFragmentBinding> {
             }
         });
         //set duwx lieu movie
-        binding.nameMovie.setText(movie.getName());
+        binding.nameMovie.setText(truncateText(movie.getName(), 15));
         binding.format.setText(movie.getFormat()+" PHỤ ĐỀ");
         binding.tvtAgeLimit.setText("C" + movie.getAgeLimit());
         TextView t = getActivity().findViewById(R.id.tvt_headerphim);
