@@ -28,7 +28,9 @@ public class FilmInfoChildFragment extends BaseFragment<FilmInfoChildFragmentBin
 
     @Override
     public boolean backPressed() {
-        return true;
+        mViewController.backFromAddFragment(null);
+        getActivity().findViewById(R.id.bottombar).setVisibility(View.VISIBLE);
+        return false;
     }
 
     @Override

@@ -41,6 +41,8 @@ public class SignUpFragment extends BaseFragment<DangkyFragmentBinding> {
 
     @Override
     public boolean backPressed() {
+        getActivity().findViewById(R.id.bottombar).setVisibility(View.VISIBLE);
+        mViewController.replaceFragment(AccountFragment.class,null);
         return false;
     }
 

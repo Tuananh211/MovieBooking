@@ -31,7 +31,8 @@ public class ChangePassFragment extends BaseFragment<ChangePassFragmentBinding> 
 
     @Override
     public boolean backPressed() {
-        return true;
+        mViewController.backFromAddFragment(null);
+        return false;
     }
 
 

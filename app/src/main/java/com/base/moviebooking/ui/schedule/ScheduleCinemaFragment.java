@@ -48,6 +48,8 @@ public class ScheduleCinemaFragment extends BaseFragment<ScheduleCinemaFragmentB
 
     @Override
     public boolean backPressed() {
+        getActivity().findViewById(R.id.bottombar).setVisibility(View.VISIBLE);
+        mViewController.replaceFragment(TheaterFragment.class,null);
         return false;
     }
 

@@ -43,6 +43,8 @@ public class GiaoDichFragment extends BaseFragment<GiaodichFragmentBinding> {
 
     @Override
     public boolean backPressed() {
+        mViewController.backFromAddFragment(null);
+        getActivity().findViewById(R.id.bottombar).setVisibility(View.VISIBLE);
         return false;
     }
 

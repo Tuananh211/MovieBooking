@@ -49,6 +49,8 @@ public class SearchFilmFragment  extends BaseFragment<ActiveSearchFragmentBindin
 
     @Override
     public boolean backPressed() {
+        getActivity().findViewById(R.id.bottombar).setVisibility(View.VISIBLE);
+        mViewController.replaceFragment(HomeFragment.class,null);
         return false;
     }
 

@@ -50,6 +50,9 @@ public class ShowTimeFragment extends BaseFragment<LichPhimBinding>  {
 
     @Override
     public boolean backPressed() {
+        stopAllVideos();
+        getActivity().findViewById(R.id.bottombar).setVisibility(View.VISIBLE);
+        mViewController.replaceFragment(HomeFragment.class,null);
         return false;
     }
 

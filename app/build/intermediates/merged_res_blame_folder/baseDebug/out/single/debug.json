@@ -876,6 +876,10 @@
         "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
+        "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\drawable_edittext_background_grey.xml.flat",
+        "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\drawable\\edittext_background_grey.xml"
+    },
+    {
         "merged": "D:\\Code DOAN\\MovieBooking\\app\\build\\intermediates\\res\\merged\\base\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "D:\\Code DOAN\\MovieBooking\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },

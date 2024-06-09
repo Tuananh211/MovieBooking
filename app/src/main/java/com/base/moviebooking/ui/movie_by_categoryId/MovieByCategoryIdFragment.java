@@ -50,7 +50,9 @@ public class MovieByCategoryIdFragment extends  BaseFragment<MovieByCategoryFrag
     }
     @Override
     public boolean backPressed() {
-       return false;
+        mViewController.backFromAddFragment(null);
+        getActivity().findViewById(R.id.bottombar).setVisibility(View.VISIBLE);
+        return false;
     }
 
     @Override

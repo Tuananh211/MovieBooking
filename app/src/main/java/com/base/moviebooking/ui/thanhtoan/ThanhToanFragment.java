@@ -64,6 +64,7 @@ public class ThanhToanFragment extends BaseFragment<ThanhtoanFragmentBinding> {
 
     @Override
     public boolean backPressed() {
+        mViewController.backFromAddFragment(null);
         return false;
     }
 

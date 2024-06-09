@@ -76,8 +76,8 @@ public class HomeFragment extends BaseFragment<HomeFragmentBinding> {
 
     @Override
     public boolean backPressed() {
-
-        return true;
+        showDialogLogout();
+        return false;
     }
 
     @Override

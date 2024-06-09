@@ -68,6 +68,7 @@ public class ChonGheFragment extends BaseFragment<ChongheFragmentBinding> {
 
     @Override
     public boolean backPressed() {
+        mViewController.backFromAddFragment(null);
         return false;
     }
 

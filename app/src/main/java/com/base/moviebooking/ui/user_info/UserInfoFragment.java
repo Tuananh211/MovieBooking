@@ -70,6 +70,8 @@ public class UserInfoFragment extends BaseFragment<UserInfoFragmentBinding> {
 
     @Override
     public boolean backPressed() {
+        getActivity().findViewById(R.id.bottombar).setVisibility(View.VISIBLE);
+        mViewController.backFromAddFragment(null);
         return false;
     }
 
